@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <Python.h>
 
-const char* VERSION = "1.4";
+const char* VERSION = "1.5";
 
 /** detecting whether base is starts with str
  */
@@ -606,7 +606,7 @@ const char *_getOEM()
 		}
 		else if((strcmp(boxtype_name, "xp1000s\n") == 0) || (strcmp(boxtype_name, "xp1000\n") == 0))
 		{
-			return "?";
+			return MACHINE_OEM;
 		}
 		else if(startsWith(boxtype_name, "et"))
 		{
@@ -626,7 +626,7 @@ const char *_getOEM()
 		}		
 		else if(startsWith(boxtype_name, "ixuss"))
 		{
-			return "Medi@link Ixuss";
+			return "Medi@link";
 		}
 	}
 	else if((boxtype_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
@@ -654,7 +654,7 @@ const char *_getOEM()
 	{
 		return "Dream Multimedia";
 	}
-	return "NO_MANUFACTUER_NAME";  
+	return MACHINE_OEM;  
 }
 
 const char *_getDriverDate()
