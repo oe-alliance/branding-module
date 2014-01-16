@@ -591,69 +591,6 @@ const char *_getBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend, Odin 
 
 const char *_getOEM()
 {
-  	FILE *boxtype_file;
-	char boxtype_name[20];
-
-	// for OEM resellers
-	if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
-	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file);
-
-		if(startsWith(boxtype_name, "ini"))
-		{
-			return "INI";
-		}
-		else if((strcmp(boxtype_name, "xp1000s\n") == 0) || (strcmp(boxtype_name, "xp1000\n") == 0))
-		{
-			return MACHINE_OEM;
-		}
-		else if(startsWith(boxtype_name, "et"))
-		{
-			return "Xtrend";
-		}
-		else if((strcmp(boxtype_name, "gigablue\n") == 0))
-		{
-			return "GIGA";
-		}
-		else if(startsWith(boxtype_name, "odin"))
-		{
-			return "Odin";
-		}
-		else if(startsWith(boxtype_name, "ebox"))
-		{
-			return "MixOS";
-		}		
-		else if(startsWith(boxtype_name, "ixuss"))
-		{
-			return "Medi@link";
-		}
-	}
-	else if((boxtype_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
-	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file);
-		
-		return "DAGS";
-	}
-	else if((boxtype_file = fopen("/proc/stb/info/azmodel", "r")) != NULL)
-	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file); 
-		
-		return "OpenSAT";
-	}
-	else if((boxtype_file = fopen("/proc/stb/info/vumodel", "r")) != NULL)
-	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file); 
-		
-		return "Ceru";
-	}
-	else
-	{
-		return "Dream Multimedia";
-	}
 	return MACHINE_OEM;  
 }
 
