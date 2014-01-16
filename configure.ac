@@ -71,6 +71,15 @@ AC_SUBST(DRIVERDATE)
 AC_DEFINE_UNQUOTED(DRIVERDATE,"$DRIVERDATE",[driver date])
 
 
+AC_ARG_WITH(debug,
+	AS_HELP_STRING([--without-debug],[disable debugging code]),
+	[with_debug="$withval"],[with_debug="yes"])
+if test "$with_debug" = "yes"; then
+	DEBUG_CFLAGS="-ggdb3"
+	AC_DEFINE([DEBUG],[1],[Define to 1 to enable debugging code])
+fi
+AC_SUBST(DEBUG_CFLAGS)
+
 AC_ARG_WITH(po,
 	AS_HELP_STRING([--with-po],[enable updating of po files]),
 	[with_po="$withval"],[with_po="no"])
