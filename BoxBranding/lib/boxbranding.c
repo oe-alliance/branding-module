@@ -703,7 +703,7 @@ static PyObject* getImageBuild(PyObject* self)
     return Py_BuildValue("s", _getImageBuild());
 }
 static PyMethodDef boxbrandingMethods[] = {
-		{ "getMachineBrand", getBrand, METH_NOARGS },
+		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },
 		{ "getOEM", getOEM, METH_NOARGS },
