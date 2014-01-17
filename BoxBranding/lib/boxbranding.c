@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <Python.h>
 
-const char* VERSION = "1.5";
+const char* VERSION = "1.4";
 
 /** detecting whether base is starts with str
  */
@@ -486,7 +486,7 @@ const char *_getMachineName()
 
 /** detecting real Box Manufactuer for OSD Translations
  */
-const char *_getBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend, Odin ??, Vu+, Dreambox, AZBox, Technomate
+const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend, Odin ??, Vu+, Dreambox, AZBox, Technomate
 {
   	FILE *boxtype_file;
 	char boxtype_name[20];
@@ -658,19 +658,19 @@ const char *_getDriverDate()
 	}
 }
 
-const char *_getVersion()
+const char *_getImageVersion()
 {
 	return IMAGEVERSION;
 }
 
-const char *_getBuild()
+const char *_getImageBuild()
 {
 	return IMAGEBUILD;
 }
 
-static PyObject* getBrand(PyObject* self)
+static PyObject* getMachineBrand(PyObject* self)
 {
-    return Py_BuildValue("s", _getBrand());
+    return Py_BuildValue("s", _getMachineBrand());
 }
  
 static PyObject* getMachineName(PyObject* self)
@@ -693,23 +693,23 @@ static PyObject* getDriverDate(PyObject* self)
     return Py_BuildValue("s", _getDriverDate());
 }
 
-static PyObject* getVersion(PyObject* self)
+static PyObject* getImageVersion(PyObject* self)
 {
-    return Py_BuildValue("s", _getVersion());
+    return Py_BuildValue("s", _getImageVersion());
 }
 
-static PyObject* getBuild(PyObject* self)
+static PyObject* getImageBuild(PyObject* self)
 {
-    return Py_BuildValue("s", _getBuild());
+    return Py_BuildValue("s", _getImageBuild());
 }
 static PyMethodDef boxbrandingMethods[] = {
-		{ "getBrand", getBrand, METH_NOARGS },
+		{ "getMachineBrand", getBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },
 		{ "getOEM", getOEM, METH_NOARGS },
 		{ "getDriverDate", getDriverDate, METH_NOARGS },
-		{ "getVersion", getVersion, METH_NOARGS },
-		{ "getBuild", getBuild, METH_NOARGS },
+		{ "getImageVersion", getImageVersion, METH_NOARGS },
+		{ "getImageBuild", getImageBuild, METH_NOARGS },
 		{ NULL, NULL }
 };
 
