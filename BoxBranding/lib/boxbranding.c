@@ -668,6 +668,11 @@ const char *_getImageBuild()
 	return IMAGEBUILD;
 }
 
+const char *_getImageDistro()
+{
+	return DISTRO;
+}
+
 static PyObject* getMachineBrand(PyObject* self)
 {
     return Py_BuildValue("s", _getMachineBrand());
@@ -702,6 +707,12 @@ static PyObject* getImageBuild(PyObject* self)
 {
     return Py_BuildValue("s", _getImageBuild());
 }
+
+static PyObject* getImageDistro(PyObject* self)
+{
+    return Py_BuildValue("s", _getImageDistro());
+}
+
 static PyMethodDef boxbrandingMethods[] = {
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
@@ -710,6 +721,7 @@ static PyMethodDef boxbrandingMethods[] = {
 		{ "getDriverDate", getDriverDate, METH_NOARGS },
 		{ "getImageVersion", getImageVersion, METH_NOARGS },
 		{ "getImageBuild", getImageBuild, METH_NOARGS },
+		{ "getImageDistro", getImageDistro, METH_NOARGS },
 		{ NULL, NULL }
 };
 
