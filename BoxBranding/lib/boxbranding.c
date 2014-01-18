@@ -627,6 +627,10 @@ const char *_getDriverDate()
 				return DRIVERDATE;
 			}
 		}
+		else // if it is not INI box, but use same proc entry, just return passed from BB drivers date
+		{
+			return DRIVERDATE;
+		}
 	}
 	/** DAGS has in each driver build date - NO NEEED TAKE IT FROM BB FILE*/
 	else if((driver_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
