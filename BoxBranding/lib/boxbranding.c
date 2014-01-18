@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <Python.h>
 
-const char* VERSION = "1.4";
+const char* VERSION = "1.5";
 
 /** detecting whether base is starts with str
  */
@@ -309,28 +309,28 @@ const char *_getMachineName()
 		/** ODIN DETECTION */
 		else if(strcmp(boxtype_name, "odinm9\n") == 0) 
 		{
-			return "M9";
+			return MACHINE_NAME;
 		}
 		else if(strcmp(boxtype_name, "odinm7\n") == 0) 
 		{
-			return "M7"; // And OEM: Optibox EVO, Galaxy Innovations Genius, Starsat LX, Opticum ax-odin, Axas Class M
+			return MACHINE_NAME; // And OEM: Optibox EVO, Galaxy Innovations Genius, Starsat LX, Opticum ax-odin, Axas Class M
 		}
 		else if(strcmp(boxtype_name, "e3hd\n") == 0) 
 		{
-			return "E3HD"; // And OEM: Optibox E3HD, Galaxy Innovations E3HD, Axas E3HD
+			return MACHINE_NAME; // And OEM: Optibox E3HD, Galaxy Innovations E3HD, Axas E3HD
 		}		
 		/** MIXoS DETECTION */
 		else if(strcmp(boxtype_name, "ebox5000\n") == 0) 
 		{
-			return "F5"; // And OEM: Galaxy Innovations 9196m
+			return MACHINE_NAME; // And OEM: Galaxy Innovations 9196m
 		}
 		else if(strcmp(boxtype_name, "ebox5100\n") == 0) 
 		{
-			return "F5mini"; // And OEM: Galaxy Innovations 9196 lite
+			return MACHINE_NAME; // And OEM: Galaxy Innovations 9196 lite
 		}
 		else if(strcmp(boxtype_name, "ebox7358\n") == 0) 
 		{
-			return "F7";
+			return MACHINE_NAME;
 		}
 		/** IXUSS DETECTION */
 		else if(strcmp(boxtype_name, "ixussone\n") == 0) 
@@ -531,15 +531,15 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 		}
 		else if(startsWith(boxtype_name, "e3hd"))
 		{
-			return "Odin"; // OEM: Optibox, Galaxy Innovations
+			return MACHINE_BRAND; // OEM: Optibox, Galaxy Innovations
 		}		
 		else if(startsWith(boxtype_name, "odin"))
 		{
-			return "Odin"; // OEM: Optibox, Galaxy Innovations, Starsat, Opticum, Axas
+			return MACHINE_BRAND; // OEM: Optibox, Galaxy Innovations, Starsat, Opticum, Axas
 		}
 		else if(startsWith(boxtype_name, "ebox"))
 		{
-			return "MixOS"; // OEM: Galaxy Innovations
+			return MACHINE_BRAND; // OEM: Galaxy Innovations
 		}		
 		else if(startsWith(boxtype_name, "ixuss"))
 		{
