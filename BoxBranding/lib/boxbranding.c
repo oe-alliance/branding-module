@@ -53,11 +53,6 @@ const char *_getBoxType()
 					fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
 					fclose(boxtype_file);  
 					
-					return boxtype_name;
-				}
-				else
-				{
-					return "gb800solo"; /**no idea why they not put proc entry for this model, thats why it is always 800 Solo*/
 				}
 			}
 		}
