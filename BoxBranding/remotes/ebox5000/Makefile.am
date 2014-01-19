@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/ebox5000
+installdir = /usr/share/enigma2/rc_models/ebox5000
 
 dist_install_DATA = \
 	rc.png \

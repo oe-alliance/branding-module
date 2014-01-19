@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/optimuss
+installdir = /usr/share/enigma2/rc_models/optimuss
 
 dist_install_DATA = \
 	rc.png \

@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/dmm0
+installdir = /usr/share/enigma2/rc_models/dmm0
 
 dist_install_DATA = \
 	rc.png \

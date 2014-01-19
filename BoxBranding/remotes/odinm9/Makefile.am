@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/odinm9
+installdir = /usr/share/enigma2/rc_models/odinm9
 
 dist_install_DATA = \
 	rc.png \

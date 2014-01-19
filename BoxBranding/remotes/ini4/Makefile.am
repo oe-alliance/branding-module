@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/ini4
+installdir = /usr/share/enigma2/rc_models/ini4
 
 dist_install_DATA = \
 	rc.png \

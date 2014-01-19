@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/et6500
+installdir = /usr/share/enigma2/rc_models/et6500
 
 dist_install_DATA = \
 	rc.png \

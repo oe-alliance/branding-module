@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/sogno
+installdir = /usr/share/enigma2/rc_models/sogno
 
 dist_install_DATA = \
 	rc.png \

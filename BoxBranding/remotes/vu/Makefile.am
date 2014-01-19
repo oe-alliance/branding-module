@@ -1,4 +1,4 @@
-installdir = $(pkgdatadir)/rc_models/vu
+installdir = /usr/share/enigma2/rc_models/vu
 
 dist_install_DATA = \
 	rc.png \
