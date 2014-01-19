@@ -99,6 +99,42 @@ Makefile
 
 BoxBranding/Makefile
 BoxBranding/lib/Makefile
+BoxBranding/remotes/Makefile
+BoxBranding/remotes/azboxhd/Makefile
+BoxBranding/remotes/azboxme/Makefile
+BoxBranding/remotes/azboxelite/Makefile
+BoxBranding/remotes/cube/Makefile
+BoxBranding/remotes/dmm0/Makefile
+BoxBranding/remotes/dmm1/Makefile
+BoxBranding/remotes/dmm2/Makefile
+BoxBranding/remotes/e3hd/Makefile
+BoxBranding/remotes/ebox5000/Makefile
+BoxBranding/remotes/evo/Makefile
+BoxBranding/remotes/et4x00/Makefile
+BoxBranding/remotes/et6x00/Makefile
+BoxBranding/remotes/et6500/Makefile
+BoxBranding/remotes/et9500/Makefile
+BoxBranding/remotes/et9x00/Makefile
+BoxBranding/remotes/gb/Makefile
+BoxBranding/remotes/ini0/Makefile
+BoxBranding/remotes/ini1/Makefile
+BoxBranding/remotes/ini2/Makefile
+BoxBranding/remotes/ini3/Makefile
+BoxBranding/remotes/ini4/Makefile
+BoxBranding/remotes/iqon/Makefile
+BoxBranding/remotes/ixussone/Makefile
+BoxBranding/remotes/ixusszero/Makefile
+BoxBranding/remotes/mediabox/Makefile
+BoxBranding/remotes/odinm6/Makefile
+BoxBranding/remotes/odinm7/Makefile
+BoxBranding/remotes/odinm9/Makefile
+BoxBranding/remotes/optimuss/Makefile
+BoxBranding/remotes/sogno/Makefile
+BoxBranding/remotes/tm/Makefile
+BoxBranding/remotes/vu/Makefile
+BoxBranding/remotes/vu2/Makefile
+BoxBranding/remotes/vu3/Makefile
+BoxBranding/remotes/xp1000/Makefile
 
 
 ])
