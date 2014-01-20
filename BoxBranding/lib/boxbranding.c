@@ -34,7 +34,13 @@ const char *_getBoxType()
 		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
 		fclose(boxtype_file);
 		
-		return boxtype_name;
+		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+		if (real_boxtype_name)
+			strcpy(real_boxtype_name, boxtype_name);
+		len = strlen(real_boxtype_name);
+		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+			real_boxtype_name[len - 1] = '\0';                                
+		return real_boxtype_name;
 	}
 	else if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
 	{
