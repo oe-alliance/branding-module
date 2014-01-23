@@ -151,42 +151,54 @@ const char *_getMachineName()
 		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
 		fclose(boxtype_file);
 		/**brand = "Technomate" "Edision" "Iqon" "Sogno"( not sure, just looked at Capitan Components/RCmodel.py) */
-		if(strcmp(boxtype_name, "tmtwinoe\n") == 0) 
+		if(strcmp(boxtype_name, "tmtwinoe\n") == 0)
 		{
 			return "TM-TWIN-OE";
 		}
-		else if(strcmp(boxtype_name, "tm2toe\n") == 0) 
+		else if(strcmp(boxtype_name, "tm2toe\n") == 0)
 		{
 			return "TM-2T-OE";
 		}
-		else if(strcmp(boxtype_name, "tmsingle\n") == 0) 
+		else if(strcmp(boxtype_name, "tmsingle\n") == 0)
 		{
 			return "TM-SINGLE";
 		}
-		else if(strcmp(boxtype_name, "tmnanooe\n") == 0) 
+		else if(strcmp(boxtype_name, "tmnanooe\n") == 0)
 		{
 			return "TM-NANO-OE";
 		}
-		else if(strcmp(boxtype_name, "ios100hd\n") == 0) 
+		else if(strcmp(boxtype_name, "tmnano2t\n") == 0)
+		{
+			return "TM-NANO-2T-OE";
+		}		
+		else if(strcmp(boxtype_name, "ios100hd\n") == 0)
 		{
 			return "IOS-100HD";
 		}
-		else if(strcmp(boxtype_name, "ios200hd\n") == 0) 
+		else if(strcmp(boxtype_name, "ios200hd\n") == 0)
 		{
 			return "IOS-200HD";
 		}
-		else if(strcmp(boxtype_name, "ios300hd\n") == 0) 
+		else if(strcmp(boxtype_name, "ios300hd\n") == 0)
 		{
 			return "IOS-300HD";
 		}
-		else if(strcmp(boxtype_name, "optimussos1\n") == 0) 
+		else if(strcmp(boxtype_name, "optimussos1\n") == 0)
 		{
 			return "Optimuss-OS1";
 		} 
-		else if(strcmp(boxtype_name, "optimussos2\n") == 0) 
+		else if(strcmp(boxtype_name, "optimussos2\n") == 0)
 		{
 			return "Optimuss-OS2";
 		}
+		else if(strcmp(boxtype_name, "optimussos2\n") == 0)
+		{
+			return "Roxxs-200HD";
+		}
+		else if(strcmp(boxtype_name, "mediabox\n") == 0)
+		{
+			return "MediaBox-HD-LX";
+		}		
 		else if(strcmp(boxtype_name, "sogno-8800hd\n") == 0) 
 		{
 			return "8800-HD";
@@ -329,6 +341,10 @@ const char *_getMachineName()
 		{
 			return MACHINE_NAME; // And OEM: Galaxy Innovations 9196 lite
 		}
+		else if(strcmp(boxtype_name, "eboxlumi\n") == 0) 
+		{
+			return MACHINE_NAME;
+		}		
 		else if(strcmp(boxtype_name, "ebox7358\n") == 0) 
 		{
 			return MACHINE_NAME;
