@@ -75,11 +75,23 @@ SUBDIRS = tm
 endif
 
 if VENTON
-SUBDIRS = ini0 ini1 ini2 ini3 ini4
+SUBDIRS = ini0 ini1 ini2
 endif
 
 if INI
 SUBDIRS = ini0 ini1 ini2 ini3 ini4
+endif
+
+if MIRACLEBOX
+SUBDIRS = ini3
+endif
+
+if XPEED
+SUBDIRS = ini4
+endif
+
+if SEZAM
+SUBDIRS = ini2 ini4
 endif
 
 if VUSOLO
