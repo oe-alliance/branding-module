@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <Python.h>
 
-const char* VERSION = "1.5";
+const char* VERSION = "1.6";
 
 /** detecting whether base is starts with str
  */
@@ -694,6 +694,11 @@ const char *_getImageDistro()
 	return DISTRO;
 }
 
+const char *_getOEVersion()
+{
+	return OE_VER;  
+}
+
 static PyObject* getMachineBrand(PyObject* self)
 {
     return Py_BuildValue("s", _getMachineBrand());
@@ -712,6 +717,11 @@ static PyObject* getBoxType(PyObject* self)
 static PyObject* getOEM(PyObject* self)
 {
     return Py_BuildValue("s", _getOEM());
+}
+
+static PyObject* getOEVersion(PyObject* self)
+{
+    return Py_BuildValue("s", _getOEVersion());
 }
 
 static PyObject* getDriverDate(PyObject* self)
@@ -739,6 +749,7 @@ static PyMethodDef boxbrandingMethods[] = {
 		{ "getMachineName", getMachineName, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },
 		{ "getOEM", getOEM, METH_NOARGS },
+		{ "getOEVersion", getOEVersion, METH_NOARGS },
 		{ "getDriverDate", getDriverDate, METH_NOARGS },
 		{ "getImageVersion", getImageVersion, METH_NOARGS },
 		{ "getImageBuild", getImageBuild, METH_NOARGS },

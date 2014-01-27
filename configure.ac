@@ -28,6 +28,12 @@ AC_ARG_WITH(boxtype,
 AC_SUBST(BOXTYPE)
 AC_DEFINE_UNQUOTED(BOXTYPE,"$BOXTYPE",[box type])
 
+AC_ARG_WITH(oever,
+	[  --with-oever=NAME oe name [[OE-A1,OE-A2,...]]],
+	[OEVER="$withval"],[OEVER="OE-Alliance 2.0"])
+AC_SUBST(OEVER)
+AC_DEFINE_UNQUOTED(OEVER,"$OEVER",[oe name])
+
 AC_ARG_WITH(distro,
 	[  --with-distro=NAME distro name [[openvix,openaaf,...]]],
 	[DISTRO="$withval"],[DISTRO="egami"])
