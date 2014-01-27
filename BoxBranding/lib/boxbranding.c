@@ -699,6 +699,16 @@ const char *_getOEVersion()
 	return OE_VER;  
 }
 
+const char *_getMachineBuild()
+{
+	return MACHINEBUILD;  
+}
+
+static PyObject* getMachineBuild(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineBuild());
+}
+
 static PyObject* getMachineBrand(PyObject* self)
 {
     return Py_BuildValue("s", _getMachineBrand());
@@ -745,6 +755,7 @@ static PyObject* getImageDistro(PyObject* self)
 }
 
 static PyMethodDef boxbrandingMethods[] = {
+		{ "getMachineBuild", getMachineBuild, METH_NOARGS },  
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },

@@ -40,6 +40,12 @@ AC_ARG_WITH(distro,
 AC_SUBST(DISTRO)
 AC_DEFINE_UNQUOTED(DISTRO,"$DISTRO",[distro name])
 
+AC_ARG_WITH(machinebuild,
+	[  --with-machinebuild=NAME machinebuild name [[mbtwin,xpeedlx3,...]]],
+	[MACHINEBUILD="$withval"],[MACHINEBUILD="mbtwin"])
+AC_SUBST(MACHINEBUILD)
+AC_DEFINE_UNQUOTED(MACHINEBUILD,"$MACHINEBUILD",[machine build])
+
 AC_ARG_WITH(machinebrand,
 	[  --with-machinebrand=NAME brand name [[Vu,Xtrend,...]]],
 	[MACHINE_BRAND="$withval"],[MACHINE_BRAND="Vu+"])
