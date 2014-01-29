@@ -15,29 +15,30 @@ class RcModel:
 	RCTYPE_ET4X00 = 9
 	RCTYPE_ET6X00 = 10
 	RCTYPE_ET6500 = 11
-	RCTYPE_ET9X00 = 12
-	RCTYPE_ET9500 = 13
-	RCTYPE_EVO = 14
-	RCTYPE_GB = 15
-	RCTYPE_INI0 = 16
-	RCTYPE_INI1 = 17
-	RCTYPE_INI2 = 18
-	RCTYPE_INI3 = 19
-	RCTYPE_INI4 = 20
-	RCTYPE_IQON = 21
-	RCTYPE_IXUSSONE = 22
-	RCTYPE_IXUSSZERO = 23
-	RCTYPE_MEDIABOX = 24
-	RCTYPE_ODINM6 = 25
-	RCTYPE_ODINM7 = 26
-	RCTYPE_ODINM9 = 27
-	RCTYPE_OPTIMUSS = 28
-	RCTYPE_SOGNO = 29
-	RCTYPE_TM = 30
-	RCTYPE_VU = 31
-	RCTYPE_VU2 = 32
-	RCTYPE_VU3 = 33
-	RCTYPE_XP1000 = 34
+	RCTYPE_ET8000 = 12
+	RCTYPE_ET9X00 = 13
+	RCTYPE_ET9500 = 14
+	RCTYPE_EVO = 15
+	RCTYPE_GB = 16
+	RCTYPE_INI0 = 17
+	RCTYPE_INI1 = 18
+	RCTYPE_INI2 = 19
+	RCTYPE_INI3 = 20
+	RCTYPE_INI4 = 21
+	RCTYPE_IQON = 22
+	RCTYPE_IXUSSONE = 23
+	RCTYPE_IXUSSZERO = 24
+	RCTYPE_MEDIABOX = 25
+	RCTYPE_ODINM6 = 26
+	RCTYPE_ODINM7 = 27
+	RCTYPE_ODINM9 = 28
+	RCTYPE_OPTIMUSS = 29
+	RCTYPE_SOGNO = 30
+	RCTYPE_TM = 31
+	RCTYPE_VU = 32
+	RCTYPE_VU2 = 33
+	RCTYPE_VU3 = 34
+	RCTYPE_XP1000 = 35
 
 
 	def __init__(self):
@@ -129,6 +130,10 @@ class RcModel:
 				self.currentRcType = self.RCTYPE_ET4X00
 			elif rc == '14':
 				self.currentRcType = self.RCTYPE_XP1000
+			elif model == 'et8000':
+				self.currentRcType = self.RCTYPE_ET8000
+			elif model == 'et10000':
+				self.currentRcType = self.RCTYPE_ET8000
 		elif os.path.exists('/proc/stb/info/azmodel'):
 			f = open("/proc/stb/info/model",'r')
 			model = f.readline().strip()
@@ -188,6 +193,8 @@ class RcModel:
 			remotefolder = 'et6x00'
 		elif self.getRcType() == self.RCTYPE_ET6500:
 			remotefolder = 'et6500'
+		elif self.getRcType() == self.RCTYPE_ET8000:
+			remotefolder = 'et8000'
 		elif self.getRcType() == self.RCTYPE_ET9X00:
 			remotefolder = 'et9x00'
 		elif self.getRcType() == self.RCTYPE_ET9500:
