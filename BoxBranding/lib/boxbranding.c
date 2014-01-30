@@ -759,6 +759,12 @@ const char *_getOEVersion()
 	return OE_VER;  
 }
 
+const char *_getMachineBuild()
+{
+	// this will return real MACHINEBUILD e.x MACHINE=mbtwin DISTRO=vix -> it will return mbtwin
+	return BOXTYPE;
+}
+
 const char *_getMachineProcModel() // return just value from proc entry
 {
 	FILE *boxtype_file;
@@ -892,6 +898,11 @@ static PyObject* getMachineName(PyObject* self)
     return Py_BuildValue("s", _getMachineName());
 }
 
+static PyObject* getMachineBuild(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineBuild());
+}
+
 static PyObject* getBoxType(PyObject* self)
 {
     return Py_BuildValue("s", _getBoxType());
@@ -928,6 +939,7 @@ static PyObject* getImageDistro(PyObject* self)
 }
 
 static PyMethodDef boxbrandingMethods[] = {
+		{ "getMachineBuild", getMachineBuild, METH_NOARGS },
 		{ "getMachineProcModel", getMachineProcModel, METH_NOARGS },  
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
