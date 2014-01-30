@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <Python.h>
 
-const char* VERSION = "1.6";
+const char* VERSION = "1.7";
 
 /** detecting whether base is starts with str
  */
@@ -23,63 +23,75 @@ bool endsWith (char* base, char* str)
 
 const char *_getBoxType()
 {
-	FILE *boxtype_file;
-	char boxtype_name[20];
-	char *real_boxtype_name = NULL;
-	char *vu_boxtype_name = NULL;
-	int len;
+	// this ugly code will be removed after we will switch tottaly to OE-A 2.0
 	
-	if((boxtype_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
-	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file);
+	if(strcmp(OE_VER, "OE-Alliance 2.0") == 0)
+	{ 
+		FILE *buffer_file;
 		
-		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-		if (real_boxtype_name)
-			strcpy(real_boxtype_name, boxtype_name);
-		len = strlen(real_boxtype_name);
-		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-			real_boxtype_name[len - 1] = '\0';                                
-		return real_boxtype_name;
-	}
-	else if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
-	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file);
+		char buffer[20];  
 		
-		if(strcmp(boxtype_name, "gigablue\n") == 0)
+		if(strcmp(BOXTYPE, "xpeedlx") == 0)
 		{
-			if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
+			if (buffer_file = fopen("/proc/stb/fp/version", "r"))
 			{
-				fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-				fclose(boxtype_file); 
-				
-				if((boxtype_file = fopen("/proc/stb/info/gbmodel", "r")) != NULL)
+				fgets(buffer, sizeof(buffer), buffer_file);
+				fclose(buffer_file);
+				if(startsWith(buffer, "2"))
 				{
-					fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-					fclose(boxtype_file);  
-					
+					return "xpeedlx2";
+				}
+				else
+				{
+					return "xpeedlx1";
 				}
 			}
+			else // if something wrong with fp/version return just machinebuild name
+			{
+				return BOXTYPE;  
+			}
 		}
-		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-		if (real_boxtype_name)
-			strcpy(real_boxtype_name, boxtype_name);
-		len = strlen(real_boxtype_name);
-		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-			real_boxtype_name[len - 1] = '\0';                                
-		return real_boxtype_name;
+		else if(strcmp(BOXTYPE, "ventonhdx") == 0)
+		{
+			if (buffer_file = fopen("/proc/stb/info/boxtype", "r"))
+			{
+				fgets(buffer, sizeof(buffer), buffer_file);
+				fclose(buffer_file);
+				if(strcmp(buffer, "ini-3000\n") == 0) 
+				{
+					return "uniboxhd1";
+				}
+				else if(strcmp(buffer, "ini-5000\n") == 0) 
+				{
+					return "uniboxhd2";
+				}
+				else if(strcmp(buffer, "ini-7000\n") == 0) 
+				{
+					return "uniboxhd3";
+				}
+				else if(strcmp(buffer, "ini-7012\n") == 0) 
+				{
+					return "uniboxhd3";
+				}
+			}  
+		}
+		else
+		{
+			return BOXTYPE;  
+		}
 	}
-	/** AzBOX DETECTION */
-	else if((boxtype_file = fopen("/proc/stb/info/azmodel", "r")) != NULL)
+	else
 	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file); 
+		FILE *boxtype_file;
+		char boxtype_name[20];
+		char *real_boxtype_name = NULL;
+		char *vu_boxtype_name = NULL;
+		int len;
 		
-		if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
+		if((boxtype_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
 		{
 			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file); 
+			fclose(boxtype_file);
 			
 			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
 			if (real_boxtype_name)
@@ -89,41 +101,26 @@ const char *_getBoxType()
 				real_boxtype_name[len - 1] = '\0';                                
 			return real_boxtype_name;
 		}
-		else
-		{
-			return MACHINE_NAME;
-		}
-	}
-	/** VU+ DETECTION */
-	else if((boxtype_file = fopen("/proc/stb/info/vumodel", "r")) != NULL)
-	{
-		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file);
-		
-		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-		if (real_boxtype_name)
-			strcpy(real_boxtype_name, boxtype_name);
-		len = strlen(real_boxtype_name);
-		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-			real_boxtype_name[len - 1] = '\0';    
-		
-		sprintf(real_boxtype_name, "vu%s", boxtype_name);
-		
-		vu_boxtype_name = malloc(strlen(real_boxtype_name) + 1);
-		if (vu_boxtype_name)
-			strcpy(vu_boxtype_name, real_boxtype_name);
-		len = strlen(vu_boxtype_name);
-		if (len > 0 && vu_boxtype_name[len - 1 ] == '\n')
-			vu_boxtype_name[len - 1] = '\0';
-		return vu_boxtype_name;
-	}
-	/** DMM DETECTION */
-	else
-	{
-		if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
+		else if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
 		{
 			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file); 
+			fclose(boxtype_file);
+			
+			if(strcmp(boxtype_name, "gigablue\n") == 0)
+			{
+				if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
+				{
+					fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+					fclose(boxtype_file); 
+					
+					if((boxtype_file = fopen("/proc/stb/info/gbmodel", "r")) != NULL)
+					{
+						fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+						fclose(boxtype_file);  
+						
+					}
+				}
+			}
 			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
 			if (real_boxtype_name)
 				strcpy(real_boxtype_name, boxtype_name);
@@ -132,11 +129,74 @@ const char *_getBoxType()
 				real_boxtype_name[len - 1] = '\0';                                
 			return real_boxtype_name;
 		}
+		/** AzBOX DETECTION */
+		else if((boxtype_file = fopen("/proc/stb/info/azmodel", "r")) != NULL)
+		{
+			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+			fclose(boxtype_file); 
+			
+			if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
+			{
+				fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+				fclose(boxtype_file); 
+				
+				real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+				if (real_boxtype_name)
+					strcpy(real_boxtype_name, boxtype_name);
+				len = strlen(real_boxtype_name);
+				if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+					real_boxtype_name[len - 1] = '\0';                                
+				return real_boxtype_name;
+			}
+			else
+			{
+				return MACHINE_NAME;
+			}
+		}
+		/** VU+ DETECTION */
+		else if((boxtype_file = fopen("/proc/stb/info/vumodel", "r")) != NULL)
+		{
+			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+			fclose(boxtype_file);
+			
+			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+			if (real_boxtype_name)
+				strcpy(real_boxtype_name, boxtype_name);
+			len = strlen(real_boxtype_name);
+			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+				real_boxtype_name[len - 1] = '\0';    
+			
+			sprintf(real_boxtype_name, "vu%s", boxtype_name);
+			
+			vu_boxtype_name = malloc(strlen(real_boxtype_name) + 1);
+			if (vu_boxtype_name)
+				strcpy(vu_boxtype_name, real_boxtype_name);
+			len = strlen(vu_boxtype_name);
+			if (len > 0 && vu_boxtype_name[len - 1 ] == '\n')
+				vu_boxtype_name[len - 1] = '\0';
+			return vu_boxtype_name;
+		}
+		/** DMM DETECTION */
 		else
 		{
-			return MACHINE_NAME;
-		}
-	}  
+			if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
+			{
+				fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+				fclose(boxtype_file); 
+				real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+				if (real_boxtype_name)
+					strcpy(real_boxtype_name, boxtype_name);
+				len = strlen(real_boxtype_name);
+				if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+					real_boxtype_name[len - 1] = '\0';                                
+				return real_boxtype_name;
+			}
+			else
+			{
+				return MACHINE_NAME;
+			}
+		}    
+	}
 }
 
 /** detecting real Box Name for OSD Translations
@@ -699,14 +759,127 @@ const char *_getOEVersion()
 	return OE_VER;  
 }
 
-const char *_getMachineBuild()
+const char *_getMachineProcModel() // return just value from proc entry
 {
-	return MACHINEBUILD;  
+	FILE *boxtype_file;
+	char boxtype_name[20];
+	char *real_boxtype_name = NULL;
+	char *vu_boxtype_name = NULL;
+	int len;
+	
+	if((boxtype_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
+	{
+		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+		fclose(boxtype_file);
+		
+		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+		if (real_boxtype_name)
+			strcpy(real_boxtype_name, boxtype_name);
+		len = strlen(real_boxtype_name);
+		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+			real_boxtype_name[len - 1] = '\0';                                
+		return real_boxtype_name;
+	}
+	else if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
+	{
+		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+		fclose(boxtype_file);
+		
+		if(strcmp(boxtype_name, "gigablue\n") == 0)
+		{
+			if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
+			{
+				fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+				fclose(boxtype_file); 
+				
+				if((boxtype_file = fopen("/proc/stb/info/gbmodel", "r")) != NULL)
+				{
+					fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+					fclose(boxtype_file);  
+					
+				}
+			}
+		}
+		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+		if (real_boxtype_name)
+			strcpy(real_boxtype_name, boxtype_name);
+		len = strlen(real_boxtype_name);
+		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+			real_boxtype_name[len - 1] = '\0';                                
+		return real_boxtype_name;
+	}
+	/** AzBOX DETECTION */
+	else if((boxtype_file = fopen("/proc/stb/info/azmodel", "r")) != NULL)
+	{
+		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+		fclose(boxtype_file); 
+		
+		if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
+		{
+			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+			fclose(boxtype_file); 
+			
+			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+			if (real_boxtype_name)
+				strcpy(real_boxtype_name, boxtype_name);
+			len = strlen(real_boxtype_name);
+			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+				real_boxtype_name[len - 1] = '\0';                                
+			return real_boxtype_name;
+		}
+		else
+		{
+			return MACHINE_NAME;
+		}
+	}
+	/** VU+ DETECTION */
+	else if((boxtype_file = fopen("/proc/stb/info/vumodel", "r")) != NULL)
+	{
+		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+		fclose(boxtype_file);
+		
+		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+		if (real_boxtype_name)
+			strcpy(real_boxtype_name, boxtype_name);
+		len = strlen(real_boxtype_name);
+		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+			real_boxtype_name[len - 1] = '\0';    
+		
+		sprintf(real_boxtype_name, "vu%s", boxtype_name);
+		
+		vu_boxtype_name = malloc(strlen(real_boxtype_name) + 1);
+		if (vu_boxtype_name)
+			strcpy(vu_boxtype_name, real_boxtype_name);
+		len = strlen(vu_boxtype_name);
+		if (len > 0 && vu_boxtype_name[len - 1 ] == '\n')
+			vu_boxtype_name[len - 1] = '\0';
+		return vu_boxtype_name;
+	}
+	/** DMM DETECTION */
+	else
+	{
+		if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
+		{
+			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
+			fclose(boxtype_file); 
+			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+			if (real_boxtype_name)
+				strcpy(real_boxtype_name, boxtype_name);
+			len = strlen(real_boxtype_name);
+			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
+				real_boxtype_name[len - 1] = '\0';                                
+			return real_boxtype_name;
+		}
+		else
+		{
+			return MACHINE_NAME;
+		}
+	}  
 }
 
-static PyObject* getMachineBuild(PyObject* self)
+static PyObject* getMachineProcModel(PyObject* self)
 {
-    return Py_BuildValue("s", _getMachineBuild());
+    return Py_BuildValue("s", _getMachineProcModel());
 }
 
 static PyObject* getMachineBrand(PyObject* self)
@@ -755,7 +928,7 @@ static PyObject* getImageDistro(PyObject* self)
 }
 
 static PyMethodDef boxbrandingMethods[] = {
-		{ "getMachineBuild", getMachineBuild, METH_NOARGS },  
+		{ "getMachineProcModel", getMachineProcModel, METH_NOARGS },  
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },

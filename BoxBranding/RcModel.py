@@ -67,23 +67,21 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_TM
 		elif getMachineBrand() == 'Iqon':
 			self.currentRcType = self.RCTYPE_IQON
-		elif getMachineBrand() == 'UNiBOX':
-			if getBoxType() == 'ini-3000':
-				fp_version = str(getFPVersion())
-				if fp_version.startswith('1'):
-					self.currentRcType = self.RCTYPE_INI0
-				else:
-					self.currentRcType = self.RCTYPE_INI2
-			elif getBoxType() in ('ini-5000', 'ini-7000', 'ini-7012', 'ini-9000'):
-				self.currentRcType = self.RCTYPE_INI1  
-		elif getMachineBrand() == 'Sezam': 
-			if getBoxType() in ('ini-1000ru', 'ini-5000ru'):
-				self.currentRcType = self.RCTYPE_INI2
-			elif getBoxType() in ('ini-9000ru'):
-				self.currentRcType = self.RCTYPE_INI4
 		elif getMachineBrand() == 'Miraclebox': 
 			self.currentRcType = self.RCTYPE_INI3
 		elif getMachineBrand() == 'GI':
+			self.currentRcType = self.RCTYPE_INI4
+		elif getBoxType() == 'uniboxhd1':
+			fp_version = str(getFPVersion())
+			if fp_version.startswith('1'):
+				self.currentRcType = self.RCTYPE_INI0
+			else:
+				self.currentRcType = self.RCTYPE_INI2
+		elif getBoxType() in ('uniboxhd2', 'uniboxhd3'):
+			self.currentRcType = self.RCTYPE_INI1  
+		elif getBoxType() in ('sezam1000hd', 'sezam5000hd'):
+			self.currentRcType = self.RCTYPE_INI2
+		elif getBoxType() in ('marvel'):
 			self.currentRcType = self.RCTYPE_INI4
 		elif getBoxType() in ('optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
 			self.currentRcType = self.RCTYPE_OPTIMUSS

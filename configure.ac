@@ -32,19 +32,13 @@ AC_ARG_WITH(oever,
 	[  --with-oever=NAME oe name [[OE-A1,OE-A2,...]]],
 	[OE_VER="$withval"],[OE_VER="OE-Alliance 2.0"])
 AC_SUBST(OE_VER)
-AC_DEFINE_UNQUOTED(OE_VER,"$OEVER",[oe name])
+AC_DEFINE_UNQUOTED(OE_VER,"$OE_VER",[oe name])
 
 AC_ARG_WITH(distro,
 	[  --with-distro=NAME distro name [[openvix,openaaf,...]]],
 	[DISTRO="$withval"],[DISTRO="egami"])
 AC_SUBST(DISTRO)
 AC_DEFINE_UNQUOTED(DISTRO,"$DISTRO",[distro name])
-
-AC_ARG_WITH(machinebuild,
-	[  --with-machinebuild=NAME machinebuild name [[mbtwin,xpeedlx3,...]]],
-	[MACHINEBUILD="$withval"],[MACHINEBUILD="mbtwin"])
-AC_SUBST(MACHINEBUILD)
-AC_DEFINE_UNQUOTED(MACHINEBUILD,"$MACHINEBUILD",[machine build])
 
 AC_ARG_WITH(machinebrand,
 	[  --with-machinebrand=NAME brand name [[Vu,Xtrend,...]]],
