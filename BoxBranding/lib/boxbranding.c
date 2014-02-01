@@ -151,6 +151,7 @@ const char *_getBoxType()
 		else if(fileExist("/proc/stb/info/vumodel"))
 		{
 			buffer = ReadProcEntry("/proc/stb/info/vumodel");
+			vu_boxtype_name = malloc(strlen(buffer) + 1);
 			sprintf(vu_boxtype_name, "vu%s", buffer);
 			return vu_boxtype_name;
 		}
