@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <sys/stat.h>
 #include <Python.h>
 
-const char* VERSION = "1.7";
+const char* VERSION = "1.8";
 
 /** detecting whether base is starts with str
  */
@@ -21,59 +22,91 @@ bool endsWith (char* base, char* str)
     return (blen >= slen) && (0 == strcmp(base + blen - slen, str));
 }
 
+/**
+* Check if a file exist using stat() function
+* return 1 if the file exist otherwise return 0
+*/
+int fileExist(const char* filename){
+	struct stat buffer;
+	int exist = stat(filename,&buffer);
+	if(exist == 0)
+	    return 1;
+	else // -1
+	    return 0;
+}
+
+/** reading file and return value from it
+ * */
+char* ReadProcEntry(char *filename)
+{
+	FILE *boxtype_file = fopen(filename,"r");
+	char boxtype_name[20];
+	char *real_boxtype_name = NULL;
+	char c;
+	int i = 0;
+	
+	if(boxtype_file)
+	{
+		while ((c = fgetc(boxtype_file)) != EOF && i < sizeof(boxtype_name) - 2)
+		{
+			if (c == '\n')
+			{
+				i--;
+				break;
+			}
+			boxtype_name[i] = c;
+			i++;
+		}
+		boxtype_name[i+1] = '\0';
+		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+		if (real_boxtype_name)
+			strcpy(real_boxtype_name, boxtype_name);
+		
+		fclose(boxtype_file);
+	}
+	else
+		puts("[BRANDING] Can not open this proc entry!\n");
+	
+	return real_boxtype_name;
+}
+
 const char *_getBoxType()
 {
 	// this ugly code will be removed after we will switch tottaly to OE-A 2.0
-	
+	char *buffer = NULL;
 	if(strcmp(OE_VER, "OE-Alliance 2.0") == 0)
-	{ 
-		FILE *buffer_file;
-		
-		char buffer[20];  
-		
+	{  
 		if(strcmp(BOXTYPE, "xpeedlx") == 0)
 		{
-			if (buffer_file = fopen("/proc/stb/fp/version", "r"))
+			buffer = ReadProcEntry("/proc/stb/fp/version");
+			if(startsWith(buffer, "2"))
 			{
-				fgets(buffer, sizeof(buffer), buffer_file);
-				fclose(buffer_file);
-				if(startsWith(buffer, "2"))
-				{
-					return "xpeedlx2";
-				}
-				else
-				{
-					return "xpeedlx1";
-				}
+				return "xpeedlx2";
 			}
-			else // if something wrong with fp/version return just machinebuild name
+			else
 			{
-				return BOXTYPE;  
+				return "xpeedlx1";
 			}
 		}
 		else if(strcmp(BOXTYPE, "ventonhdx") == 0)
 		{
-			if (buffer_file = fopen("/proc/stb/info/boxtype", "r"))
+			buffer = ReadProcEntry("/proc/stb/info/boxtype");
+			if(strcmp(buffer, "ini-3000") == 0) 
 			{
-				fgets(buffer, sizeof(buffer), buffer_file);
-				fclose(buffer_file);
-				if(strcmp(buffer, "ini-3000\n") == 0) 
-				{
-					return "uniboxhd1";
-				}
-				else if(strcmp(buffer, "ini-5000\n") == 0) 
-				{
-					return "uniboxhd2";
-				}
-				else if(strcmp(buffer, "ini-7000\n") == 0) 
-				{
-					return "uniboxhd3";
-				}
-				else if(strcmp(buffer, "ini-7012\n") == 0) 
-				{
-					return "uniboxhd3";
-				}
-			}  
+				return "uniboxhd1";
+			}
+			else if(strcmp(buffer, "ini-5000") == 0) 
+			{
+				return "uniboxhd2";
+			}
+			else if(strcmp(buffer, "ini-7000") == 0) 
+			{
+				return "uniboxhd3";
+			}
+			else if(strcmp(buffer, "ini-7012") == 0) 
+			{
+				return "uniboxhd3";
+			}
 		}
 		else
 		{
@@ -88,108 +121,46 @@ const char *_getBoxType()
 		char *vu_boxtype_name = NULL;
 		int len;
 		
-		if((boxtype_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
+		if(fileExist("/proc/stb/info/hwmodel"))
 		{
-			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file);
-			
-			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-			if (real_boxtype_name)
-				strcpy(real_boxtype_name, boxtype_name);
-			len = strlen(real_boxtype_name);
-			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-				real_boxtype_name[len - 1] = '\0';                                
-			return real_boxtype_name;
+			buffer = ReadProcEntry("/proc/stb/info/hwmodel");                               
+			return buffer;
 		}
-		else if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
+		else if(fileExist("/proc/stb/info/boxtype"))
 		{
-			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file);
-			
 			if(strcmp(boxtype_name, "gigablue\n") == 0)
 			{
-				if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
+				if(fileExist("/proc/stb/info/boxtype"))
 				{
-					fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-					fclose(boxtype_file); 
-					
-					if((boxtype_file = fopen("/proc/stb/info/gbmodel", "r")) != NULL)
-					{
-						fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-						fclose(boxtype_file);  
-						
-					}
+					buffer = ReadProcEntry("/proc/stb/info/gbmodel");
 				}
-			}
-			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-			if (real_boxtype_name)
-				strcpy(real_boxtype_name, boxtype_name);
-			len = strlen(real_boxtype_name);
-			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-				real_boxtype_name[len - 1] = '\0';                                
-			return real_boxtype_name;
-		}
-		/** AzBOX DETECTION */
-		else if((boxtype_file = fopen("/proc/stb/info/azmodel", "r")) != NULL)
-		{
-			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file); 
-			
-			if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
-			{
-				fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-				fclose(boxtype_file); 
-				
-				real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-				if (real_boxtype_name)
-					strcpy(real_boxtype_name, boxtype_name);
-				len = strlen(real_boxtype_name);
-				if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-					real_boxtype_name[len - 1] = '\0';                                
-				return real_boxtype_name;
 			}
 			else
 			{
-				return MACHINE_NAME;
+				buffer = ReadProcEntry("/proc/stb/info/boxtype");
 			}
+			return buffer;
+		}
+		/** AzBOX DETECTION */
+		else if(fileExist("/proc/stb/info/azmodel"))
+		{
+			buffer = ReadProcEntry("/proc/stb/info/model");
+			return buffer;
 		}
 		/** VU+ DETECTION */
-		else if((boxtype_file = fopen("/proc/stb/info/vumodel", "r")) != NULL)
+		else if(fileExist("/proc/stb/info/vumodel"))
 		{
-			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file);
-			
-			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-			if (real_boxtype_name)
-				strcpy(real_boxtype_name, boxtype_name);
-			len = strlen(real_boxtype_name);
-			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-				real_boxtype_name[len - 1] = '\0';    
-			
-			sprintf(real_boxtype_name, "vu%s", boxtype_name);
-			
-			vu_boxtype_name = malloc(strlen(real_boxtype_name) + 1);
-			if (vu_boxtype_name)
-				strcpy(vu_boxtype_name, real_boxtype_name);
-			len = strlen(vu_boxtype_name);
-			if (len > 0 && vu_boxtype_name[len - 1 ] == '\n')
-				vu_boxtype_name[len - 1] = '\0';
+			buffer = ReadProcEntry("/proc/stb/info/vumodel");
+			sprintf(vu_boxtype_name, "vu%s", buffer);
 			return vu_boxtype_name;
 		}
 		/** DMM DETECTION */
 		else
 		{
-			if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
+			if(fileExist("/proc/stb/info/model"))
 			{
-				fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-				fclose(boxtype_file); 
-				real_boxtype_name = malloc(strlen(boxtype_name) + 1);
-				if (real_boxtype_name)
-					strcpy(real_boxtype_name, boxtype_name);
-				len = strlen(real_boxtype_name);
-				if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-					real_boxtype_name[len - 1] = '\0';                                
-				return real_boxtype_name;
+				buffer = ReadProcEntry("/proc/stb/info/model");
+				return buffer;
 			}
 			else
 			{
@@ -524,7 +495,7 @@ const char *_getMachineName()
 		{
 			return "Solo";
 		}
-		else if(strcmp(boxtype_name, "duo\n") == 0) // should it be bm750 ???
+		else if(strcmp(boxtype_name, "duo\n") == 0)
 		{
 			return "Duo";
 		}
