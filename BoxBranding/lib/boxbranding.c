@@ -4,7 +4,7 @@
 #include <sys/stat.h>
 #include <Python.h>
 
-const char* VERSION = "2.0";
+const char* VERSION = "2.1";
 
 /** detecting whether base is starts with str
  */
@@ -122,20 +122,16 @@ const char *_getBoxType()
 			boxtype_name = ReadProcEntry("/proc/stb/info/hwmodel");                               
 			return boxtype_name;
 		}
+		/** Gigablue DETECTION */
+		else if(fileExist("/proc/stb/info/gbmodel"))
+		{
+			boxtype_name = ReadProcEntry("/proc/stb/info/gbmodel");
+			return boxtype_name;
+		}
+		/** Xtrend and other DETECTION */
 		else if(fileExist("/proc/stb/info/boxtype"))
 		{
 			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-			if(strcmp(boxtype_name, "gigablue") == 0)
-			{
-				if(fileExist("/proc/stb/info/boxtype"))
-				{
-					boxtype_name = ReadProcEntry("/proc/stb/info/gbmodel");
-				}
-			}
-			else
-			{
-				boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-			}
 			return boxtype_name;
 		}
 		/** AzBOX DETECTION */
@@ -153,18 +149,15 @@ const char *_getBoxType()
 			return vu_boxtype_name;
 		}
 		/** DMM DETECTION */
+		else if(fileExist("/proc/stb/info/model"))
+		{
+			boxtype_name = ReadProcEntry("/proc/stb/info/model");
+			return boxtype_name;
+		}
 		else
 		{
-			if(fileExist("/proc/stb/info/model"))
-			{
-				boxtype_name = ReadProcEntry("/proc/stb/info/model");
-				return boxtype_name;
-			}
-			else
-			{
-				return MACHINE_NAME;
-			}
-		}    
+			return MACHINE_NAME;
+		}
 	}
 }
 
@@ -229,57 +222,53 @@ const char *_getMachineName()
 		{
 			return "8800-HD";
 		}
+		else
+		{
+			return boxtype_name; /** if happens it is diffrent*/
+		}		
+	}
+	/** GIGABLUE DETECTION */
+	else if(fileExist("/proc/stb/info/gbmodel"))
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/gbmodel");
+		if(strcmp(boxtype_name, "gb800solo") == 0) 
+		{
+			return "800 Solo";
+		}
+		else if(strcmp(boxtype_name, "gb800se") == 0) 
+		{
+			return "800 SE";
+		}
+		else if(strcmp(boxtype_name, "gb800ue") == 0) 
+		{
+			return "800 UE";
+		}
+		else if(strcmp(boxtype_name, "gbquad") == 0) 
+		{
+			return "Quad";
+		}
+		else if(strcmp(boxtype_name, "gb800seplus") == 0) 
+		{
+			return "800 SE Plus";
+		}
+		else if(strcmp(boxtype_name, "gb800ueplus") == 0) 
+		{
+			return "800 UE Plus";
+		}
+		else if(strcmp(boxtype_name, "gbquadplus") == 0) 
+		{
+			return "Quad Plus";
+		}
+		else
+		{
+			return boxtype_name; /** if happens it is diffrent*/
+		}
 	}
 	else if(fileExist("/proc/stb/info/boxtype"))
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-		
-		/** GIGABLUE DETECTION */
-		if(strcmp(boxtype_name, "gigablue") == 0)
-		{
-				if(fileExist("/proc/stb/info/gbmodel"))
-				{
-					boxtype_name = ReadProcEntry("/proc/stb/info/gbmodel");
-					if(strcmp(boxtype_name, "gb800solo") == 0) 
-					{
-						return "800 Solo";
-					}
-					else if(strcmp(boxtype_name, "gb800se") == 0) 
-					{
-						return "800 Se";
-					}
-					else if(strcmp(boxtype_name, "gb800ue") == 0) 
-					{
-						return "800 Ue";
-					}
-					else if(strcmp(boxtype_name, "gbquad") == 0) 
-					{
-						return "Quad";
-					}
-					else if(strcmp(boxtype_name, "gb800seplus") == 0) 
-					{
-						return "800 Se Plus";
-					}
-					else if(strcmp(boxtype_name, "gb800ueplus") == 0) 
-					{
-						return "800 Ue Plus";
-					}
-					else if(strcmp(boxtype_name, "gbquadplus") == 0) 
-					{
-						return "Quad Plus";
-					}
-					else
-					{
-						return boxtype_name; /** if happens it is diffrent*/
-					}
-				}
-				else
-				{
-					return "gb800solo"; /**no idea why they not put proc entry for this model, thats why it is always 800 Solo*/
-				}
-		}
 		/** INI DETECTION */
-		else if(strcmp(boxtype_name, "ini-1000") == 0) 
+		if(strcmp(boxtype_name, "ini-1000") == 0) 
 		{
 			return "HD-e";
 		}
@@ -368,11 +357,11 @@ const char *_getMachineName()
 			return MACHINE_NAME;
 		}
 		/** IXUSS DETECTION */
-		else if(strcmp(boxtype_name, "ixussone") == 0) 
+		else if(strcmp(boxtype_name, "Ixuss One") == 0) 
 		{
 			return "One";
 		}
-		else if(strcmp(boxtype_name, "ixusszero") == 0) 
+		else if(strcmp(boxtype_name, "Ixuss Zero") == 0) 
 		{
 			return "Zero";
 		}
@@ -433,7 +422,6 @@ const char *_getMachineName()
 		if(fileExist("/proc/stb/info/model"))
 		{
 			boxtype_name = ReadProcEntry("/proc/stb/info/model");
-			
 			if(strcmp(boxtype_name, "me") == 0) 
 			{
 				return "Me";
@@ -498,17 +486,14 @@ const char *_getMachineName()
 		}
 	}
 	/** DMM DETECTION */
+	else if (fileExist("/proc/stb/info/model"))
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/model"); 
+		return boxtype_name;
+	}
 	else
 	{
-		if(fileExist("/proc/stb/info/model"))
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/model"); 
-			return boxtype_name;
-		}
-		else
-		{
-			return MACHINE_NAME;
-		}
+		return MACHINE_NAME;
 	}
 }
 
@@ -522,7 +507,6 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 	if(fileExist("/proc/stb/info/boxtype"))
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype"); 
-
 		if ((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "de")))
 		{
 			return "GI";
@@ -541,7 +525,7 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 		}
 		else if((strcmp(boxtype_name, "xp1000") == 0))
 		{
-			return "Max-Digital";
+			return MACHINE_BRAND; // OEM: MK-Digital, MAX-Digital
 		}		
 		else if((strcmp(boxtype_name, "xp1000s") == 0))
 		{
@@ -565,7 +549,7 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 		}
 		else if(startsWith(boxtype_name, "ebox"))
 		{
-			return MACHINE_BRAND; // OEM: Galaxy Innovations
+			return MACHINE_BRAND; // OEM: Mixos, Galaxy Innovations
 		}		
 		else if(startsWith(boxtype_name, "ixuss"))
 		{

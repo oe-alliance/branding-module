@@ -155,9 +155,9 @@ class RcModel:
 			elif model == 'odinm7':
 				self.currentRcType = self.RCTYPE_ODINM7
 			elif model.startswith('Ixuss'):
-				if getBoxType() == 'ixussone':
+				if getBoxType() == 'Ixuss One':
 					self.currentRcType = self.RCTYPE_IXUSSONE
-				elif getBoxType() == 'ixusszero':
+				elif getBoxType() == 'Ixuss Zero':
 					self.currentRcType = self.RCTYPE_IXUSSZERO
 
 	def getRcType(self):
