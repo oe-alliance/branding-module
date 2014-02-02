@@ -4,7 +4,7 @@
 #include <sys/stat.h>
 #include <Python.h>
 
-const char* VERSION = "1.9";
+const char* VERSION = "2.0";
 
 /** detecting whether base is starts with str
  */
@@ -124,7 +124,8 @@ const char *_getBoxType()
 		}
 		else if(fileExist("/proc/stb/info/boxtype"))
 		{
-			if(strcmp(boxtype_name, "gigablue\n") == 0)
+			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+			if(strcmp(boxtype_name, "gigablue") == 0)
 			{
 				if(fileExist("/proc/stb/info/boxtype"))
 				{
