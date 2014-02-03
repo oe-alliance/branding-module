@@ -101,6 +101,10 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_DMM1
 		elif getBoxType() in ('starsatlx', 'axodin', 'odinm6'):
 			self.currentRcType = self.RCTYPE_ODINM6
+		elif getMachineName() == 'Ixuss One':
+			self.currentRcType = self.RCTYPE_IXUSSONE
+		elif getMachineName() == 'Ixuss Zero':
+			self.currentRcType = self.RCTYPE_IXUSSZERO
 		elif getMachineBrand() in ('Xtrend', 'Max-Digital', 'MK-Digital', 'Octagon'):
 			model = self.readFile('/proc/stb/info/boxtype')
 			rc = self.readFile('/proc/stb/ir/rc/type')
@@ -154,12 +158,7 @@ class RcModel:
 				self.currentRcType = self.RCTYPE_ODINM9
 			elif model == 'odinm7':
 				self.currentRcType = self.RCTYPE_ODINM7
-			elif model.startswith('Ixuss'):
-				if getBoxType() == 'Ixuss One':
-					self.currentRcType = self.RCTYPE_IXUSSONE
-				elif getBoxType() == 'Ixuss Zero':
-					self.currentRcType = self.RCTYPE_IXUSSZERO
-
+				
 	def getRcType(self):
 		self.readRcTypeFromProc()
 		return self.currentRcType
