@@ -132,6 +132,14 @@ const char *_getBoxType()
 		else if(fileExist("/proc/stb/info/boxtype"))
 		{
 			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+			if(strcmp(boxtype_name, "Ixuss One") == 0) 
+			{
+				return "Ixuss One";
+			}
+			else if(strcmp(boxtype_name, "Ixuss Zero") == 0) 
+			{
+				return "Ixuss Zero";
+			}
 			return boxtype_name;
 		}
 		/** AzBOX DETECTION */

@@ -101,9 +101,9 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_DMM1
 		elif getBoxType() in ('starsatlx', 'axodin', 'odinm6'):
 			self.currentRcType = self.RCTYPE_ODINM6
-		elif getMachineName() == 'Ixuss One':
+		elif getBoxType() in ('ixussone', 'Ixuss One'): # It will be removed, currently it is still need for OE-A 1.0
 			self.currentRcType = self.RCTYPE_IXUSSONE
-		elif getMachineName() == 'Ixuss Zero':
+		elif getBoxType() in ('ixusszero', 'Ixuss Zero'):
 			self.currentRcType = self.RCTYPE_IXUSSZERO
 		elif getMachineBrand() in ('Xtrend', 'Max-Digital', 'MK-Digital', 'Octagon'):
 			model = self.readFile('/proc/stb/info/boxtype')
