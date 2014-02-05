@@ -602,7 +602,7 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 	return MACHINE_BRAND;
 }
 
-const char *_getOEM()
+const char *_getBrandOEM()
 {
 	return MACHINE_OEM;  
 }
@@ -844,9 +844,9 @@ static PyObject* getBoxType(PyObject* self)
     return Py_BuildValue("s", _getBoxType());
 }
 
-static PyObject* getOEM(PyObject* self)
+static PyObject* getBrandOEM(PyObject* self)
 {
-    return Py_BuildValue("s", _getOEM());
+    return Py_BuildValue("s", _getBrandOEM());
 }
 
 static PyObject* getOEVersion(PyObject* self)
@@ -880,7 +880,7 @@ static PyMethodDef boxbrandingMethods[] = {
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },
-		{ "getOEM", getOEM, METH_NOARGS },
+		{ "getBrandOEM", getBrandOEM, METH_NOARGS },
 		{ "getOEVersion", getOEVersion, METH_NOARGS },
 		{ "getDriverDate", getDriverDate, METH_NOARGS },
 		{ "getImageVersion", getImageVersion, METH_NOARGS },
