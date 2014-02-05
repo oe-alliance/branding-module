@@ -4,7 +4,7 @@
 #include <sys/stat.h>
 #include <Python.h>
 
-const char* VERSION = "2.1";
+const char* VERSION = "2.2";
 
 /** detecting whether base is starts with str
  */
@@ -695,6 +695,11 @@ const char *_getImageFolder()
 	return IMAGEDIR;
 }
 
+const char *_getImageFileSystem()
+{
+	return IMAGE_FSTYPES;
+}
+
 const char *_getOEVersion()
 {
 	return OE_VER;  
@@ -711,9 +716,19 @@ const char *_getMachineMtdRoot()
 	return MTD_ROOTFS;
 }
 
+const char *_getMachineRootFile()
+{
+	return ROOT_FILE;
+}
+
 const char *_getMachineMtdKernel()
 {
 	return MTD_KERNEL;
+}
+
+const char *_getMachineKernelFile()
+{
+	return KERNEL_FILE;
 }
 
 const char *_getMachineMKUBIFS()
@@ -874,6 +889,16 @@ static PyObject* getMachineMtdKernel(PyObject* self)
     return Py_BuildValue("s", _getMachineMtdKernel());
 }
 
+static PyObject* getMachineRootFile(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineRootFile());
+}
+
+static PyObject* getMachineKernelFile(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineKernelFile());
+}
+
 static PyObject* getMachineMKUBIFS(PyObject* self)
 {
     return Py_BuildValue("s", _getMachineMKUBIFS());
@@ -924,12 +949,20 @@ static PyObject* getImageFolder(PyObject* self)
     return Py_BuildValue("s", _getImageFolder());
 }
 
+static PyObject* getImageFileSystem(PyObject* self)
+{
+    return Py_BuildValue("s", _getImageFileSystem());
+}
+
+
 static PyMethodDef boxbrandingMethods[] = {
 		{ "getMachineBuild", getMachineBuild, METH_NOARGS },
 		{ "getMachineProcModel", getMachineProcModel, METH_NOARGS },  
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
 		{ "getMachineMtdRoot", getMachineMtdRoot, METH_NOARGS },
+		{ "getMachineKernelFile", getMachineKernelFile, METH_NOARGS },
+		{ "getMachineRootFile", getMachineRootFile, METH_NOARGS },
 		{ "getMachineMtdKernel", getMachineMtdKernel, METH_NOARGS },
 		{ "getMachineMKUBIFS", getMachineMKUBIFS, METH_NOARGS },
 		{ "getMachineUBINIZE", getMachineUBINIZE, METH_NOARGS },
@@ -941,6 +974,7 @@ static PyMethodDef boxbrandingMethods[] = {
 		{ "getImageBuild", getImageBuild, METH_NOARGS },
 		{ "getImageDistro", getImageDistro, METH_NOARGS },
 		{ "getImageFolder", getImageFolder, METH_NOARGS },
+		{ "getImageFileSystem", getImageFileSystem, METH_NOARGS },
 		{ NULL, NULL }
 };
 

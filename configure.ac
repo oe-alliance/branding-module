@@ -71,22 +71,40 @@ AC_SUBST(IMAGEBUILD)
 AC_DEFINE_UNQUOTED(IMAGEBUILD,"$IMAGEBUILD",[build number])
 
 AC_ARG_WITH(imagedir,
-	[  --with-imagedir=NAME image folder [[628]]],
+	[  --with-imagedir=NAME imagedir folder [[628]]],
 	[IMAGEDIR="$withval"],[IMAGEDIR=""])
 AC_SUBST(IMAGEDIR)
-AC_DEFINE_UNQUOTED(IMAGEDIR,"$IMAGEDIR",[build folder])
+AC_DEFINE_UNQUOTED(IMAGEDIR,"$IMAGEDIR",[imagedir folder])
+
+AC_ARG_WITH(imagefs,
+	[  --with-imagefs=NAME imagefs folder [[628]]],
+	[IMAGE_FSTYPES="$withval"],[IMAGE_FSTYPES=""])
+AC_SUBST(IMAGE_FSTYPES)
+AC_DEFINE_UNQUOTED(IMAGE_FSTYPES,"$IMAGE_FSTYPES",[imagefs folder])
 
 AC_ARG_WITH(mtdrootfs,
-	[  --with-mtdrootfs=NAME mtdroot number [[628]]],
+	[  --with-mtdrootfs=NAME mtdrootfs number [[628]]],
 	[MTD_ROOTFS="$withval"],[MTD_ROOTFS=""])
 AC_SUBST(MTD_ROOTFS)
-AC_DEFINE_UNQUOTED(MTD_ROOTFS,"$MTD_ROOTFS",[mtdroot number])
+AC_DEFINE_UNQUOTED(MTD_ROOTFS,"$MTD_ROOTFS",[mtdrootfs number])
 
 AC_ARG_WITH(mtdkernel,
 	[  --with-mtdkernel=NAME mtdkernel number [[628]]],
 	[MTD_KERNEL="$withval"],[MTD_KERNEL=""])
 AC_SUBST(MTD_KERNEL)
 AC_DEFINE_UNQUOTED(MTD_KERNEL,"$MTD_KERNEL",[mtdkernel number])
+
+AC_ARG_WITH(rootfile,
+	[  --with-rootfile=NAME rootfile name [[628]]],
+	[ROOT_FILE="$withval"],[ROOT_FILE=""])
+AC_SUBST(ROOT_FILE)
+AC_DEFINE_UNQUOTED(ROOT_FILE,"$ROOT_FILE",[rootfile name])
+
+AC_ARG_WITH(kernelfile,
+	[  --with-kernelfile=NAME kernelfile name [[628]]],
+	[KERNEL_FILE="$withval"],[KERNEL_FILE=""])
+AC_SUBST(KERNEL_FILE)
+AC_DEFINE_UNQUOTED(KERNEL_FILE,"$KERNEL_FILE",[kernelfile name])
 
 AC_ARG_WITH(mkubifs,
 	[  --with-mkubifs=NAME mkubifs number [[628]]],
