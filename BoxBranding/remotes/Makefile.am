@@ -117,3 +117,11 @@ endif
 if SOGNO
 SUBDIRS = sogno
 endif
+
+if SPARK
+SUBDIRS = spark
+endif
+
+if SPARK7162
+SUBDIRS = spark
+endif

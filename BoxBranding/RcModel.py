@@ -39,6 +39,7 @@ class RcModel:
 	RCTYPE_VU2 = 33
 	RCTYPE_VU3 = 34
 	RCTYPE_XP1000 = 35
+	RCTYPE_SPARK = 36
 
 
 	def __init__(self):
@@ -158,6 +159,8 @@ class RcModel:
 				self.currentRcType = self.RCTYPE_ODINM9
 			elif model == 'odinm7':
 				self.currentRcType = self.RCTYPE_ODINM7
+		elif getBoxType() in ('spark', 'spark7162'):
+			self.currentRcType = self.RCTYPE_SPARK
 				
 	def getRcType(self):
 		self.readRcTypeFromProc()
@@ -238,6 +241,8 @@ class RcModel:
 			remotefolder = 'vu3'
 		elif self.getRcType() == self.RCTYPE_XP1000:
 			remotefolder = 'xp1000'
+		elif self.getRcType() == self.RCTYPE_SPARK:
+			remotefolder = 'spark'
 		return remotefolder
 		
 	def getRcLocation(self):

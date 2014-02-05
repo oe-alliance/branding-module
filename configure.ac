@@ -176,6 +176,8 @@ AM_CONDITIONAL(VUSOLO2, test "$BOXTYPE" == vusolo2)
 AM_CONDITIONAL(VUDUO2, test "$BOXTYPE" == vuduo2)
 AM_CONDITIONAL(VENTONHDX, test "$BOXTYPE" == ventonhdx)
 AM_CONDITIONAL(XP1000, test "$MACHINE_OEM" == xp1000)
+AM_CONDITIONAL(SPARK, test "$BOXTYPE" == spark)
+AM_CONDITIONAL(SPARK7162, test "$BOXTYPE" == spark7162)
 
 AC_CONFIG_FILES([
 Makefile
@@ -219,6 +221,7 @@ BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
 BoxBranding/remotes/xp1000/Makefile
+BoxBranding/remotes/spark/Makefile
 
 
 ])
