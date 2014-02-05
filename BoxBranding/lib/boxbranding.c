@@ -4,7 +4,7 @@
 #include <sys/stat.h>
 #include <Python.h>
 
-const char* VERSION = "2.1";
+const char* VERSION = "2.2";
 
 /** detecting whether base is starts with str
  */
@@ -602,9 +602,9 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 	return MACHINE_BRAND;
 }
 
-const char *_getOEM()
+const char *_getBrandOEM()
 {
-	return MACHINE_OEM;  
+	return BRAND_OEM;  
 }
 
 const char *_getDriverDate()
@@ -690,6 +690,16 @@ const char *_getImageDistro()
 	return DISTRO;
 }
 
+const char *_getImageFolder()
+{
+	return IMAGEDIR;
+}
+
+const char *_getImageFileSystem()
+{
+	return IMAGE_FSTYPES;
+}
+
 const char *_getOEVersion()
 {
 	return OE_VER;  
@@ -699,6 +709,36 @@ const char *_getMachineBuild()
 {
 	// this will return real MACHINEBUILD e.x MACHINE=mbtwin DISTRO=vix -> it will return mbtwin
 	return BOXTYPE;
+}
+
+const char *_getMachineMtdRoot()
+{
+	return MTD_ROOTFS;
+}
+
+const char *_getMachineRootFile()
+{
+	return ROOT_FILE;
+}
+
+const char *_getMachineMtdKernel()
+{
+	return MTD_KERNEL;
+}
+
+const char *_getMachineKernelFile()
+{
+	return KERNEL_FILE;
+}
+
+const char *_getMachineMKUBIFS()
+{
+	return MKUBIFS_ARGS;
+}
+
+const char *_getMachineUBINIZE()
+{
+	return UBINIZE_ARGS;
 }
 
 const char *_getMachineProcModel() // return just value from proc entry
@@ -839,14 +879,44 @@ static PyObject* getMachineBuild(PyObject* self)
     return Py_BuildValue("s", _getMachineBuild());
 }
 
+static PyObject* getMachineMtdRoot(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineMtdRoot());
+}
+
+static PyObject* getMachineMtdKernel(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineMtdKernel());
+}
+
+static PyObject* getMachineRootFile(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineRootFile());
+}
+
+static PyObject* getMachineKernelFile(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineKernelFile());
+}
+
+static PyObject* getMachineMKUBIFS(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineMKUBIFS());
+}
+
+static PyObject* getMachineUBINIZE(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineUBINIZE());
+}
+
 static PyObject* getBoxType(PyObject* self)
 {
     return Py_BuildValue("s", _getBoxType());
 }
 
-static PyObject* getOEM(PyObject* self)
+static PyObject* getBrandOEM(PyObject* self)
 {
-    return Py_BuildValue("s", _getOEM());
+    return Py_BuildValue("s", _getBrandOEM());
 }
 
 static PyObject* getOEVersion(PyObject* self)
@@ -874,18 +944,37 @@ static PyObject* getImageDistro(PyObject* self)
     return Py_BuildValue("s", _getImageDistro());
 }
 
+static PyObject* getImageFolder(PyObject* self)
+{
+    return Py_BuildValue("s", _getImageFolder());
+}
+
+static PyObject* getImageFileSystem(PyObject* self)
+{
+    return Py_BuildValue("s", _getImageFileSystem());
+}
+
+
 static PyMethodDef boxbrandingMethods[] = {
 		{ "getMachineBuild", getMachineBuild, METH_NOARGS },
 		{ "getMachineProcModel", getMachineProcModel, METH_NOARGS },  
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
+		{ "getMachineMtdRoot", getMachineMtdRoot, METH_NOARGS },
+		{ "getMachineKernelFile", getMachineKernelFile, METH_NOARGS },
+		{ "getMachineRootFile", getMachineRootFile, METH_NOARGS },
+		{ "getMachineMtdKernel", getMachineMtdKernel, METH_NOARGS },
+		{ "getMachineMKUBIFS", getMachineMKUBIFS, METH_NOARGS },
+		{ "getMachineUBINIZE", getMachineUBINIZE, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },
-		{ "getOEM", getOEM, METH_NOARGS },
+		{ "getBrandOEM", getBrandOEM, METH_NOARGS },
 		{ "getOEVersion", getOEVersion, METH_NOARGS },
 		{ "getDriverDate", getDriverDate, METH_NOARGS },
 		{ "getImageVersion", getImageVersion, METH_NOARGS },
 		{ "getImageBuild", getImageBuild, METH_NOARGS },
 		{ "getImageDistro", getImageDistro, METH_NOARGS },
+		{ "getImageFolder", getImageFolder, METH_NOARGS },
+		{ "getImageFileSystem", getImageFileSystem, METH_NOARGS },
 		{ NULL, NULL }
 };
 

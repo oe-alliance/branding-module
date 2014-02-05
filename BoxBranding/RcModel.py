@@ -86,7 +86,7 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_INI4
 		elif getBoxType() in ('optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
 			self.currentRcType = self.RCTYPE_OPTIMUSS
-		elif getBoxType() == 'sogno-8800hd':
+		elif getBoxType() == 'sogno8800hd':
 			self.currentRcType = self.RCTYPE_SOGNO
 		elif getBoxType() in ('vusolo', 'vusolo2', 'vuduo', 'vuuno'):
 			self.currentRcType = self.RCTYPE_VU
@@ -106,7 +106,7 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_IXUSSONE
 		elif getBoxType() in ('ixusszero', 'Ixuss Zero'):
 			self.currentRcType = self.RCTYPE_IXUSSZERO
-		elif getMachineBrand() in ('Xtrend', 'Max-Digital', 'MK-Digital', 'Octagon'):
+		elif getMachineBrand() in ('Xtrend', 'MaxDigital', 'MK-Digital', 'Octagon'):
 			model = self.readFile('/proc/stb/info/boxtype')
 			rc = self.readFile('/proc/stb/ir/rc/type')
 			if rc == '3':
