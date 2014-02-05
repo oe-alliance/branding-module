@@ -52,11 +52,11 @@ AC_ARG_WITH(machinename,
 AC_SUBST(MACHINE_NAME)
 AC_DEFINE_UNQUOTED(MACHINE_NAME,"$MACHINE_NAME",[machine name])
 
-AC_ARG_WITH(machineoem,
-	[  --with-machineoem=NAME machine oem [[DAGS,DMM,...]]],
-	[MACHINE_OEM="$withval"],[MACHINE_OEM="DAGS"])
-AC_SUBST(MACHINE_OEM)
-AC_DEFINE_UNQUOTED(MACHINE_OEM,"$MACHINE_OEM",[machine oem])
+AC_ARG_WITH(brandoem,
+	[  --with-brandoem=NAME brand oem [[DAGS,DMM,...]]],
+	[BRAND_OEM="$withval"],[BRAND_OEM="dags"])
+AC_SUBST(BRAND_OEM)
+AC_DEFINE_UNQUOTED(BRAND_OEM,"$BRAND_OEM",[brand oem])
 
 AC_ARG_WITH(imageversion,
 	[  --with-imageversion=NAME version number [[3.0]]],
@@ -148,26 +148,26 @@ if test "$with_po" = "yes"; then
 fi
 AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 
-AM_CONDITIONAL(AZBOX, test `echo "$BOXTYPE" | cut -b 1-5` == "azbox")
-AM_CONDITIONAL(CUBE, test `echo "$BOXTYPE" | cut -b 1-4` == "cube")
-AM_CONDITIONAL(DREAMBOX, test `echo "$BOXTYPE" | cut -b 1-2` == "dm")
+AM_CONDITIONAL(AZBOX, test `echo "$BRAND_OEM"` == "azbox")
+AM_CONDITIONAL(CUBE, test `echo "$BOXTYPE"` == "cube")
+AM_CONDITIONAL(DREAMBOX, test `echo "$BRAND_OEM"` == "dreambox")
 AM_CONDITIONAL(TECHNOMATE, test `echo "$BOXTYPE" | cut -b 1-2` == "tm")
 AM_CONDITIONAL(IQON, test `echo "$BOXTYPE" | cut -b 1-4` == "iqon")
-AM_CONDITIONAL(VUPLUS, test `echo "$MACHINE_OEM"` == "vuplus")
-AM_CONDITIONAL(XTREND, test `echo "$MACHINE_OEM"` == "xtrend")
-AM_CONDITIONAL(DAGS, test `echo "$MACHINE_OEM" | cut -b 1-4` == "dags")
-AM_CONDITIONAL(GIGABLUE, test `echo "$MACHINE_OEM"` == "gigablue")
-AM_CONDITIONAL(ODIN, test `echo "$MACHINE_OEM" | cut -b 1-4` == "odin")
-AM_CONDITIONAL(INI, test `echo "$MACHINE_OEM" | cut -b 1-3` == "ini")
+AM_CONDITIONAL(VUPLUS, test `echo "$BRAND_OEM"` == "vuplus")
+AM_CONDITIONAL(XTREND, test `echo "$BRAND_OEM"` == "xtrend")
+AM_CONDITIONAL(DAGS, test `echo "$BRAND_OEM" | cut -b 1-4` == "dags")
+AM_CONDITIONAL(GIGABLUE, test `echo "$BRAND_OEM"` == "gigablue")
+AM_CONDITIONAL(ODIN, test `echo "$BRAND_OEM" | cut -b 1-4` == "odin")
+AM_CONDITIONAL(INI, test `echo "$BRAND_OEM" | cut -b 1-3` == "ini")
 AM_CONDITIONAL(SEZAM, test `echo "$BOXTYPE" | cut -b 1-5` == "sezam")
 AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
 AM_CONDITIONAL(MIRACLEBOX, test `echo "$BOXTYPE" | cut -b 1-2` == "mb")
-AM_CONDITIONAL(EBOX, test `echo "$MACHINE_OEM" | cut -b 1-4` == "ebox")
+AM_CONDITIONAL(EBOX, test `echo "$BRAND_OEM"` == "ebox")
 AM_CONDITIONAL(EDISION, test `echo "$BOXTYPE" | cut -b 1-4` == "opti")
 AM_CONDITIONAL(EVO, test `echo "$BOXTYPE" | cut -b 1-4` == "enfi")
 AM_CONDITIONAL(JEPSSEN, test `echo "$BOXTYPE" | cut -b 1-5` == "media")
-AM_CONDITIONAL(SOGNO, test `echo "$BOXTYPE" | cut -b 1-5` == "sogno")
+AM_CONDITIONAL(SOGNO, test `echo "$BRAND_OEM"` == "sogno")
 AM_CONDITIONAL(AZBOXME, test "$BOXTYPE" == azboxme)
 AM_CONDITIONAL(AZBOXMINIME, test "$BOXTYPE" == azboxminime)
 AM_CONDITIONAL(AZBOXHD, test "$BOXTYPE" == azboxhd)
@@ -180,7 +180,7 @@ AM_CONDITIONAL(DM800SE, test "$BOXTYPE" == dm800se)
 AM_CONDITIONAL(DM800SEV2, test "$BOXTYPE" == dm800sev2)
 AM_CONDITIONAL(DM500HD, test "$BOXTYPE" == dm500hd)
 AM_CONDITIONAL(DM500HDV2, test "$BOXTYPE" == dm500hdv2)
-AM_CONDITIONAL(E3HD, test "$MACHINE_OEM" == e3hd)
+AM_CONDITIONAL(E3HD, test "$BOXTYPE" == e3hd)
 AM_CONDITIONAL(ET4X00, test "$BOXTYPE" == et4x00)
 AM_CONDITIONAL(ET5X00, test "$BOXTYPE" == et5x00)
 AM_CONDITIONAL(ET6X00, test "$BOXTYPE" == et6x00)
@@ -223,7 +223,7 @@ AM_CONDITIONAL(VUDUO, test "$BOXTYPE" == vuduo)
 AM_CONDITIONAL(VUSOLO2, test "$BOXTYPE" == vusolo2)
 AM_CONDITIONAL(VUDUO2, test "$BOXTYPE" == vuduo2)
 AM_CONDITIONAL(VENTONHDX, test "$BOXTYPE" == ventonhdx)
-AM_CONDITIONAL(XP1000, test "$MACHINE_OEM" == xp1000)
+AM_CONDITIONAL(XP1000, test "$BOXTYPE" == xp1000)
 
 AC_CONFIG_FILES([
 Makefile
