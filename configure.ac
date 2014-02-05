@@ -70,6 +70,36 @@ AC_ARG_WITH(imagebuild,
 AC_SUBST(IMAGEBUILD)
 AC_DEFINE_UNQUOTED(IMAGEBUILD,"$IMAGEBUILD",[build number])
 
+AC_ARG_WITH(imagedir,
+	[  --with-imagedir=NAME image folder [[628]]],
+	[IMAGEDIR="$withval"],[IMAGEDIR=""])
+AC_SUBST(IMAGEDIR)
+AC_DEFINE_UNQUOTED(IMAGEDIR,"$IMAGEDIR",[build folder])
+
+AC_ARG_WITH(mtdrootfs,
+	[  --with-mtdrootfs=NAME mtdroot number [[628]]],
+	[MTD_ROOTFS="$withval"],[MTD_ROOTFS=""])
+AC_SUBST(MTD_ROOTFS)
+AC_DEFINE_UNQUOTED(MTD_ROOTFS,"$MTD_ROOTFS",[mtdroot number])
+
+AC_ARG_WITH(mtdkernel,
+	[  --with-mtdkernel=NAME mtdkernel number [[628]]],
+	[MTD_KERNEL="$withval"],[MTD_KERNEL=""])
+AC_SUBST(MTD_KERNEL)
+AC_DEFINE_UNQUOTED(MTD_KERNEL,"$MTD_KERNEL",[mtdkernel number])
+
+AC_ARG_WITH(mkubifs,
+	[  --with-mkubifs=NAME mkubifs number [[628]]],
+	[MKUBIFS_ARGS="$withval"],[MKUBIFS_ARGS=""])
+AC_SUBST(MKUBIFS_ARGS)
+AC_DEFINE_UNQUOTED(MKUBIFS_ARGS,"$MKUBIFS_ARGS",[mkubifs number])
+
+AC_ARG_WITH(ubinize,
+	[  --with-ubinize=NAME ubinize number [[628]]],
+	[UBINIZE_ARGS="$withval"],[UBINIZE_ARGS=""])
+AC_SUBST(UBINIZE_ARGS)
+AC_DEFINE_UNQUOTED(UBINIZE_ARGS,"$UBINIZE_ARGS",[ubinize number])
+
 AC_ARG_WITH(driverdate,
 	[  --with-driverdate=NAME driver date [[628]]],
 	[DRIVERDATE="$withval"],[DRIVERDATE=""])

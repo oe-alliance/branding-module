@@ -690,6 +690,11 @@ const char *_getImageDistro()
 	return DISTRO;
 }
 
+const char *_getImageFolder()
+{
+	return IMAGEDIR;
+}
+
 const char *_getOEVersion()
 {
 	return OE_VER;  
@@ -699,6 +704,26 @@ const char *_getMachineBuild()
 {
 	// this will return real MACHINEBUILD e.x MACHINE=mbtwin DISTRO=vix -> it will return mbtwin
 	return BOXTYPE;
+}
+
+const char *_getMachineMtdRoot()
+{
+	return MTD_ROOTFS;
+}
+
+const char *_getMachineMtdKernel()
+{
+	return MTD_KERNEL;
+}
+
+const char *_getMachineMKUBIFS()
+{
+	return MKUBIFS_ARGS;
+}
+
+const char *_getMachineUBINIZE()
+{
+	return UBINIZE_ARGS;
 }
 
 const char *_getMachineProcModel() // return just value from proc entry
@@ -839,6 +864,26 @@ static PyObject* getMachineBuild(PyObject* self)
     return Py_BuildValue("s", _getMachineBuild());
 }
 
+static PyObject* getMachineMtdRoot(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineMtdRoot());
+}
+
+static PyObject* getMachineMtdKernel(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineMtdKernel());
+}
+
+static PyObject* getMachineMKUBIFS(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineMKUBIFS());
+}
+
+static PyObject* getMachineUBINIZE(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineUBINIZE());
+}
+
 static PyObject* getBoxType(PyObject* self)
 {
     return Py_BuildValue("s", _getBoxType());
@@ -874,11 +919,20 @@ static PyObject* getImageDistro(PyObject* self)
     return Py_BuildValue("s", _getImageDistro());
 }
 
+static PyObject* getImageFolder(PyObject* self)
+{
+    return Py_BuildValue("s", _getImageFolder());
+}
+
 static PyMethodDef boxbrandingMethods[] = {
 		{ "getMachineBuild", getMachineBuild, METH_NOARGS },
 		{ "getMachineProcModel", getMachineProcModel, METH_NOARGS },  
 		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
 		{ "getMachineName", getMachineName, METH_NOARGS },
+		{ "getMachineMtdRoot", getMachineMtdRoot, METH_NOARGS },
+		{ "getMachineMtdKernel", getMachineMtdKernel, METH_NOARGS },
+		{ "getMachineMKUBIFS", getMachineMKUBIFS, METH_NOARGS },
+		{ "getMachineUBINIZE", getMachineUBINIZE, METH_NOARGS },
 		{ "getBoxType", getBoxType, METH_NOARGS },
 		{ "getOEM", getOEM, METH_NOARGS },
 		{ "getOEVersion", getOEVersion, METH_NOARGS },
@@ -886,6 +940,7 @@ static PyMethodDef boxbrandingMethods[] = {
 		{ "getImageVersion", getImageVersion, METH_NOARGS },
 		{ "getImageBuild", getImageBuild, METH_NOARGS },
 		{ "getImageDistro", getImageDistro, METH_NOARGS },
+		{ "getImageFolder", getImageFolder, METH_NOARGS },
 		{ NULL, NULL }
 };
 
