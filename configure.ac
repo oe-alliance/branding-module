@@ -44,7 +44,13 @@ AC_ARG_WITH(machinebrand,
 	[  --with-machinebrand=NAME brand name [[Vu,Xtrend,...]]],
 	[MACHINE_BRAND="$withval"],[MACHINE_BRAND="Vu+"])
 AC_SUBST(MACHINE_BRAND)
-AC_DEFINE_UNQUOTED(MACHINE_BRAND,"$MACHINE_BRAND",[machine brand])
+AC_DEFINE_UNQUOTED(MACHINE_BRAND,"$MACHINE_BRAND",[machine name])
+
+AC_ARG_WITH(machinebuild,
+	[  --with-machinebuild=NAME build name [[Vu,Xtrend,...]]],
+	[MACHINE_BUILD="$withval"],[MACHINE_BUILD="inihdx"])
+AC_SUBST(MACHINE_BUILD)
+AC_DEFINE_UNQUOTED(MACHINE_BUILD,"$MACHINE_BUILD",[build name])
 
 AC_ARG_WITH(machinename,
 	[  --with-machinename=NAME machine name [[Solo,Ultimo,...]]],
