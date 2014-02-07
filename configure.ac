@@ -102,9 +102,9 @@ AC_DEFINE_UNQUOTED(MTD_KERNEL,"$MTD_KERNEL",[mtdkernel number])
 
 AC_ARG_WITH(rootfile,
 	[  --with-rootfile=NAME rootfile name [[628]]],
-	[ROOT_FILE="$withval"],[ROOT_FILE=""])
-AC_SUBST(ROOT_FILE)
-AC_DEFINE_UNQUOTED(ROOT_FILE,"$ROOT_FILE",[rootfile name])
+	[ROOTFS_FILE="$withval"],[ROOTFS_FILE=""])
+AC_SUBST(ROOTFS_FILE)
+AC_DEFINE_UNQUOTED(ROOTFS_FILE,"$ROOTFS_FILE",[rootfile name])
 
 AC_ARG_WITH(kernelfile,
 	[  --with-kernelfile=NAME kernelfile name [[628]]],

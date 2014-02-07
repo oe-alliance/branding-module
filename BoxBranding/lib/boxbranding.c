@@ -718,7 +718,7 @@ const char *_getMachineMtdRoot()
 
 const char *_getMachineRootFile()
 {
-	return ROOT_FILE;
+	return ROOTFS_FILE;
 }
 
 const char *_getMachineMtdKernel()
