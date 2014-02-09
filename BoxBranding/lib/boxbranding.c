@@ -604,7 +604,7 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 
 const char *_getBrandOEM()
 {
-	return MACHINE_OEM;  
+	return BRAND_OEM;  
 }
 
 const char *_getDriverDate()
