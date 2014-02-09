@@ -58,6 +58,12 @@ AC_ARG_WITH(machineoem,
 AC_SUBST(MACHINE_OEM)
 AC_DEFINE_UNQUOTED(MACHINE_OEM,"$MACHINE_OEM",[machine oem])
 
+AC_ARG_WITH(brandoem,
+	[  --with-brandoem=NAME brand oem [[DAGS,DMM,...]]],
+	[BRAND_OEM="$withval"],[BRAND_OEM="dags"])
+AC_SUBST(BRAND_OEM)
+AC_DEFINE_UNQUOTED(BRAND_OEM,"$BRAND_OEM",[brand oem])
+
 AC_ARG_WITH(imageversion,
 	[  --with-imageversion=NAME version number [[3.0]]],
 	[IMAGEVERSION="$withval"],[IMAGEVERSION=""])
