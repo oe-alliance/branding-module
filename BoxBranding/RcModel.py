@@ -81,7 +81,7 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_INI1  
 		elif getBoxType() in ('sezam1000hd', 'sezam5000hd'):
 			self.currentRcType = self.RCTYPE_INI2
-		elif getBoxType() in ('marvel'):
+		elif getBoxType() in ('sezammarvel'):
 			self.currentRcType = self.RCTYPE_INI4
 		elif getBoxType() in ('optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
 			self.currentRcType = self.RCTYPE_OPTIMUSS
