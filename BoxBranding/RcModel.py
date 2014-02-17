@@ -143,9 +143,9 @@ class RcModel:
 			elif model == 'odinm7':
 				self.currentRcType = self.RCTYPE_ODINM7
 			elif model.startswith('Ixuss'):
-				if getBoxType() == 'ixussone':
+				if getBoxType() in ('ixussone', 'Ixuss One'):
 					self.currentRcType = self.RCTYPE_IXUSSONE
-				elif getBoxType() == 'ixusszero':
+				elif getBoxType() in ('ixusszero', 'Ixuss Zero'):
 					self.currentRcType = self.RCTYPE_IXUSSZERO
 			elif model == 'sogno-8800hd':
 				self.currentRcType = self.RCTYPE_SOGNO	
