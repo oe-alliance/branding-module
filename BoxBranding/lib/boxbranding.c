@@ -708,7 +708,7 @@ const char *_getOEVersion()
 const char *_getMachineBuild()
 {
 	// this will return real MACHINEBUILD e.x MACHINE=mbtwin DISTRO=vix -> it will return mbtwin
-	return BOXTYPE;
+	return MACHINE_BUILD;
 }
 
 const char *_getMachineMtdRoot()
@@ -718,7 +718,7 @@ const char *_getMachineMtdRoot()
 
 const char *_getMachineRootFile()
 {
-	return ROOT_FILE;
+	return ROOTFS_FILE;
 }
 
 const char *_getMachineMtdKernel()

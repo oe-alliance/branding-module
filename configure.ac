@@ -44,7 +44,13 @@ AC_ARG_WITH(machinebrand,
 	[  --with-machinebrand=NAME brand name [[Vu,Xtrend,...]]],
 	[MACHINE_BRAND="$withval"],[MACHINE_BRAND="Vu+"])
 AC_SUBST(MACHINE_BRAND)
-AC_DEFINE_UNQUOTED(MACHINE_BRAND,"$MACHINE_BRAND",[machine brand])
+AC_DEFINE_UNQUOTED(MACHINE_BRAND,"$MACHINE_BRAND",[machine name])
+
+AC_ARG_WITH(machinebuild,
+	[  --with-machinebuild=NAME build name [[Vu,Xtrend,...]]],
+	[MACHINE_BUILD="$withval"],[MACHINE_BUILD="inihdx"])
+AC_SUBST(MACHINE_BUILD)
+AC_DEFINE_UNQUOTED(MACHINE_BUILD,"$MACHINE_BUILD",[build name])
 
 AC_ARG_WITH(machinename,
 	[  --with-machinename=NAME machine name [[Solo,Ultimo,...]]],
@@ -96,9 +102,9 @@ AC_DEFINE_UNQUOTED(MTD_KERNEL,"$MTD_KERNEL",[mtdkernel number])
 
 AC_ARG_WITH(rootfile,
 	[  --with-rootfile=NAME rootfile name [[628]]],
-	[ROOT_FILE="$withval"],[ROOT_FILE=""])
-AC_SUBST(ROOT_FILE)
-AC_DEFINE_UNQUOTED(ROOT_FILE,"$ROOT_FILE",[rootfile name])
+	[ROOTFS_FILE="$withval"],[ROOTFS_FILE=""])
+AC_SUBST(ROOTFS_FILE)
+AC_DEFINE_UNQUOTED(ROOTFS_FILE,"$ROOTFS_FILE",[rootfile name])
 
 AC_ARG_WITH(kernelfile,
 	[  --with-kernelfile=NAME kernelfile name [[628]]],
@@ -149,7 +155,7 @@ fi
 AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 
 AM_CONDITIONAL(AZBOX, test `echo "$BRAND_OEM"` == "azbox")
-AM_CONDITIONAL(CUBE, test `echo "$BOXTYPE"` == "cube")
+AM_CONDITIONAL(CUBE, test `echo "$MACHINE_BUILD"` == "cube")
 AM_CONDITIONAL(DREAMBOX, test `echo "$BRAND_OEM"` == "dreambox")
 AM_CONDITIONAL(TECHNOMATE, test `echo "$BOXTYPE" | cut -b 1-2` == "tm")
 AM_CONDITIONAL(IQON, test `echo "$BOXTYPE" | cut -b 1-4` == "iqon")
@@ -159,6 +165,7 @@ AM_CONDITIONAL(DAGS, test `echo "$BRAND_OEM" | cut -b 1-4` == "dags")
 AM_CONDITIONAL(GIGABLUE, test `echo "$BRAND_OEM"` == "gigablue")
 AM_CONDITIONAL(ODIN, test `echo "$BRAND_OEM" | cut -b 1-4` == "odin")
 AM_CONDITIONAL(INI, test `echo "$BRAND_OEM" | cut -b 1-3` == "ini")
+AM_CONDITIONAL(XP, test `echo "$BRAND_OEM"` == "xp")
 AM_CONDITIONAL(SEZAM, test `echo "$BOXTYPE" | cut -b 1-5` == "sezam")
 AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
@@ -196,8 +203,9 @@ AM_CONDITIONAL(GB800SEPLUS, test "$BOXTYPE" == gb800seplus)
 AM_CONDITIONAL(GB800UEPLUS, test "$BOXTYPE" == gb800ueplus)
 AM_CONDITIONAL(GBQUADPLUS, test "$BOXTYPE" == gbquadplus)
 AM_CONDITIONAL(GBQUAD, test "$BOXTYPE" == gbquad)
-AM_CONDITIONAL(INIHDE, test "$BOXTYPE" == inihde)
-AM_CONDITIONAL(INIHDP, test "$BOXTYPE" == inihdp)
+AM_CONDITIONAL(INIHDX, test "$MACHINE_BUILD" == inihdx)
+AM_CONDITIONAL(INIHDE, test "$MACHINE_BUILD" == inihde)
+AM_CONDITIONAL(INIHDP, test "$MACHINE_BUILD" == inihdp)
 AM_CONDITIONAL(IQONIOS100HD, test "$BOXTYPE" == iqonios100hd)
 AM_CONDITIONAL(IQONIOS200HD, test "$BOXTYPE" == iqonios200hd)
 AM_CONDITIONAL(IQONIOS300HD, test "$BOXTYPE" == iqonios300hd)
@@ -207,8 +215,8 @@ AM_CONDITIONAL(IXUSSDUO, test "$BOXTYPE" == ixussduo)
 AM_CONDITIONAL(MEDIABOX, test "$BOXTYPE" == mediabox)
 AM_CONDITIONAL(MBTWIN, test "$BOXTYPE" == mbtwin)
 AM_CONDITIONAL(ODINM6, test "$BOXTYPE" == odinm6)
-AM_CONDITIONAL(ODINM7, test "$BOXTYPE" == odinm7)
-AM_CONDITIONAL(ODINM9, test "$BOXTYPE" == odinm9)
+AM_CONDITIONAL(ODINM7, test "$MACHINE_BUILD" == odinm7)
+AM_CONDITIONAL(ODINM9, test "$MACHINE_BUILD" == odinm9)
 AM_CONDITIONAL(OPTIMUSSOS1, test "$BOXTYPE" == optimussos1)
 AM_CONDITIONAL(OPTIMUSSOS2, test "$BOXTYPE" == optimussos2)
 AM_CONDITIONAL(SOGNO8800HD, test "$BOXTYPE" == sogno8800hd)
@@ -223,7 +231,9 @@ AM_CONDITIONAL(VUDUO, test "$BOXTYPE" == vuduo)
 AM_CONDITIONAL(VUSOLO2, test "$BOXTYPE" == vusolo2)
 AM_CONDITIONAL(VUDUO2, test "$BOXTYPE" == vuduo2)
 AM_CONDITIONAL(VENTONHDX, test "$BOXTYPE" == ventonhdx)
-AM_CONDITIONAL(XP1000, test "$BOXTYPE" == xp1000)
+AM_CONDITIONAL(XP1000, test "$MACHINE_BUILD" == xp1000)
+AM_CONDITIONAL(XP1000MAX, test "$BOXTYPE" == xp1000max)
+AM_CONDITIONAL(XP1000MK, test "$BOXTYPE" == xp1000mk)
 AM_CONDITIONAL(SPARK, test "$BOXTYPE" == spark)
 AM_CONDITIONAL(SPARK7162, test "$BOXTYPE" == spark7162)
 
