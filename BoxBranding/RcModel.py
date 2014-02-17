@@ -65,7 +65,7 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_MEDIABOX
 		elif getMachineBrand() == 'Technomate':
 			self.currentRcType = self.RCTYPE_TM
-		elif getMachineBrand() == 'Iqon':
+		elif getMachineBrand() in ('Iqon', 'Roxxs', 'MediaArt'):
 			self.currentRcType = self.RCTYPE_IQON
 		elif getMachineBrand() == 'Miraclebox': 
 			self.currentRcType = self.RCTYPE_INI3
