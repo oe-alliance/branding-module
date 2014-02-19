@@ -276,9 +276,9 @@ const char *_getMachineName()
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		/** INI DETECTION */
-		if(strcmp(boxtype_name, "ini-1000") == 0) 
+		if(strcmp(boxtype_name, "ini-1000am") == 0) 
 		{
-			return "HD-e";
+			return "5x00";
 		}
 		else if(strcmp(boxtype_name, "ini-3000") == 0) 
 		{
@@ -526,6 +526,10 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 		else if((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "ru")))
 		{
 			return "Sezam";
+		}
+		else if((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "am")))
+		{
+			return "Atemio";
 		}
 		else if(startsWith(boxtype_name, "ini"))
 		{

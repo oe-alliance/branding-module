@@ -69,7 +69,7 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_IQON
 		elif getMachineBrand() == 'Miraclebox': 
 			self.currentRcType = self.RCTYPE_INI3
-		elif getMachineBrand() == 'GI':
+		elif getMachineBrand() in ('GI', 'Atemio'):
 			self.currentRcType = self.RCTYPE_INI4
 		elif getBoxType() == 'uniboxhd1':
 			fp_version = str(getFPVersion())
