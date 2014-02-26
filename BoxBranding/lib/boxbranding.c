@@ -417,7 +417,7 @@ const char *_getMachineName()
 		/** E2BMC ARM BOX */
 		else if(strcmp(boxtype_name, "cube") == 0) 
 		{
-			return "Cube";
+			return MACHINE_NAME;
 		}		
 		else /** if there is not matching STB name, return value from proc */
 		{

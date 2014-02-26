@@ -136,6 +136,8 @@ class RcModel:
 				self.currentRcType = self.RCTYPE_ET8000
 			elif model == 'et10000':
 				self.currentRcType = self.RCTYPE_ET8000
+			elif model == 'cube':
+				self.currentRcType = self.RCTYPE_CUBE
 		elif os.path.exists('/proc/stb/info/azmodel'):
 			f = open("/proc/stb/info/model",'r')
 			model = f.readline().strip()

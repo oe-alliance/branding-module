@@ -155,7 +155,7 @@ fi
 AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 
 AM_CONDITIONAL(AZBOX, test `echo "$BRAND_OEM"` == "azbox")
-AM_CONDITIONAL(CUBE, test `echo "$MACHINE_BUILD"` == "cube")
+AM_CONDITIONAL(CUBE, test `echo "$BRAND_OEM"` == "cube")
 AM_CONDITIONAL(DREAMBOX, test `echo "$BRAND_OEM"` == "dreambox")
 AM_CONDITIONAL(TECHNOMATE, test `echo "$BOXTYPE" | cut -b 1-2` == "tm")
 AM_CONDITIONAL(IQON, test `echo "$BOXTYPE" | cut -b 1-4` == "iqon")
