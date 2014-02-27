@@ -105,8 +105,17 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_IXUSSONE
 		elif getBoxType() in ('ixusszero', 'Ixuss Zero'):
 			self.currentRcType = self.RCTYPE_IXUSSZERO
+		elif getMachineBuild() == 'cube':
+			self.currentRcType = self.RCTYPE_CUBE
+		elif getMachineBuild().startswith('ebox'):
+			self.currentRcType = self.RCTYPE_EBOX5000
+		elif getMachineBuild() == 'e3hd':
+			self.currentRcType = self.RCTYPE_E3HD
+		elif getMachineBuild() == 'odinm9':
+			self.currentRcType = self.RCTYPE_ODINM9
+		elif getMachineBuild == 'odinm7':
+			self.currentRcType = self.RCTYPE_ODINM7
 		elif getMachineBrand() in ('Xtrend', 'MaxDigital', 'MK-Digital', 'Octagon'):
-			model = self.readFile('/proc/stb/info/boxtype')
 			rc = self.readFile('/proc/stb/ir/rc/type')
 			if rc == '3':
 				self.currentRcType = self.RCTYPE_ODINM9
@@ -120,24 +129,22 @@ class RcModel:
 				self.currentRcType = self.RCTYPE_ET6X00
 			elif rc == '8':
 				self.currentRcType = self.RCTYPE_VU
-			elif rc == '9' and model == 'et9500':
-				self.currentRcType = self.RCTYPE_ET9500
-			elif rc == '9' and model == 'et6500':
+			elif rc == '9' and getBoxType() == 'et6500':
 				self.currentRcType = self.RCTYPE_ET6500
-			elif rc == '11' and model == 'et9200':
+			elif rc == '9' and getBoxType() == 'et8000':
+				self.currentRcType = self.RCTYPE_ET6500
+			elif rc == '9' and getBoxType() == 'et9500':
 				self.currentRcType = self.RCTYPE_ET9500
-			elif rc == '11' and model == 'et9000':
+			elif rc == '9' and getBoxType() == 'et10000':
+				self.currentRcType = self.RCTYPE_ET6500
+			elif rc == '11' and getBoxType() == 'et9200':
+				self.currentRcType = self.RCTYPE_ET9500
+			elif rc == '11' and getBoxType() == 'et9000':
 				self.currentRcType = self.RCTYPE_ET9x00
-			elif rc == '13' and model == 'et4000':
+			elif rc == '13' and getBoxType() == 'et4000':
 				self.currentRcType = self.RCTYPE_ET4X00
 			elif rc == '14':
 				self.currentRcType = self.RCTYPE_XP1000
-			elif model == 'et8000':
-				self.currentRcType = self.RCTYPE_ET8000
-			elif model == 'et10000':
-				self.currentRcType = self.RCTYPE_ET8000
-			elif model == 'cube':
-				self.currentRcType = self.RCTYPE_CUBE
 		elif os.path.exists('/proc/stb/info/azmodel'):
 			f = open("/proc/stb/info/model",'r')
 			model = f.readline().strip()
@@ -148,18 +155,6 @@ class RcModel:
 				self.currentRcType = self.RCTYPE_AZBOXELITE
 			elif model == "me" or model == "minime":
 				self.currentRcType = self.RCTYPE_AZBOXME
-		elif os.path.exists('/proc/stb/info/boxtype'):
-			model = self.readFile('/proc/stb/info/boxtype')
-			if model.startswith('ebox'):
-				self.currentRcType = self.RCTYPE_EBOX5000
-			elif model == 'cube':
-				self.currentRcType = self.RCTYPE_CUBE
-			elif model == 'e3hd':
-				self.currentRcType = self.RCTYPE_E3HD
-			elif model == 'odinm9':
-				self.currentRcType = self.RCTYPE_ODINM9
-			elif model == 'odinm7':
-				self.currentRcType = self.RCTYPE_ODINM7
 				
 	def getRcType(self):
 		self.readRcTypeFromProc()
@@ -167,7 +162,6 @@ class RcModel:
 		
 	def getRcFolder(self):
 		remotefolder = 'dmm0'
-		print 'self.getRcType:',self.getRcType()
 		if self.getRcType() == self.RCTYPE_AZBOXHD:
 			remotefolder = 'azboxhd'
 		elif self.getRcType() == self.RCTYPE_AZBOXELITE:
