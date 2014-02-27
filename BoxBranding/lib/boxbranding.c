@@ -110,6 +110,11 @@ const char *_getBoxType()
 				return "uniboxhd3";
 			}
 		}
+		else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0)
+		{
+			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+			return boxtype_name;
+		}
 		else
 		{
 			return BOXTYPE;  
