@@ -1,4 +1,4 @@
-from boxbranding import getBoxType, getMachineName, getMachineBrand
+from boxbranding import getBoxType, getMachineName, getMachineBrand, getMachineBuild
 from Tools.StbHardware import getFPVersion
 import os
 
@@ -113,7 +113,7 @@ class RcModel:
 			self.currentRcType = self.RCTYPE_E3HD
 		elif getMachineBuild() == 'odinm9':
 			self.currentRcType = self.RCTYPE_ODINM9
-		elif getMachineBuild == 'odinm7':
+		elif getMachineBuild() == 'odinm7':
 			self.currentRcType = self.RCTYPE_ODINM7
 		elif getMachineBrand() in ('Xtrend', 'MaxDigital', 'MK-Digital', 'Octagon'):
 			rc = self.readFile('/proc/stb/ir/rc/type')
