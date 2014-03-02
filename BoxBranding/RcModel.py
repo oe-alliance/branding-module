@@ -132,7 +132,7 @@ class RcModel:
 			elif rc == '9' and getBoxType() == 'et6500':
 				self.currentRcType = self.RCTYPE_ET6500
 			elif rc == '9' and getBoxType() == 'et8000':
-				self.currentRcType = self.RCTYPE_ET6500
+				self.currentRcType = self.RCTYPE_ET8000
 			elif rc == '9' and getBoxType() == 'et9500':
 				self.currentRcType = self.RCTYPE_ET9500
 			elif rc == '9' and getBoxType() == 'et10000':
