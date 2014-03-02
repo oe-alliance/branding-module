@@ -110,6 +110,11 @@ const char *_getBoxType()
 				return "uniboxhd3";
 			}
 		}
+		else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0)
+		{
+			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+			return boxtype_name;
+		}
 		else
 		{
 			return BOXTYPE;  
@@ -276,9 +281,9 @@ const char *_getMachineName()
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		/** INI DETECTION */
-		if(strcmp(boxtype_name, "ini-1000") == 0) 
+		if(strcmp(boxtype_name, "ini-1000am") == 0) 
 		{
-			return "HD-e";
+			return "5x00";
 		}
 		else if(strcmp(boxtype_name, "ini-3000") == 0) 
 		{
@@ -417,7 +422,7 @@ const char *_getMachineName()
 		/** E2BMC ARM BOX */
 		else if(strcmp(boxtype_name, "cube") == 0) 
 		{
-			return "Cube";
+			return MACHINE_NAME;
 		}		
 		else /** if there is not matching STB name, return value from proc */
 		{
@@ -526,6 +531,10 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 		else if((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "ru")))
 		{
 			return "Sezam";
+		}
+		else if((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "am")))
+		{
+			return "Atemio";
 		}
 		else if(startsWith(boxtype_name, "ini"))
 		{

@@ -10,10 +10,6 @@ if DREAMBOX
 SUBDIRS = dmm0 dmm1 dmm2
 endif
 
-if E3HD
-SUBDIRS = e3hd
-endif
-
 if EBOX
 SUBDIRS = ebox5000
 endif
@@ -59,7 +55,7 @@ SUBDIRS = ixusszero
 endif
 
 if ODIN
-SUBDIRS = odinm9 odinm7 odinm6
+SUBDIRS = odinm9 odinm7 odinm6 e3hd
 endif
 
 if TECHNOMATE
