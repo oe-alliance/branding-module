@@ -188,6 +188,8 @@ class RcModel:
 			remotefolder = 'et6500'
 		elif self.getRcType() == self.RCTYPE_ET8000:
 			remotefolder = 'et8000'
+		elif self.getRcType() == self.RCTYPE_ET10000:
+			remotefolder = 'et10000'
 		elif self.getRcType() == self.RCTYPE_ET9X00:
 			remotefolder = 'et9x00'
 		elif self.getRcType() == self.RCTYPE_ET9500:
