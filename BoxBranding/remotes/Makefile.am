@@ -19,7 +19,7 @@ SUBDIRS = evo
 endif
 
 if XTREND
-SUBDIRS = et4x00 et6x00 et6500 et9x00 et9500 et8000
+SUBDIRS = et4x00 et6x00 et6500 et9x00 et9500 et8000 et10000
 endif
 
 if GIGABLUE
