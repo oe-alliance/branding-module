@@ -30,6 +30,14 @@ if IQON
 SUBDIRS = iqon
 endif
 
+if ROXXS
+SUBDIRS = iqon
+endif
+
+if MEDIAART
+SUBDIRS = iqon
+endif
+
 if FORCE1
 SUBDIRS = iqon
 endif
