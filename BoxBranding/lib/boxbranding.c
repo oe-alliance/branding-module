@@ -80,14 +80,22 @@ const char *_getBoxType()
 	{  
 		if(strcmp(BOXTYPE, "xpeedlx") == 0)
 		{
-			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
-			if(startsWith(boxtype_name, "2"))
+			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+			if(strcmp(boxtype_name, "ini-1000lx") == 0) 
 			{
-				return "xpeedlx2";
+				return "xpeedlx2t";
 			}
-			else
+			else if(strcmp(boxtype_name, "ini-1000de") == 0) 
 			{
-				return "xpeedlx1";
+				boxtype_name = ReadProcEntry("/proc/stb/fp/version");
+				if(startsWith(boxtype_name, "2"))
+				{
+					return "xpeedlx2";
+				}
+				else
+				{
+					return "xpeedlx1";
+				}
 			}
 		}
 		else if(strcmp(BOXTYPE, "ventonhdx") == 0)
@@ -325,6 +333,10 @@ const char *_getMachineName()
 		{
 			return "Xpeed LX-x";
 		}
+		else if(strcmp(boxtype_name, "ini-1000lx") == 0) 
+		{
+			return "Xpeed LX-2T";
+		}
 		else if(strcmp(boxtype_name, "ini-9000de") == 0) 
 		{
 			return "Xpeed LX-3";
@@ -520,7 +532,7 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 	if(fileExist("/proc/stb/info/boxtype"))
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype"); 
-		if ((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "de")))
+		if (((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "lx"))) || ((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "de"))))
 		{
 			return "GI";
 		}
