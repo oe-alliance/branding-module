@@ -63,8 +63,6 @@ class RcModel:
 			remotefolder = 'gb'
 		elif getMachineBrand() == 'Jepssen':
 			remotefolder = 'mediabox'
-		elif getMachineBrand() == 'Technomate':
-			remotefolder = 'tm'
 		elif getMachineBrand() in ('Iqon', 'Roxxs', 'MediaArt'):
 			remotefolder = 'iqon'
 
@@ -74,6 +72,10 @@ class RcModel:
 			remotefolder = 'dmm1'
 		elif getBoxType() in ('dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2'):
 			remotefolder = 'dmm2'
+		elif getBoxType() in ('tmtwin', 'tm2t'):
+			remotefolder = 'tm1'
+		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t'):
+			remotefolder = 'tm2'
 		elif getBoxType() == 'uniboxhd1':
 			fp_version = str(getFPVersion())
 			if fp_version.startswith('1'):

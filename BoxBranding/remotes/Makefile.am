@@ -66,8 +66,24 @@ if ODIN
 SUBDIRS = odinm9 odinm7 odinm6 e3hd
 endif
 
-if TECHNOMATE
-SUBDIRS = tm
+if TMTWINOE 
+SUBDIRS = tm1
+endif
+
+if TM2TOE 
+SUBDIRS = tm1
+endif
+
+if TMSINGLE
+SUBDIRS = tm2
+endif
+
+if TMNANO
+SUBDIRS = tm2
+endif
+
+if TMNANO2T
+SUBDIRS = tm2
 endif
 
 if VENTON

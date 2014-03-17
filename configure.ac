@@ -226,6 +226,7 @@ AM_CONDITIONAL(TMTWINOE, test "$BOXTYPE" == tmtwin)
 AM_CONDITIONAL(TM2TOE, test "$BOXTYPE" == tm2t)
 AM_CONDITIONAL(TMSINGLE, test "$BOXTYPE" == tmsingle)
 AM_CONDITIONAL(TMNANO, test "$BOXTYPE" == tmnano)
+AM_CONDITIONAL(TMNANO2T, test "$BOXTYPE" == tmnano2t)
 AM_CONDITIONAL(VUUNO, test "$BOXTYPE" == vuuno)
 AM_CONDITIONAL(VUULTIMO, test "$BOXTYPE" == vuultimo)
 AM_CONDITIONAL(VUSOLO, test "$BOXTYPE" == vusolo)
@@ -276,7 +277,8 @@ BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss/Makefile
 BoxBranding/remotes/sogno/Makefile
-BoxBranding/remotes/tm/Makefile
+BoxBranding/remotes/tm1/Makefile
+BoxBranding/remotes/tm2/Makefile
 BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
