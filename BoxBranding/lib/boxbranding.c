@@ -76,109 +76,54 @@ const char *_getBoxType()
 	char *boxtype_name = NULL;
 	char *vu_boxtype_name = NULL;
 	
-	if(strcmp(OE_VER, "OE-Alliance 2.0") == 0)
-	{  
-		if(strcmp(BOXTYPE, "xpeedlx") == 0)
+	if(strcmp(BOXTYPE, "xpeedlx") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+		if(strcmp(boxtype_name, "ini-1000lx") == 0) 
 		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-			if(strcmp(boxtype_name, "ini-1000lx") == 0) 
-			{
-				return "xpeedlx2t";
-			}
-			else if(strcmp(boxtype_name, "ini-1000de") == 0) 
-			{
-				boxtype_name = ReadProcEntry("/proc/stb/fp/version");
-				if(startsWith(boxtype_name, "2"))
-				{
-					return "xpeedlx2";
-				}
-				else
-				{
-					return "xpeedlx1";
-				}
-			}
+			return "xpeedlx2t";
 		}
-		else if(strcmp(BOXTYPE, "ventonhdx") == 0)
+		else if(strcmp(boxtype_name, "ini-1000de") == 0) 
 		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-			if(strcmp(boxtype_name, "ini-3000") == 0) 
+			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
+			if(startsWith(boxtype_name, "2"))
 			{
-				return "uniboxhd1";
+				return "xpeedlx2";
 			}
-			else if(strcmp(boxtype_name, "ini-5000") == 0) 
+			else
 			{
-				return "uniboxhd2";
+				return "xpeedlx1";
 			}
-			else if(strcmp(boxtype_name, "ini-7000") == 0) 
-			{
-				return "uniboxhd3";
-			}
-			else if(strcmp(boxtype_name, "ini-7012") == 0) 
-			{
-				return "uniboxhd3";
-			}
-		}
-		else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0)
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-			return boxtype_name;
-		}
-		else
-		{
-			return BOXTYPE;  
 		}
 	}
+	else if(strcmp(BOXTYPE, "ventonhdx") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+		if(strcmp(boxtype_name, "ini-3000") == 0) 
+		{
+			return "uniboxhd1";
+		}
+		else if(strcmp(boxtype_name, "ini-5000") == 0) 
+		{
+			return "uniboxhd2";
+		}
+		else if(strcmp(boxtype_name, "ini-7000") == 0) 
+		{
+			return "uniboxhd3";
+		}
+		else if(strcmp(boxtype_name, "ini-7012") == 0) 
+		{
+			return "uniboxhd3";
+		}
+	}
+	else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+		return boxtype_name;
+	}
 	else
-	{		
-		if(fileExist("/proc/stb/info/hwmodel"))
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/hwmodel");                               
-			return boxtype_name;
-		}
-		/** Gigablue DETECTION */
-		else if(fileExist("/proc/stb/info/gbmodel"))
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/gbmodel");
-			return boxtype_name;
-		}
-		/** Xtrend and other DETECTION */
-		else if(fileExist("/proc/stb/info/boxtype"))
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-			if(strcmp(boxtype_name, "Ixuss One") == 0) 
-			{
-				return "Ixuss One";
-			}
-			else if(strcmp(boxtype_name, "Ixuss Zero") == 0) 
-			{
-				return "Ixuss Zero";
-			}
-			return boxtype_name;
-		}
-		/** AzBOX DETECTION */
-		else if(fileExist("/proc/stb/info/azmodel"))
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/model");
-			return boxtype_name;
-		}
-		/** VU+ DETECTION */
-		else if(fileExist("/proc/stb/info/vumodel"))
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/vumodel");
-			vu_boxtype_name = malloc(strlen(boxtype_name) + 1);
-			sprintf(vu_boxtype_name, "vu%s", boxtype_name);
-			return vu_boxtype_name;
-		}
-		/** DMM DETECTION */
-		else if(fileExist("/proc/stb/info/model"))
-		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/model");
-			return boxtype_name;
-		}
-		else
-		{
-			return MACHINE_NAME;
-		}
+	{
+		return BOXTYPE;  
 	}
 }
 
