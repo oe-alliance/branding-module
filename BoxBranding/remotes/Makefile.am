@@ -137,3 +137,7 @@ endif
 if SOGNO
 SUBDIRS = sogno
 endif
+
+if UNIBOXHDE
+SUBDIRS = uniboxhde
+endif

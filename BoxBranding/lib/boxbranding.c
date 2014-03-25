@@ -183,10 +183,14 @@ const char *_getMachineName()
 		else if(strcmp(boxtype_name, "mediabox") == 0)
 		{
 			return "MediaBox-HD-LX";
-		}		
+		}
 		else if(strcmp(boxtype_name, "sogno-8800hd") == 0) 
 		{
 			return "8800-HD";
+		}
+		else if(strcmp(boxtype_name, "unibox-hde") == 0)
+		{
+			return "HD Eco+";
 		}
 		else
 		{
@@ -549,6 +553,10 @@ const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend
 		else if(startsWith(boxtype_name, "sogno")) 
 		{
 			return "Sogno";
+		}
+		else if(startsWith(boxtype_name, "unibox"))
+		{
+			return "UNiBOX";
 		}
 	}
 	else if(fileExist("/proc/stb/info/azmodel"))

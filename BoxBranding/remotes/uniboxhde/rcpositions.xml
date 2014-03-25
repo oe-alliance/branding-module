@@ -1,0 +1,65 @@
+<rcs>
+	<rc id="2">
+		<button name="POWER" pos="34,40" />
+		<button name="TIMER" pos="95,40" />
+		
+		<button name="1" pos="34,73" />
+		<button name="2" pos="65,73" />
+		<button name="3" pos="95,73" />
+		<button name="4" pos="34,99" />
+		<button name="5" pos="65,99" />
+		<button name="6" pos="95,99" />
+		<button name="7" pos="34,124" />
+		<button name="8" pos="65,124" />
+		<button name="9" pos="95,124" />
+		<button name="ARROWLEFT" pos="34,149" />
+		<button name="0" pos="65,149" />
+		<button name="ARROWRIGHT" pos="95,149" />
+		
+		<button name="RED" pos="42,179" />
+		<button name="GREEN" pos="62,170" />
+		<button name="YELLOW" pos="82,170" />
+		<button name="BLUE" pos="95,179" />
+		
+		<button name="MENU" pos="34,201" />
+		<button name="INFO" pos="95,201" />
+		<button name="EPG" pos="34,260" />
+		<button name="PVR" pos="95,260" />
+		
+		<button name="OK" pos="65,230" />
+		<button name="UP" pos="65,201" />
+		<button name="DOWN" pos="65,259" />
+		<button name="LEFT" pos="34,230" />
+		<button name="RIGHT" pos="95,230" />
+		
+		<button name="PLUGIN" pos="34,288" />
+		<button name="EXIT" pos="65,288" />
+		<button name="SCREEN" pos="95,288" />
+		
+		<button name="VOL+" pos="34,310" />
+		<button name="VOL-" pos="34,336" />
+		<button name="MUTE" pos="65,336" />
+		<button name="AUDIO" pos="65,310" />
+		<button name="BOUQUET+" pos="95,310" />
+		<button name="BOUQUET-" pos="95,336" />
+		
+		<button name="REWIND" pos="34,363" />
+		<button name="PLAY" pos="65,363" />
+		<button name="PAUSE" pos="65,363" />
+		<button name="FORWARD" pos="95,363" />
+		
+		<button name="RECORD" pos="34,387" />
+		<button name="MEDIA" pos="65,387" />
+		<button name="STOP" pos="95,387" />
+		
+		<button name="TV" pos="30,409" />
+		<button name="FAV" pos="54,409" />
+		<button name="SUBTITLE" pos="75,409" />
+		<button name="TEXT" pos="95,409" />
+		
+		<button name="WWW" pos="30,429" />
+		<button name="SETUP" pos="54,429" />
+		<button name="LAN" pos="75,429" />
+		<button name="HELP" pos="95,429" />
+	</rc>
+</rcs>
