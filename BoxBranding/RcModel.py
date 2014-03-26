@@ -83,7 +83,9 @@ class RcModel:
 			else:
 				remotefolder = 'ini2'
 		elif getBoxType() in ('uniboxhd2', 'uniboxhd3'):
-			remotefolder = 'ini1'  
+			remotefolder = 'ini1'
+		elif getBoxType() == 'uniboxhde':
+			remotefolder = 'uniboxhde'
 		elif getBoxType() in ('sezam1000hd', 'sezam5000hd'):
 			remotefolder = 'ini2'
 		elif getMachineBrand() == 'Miraclebox': 

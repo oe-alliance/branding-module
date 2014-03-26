@@ -177,7 +177,8 @@ AM_CONDITIONAL(EVO, test `echo "$BOXTYPE" | cut -b 1-4` == "enfi")
 AM_CONDITIONAL(JEPSSEN, test `echo "$BOXTYPE" | cut -b 1-5` == "media")
 AM_CONDITIONAL(ROXXS, test `echo "$BOXTYPE" | cut -b 1-5` == "roxxs")
 AM_CONDITIONAL(MEDIAART, test `echo "$BOXTYPE" | cut -b 1-4` == "mart")
-AM_CONDITIONAL(SOGNO, test `echo "$BRAND_OEM"` == "sogno")
+AM_CONDITIONAL(SOGNO, test `echo "$BOXTYPE"` == "sogno8800hd")
+AM_CONDITIONAL(UNIBOXHDE, test "$BOXTYPE" == uniboxhde)
 AM_CONDITIONAL(AZBOXME, test "$BOXTYPE" == azboxme)
 AM_CONDITIONAL(AZBOXMINIME, test "$BOXTYPE" == azboxminime)
 AM_CONDITIONAL(AZBOXHD, test "$BOXTYPE" == azboxhd)
@@ -277,6 +278,7 @@ BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss/Makefile
 BoxBranding/remotes/sogno/Makefile
+BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile
 BoxBranding/remotes/tm2/Makefile
 BoxBranding/remotes/vu/Makefile

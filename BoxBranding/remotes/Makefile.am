@@ -138,6 +138,10 @@ if SOGNO
 SUBDIRS = sogno
 endif
 
+if UNIBOXHDE
+SUBDIRS = uniboxhde
+endif
+
 if SPARK
 SUBDIRS = spark
 endif
