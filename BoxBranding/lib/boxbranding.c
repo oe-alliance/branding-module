@@ -340,22 +340,6 @@ const char *_getMachineName()
 			return "Zero";
 		}
 		/** XTREND DETECTION */
-		else if(strcmp(boxtype_name, "et9x00") == 0) 
-		{
-			return "ET9x00";
-		}
-		else if(strcmp(boxtype_name, "et9000") == 0) 
-		{
-			return "ET9000";
-		}
-		else if(strcmp(boxtype_name, "et9200") == 0) 
-		{
-			return "ET9200";
-		}
-		else if(strcmp(boxtype_name, "et9500") == 0) 
-		{
-			return "ET9500";
-		}
 		else if(strcmp(boxtype_name, "et4x00") == 0) 
 		{
 			return "ET4x00";
@@ -379,6 +363,30 @@ const char *_getMachineName()
 		else if(strcmp(boxtype_name, "et6500") == 0) 
 		{
 			return "ET6500";
+		}
+		else if(strcmp(boxtype_name, "et8000") == 0) 
+		{
+			return "ET8000";
+		}
+		else if(strcmp(boxtype_name, "et9x00") == 0) 
+		{
+			return "ET9x00";
+		}
+		else if(strcmp(boxtype_name, "et9000") == 0) 
+		{
+			return "ET9000";
+		}
+		else if(strcmp(boxtype_name, "et9200") == 0) 
+		{
+			return "ET9200";
+		}
+		else if(strcmp(boxtype_name, "et9500") == 0) 
+		{
+			return "ET9500";
+		}
+		else if(strcmp(boxtype_name, "et10000") == 0) 
+		{
+			return "ET10000";
 		}
 		/** E2BMC ARM BOX */
 		else if(strcmp(boxtype_name, "cube") == 0) 
