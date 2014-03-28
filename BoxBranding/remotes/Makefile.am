@@ -38,7 +38,7 @@ if MEDIAART
 SUBDIRS = iqon
 endif
 
-if FORCE1
+if FORCE
 SUBDIRS = iqon
 endif
 
