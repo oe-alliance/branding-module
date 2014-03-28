@@ -30,33 +30,6 @@ class RcModel:
 			elif model == "me" or model == "minime":
 				remotefolder = 'azboxme'
 
-		elif getMachineBrand() in ('Xtrend', 'MaxDigital', 'MK-Digital', 'Octagon'):
-			rc = self.readFile('/proc/stb/ir/rc/type')
-			if rc == '3':
-				remotefolder = 'odinm9'
-			if rc in ('4', '6'):
-				remotefolder = 'dmm0'
-			elif rc == '5':
-				remotefolder = 'et9x00'
-			elif rc == '7':
-				remotefolder = 'et6x00'
-			elif rc == '8':
-				remotefolder = 'vu'
-			elif rc == '9' and getBoxType() == 'et6500':
-				remotefolder = 'et6500'
-			elif rc == '9' and getBoxType() == 'et9500':
-				remotefolder = 'et9500'
-			elif rc == '9' and getBoxType() in ('et8000', 'et10000'):
-				remotefolder = 'et8000'
-			elif rc == '11' and getBoxType() == 'et9000':
-				remotefolder = 'et9x00'
-			elif rc == '11' and getBoxType() == 'et9200':
-				remotefolder = 'et9500'
-			elif rc == '13':
-				remotefolder = 'et4x00'
-			elif rc == '14':
-				remotefolder = 'xp1000'
-
 		elif getMachineBrand() == 'EVO':
 			remotefolder = 'evo'
 		elif getMachineBrand() == 'GigaBlue':
@@ -96,6 +69,18 @@ class RcModel:
 			remotefolder = 'optimuss'
 		elif getBoxType() == 'sogno8800hd':
 			remotefolder = 'sogno'
+		elif getBoxType() == ('et4x00', 'et5x00'):
+			remotefolder = 'et4x00'
+		elif getBoxType() == 'et6x00':
+			remotefolder = 'et6x00'
+		elif getBoxType() == 'et6500':
+			remotefolder = 'et6500'
+		elif getBoxType() in ('et8000', 'et10000'):
+			remotefolder = 'et8000'
+		elif getBoxType() == ('et9000', 'et9x00'):
+			remotefolder = 'et9x00'
+		elif getBoxType() == ('et9200', 'et9500'):
+			remotefolder = 'et9500'
 		elif getBoxType() in ('vusolo', 'vusolo2', 'vuduo', 'vuuno'):
 			remotefolder = 'vu'
 		elif getBoxType() == 'vuultimo':
@@ -118,6 +103,8 @@ class RcModel:
 			remotefolder = 'odinm7'
 		elif getMachineBuild() == 'odinm9':
 			remotefolder = 'odinm9'
+		elif getMachineBuild() == 'xp1000':
+			remotefolder = 'xp1000'
 
 		return remotefolder
 		
