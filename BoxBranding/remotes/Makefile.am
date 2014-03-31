@@ -23,7 +23,7 @@ SUBDIRS = et4x00 et6x00 et6500 et8000 et9x00 et9500
 endif
 
 if GIGABLUE
-SUBDIRS = gb
+SUBDIRS = gb0 gb1
 endif
 
 if IQON

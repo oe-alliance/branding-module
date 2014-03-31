@@ -32,8 +32,10 @@ class RcModel:
 
 		elif getMachineBrand() == 'EVO':
 			remotefolder = 'evo'
-		elif getMachineBrand() == 'GigaBlue':
-			remotefolder = 'gb'
+		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus'):
+			remotefolder = 'gb0'
+		elif getBoxType() == 'gbquadplus':
+			remotefolder = 'gb1'
 		elif getMachineBrand() == 'Jepssen':
 			remotefolder = 'mediabox'
 		elif getMachineBrand() in ('Iqon', 'Roxxs', 'MediaArt'):

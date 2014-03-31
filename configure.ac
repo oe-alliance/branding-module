@@ -267,7 +267,8 @@ BoxBranding/remotes/et6500/Makefile
 BoxBranding/remotes/et8000/Makefile
 BoxBranding/remotes/et9500/Makefile
 BoxBranding/remotes/et9x00/Makefile
-BoxBranding/remotes/gb/Makefile
+BoxBranding/remotes/gb0/Makefile
+BoxBranding/remotes/gb1/Makefile
 BoxBranding/remotes/ini0/Makefile
 BoxBranding/remotes/ini1/Makefile
 BoxBranding/remotes/ini2/Makefile
