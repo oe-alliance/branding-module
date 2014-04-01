@@ -47,10 +47,16 @@ AC_SUBST(MACHINE_BRAND)
 AC_DEFINE_UNQUOTED(MACHINE_BRAND,"$MACHINE_BRAND",[machine name])
 
 AC_ARG_WITH(machinebuild,
-	[  --with-machinebuild=NAME build name [[Vu,Xtrend,...]]],
+	[  --with-machinebuild=NAME build name [[inihdx,inihdp,...]]],
 	[MACHINE_BUILD="$withval"],[MACHINE_BUILD="inihdx"])
 AC_SUBST(MACHINE_BUILD)
 AC_DEFINE_UNQUOTED(MACHINE_BUILD,"$MACHINE_BUILD",[build name])
+
+AC_ARG_WITH(machinemake,
+	[  --with-machinemake=NAME build name [[ventonhdx,vusolo,...]]],
+	[MACHINE_MAKE="$withval"],[MACHINE_MAKE="ventonhdx"])
+AC_SUBST(MACHINE_MAKE)
+AC_DEFINE_UNQUOTED(MACHINE_MAKE,"$MACHINE_MAKE",[build name])
 
 AC_ARG_WITH(machinename,
 	[  --with-machinename=NAME machine name [[Solo,Ultimo,...]]],
@@ -177,6 +183,7 @@ AM_CONDITIONAL(EVO, test `echo "$BOXTYPE" | cut -b 1-4` == "enfi")
 AM_CONDITIONAL(JEPSSEN, test `echo "$BOXTYPE" | cut -b 1-5` == "media")
 AM_CONDITIONAL(ROXXS, test `echo "$BOXTYPE" | cut -b 1-5` == "roxxs")
 AM_CONDITIONAL(MEDIAART, test `echo "$BOXTYPE" | cut -b 1-4` == "mart")
+AM_CONDITIONAL(FORCE, test `echo "$BOXTYPE" | cut -b 1-5` == "force")
 AM_CONDITIONAL(SOGNO, test `echo "$BOXTYPE"` == "sogno8800hd")
 AM_CONDITIONAL(UNIBOXHDE, test "$BOXTYPE" == uniboxhde)
 AM_CONDITIONAL(AZBOXME, test "$BOXTYPE" == azboxme)
@@ -198,7 +205,6 @@ AM_CONDITIONAL(ET9X00, test "$BOXTYPE" == et9x00)
 AM_CONDITIONAL(ET8000, test "$BOXTYPE" == et8000)
 AM_CONDITIONAL(ET10000, test "$BOXTYPE" == et10000)
 AM_CONDITIONAL(ENFINITY, test "$BOXTYPE" == enfinity)
-AM_CONDITIONAL(FORCE1, test "$BOXTYPE" == force1)
 AM_CONDITIONAL(GB800SOLO, test "$BOXTYPE" == gb800solo)
 AM_CONDITIONAL(GB800SE, test "$BOXTYPE" == gb800se)
 AM_CONDITIONAL(GB800UE, test "$BOXTYPE" == gb800ue)
@@ -263,7 +269,8 @@ BoxBranding/remotes/et6500/Makefile
 BoxBranding/remotes/et8000/Makefile
 BoxBranding/remotes/et9500/Makefile
 BoxBranding/remotes/et9x00/Makefile
-BoxBranding/remotes/gb/Makefile
+BoxBranding/remotes/gb0/Makefile
+BoxBranding/remotes/gb1/Makefile
 BoxBranding/remotes/ini0/Makefile
 BoxBranding/remotes/ini1/Makefile
 BoxBranding/remotes/ini2/Makefile

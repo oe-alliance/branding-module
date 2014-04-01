@@ -70,7 +70,7 @@ char* ReadProcEntry(char *filename)
 	return real_boxtype_name;
 }
 
-const char *_getBoxType()
+const char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE=ventonhdx DISTRO=openvix -> it will return uniboxhd1   for a UniBox HD1
 {
 	// this ugly code will be removed after we will switch tottaly to OE-A 2.0
 	char *boxtype_name = NULL;
@@ -689,8 +689,14 @@ const char *_getOEVersion()
 
 const char *_getMachineBuild()
 {
-	// this will return real MACHINEBUILD e.x MACHINE=mbtwin DISTRO=vix -> it will return mbtwin
+	// this will return BUILD MACHINE e.x MACHINE=mbtwin DISTRO=openvix -> it will return inihdx
 	return MACHINE_BUILD;
+}
+
+const char *_getMachineMake()
+{
+	// this will return MAKE MACHINE e.x MACHINE=mbtwin DISTRO=openvix -> it will return mbtwin
+	return MACHINE_MAKE;
 }
 
 const char *_getMachineMtdRoot()
@@ -861,6 +867,11 @@ static PyObject* getMachineBuild(PyObject* self)
     return Py_BuildValue("s", _getMachineBuild());
 }
 
+static PyObject* getMachineMake(PyObject* self)
+{
+    return Py_BuildValue("s", _getMachineMake());
+}
+
 static PyObject* getMachineMtdRoot(PyObject* self)
 {
     return Py_BuildValue("s", _getMachineMtdRoot());
@@ -938,26 +949,27 @@ static PyObject* getImageFileSystem(PyObject* self)
 
 
 static PyMethodDef boxbrandingMethods[] = {
-		{ "getMachineBuild", getMachineBuild, METH_NOARGS },
-		{ "getMachineProcModel", getMachineProcModel, METH_NOARGS },  
-		{ "getMachineBrand", getMachineBrand, METH_NOARGS },
-		{ "getMachineName", getMachineName, METH_NOARGS },
-		{ "getMachineMtdRoot", getMachineMtdRoot, METH_NOARGS },
-		{ "getMachineKernelFile", getMachineKernelFile, METH_NOARGS },
-		{ "getMachineRootFile", getMachineRootFile, METH_NOARGS },
-		{ "getMachineMtdKernel", getMachineMtdKernel, METH_NOARGS },
-		{ "getMachineMKUBIFS", getMachineMKUBIFS, METH_NOARGS },
-		{ "getMachineUBINIZE", getMachineUBINIZE, METH_NOARGS },
-		{ "getBoxType", getBoxType, METH_NOARGS },
-		{ "getBrandOEM", getBrandOEM, METH_NOARGS },
-		{ "getOEVersion", getOEVersion, METH_NOARGS },
-		{ "getDriverDate", getDriverDate, METH_NOARGS },
-		{ "getImageVersion", getImageVersion, METH_NOARGS },
-		{ "getImageBuild", getImageBuild, METH_NOARGS },
-		{ "getImageDistro", getImageDistro, METH_NOARGS },
-		{ "getImageFolder", getImageFolder, METH_NOARGS },
-		{ "getImageFileSystem", getImageFileSystem, METH_NOARGS },
-		{ NULL, NULL }
+	{ "getMachineBuild", getMachineBuild, METH_NOARGS },
+	{ "getMachineMake", getMachineMake, METH_NOARGS },
+	{ "getMachineProcModel", getMachineProcModel, METH_NOARGS },  
+	{ "getMachineBrand", getMachineBrand, METH_NOARGS },
+	{ "getMachineName", getMachineName, METH_NOARGS },
+	{ "getMachineMtdRoot", getMachineMtdRoot, METH_NOARGS },
+	{ "getMachineKernelFile", getMachineKernelFile, METH_NOARGS },
+	{ "getMachineRootFile", getMachineRootFile, METH_NOARGS },
+	{ "getMachineMtdKernel", getMachineMtdKernel, METH_NOARGS },
+	{ "getMachineMKUBIFS", getMachineMKUBIFS, METH_NOARGS },
+	{ "getMachineUBINIZE", getMachineUBINIZE, METH_NOARGS },
+	{ "getBoxType", getBoxType, METH_NOARGS },
+	{ "getBrandOEM", getBrandOEM, METH_NOARGS },
+	{ "getOEVersion", getOEVersion, METH_NOARGS },
+	{ "getDriverDate", getDriverDate, METH_NOARGS },
+	{ "getImageVersion", getImageVersion, METH_NOARGS },
+	{ "getImageBuild", getImageBuild, METH_NOARGS },
+	{ "getImageDistro", getImageDistro, METH_NOARGS },
+	{ "getImageFolder", getImageFolder, METH_NOARGS },
+	{ "getImageFileSystem", getImageFileSystem, METH_NOARGS },
+	{ NULL, NULL }
 };
 
 void initboxbranding() {
