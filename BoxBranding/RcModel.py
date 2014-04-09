@@ -75,6 +75,8 @@ class RcModel:
 			remotefolder = 'et4x00'
 		elif getBoxType() == 'et6x00':
 			remotefolder = 'et6x00'
+		elif getBoxType() == 'et6000':
+			remotefolder = 'et6x00'
 		elif getBoxType() == 'et6500':
 			remotefolder = 'et6500'
 		elif getBoxType() in ('et8000', 'et10000'):
