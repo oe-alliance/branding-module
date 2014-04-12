@@ -73,7 +73,7 @@ class RcModel:
 			remotefolder = 'sogno'
 		elif getBoxType() == ('et4x00', 'et5x00'):
 			remotefolder = 'et4x00'
-		elif getBoxType() == 'et6x00':
+		elif getBoxType() in ('et6x00', 'et6000'):
 			remotefolder = 'et6x00'
 		elif getBoxType() == 'et6500':
 			remotefolder = 'et6500'

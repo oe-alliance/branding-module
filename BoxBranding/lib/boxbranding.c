@@ -176,13 +176,29 @@ const char *_getMachineName()
 		{
 			return "Optimuss-OS2";
 		}
-		else if(strcmp(boxtype_name, "optimussos2") == 0)
+		else if(strcmp(boxtype_name, "optimussos1plus") == 0)
 		{
-			return "Roxxs-200HD";
+			return "Optimuss-OS1 Plus";
+		} 
+		else if(strcmp(boxtype_name, "optimussos2plus") == 0)
+		{
+			return "Optimuss-OS2 Plus";
 		}
+		else if(strcmp(boxtype_name, "force1") == 0)
+		{
+			return "Force 1";
+		}		
+		else if(strcmp(boxtype_name, "roxxs200hd") == 0)
+		{
+			return "200HD";
+		}
+		else if(strcmp(boxtype_name, "mediaart200hd") == 0)
+		{
+			return "200HD";
+		}		
 		else if(strcmp(boxtype_name, "mediabox") == 0)
 		{
-			return "MediaBox-HD-LX";
+			return "HD-LX";
 		}
 		else if(strcmp(boxtype_name, "sogno-8800hd") == 0) 
 		{
