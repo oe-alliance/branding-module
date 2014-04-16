@@ -71,17 +71,17 @@ class RcModel:
 			remotefolder = 'optimuss'
 		elif getBoxType() == 'sogno8800hd':
 			remotefolder = 'sogno'
-		elif getBoxType() in ('et4x00', 'et5x00'):
+		elif getBoxType() in ('et4x00'):
 			remotefolder = 'et4x00'
-		elif getBoxType() in ('et6x00', 'et6000'):
+		elif getBoxType() in ('et6x00', 'et6000', 'et5x00', 'et5000'):
 			remotefolder = 'et6x00'
 		elif getBoxType() == 'et6500':
 			remotefolder = 'et6500'
 		elif getBoxType() in ('et8000', 'et10000'):
 			remotefolder = 'et8000'
-		elif getBoxType() in ('et9000', 'et9x00'):
+		elif getBoxType() in ('et9000', 'et9x00', 'et9200'):
 			remotefolder = 'et9x00'
-		elif getBoxType() in ('et9200', 'et9500'):
+		elif getBoxType() in ('et9500'):
 			remotefolder = 'et9500'
 		elif getBoxType() in ('vusolo', 'vusolo2', 'vuduo', 'vuuno'):
 			remotefolder = 'vu'
