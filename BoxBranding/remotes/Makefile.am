@@ -18,6 +18,10 @@ if EVO
 SUBDIRS = evo
 endif
 
+if VISIONNET
+SUBDIRS = visionnet
+endif
+
 if XTREND
 SUBDIRS = et4x00 et6x00 et6500 et8000 et9x00 et9500
 endif
