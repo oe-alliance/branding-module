@@ -152,8 +152,12 @@ const char *_getMachineName()
 		}
 		else if(strcmp(boxtype_name, "ini-1000lx") == 0) 
 		{
-			return "Xpeed LX-2T";
+			return "LX-2T";
 		}
+		else if(strcmp(boxtype_name, "ini-7012au") == 0) 
+		{
+			return "T3";
+		}		
 		/** XTREND DETECTION */
 		else if(strcmp(boxtype_name, "et4x00") == 0) 
 		{

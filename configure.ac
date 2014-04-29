@@ -177,6 +177,7 @@ AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
 AM_CONDITIONAL(MIRACLEBOX, test `echo "$BOXTYPE" | cut -b 1-2` == "mb")
 AM_CONDITIONAL(ATEMIO, test `echo "$BOXTYPE" | cut -b 1-6` == "atemio")
+AM_CONDITIONAL(BEYONWIZ, test `echo "$BOXTYPE" | cut -b 1-8` == "beyonwiz")
 AM_CONDITIONAL(EBOX, test `echo "$BRAND_OEM"` == "ebox")
 AM_CONDITIONAL(EDISION, test `echo "$BOXTYPE" | cut -b 1-4` == "opti")
 AM_CONDITIONAL(EVO, test `echo "$BOXTYPE" | cut -b 1-4` == "enfi")
@@ -275,6 +276,7 @@ BoxBranding/remotes/ini1/Makefile
 BoxBranding/remotes/ini2/Makefile
 BoxBranding/remotes/ini3/Makefile
 BoxBranding/remotes/ini4/Makefile
+BoxBranding/remotes/ini5/Makefile
 BoxBranding/remotes/iqon/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
