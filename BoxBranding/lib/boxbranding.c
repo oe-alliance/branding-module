@@ -154,10 +154,6 @@ const char *_getMachineName()
 		{
 			return "LX-2T";
 		}
-		else if(strcmp(boxtype_name, "ini-7012au") == 0) 
-		{
-			return "T3";
-		}		
 		/** XTREND DETECTION */
 		else if(strcmp(boxtype_name, "et4x00") == 0) 
 		{
