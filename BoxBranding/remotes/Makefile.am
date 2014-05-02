@@ -90,6 +90,10 @@ if TMNANO2T
 SUBDIRS = tm2
 endif
 
+if TMNANO2SUPER
+SUBDIRS = tm2
+endif
+
 if VENTON
 SUBDIRS = ini0 ini1 ini2
 endif
