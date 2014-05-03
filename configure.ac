@@ -177,9 +177,11 @@ AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
 AM_CONDITIONAL(MIRACLEBOX, test `echo "$BOXTYPE" | cut -b 1-2` == "mb")
 AM_CONDITIONAL(ATEMIO, test `echo "$BOXTYPE" | cut -b 1-6` == "atemio")
+AM_CONDITIONAL(BEYONWIZ, test `echo "$BOXTYPE" | cut -b 1-8` == "beyonwiz")
 AM_CONDITIONAL(EBOX, test `echo "$BRAND_OEM"` == "ebox")
 AM_CONDITIONAL(EDISION, test `echo "$BOXTYPE" | cut -b 1-4` == "opti")
 AM_CONDITIONAL(EVO, test `echo "$BOXTYPE" | cut -b 1-4` == "enfi")
+AM_CONDITIONAL(VISIONNET, test `echo "$BOXTYPE" | cut -b 1-6` == "marvel")
 AM_CONDITIONAL(JEPSSEN, test `echo "$BOXTYPE" | cut -b 1-5` == "media")
 AM_CONDITIONAL(ROXXS, test `echo "$BOXTYPE" | cut -b 1-5` == "roxxs")
 AM_CONDITIONAL(MEDIAART, test `echo "$BOXTYPE" | cut -b 1-4` == "mart")
@@ -234,6 +236,7 @@ AM_CONDITIONAL(TM2TOE, test "$BOXTYPE" == tm2t)
 AM_CONDITIONAL(TMSINGLE, test "$BOXTYPE" == tmsingle)
 AM_CONDITIONAL(TMNANO, test "$BOXTYPE" == tmnano)
 AM_CONDITIONAL(TMNANO2T, test "$BOXTYPE" == tmnano2t)
+AM_CONDITIONAL(TMNANO2SUPER, test "$BOXTYPE" == tmnano2super)
 AM_CONDITIONAL(VUUNO, test "$BOXTYPE" == vuuno)
 AM_CONDITIONAL(VUULTIMO, test "$BOXTYPE" == vuultimo)
 AM_CONDITIONAL(VUSOLO, test "$BOXTYPE" == vusolo)
@@ -276,6 +279,7 @@ BoxBranding/remotes/ini1/Makefile
 BoxBranding/remotes/ini2/Makefile
 BoxBranding/remotes/ini3/Makefile
 BoxBranding/remotes/ini4/Makefile
+BoxBranding/remotes/ini5/Makefile
 BoxBranding/remotes/iqon/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
@@ -288,6 +292,7 @@ BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile
 BoxBranding/remotes/tm2/Makefile
+BoxBranding/remotes/visionnet/Makefile
 BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile

@@ -130,133 +130,11 @@ const char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x M
 const char *_getMachineName()
 {
 	char *boxtype_name = NULL;
-	if(fileExist("/proc/stb/info/hwmodel"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/hwmodel");
-		/**brand = "Technomate" "Edision" "Iqon" "Sogno"( not sure, just looked at Capitan Components/RCmodel.py) */
-		if(strcmp(boxtype_name, "tmtwinoe") == 0)
-		{
-			return "TM-TWIN-OE";
-		}
-		else if(strcmp(boxtype_name, "tm2toe") == 0)
-		{
-			return "TM-2T-OE";
-		}
-		else if(strcmp(boxtype_name, "tmsingle") == 0)
-		{
-			return "TM-SINGLE";
-		}
-		else if(strcmp(boxtype_name, "tmnanooe") == 0)
-		{
-			return "TM-NANO-OE";
-		}
-		else if(strcmp(boxtype_name, "tmnano2t") == 0)
-		{
-			return "TM-NANO-2T-OE";
-		}		
-		else if(strcmp(boxtype_name, "ios100hd") == 0)
-		{
-			return "IOS-100HD";
-		}
-		else if(strcmp(boxtype_name, "ios200hd") == 0)
-		{
-			return "IOS-200HD";
-		}
-		else if(strcmp(boxtype_name, "ios300hd") == 0)
-		{
-			return "IOS-300HD";
-		}
-		else if(strcmp(boxtype_name, "optimussos1") == 0)
-		{
-			return "Optimuss-OS1";
-		} 
-		else if(strcmp(boxtype_name, "optimussos2") == 0)
-		{
-			return "Optimuss-OS2";
-		}
-		else if(strcmp(boxtype_name, "optimussos1plus") == 0)
-		{
-			return "Optimuss-OS1 Plus";
-		} 
-		else if(strcmp(boxtype_name, "optimussos2plus") == 0)
-		{
-			return "Optimuss-OS2 Plus";
-		}
-		else if(strcmp(boxtype_name, "force1") == 0)
-		{
-			return "Force 1";
-		}		
-		else if(strcmp(boxtype_name, "roxxs200hd") == 0)
-		{
-			return "200HD";
-		}
-		else if(strcmp(boxtype_name, "mediaart200hd") == 0)
-		{
-			return "200HD";
-		}		
-		else if(strcmp(boxtype_name, "mediabox") == 0)
-		{
-			return "HD-LX";
-		}
-		else if(strcmp(boxtype_name, "sogno-8800hd") == 0) 
-		{
-			return "8800-HD";
-		}
-		else if(strcmp(boxtype_name, "unibox-hde") == 0)
-		{
-			return "HD Eco+";
-		}
-		else
-		{
-			return boxtype_name; /** if happens it is diffrent*/
-		}		
-	}
-	/** GIGABLUE DETECTION */
-	else if(fileExist("/proc/stb/info/gbmodel"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/gbmodel");
-		if(strcmp(boxtype_name, "gb800solo") == 0) 
-		{
-			return "800 Solo";
-		}
-		else if(strcmp(boxtype_name, "gb800se") == 0) 
-		{
-			return "800 SE";
-		}
-		else if(strcmp(boxtype_name, "gb800ue") == 0) 
-		{
-			return "800 UE";
-		}
-		else if(strcmp(boxtype_name, "gbquad") == 0) 
-		{
-			return "Quad";
-		}
-		else if(strcmp(boxtype_name, "gb800seplus") == 0) 
-		{
-			return "800 SE Plus";
-		}
-		else if(strcmp(boxtype_name, "gb800ueplus") == 0) 
-		{
-			return "800 UE Plus";
-		}
-		else if(strcmp(boxtype_name, "gbquadplus") == 0) 
-		{
-			return "Quad Plus";
-		}
-		else
-		{
-			return boxtype_name; /** if happens it is diffrent*/
-		}
-	}
-	else if(fileExist("/proc/stb/info/boxtype"))
+	if(fileExist("/proc/stb/info/boxtype"))
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		/** INI DETECTION */
-		if(strcmp(boxtype_name, "ini-1000am") == 0) 
-		{
-			return "5x00";
-		}
-		else if(strcmp(boxtype_name, "ini-3000") == 0) 
+		if(strcmp(boxtype_name, "ini-3000") == 0) 
 		{
 			return "HD-1";
 		}
@@ -272,86 +150,9 @@ const char *_getMachineName()
 		{
 			return "HD-3";
 		}
-		else if(strcmp(boxtype_name, "ini-1000sv") == 0) 
-		{
-			return "Premium Mini";
-		}
-		else if(strcmp(boxtype_name, "ini-5000sv") == 0) 
-		{
-			return "Premium Twin";
-		}
-		else if(strcmp(boxtype_name, "ini-1000ru") == 0) 
-		{
-			return "HD-1000";
-		} 
-		else if(strcmp(boxtype_name, "ini-5000ru") == 0) 
-		{
-			return "HD-5000";
-		}
-		else if(strcmp(boxtype_name, "ini-9000ru") == 0) 
-		{
-			return "Marvel";
-		}
-		else if(strcmp(boxtype_name, "ini-1000de") == 0) 
-		{
-			return "Xpeed LX-x";
-		}
 		else if(strcmp(boxtype_name, "ini-1000lx") == 0) 
 		{
-			return "Xpeed LX-2T";
-		}
-		else if(strcmp(boxtype_name, "ini-9000de") == 0) 
-		{
-			return "Xpeed LX-3";
-		}
-		/** XP DETECTION */
-		else if(strcmp(boxtype_name, "xp1000") == 0) 
-		{
-			return "XP-1000";
-		}
-		/** OCTAGON DETECTION */
-		else if(strcmp(boxtype_name, "xp1000s") == 0) 
-		{
-			return "SF8 HD";
-		}
-		/** ODIN DETECTION */
-		else if(strcmp(boxtype_name, "odinm9") == 0) 
-		{
-			return MACHINE_NAME;
-		}
-		else if(strcmp(boxtype_name, "odinm7") == 0) 
-		{
-			return MACHINE_NAME; // And OEM: Optibox EVO, Galaxy Innovations Genius, Starsat LX, Opticum ax-odin, Axas Class M
-		}
-		else if(strcmp(boxtype_name, "e3hd") == 0) 
-		{
-			return MACHINE_NAME; // And OEM: Optibox E3HD, Galaxy Innovations E3HD, Axas E3HD
-		}		
-		/** MIXoS DETECTION */
-		else if(strcmp(boxtype_name, "ebox5000") == 0) 
-		{
-			return MACHINE_NAME; // And OEM: Galaxy Innovations 9196m
-		}
-		else if(strcmp(boxtype_name, "ebox5100") == 0) 
-		{
-			return MACHINE_NAME; // And OEM: Galaxy Innovations 9196 lite
-		}
-		else if(strcmp(boxtype_name, "eboxlumi") == 0) 
-		{
-			return MACHINE_NAME;
-		}		
-		else if(strcmp(boxtype_name, "ebox7358") == 0) 
-		{
-			return MACHINE_NAME;
-		}
-		/** IXUSS DETECTION */
-		else if(strcmp(boxtype_name, "Ixuss One") == 0) 
-		{
-			return "One";
-		}
-		else if(strcmp(boxtype_name, "Ixuss Zero") == 0) 
-		{
-			return "Zero";
+			return "LX-2T";
 		}
 		/** XTREND DETECTION */
 		else if(strcmp(boxtype_name, "et4x00") == 0) 
@@ -378,10 +179,6 @@ const char *_getMachineName()
 		{
 			return "ET6500";
 		}
-		else if(strcmp(boxtype_name, "et8000") == 0) 
-		{
-			return "ET8000";
-		}
 		else if(strcmp(boxtype_name, "et9x00") == 0) 
 		{
 			return "ET9x00";
@@ -398,18 +195,9 @@ const char *_getMachineName()
 		{
 			return "ET9500";
 		}
-		else if(strcmp(boxtype_name, "et10000") == 0) 
-		{
-			return "ET10000";
-		}
-		/** E2BMC ARM BOX */
-		else if(strcmp(boxtype_name, "cube") == 0) 
-		{
-			return MACHINE_NAME;
-		}		
 		else /** if there is not matching STB name, return value from proc */
 		{
-			return boxtype_name;
+			return MACHINE_NAME;
 		}
 	}
 	/** AzBOX DETECTION */
@@ -452,149 +240,16 @@ const char *_getMachineName()
 			return MACHINE_NAME;
 		}
 	}
-	/** VU+ DETECTION */
-	else if(fileExist("/proc/stb/info/vumodel"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/vumodel");
-		if(strcmp(boxtype_name, "solo") == 0) 
-		{
-			return "Solo";
-		}
-		else if(strcmp(boxtype_name, "duo") == 0)
-		{
-			return "Duo";
-		}
-		else if(strcmp(boxtype_name, "ultimo") == 0) 
-		{
-			return "Ultimo";
-		}
-		else if(strcmp(boxtype_name, "solo2") == 0) 
-		{
-			return "Solo²";
-		}
-		else if(strcmp(boxtype_name, "duo2") == 0) 
-		{
-			return "Duo²";
-		}
-		else
-		{
-			return MACHINE_NAME;
-		}
-	}
-	/** DMM DETECTION */
-	else if (fileExist("/proc/stb/info/model"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/model"); 
-		return boxtype_name;
-	}
 	else
 	{
 		return MACHINE_NAME;
 	}
 }
 
-/** detecting real Box Manufactuer for OSD Translations
- */
-const char *_getMachineBrand() // Unibox, Miraclebox, Sezam, GI, Octagon, Xtrend, Odin ??, Vu+, Dreambox, AZBox, Technomate
+const char *_getMachineBrand()
 {
 	char *boxtype_name = NULL;
 	
-	// for OEM resellers
-	if(fileExist("/proc/stb/info/boxtype"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype"); 
-		if (((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "lx"))) || ((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "de"))))
-		{
-			return "GI";
-		}
-		else if((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "sv")))
-		{
-			return "Miraclebox";
-		}
-		else if((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "ru")))
-		{
-			return "Sezam";
-		}
-		else if((startsWith(boxtype_name, "ini")) && (endsWith(boxtype_name, "am")))
-		{
-			return "Atemio";
-		}
-		else if(startsWith(boxtype_name, "ini"))
-		{
-			return "UNiBOX";
-		}
-		else if((strcmp(boxtype_name, "xp1000") == 0))
-		{
-			return MACHINE_BRAND; // OEM: MK-Digital, MAX-Digital
-		}		
-		else if((strcmp(boxtype_name, "xp1000s") == 0))
-		{
-			return "Octagon";
-		}
-		else if(startsWith(boxtype_name, "et"))
-		{
-			return "Xtrend";
-		}
-		else if((strcmp(boxtype_name, "gigablue") == 0))
-		{
-			return "GigaBlue";
-		}
-		else if(startsWith(boxtype_name, "e3hd"))
-		{
-			return MACHINE_BRAND; // OEM: Optibox, Galaxy Innovations
-		}		
-		else if(startsWith(boxtype_name, "odin"))
-		{
-			return MACHINE_BRAND; // OEM: Optibox, Galaxy Innovations, Starsat, Opticum, Axas
-		}
-		else if(startsWith(boxtype_name, "ebox"))
-		{
-			return MACHINE_BRAND; // OEM: Mixos, Galaxy Innovations
-		}		
-		else if(startsWith(boxtype_name, "ixuss"))
-		{
-			return "Medi@link Ixuss";
-		}
-	}
-	else if(fileExist("/proc/stb/info/hwmodel"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/hwmodel"); 
-		/**brand = "Technomate" "Edision" "Iqon" "Sogno"( not sure, just looked at Capitan Components/RCmodel.py) */
-		if(startsWith(boxtype_name, "tm"))
-		{
-			return "Technomate";
-		}
-		else if(startsWith(boxtype_name, "ios"))
-		{
-			return "Iqon";
-		}
-		else if(startsWith(boxtype_name, "optimuss"))
-		{
-			return "Edison";
-		}
-		else if(startsWith(boxtype_name, "sogno")) 
-		{
-			return "Sogno";
-		}
-		else if(startsWith(boxtype_name, "unibox"))
-		{
-			return "UNiBOX";
-		}
-	}
-	else if(fileExist("/proc/stb/info/azmodel"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/azmodel"); 
-		return "AZBox";
-	}
-	else if(fileExist("/proc/stb/info/vumodel"))
-	{
-		boxtype_name = ReadProcEntry("/proc/stb/info/vumodel"); 
-		return "Vu+";
-	}
-	else
-	{
-		return "Dreambox";
-	}
 	return MACHINE_BRAND;
 }
 

@@ -18,6 +18,10 @@ if EVO
 SUBDIRS = evo
 endif
 
+if VISIONNET
+SUBDIRS = visionnet
+endif
+
 if XTREND
 SUBDIRS = et4x00 et6x00 et6500 et8000 et9x00 et9500
 endif
@@ -86,12 +90,16 @@ if TMNANO2T
 SUBDIRS = tm2
 endif
 
+if TMNANO2SUPER
+SUBDIRS = tm2
+endif
+
 if VENTON
 SUBDIRS = ini0 ini1 ini2
 endif
 
 if INI
-SUBDIRS = ini0 ini1 ini2 ini3 ini4
+SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5
 endif
 
 if MIRACLEBOX
@@ -104,6 +112,14 @@ endif
 
 if SEZAM
 SUBDIRS = ini2 ini4
+endif
+
+if ATEMIO
+SUBDIRS = ini4
+endif
+
+if BEYONWIZ
+SUBDIRS = ini5
 endif
 
 if VUSOLO

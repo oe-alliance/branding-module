@@ -32,6 +32,8 @@ class RcModel:
 
 		elif getMachineBrand() == 'EVO':
 			remotefolder = 'evo'
+		elif getMachineBrand() == 'VisionNet':
+			remotefolder = 'visionnet'			
 		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus'):
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
@@ -49,7 +51,7 @@ class RcModel:
 			remotefolder = 'dmm2'
 		elif getBoxType() in ('tmtwin', 'tm2t'):
 			remotefolder = 'tm1'
-		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t'):
+		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano2super'):
 			remotefolder = 'tm2'
 		elif getBoxType() == 'uniboxhd1':
 			fp_version = str(getFPVersion())
@@ -67,6 +69,8 @@ class RcModel:
 			remotefolder = 'ini3'
 		elif getMachineBrand() in ('GI', 'Atemio') or getBoxType() in ('sezammarvel'):
 			remotefolder = 'ini4'
+		elif getBoxType() == 'beyonwizt3':
+			remotefolder = 'ini5'
 		elif getBoxType() in ('optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
 			remotefolder = 'optimuss'
 		elif getBoxType() == 'sogno8800hd':
