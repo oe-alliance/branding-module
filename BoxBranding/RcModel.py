@@ -42,7 +42,8 @@ class RcModel:
 			remotefolder = 'mediabox'
 		elif getMachineBrand() in ('Iqon', 'Roxxs', 'MediaArt'):
 			remotefolder = 'iqon'
-
+		elif getBoxType() == 'formuler1':
+			remotefolder = 'formuler1'
 		elif getBoxType() == 'dm8000':
 			remotefolder = 'dmm0'
 		elif getBoxType() in ('dm800', 'dm800se', 'dm500hd'):

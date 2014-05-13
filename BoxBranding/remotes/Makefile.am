@@ -18,6 +18,10 @@ if EVO
 SUBDIRS = evo
 endif
 
+if FORMULER1
+SUBDIRS = formuler1
+endif
+
 if VISIONNET
 SUBDIRS = visionnet
 endif
