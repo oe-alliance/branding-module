@@ -74,6 +74,10 @@ if ODIN
 SUBDIRS = odinm9 odinm7 odinm6 e3hd
 endif
 
+if SKYLAKE
+SUBDIRS = hd2400
+endif
+
 if TMTWINOE 
 SUBDIRS = tm1
 endif

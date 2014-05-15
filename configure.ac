@@ -172,6 +172,7 @@ AM_CONDITIONAL(GIGABLUE, test `echo "$BRAND_OEM"` == "gigablue")
 AM_CONDITIONAL(ODIN, test `echo "$BRAND_OEM" | cut -b 1-4` == "odin")
 AM_CONDITIONAL(INI, test `echo "$BRAND_OEM" | cut -b 1-3` == "ini")
 AM_CONDITIONAL(XP, test `echo "$BRAND_OEM"` == "xp")
+AM_CONDITIONAL(SKYLAKE, test `echo "$BRAND_OEM"` == "skylake")
 AM_CONDITIONAL(SEZAM, test `echo "$BOXTYPE" | cut -b 1-5` == "sezam")
 AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
@@ -226,6 +227,7 @@ AM_CONDITIONAL(IXUSSZERO, test "$BOXTYPE" == ixusszero)
 AM_CONDITIONAL(IXUSSDUO, test "$BOXTYPE" == ixussduo)
 AM_CONDITIONAL(MEDIABOX, test "$BOXTYPE" == mediabox)
 AM_CONDITIONAL(MBTWIN, test "$BOXTYPE" == mbtwin)
+AM_CONDITIONAL(MUTANT2400, test "$BOXTYPE" == mutant2400)
 AM_CONDITIONAL(ODINM6, test "$BOXTYPE" == odinm6)
 AM_CONDITIONAL(ODINM7, test "$MACHINE_BUILD" == odinm7)
 AM_CONDITIONAL(ODINM9, test "$MACHINE_BUILD" == odinm9)
@@ -274,6 +276,7 @@ BoxBranding/remotes/et9x00/Makefile
 BoxBranding/remotes/formuler1/Makefile
 BoxBranding/remotes/gb0/Makefile
 BoxBranding/remotes/gb1/Makefile
+BoxBranding/remotes/hd2400/Makefile
 BoxBranding/remotes/ini0/Makefile
 BoxBranding/remotes/ini1/Makefile
 BoxBranding/remotes/ini2/Makefile
