@@ -18,6 +18,10 @@ if EVO
 SUBDIRS = evo
 endif
 
+if FORMULER1
+SUBDIRS = formuler1
+endif
+
 if VISIONNET
 SUBDIRS = visionnet
 endif
@@ -68,6 +72,10 @@ endif
 
 if ODIN
 SUBDIRS = odinm9 odinm7 odinm6 e3hd
+endif
+
+if SKYLAKE
+SUBDIRS = hd2400
 endif
 
 if TMTWINOE 
