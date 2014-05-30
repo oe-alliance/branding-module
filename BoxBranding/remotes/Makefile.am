@@ -134,6 +134,10 @@ if VUSOLO
 SUBDIRS = vu
 endif
 
+if VUSOLOSE
+SUBDIRS = vu
+endif
+
 if VUSOLO2
 SUBDIRS = vu
 endif

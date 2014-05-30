@@ -90,7 +90,7 @@ class RcModel:
 			remotefolder = 'et9x00'
 		elif getBoxType() in ('et9500'):
 			remotefolder = 'et9500'
-		elif getBoxType() in ('vusolo', 'vusolo2', 'vuduo', 'vuuno'):
+		elif getBoxType() in ('vusolo', 'vusolo2', 'vusolose', 'vuduo', 'vuuno'):
 			remotefolder = 'vu'
 		elif getBoxType() == 'vuultimo':
 			remotefolder = 'vu2'
