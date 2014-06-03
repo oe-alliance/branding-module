@@ -34,7 +34,7 @@ class RcModel:
 			remotefolder = 'evo'
 		elif getMachineBrand() == 'VisionNet':
 			remotefolder = 'visionnet'			
-		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus'):
+		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox'):
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
 			remotefolder = 'gb1'
@@ -90,13 +90,13 @@ class RcModel:
 			remotefolder = 'et9x00'
 		elif getBoxType() in ('et9500'):
 			remotefolder = 'et9500'
-		elif getBoxType() in ('vusolo', 'vusolo2', 'vuduo', 'vuuno'):
+		elif getBoxType() in ('vusolo', 'vusolo2', 'vusolose', 'vuduo', 'vuuno'):
 			remotefolder = 'vu'
 		elif getBoxType() == 'vuultimo':
 			remotefolder = 'vu2'
 		elif getBoxType() == 'vuduo2':
 			remotefolder = 'vu3'
-		elif getBoxType() in ('starsatlx', 'axodin', 'odinm6'):
+		elif getBoxType() in ('starsatlx', 'axodin', 'axodinc' 'odinm6'):
 			remotefolder = 'odinm6'
 		elif getBoxType() in ('ixussone'):
 			remotefolder = 'ixussone'
