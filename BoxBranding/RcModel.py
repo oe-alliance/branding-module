@@ -96,7 +96,7 @@ class RcModel:
 			remotefolder = 'vu2'
 		elif getBoxType() == 'vuduo2':
 			remotefolder = 'vu3'
-		elif getBoxType() in ('starsatlx', 'axodin', 'axodinc' 'odinm6'):
+		elif getBoxType() in ('starsatlx', 'axodin', 'axodinc', 'odinm6'):
 			remotefolder = 'odinm6'
 		elif getBoxType() in ('ixussone'):
 			remotefolder = 'ixussone'
