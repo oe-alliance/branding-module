@@ -94,6 +94,22 @@ const char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x M
 			}
 		}
 	}
+	else if(strcmp(BOXTYPE, "atemio6x00") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+		if(strcmp(boxtype_name, "ini-2000at") == 0) 
+		{
+			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
+			if(startsWith(boxtype_name, "2"))
+			{
+				return "atemio6200";
+			}
+			else
+			{
+				return "atemio6100";
+			}
+		}
+	}	  
 	else if(strcmp(BOXTYPE, "ventonhdx") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
@@ -153,6 +169,18 @@ const char *_getMachineName()
 		else if(strcmp(boxtype_name, "ini-1000lx") == 0) 
 		{
 			return "LX-2T";
+		}
+		else if(strcmp(boxtype_name, "ini-2000at") == 0)
+		{
+			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
+			if(startsWith(boxtype_name, "2"))
+			{
+				return "6200";
+			}
+			else
+			{
+				return "6100";
+			}
 		}
 		/** XTREND DETECTION */
 		else if(strcmp(boxtype_name, "et4x00") == 0) 
