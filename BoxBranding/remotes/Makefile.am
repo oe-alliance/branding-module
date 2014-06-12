@@ -35,19 +35,19 @@ SUBDIRS = gb0 gb1
 endif
 
 if IQON
-SUBDIRS = iqon
+SUBDIRS = iqon1
 endif
 
 if ROXXS
-SUBDIRS = iqon
+SUBDIRS = iqon1
 endif
 
 if MEDIAART
-SUBDIRS = iqon
+SUBDIRS = iqon1
 endif
 
 if FORCE
-SUBDIRS = iqon
+SUBDIRS = iqon2
 endif
 
 if JEPSSEN
