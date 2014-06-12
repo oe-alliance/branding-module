@@ -289,7 +289,8 @@ BoxBranding/remotes/ini2/Makefile
 BoxBranding/remotes/ini3/Makefile
 BoxBranding/remotes/ini4/Makefile
 BoxBranding/remotes/ini5/Makefile
-BoxBranding/remotes/iqon/Makefile
+BoxBranding/remotes/iqon1/Makefile
+BoxBranding/remotes/iqon2/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
 BoxBranding/remotes/mediabox/Makefile
