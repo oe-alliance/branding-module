@@ -173,6 +173,7 @@ AM_CONDITIONAL(ODIN, test `echo "$BRAND_OEM" | cut -b 1-4` == "odin")
 AM_CONDITIONAL(INI, test `echo "$BRAND_OEM" | cut -b 1-3` == "ini")
 AM_CONDITIONAL(XP, test `echo "$BRAND_OEM"` == "xp")
 AM_CONDITIONAL(SKYLAKE, test `echo "$BRAND_OEM"` == "skylake")
+AM_CONDITIONAL(FULAN, test `echo "$BRAND_OEM"` == "fulan")
 AM_CONDITIONAL(SEZAM, test `echo "$BOXTYPE" | cut -b 1-5` == "sezam")
 AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
@@ -254,8 +255,8 @@ AM_CONDITIONAL(VENTONHDX, test "$BOXTYPE" == ventonhdx)
 AM_CONDITIONAL(XP1000, test "$MACHINE_BUILD" == xp1000)
 AM_CONDITIONAL(XP1000MAX, test "$BOXTYPE" == xp1000max)
 AM_CONDITIONAL(XP1000MK, test "$BOXTYPE" == xp1000mk)
-AM_CONDITIONAL(SPARK, test "$BOXTYPE" == spark)
-AM_CONDITIONAL(SPARK7162, test "$BOXTYPE" == spark7162)
+AM_CONDITIONAL(SPARK, test "$MACHINE_BUILD" == spark)
+AM_CONDITIONAL(SPARK7162, test "$MACHINE_BUILD" == spark7162)
 
 AC_CONFIG_FILES([
 Makefile
