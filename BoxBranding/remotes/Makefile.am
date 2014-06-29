@@ -18,7 +18,7 @@ if EVO
 SUBDIRS = evo
 endif
 
-if FORMULER1
+if FORMULER
 SUBDIRS = formuler1
 endif
 
