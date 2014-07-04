@@ -44,7 +44,7 @@ class RcModel:
 			remotefolder = 'mediabox'
 		elif getBoxType() in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'roxxs200hd', 'mediaart200hd'):
 			remotefolder = 'iqon1'
-		elif getBoxType() in ('force1'):
+		elif getBoxType() in ('force1', 'worldvisionf1'):
 			remotefolder = 'iqon2'
 		elif getBoxType() == 'formuler1':
 			remotefolder = 'formuler1'

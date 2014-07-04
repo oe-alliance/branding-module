@@ -50,6 +50,10 @@ if FORCE
 SUBDIRS = iqon2
 endif
 
+if WORLDVISION
+SUBDIRS = iqon2
+endif
+
 if JEPSSEN
 SUBDIRS = mediabox
 endif
