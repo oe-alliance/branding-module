@@ -18,7 +18,7 @@ if EVO
 SUBDIRS = evo
 endif
 
-if FORMULER1
+if FORMULER
 SUBDIRS = formuler1
 endif
 
@@ -47,6 +47,10 @@ SUBDIRS = iqon1
 endif
 
 if FORCE
+SUBDIRS = iqon2
+endif
+
+if WORLDVISION
 SUBDIRS = iqon2
 endif
 
