@@ -46,7 +46,7 @@ class RcModel:
 			remotefolder = 'iqon1'
 		elif getBoxType() in ('force1', 'worldvisionf1'):
 			remotefolder = 'iqon2'
-		elif getBoxType() == 'formuler1':
+		elif getBoxType() in ('formuler1', 'formuler3'):
 			remotefolder = 'formuler1'
 		elif getBoxType() == 'dm8000':
 			remotefolder = 'dmm0'
