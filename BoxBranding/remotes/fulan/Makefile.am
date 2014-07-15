@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/spark
+installdir = /usr/share/enigma2/rc_models/fulan
 
 dist_install_DATA = \
 	rc.png \

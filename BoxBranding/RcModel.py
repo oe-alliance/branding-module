@@ -116,8 +116,8 @@ class RcModel:
 			remotefolder = 'odinm9'
 		elif getMachineBuild() == 'xp1000':
 			remotefolder = 'xp1000'
-		elif getMachineBuild() in ('spark', 'spark7162'):
-			remotefolder = 'spark'			
+		elif getBrandOEM() == 'fulan':
+			remotefolder = 'fulan'
 
 		return remotefolder
 		

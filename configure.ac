@@ -258,8 +258,6 @@ AM_CONDITIONAL(VENTONHDX, test "$BOXTYPE" == ventonhdx)
 AM_CONDITIONAL(XP1000, test "$MACHINE_BUILD" == xp1000)
 AM_CONDITIONAL(XP1000MAX, test "$BOXTYPE" == xp1000max)
 AM_CONDITIONAL(XP1000MK, test "$BOXTYPE" == xp1000mk)
-AM_CONDITIONAL(SPARK, test "$MACHINE_BUILD" == spark)
-AM_CONDITIONAL(SPARK7162, test "$MACHINE_BUILD" == spark7162)
 
 AC_CONFIG_FILES([
 Makefile
@@ -284,6 +282,7 @@ BoxBranding/remotes/et8000/Makefile
 BoxBranding/remotes/et9500/Makefile
 BoxBranding/remotes/et9x00/Makefile
 BoxBranding/remotes/formuler1/Makefile
+BoxBranding/remotes/fulan/Makefile
 BoxBranding/remotes/gb0/Makefile
 BoxBranding/remotes/gb1/Makefile
 BoxBranding/remotes/hd2400/Makefile
@@ -311,7 +310,6 @@ BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
 BoxBranding/remotes/xp1000/Makefile
-BoxBranding/remotes/spark/Makefile
 
 
 ])

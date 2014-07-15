@@ -22,6 +22,10 @@ if FORMULER
 SUBDIRS = formuler1
 endif
 
+if FULAN
+SUBDIRS = fulan
+endif
+
 if VISIONNET
 SUBDIRS = visionnet
 endif
@@ -174,10 +178,3 @@ if UNIBOXHDE
 SUBDIRS = uniboxhde
 endif
 
-if SPARK
-SUBDIRS = spark
-endif
-
-if SPARK7162
-SUBDIRS = spark
-endif
