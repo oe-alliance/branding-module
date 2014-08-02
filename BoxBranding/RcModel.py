@@ -77,7 +77,9 @@ class RcModel:
 		elif getBoxType() == 'beyonwizt3':
 			remotefolder = 'ini5'
 		elif getBoxType() in ('optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
-			remotefolder = 'optimuss'
+			remotefolder = 'optimuss1'
+		elif getBoxType() in ('optimussos3plus'):
+			remotefolder = 'optimuss2'
 		elif getBoxType() == 'sogno8800hd':
 			remotefolder = 'sogno'
 		elif getBoxType() in ('et4x00'):

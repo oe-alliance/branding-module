@@ -59,7 +59,7 @@ SUBDIRS = mediabox
 endif
 
 if EDISION
-SUBDIRS = optimuss
+SUBDIRS = optimuss1 optimuss2
 endif
 
 if IXUSSONE
