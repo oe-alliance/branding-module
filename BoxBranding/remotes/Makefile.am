@@ -31,7 +31,7 @@ SUBDIRS = visionnet
 endif
 
 if XTREND
-SUBDIRS = et4x00 et6x00 et6500 et8000 et9x00 et9500
+SUBDIRS = et4x00 et6x00 et6500 et8000 et9x00 et9500 et7x00
 endif
 
 if GIGABLUE

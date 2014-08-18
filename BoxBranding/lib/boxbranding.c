@@ -130,7 +130,7 @@ const char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x M
 			return "uniboxhd3";
 		}
 	}
-	else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0)
+	else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0 || strcmp(BOXTYPE, "et7x00") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		return boxtype_name;
@@ -206,6 +206,14 @@ const char *_getMachineName()
 		else if(strcmp(boxtype_name, "et6500") == 0) 
 		{
 			return "ET6500";
+		}
+		else if(strcmp(boxtype_name, "et7000") == 0) 
+		{
+			return "ET7000";
+		}
+		else if(strcmp(boxtype_name, "et7500") == 0) 
+		{
+			return "ET7500";
 		}
 		else if(strcmp(boxtype_name, "et9x00") == 0) 
 		{
