@@ -33,7 +33,7 @@ class RcModel:
 		elif getMachineBrand() == 'EVO':
 			remotefolder = 'evo'
 		elif getMachineBrand() == 'VisionNet':
-			remotefolder = 'visionnet'			
+			remotefolder = 'visionnet'
 		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox'):
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
@@ -44,7 +44,7 @@ class RcModel:
 			remotefolder = 'mediabox'
 		elif getBoxType() in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'roxxs200hd', 'mediaart200hd'):
 			remotefolder = 'iqon1'
-		elif getBoxType() in ('force1', 'force1plus', 'worldvisionf1'):
+		elif getBoxType() in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus'):
 			remotefolder = 'iqon2'
 		elif getBoxType() in ('formuler1', 'formuler3'):
 			remotefolder = 'formuler1'
