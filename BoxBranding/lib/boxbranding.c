@@ -97,7 +97,7 @@ const char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x M
 	else if(strcmp(BOXTYPE, "atemio6x00") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-		if(strcmp(boxtype_name, "ini-2000at") == 0) 
+		if(strcmp(boxtype_name, "ini-2000am") == 0) 
 		{
 			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
 			if(startsWith(boxtype_name, "2"))
@@ -170,7 +170,7 @@ const char *_getMachineName()
 		{
 			return "LX-2T";
 		}
-		else if(strcmp(boxtype_name, "ini-2000at") == 0)
+		else if(strcmp(boxtype_name, "ini-2000am") == 0)
 		{
 			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
 			if(startsWith(boxtype_name, "2"))
