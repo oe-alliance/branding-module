@@ -56,7 +56,7 @@ class RcModel:
 			remotefolder = 'dmm2'
 		elif getBoxType() in ('tmtwin', 'tm2t'):
 			remotefolder = 'tm1'
-		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano2super'):
+		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano3t', 'tmnano2super'):
 			remotefolder = 'tm2'
 		elif getBoxType() == 'uniboxhd1':
 			fp_version = str(getFPVersion())
