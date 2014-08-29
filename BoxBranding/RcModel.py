@@ -38,6 +38,8 @@ class RcModel:
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
 			remotefolder = 'gb1'
+		elif getBoxType() in ('mutant1100'):
+			remotefolder = 'hd1100'
 		elif getBoxType() in ('mutant2400', 'quadbox2400'):
 			remotefolder = 'hd2400'
 		elif getMachineBrand() == 'Jepssen':
