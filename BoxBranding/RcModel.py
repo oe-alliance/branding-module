@@ -38,6 +38,8 @@ class RcModel:
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
 			remotefolder = 'gb1'
+		elif getBoxType() in ('mutant1100'):
+			remotefolder = 'hd1100'
 		elif getBoxType() in ('mutant2400', 'quadbox2400'):
 			remotefolder = 'hd2400'
 		elif getMachineBrand() == 'Jepssen':
@@ -56,7 +58,7 @@ class RcModel:
 			remotefolder = 'dmm2'
 		elif getBoxType() in ('tmtwin', 'tm2t'):
 			remotefolder = 'tm1'
-		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano2super'):
+		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano3t', 'tmnano2super'):
 			remotefolder = 'tm2'
 		elif getBoxType() == 'uniboxhd1':
 			fp_version = str(getFPVersion())

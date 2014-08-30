@@ -235,7 +235,8 @@ AM_CONDITIONAL(IXUSSZERO, test "$BOXTYPE" == ixusszero)
 AM_CONDITIONAL(IXUSSDUO, test "$BOXTYPE" == ixussduo)
 AM_CONDITIONAL(MEDIABOX, test "$BOXTYPE" == mediabox)
 AM_CONDITIONAL(MBTWIN, test "$BOXTYPE" == mbtwin)
-AM_CONDITIONAL(MUTANT2400, test "$BOXTYPE" == mutant2400)
+AM_CONDITIONAL(HD2400, test "$MACHINE_BUILD" == hd2400)
+AM_CONDITIONAL(HD1100, test "$MACHINE_BUILD" == hd1100)
 AM_CONDITIONAL(ODINM6, test "$BOXTYPE" == odinm6)
 AM_CONDITIONAL(ODINM7, test "$MACHINE_BUILD" == odinm7)
 AM_CONDITIONAL(ODINM9, test "$MACHINE_BUILD" == odinm9)
@@ -287,6 +288,7 @@ BoxBranding/remotes/formuler1/Makefile
 BoxBranding/remotes/fulan/Makefile
 BoxBranding/remotes/gb0/Makefile
 BoxBranding/remotes/gb1/Makefile
+BoxBranding/remotes/hd1100/Makefile
 BoxBranding/remotes/hd2400/Makefile
 BoxBranding/remotes/ini0/Makefile
 BoxBranding/remotes/ini1/Makefile
