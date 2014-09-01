@@ -1,4 +1,4 @@
-from boxbranding import getBoxType, getMachineBrand, getMachineBuild
+from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
 from Tools.StbHardware import getFPVersion
 import os
 
@@ -122,6 +122,8 @@ class RcModel:
 			remotefolder = 'odinm9'
 		elif getMachineBuild() == 'xp1000':
 			remotefolder = 'xp1000'
+		elif getBrandOEM() == 'fulan':
+			remotefolder = 'fulan'
 
 		return remotefolder
 		

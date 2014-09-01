@@ -22,6 +22,10 @@ if FORMULER
 SUBDIRS = formuler1
 endif
 
+if FULAN
+SUBDIRS = fulan
+endif
+
 if VISIONNET
 SUBDIRS = visionnet
 endif
@@ -177,3 +181,4 @@ endif
 if UNIBOXHDE
 SUBDIRS = uniboxhde
 endif
+
