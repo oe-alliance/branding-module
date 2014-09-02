@@ -34,7 +34,7 @@ class RcModel:
 			remotefolder = 'evo'
 		elif getMachineBrand() == 'VisionNet':
 			remotefolder = 'visionnet'
-		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox'):
+		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra'):
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
 			remotefolder = 'gb1'
