@@ -111,7 +111,7 @@ class RcModel:
 		elif getBoxType() in ('ixussone'):
 			remotefolder = 'ixussone'
 		elif getBoxType() in ('ixusszero'):
-			emotefolder = 'ixusszero'
+			remotefolder = 'ixusszero'
 		elif getMachineBuild() == 'cube':
 			remotefolder = 'cube'
 		elif getMachineBuild().startswith('ebox'):
