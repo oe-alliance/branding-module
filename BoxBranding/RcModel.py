@@ -56,7 +56,7 @@ class RcModel:
 			remotefolder = 'dmm0'
 		elif getBoxType() in ('dm800', 'dm800se', 'dm500hd'):
 			remotefolder = 'dmm1'
-		elif getBoxType() in ('dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2'):
+		elif getBoxType() in ('dm7080', 'dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2'):
 			remotefolder = 'dmm2'
 		elif getBoxType() in ('tmtwin', 'tm2t'):
 			remotefolder = 'tm1'
