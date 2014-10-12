@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/evo
+installdir = /usr/share/enigma2/rc_models/evo1
 
 dist_install_DATA = \
 	rc.png \

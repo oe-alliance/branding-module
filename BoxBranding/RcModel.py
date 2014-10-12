@@ -30,11 +30,13 @@ class RcModel:
 			elif model == "me" or model == "minime":
 				remotefolder = 'azboxme'
 
-		elif getMachineBrand() == 'EVO':
-			remotefolder = 'evo'
+		elif getBoxType() in ('enfinity'):
+			remotefolder = 'evo1'
+		elif getBoxType() in ('x2plus'):
+			remotefolder = 'evo2'
 		elif getBoxType() in ('enibox'):
 			remotefolder = 'kmt3000'
-		elif getMachineBrand() == 'VisionNet':
+		elif getBoxType() in ('marvel1'):
 			remotefolder = 'visionnet'
 		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra'):
 			remotefolder = 'gb0'

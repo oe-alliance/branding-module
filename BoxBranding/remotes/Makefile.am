@@ -14,8 +14,12 @@ if EBOX
 SUBDIRS = ebox5000
 endif
 
-if EVO
-SUBDIRS = evo
+if ENFINITY
+SUBDIRS = evo1
+endif
+
+if X2PLUS
+SUBDIRS = evo2
 endif
 
 if FORMULER

@@ -184,7 +184,6 @@ AM_CONDITIONAL(ATEMIO, test `echo "$BOXTYPE" | cut -b 1-6` == "atemio")
 AM_CONDITIONAL(BEYONWIZ, test `echo "$BOXTYPE" | cut -b 1-8` == "beyonwiz")
 AM_CONDITIONAL(EBOX, test `echo "$BRAND_OEM"` == "ebox")
 AM_CONDITIONAL(EDISION, test `echo "$BOXTYPE" | cut -b 1-4` == "opti")
-AM_CONDITIONAL(EVO, test `echo "$BOXTYPE" | cut -b 1-4` == "enfi")
 AM_CONDITIONAL(VISIONNET, test `echo "$BOXTYPE" | cut -b 1-6` == "marvel")
 AM_CONDITIONAL(JEPSSEN, test `echo "$BOXTYPE" | cut -b 1-5` == "media")
 AM_CONDITIONAL(ROXXS, test `echo "$BOXTYPE" | cut -b 1-5` == "roxxs")
@@ -216,6 +215,7 @@ AM_CONDITIONAL(ET8000, test "$BOXTYPE" == et8000)
 AM_CONDITIONAL(ET8500, test "$BOXTYPE" == et8500)
 AM_CONDITIONAL(ET10000, test "$BOXTYPE" == et10000)
 AM_CONDITIONAL(ENFINITY, test "$BOXTYPE" == enfinity)
+AM_CONDITIONAL(X2PLUS, test "$BOXTYPE" == x2plus)
 AM_CONDITIONAL(FORMULER1, test "$BOXTYPE" == formuler1)
 AM_CONDITIONAL(FORMULER3, test "$BOXTYPE" == formuler3)
 AM_CONDITIONAL(GBIPBOX, test "$BOXTYPE" == gbipbox)
@@ -280,7 +280,8 @@ BoxBranding/remotes/dmm1/Makefile
 BoxBranding/remotes/dmm2/Makefile
 BoxBranding/remotes/e3hd/Makefile
 BoxBranding/remotes/ebox5000/Makefile
-BoxBranding/remotes/evo/Makefile
+BoxBranding/remotes/evo1/Makefile
+BoxBranding/remotes/evo2/Makefile
 BoxBranding/remotes/et4x00/Makefile
 BoxBranding/remotes/et6x00/Makefile
 BoxBranding/remotes/et6500/Makefile
