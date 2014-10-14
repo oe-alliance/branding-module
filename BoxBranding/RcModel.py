@@ -48,7 +48,7 @@ class RcModel:
 			remotefolder = 'hd2400'
 		elif getMachineBrand() == 'Jepssen':
 			remotefolder = 'mediabox'
-		elif getBoxType() in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'roxxs200hd', 'mediaart200hd'):
+		elif getBoxType() in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd'):
 			remotefolder = 'iqon1'
 		elif getBoxType() in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus'):
 			remotefolder = 'iqon2'
