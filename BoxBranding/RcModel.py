@@ -35,7 +35,9 @@ class RcModel:
 		elif getBoxType() in ('x2plus'):
 			remotefolder = 'evo2'
 		elif getBoxType() in ('enibox'):
-			remotefolder = 'kmt3000'
+			remotefolder = 'hdbox'
+		elif getBoxType() in ('mago'):
+			remotefolder = 'relock'
 		elif getBoxType() in ('marvel1'):
 			remotefolder = 'visionnet'
 		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra'):

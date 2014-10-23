@@ -303,7 +303,7 @@ BoxBranding/remotes/ini4/Makefile
 BoxBranding/remotes/ini5/Makefile
 BoxBranding/remotes/iqon1/Makefile
 BoxBranding/remotes/iqon2/Makefile
-BoxBranding/remotes/kmt3000/Makefile
+BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
 BoxBranding/remotes/mediabox/Makefile
@@ -312,6 +312,7 @@ BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss1/Makefile
 BoxBranding/remotes/optimuss2/Makefile
+BoxBranding/remotes/relock/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile

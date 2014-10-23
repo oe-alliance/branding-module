@@ -31,7 +31,7 @@ SUBDIRS = fulan
 endif
 
 if TRIPLEDOT
-SUBDIRS = kmt3000
+SUBDIRS = hdbox relock
 endif
 
 if VISIONNET

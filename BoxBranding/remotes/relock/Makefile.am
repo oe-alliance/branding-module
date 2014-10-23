@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/kmt3000
+installdir = /usr/share/enigma2/rc_models/relock
 
 dist_install_DATA = \
 	rc.png \
