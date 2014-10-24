@@ -194,3 +194,7 @@ if UNIBOXHDE
 SUBDIRS = uniboxhde
 endif
 
+if AIRDIGITAL
+SUBDIRS = zgemma
+endif
+

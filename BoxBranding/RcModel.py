@@ -40,6 +40,8 @@ class RcModel:
 			remotefolder = 'relock'
 		elif getBoxType() in ('marvel1'):
 			remotefolder = 'visionnet'
+		elif getBoxType() in ('zgemmash1', 'zgemmas2s'):
+			remotefolder = 'zgemma'
 		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra'):
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':

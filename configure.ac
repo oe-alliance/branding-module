@@ -160,6 +160,7 @@ if test "$with_po" = "yes"; then
 fi
 AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 
+AM_CONDITIONAL(AIRDIGITAL, test `echo "$BRAND_OEM"` == "airdigital")
 AM_CONDITIONAL(AZBOX, test `echo "$BRAND_OEM"` == "azbox")
 AM_CONDITIONAL(CUBE, test `echo "$BRAND_OEM"` == "cube")
 AM_CONDITIONAL(DREAMBOX, test `echo "$BRAND_OEM"` == "dreambox")
@@ -322,6 +323,7 @@ BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
 BoxBranding/remotes/xp1000/Makefile
+BoxBranding/remotes/zgemma/Makefile
 
 
 ])
