@@ -313,7 +313,7 @@ BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss1/Makefile
 BoxBranding/remotes/optimuss2/Makefile
-BoxBranding/remotes/relock/Makefile
+BoxBranding/remotes/relook/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile

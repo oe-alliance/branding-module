@@ -31,7 +31,7 @@ SUBDIRS = fulan
 endif
 
 if TRIPLEDOT
-SUBDIRS = hdbox relock
+SUBDIRS = hdbox relook
 endif
 
 if VISIONNET
