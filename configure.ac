@@ -160,6 +160,7 @@ if test "$with_po" = "yes"; then
 fi
 AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 
+AM_CONDITIONAL(AIRDIGITAL, test `echo "$BRAND_OEM"` == "airdigital")
 AM_CONDITIONAL(AZBOX, test `echo "$BRAND_OEM"` == "azbox")
 AM_CONDITIONAL(CUBE, test `echo "$BRAND_OEM"` == "cube")
 AM_CONDITIONAL(DREAMBOX, test `echo "$BRAND_OEM"` == "dreambox")
@@ -184,7 +185,6 @@ AM_CONDITIONAL(ATEMIO, test `echo "$BOXTYPE" | cut -b 1-6` == "atemio")
 AM_CONDITIONAL(BEYONWIZ, test `echo "$BOXTYPE" | cut -b 1-8` == "beyonwiz")
 AM_CONDITIONAL(EBOX, test `echo "$BRAND_OEM"` == "ebox")
 AM_CONDITIONAL(EDISION, test `echo "$BOXTYPE" | cut -b 1-4` == "opti")
-AM_CONDITIONAL(EVO, test `echo "$BOXTYPE" | cut -b 1-4` == "enfi")
 AM_CONDITIONAL(VISIONNET, test `echo "$BOXTYPE" | cut -b 1-6` == "marvel")
 AM_CONDITIONAL(JEPSSEN, test `echo "$BOXTYPE" | cut -b 1-5` == "media")
 AM_CONDITIONAL(ROXXS, test `echo "$BOXTYPE" | cut -b 1-5` == "roxxs")
@@ -216,6 +216,7 @@ AM_CONDITIONAL(ET8000, test "$BOXTYPE" == et8000)
 AM_CONDITIONAL(ET8500, test "$BOXTYPE" == et8500)
 AM_CONDITIONAL(ET10000, test "$BOXTYPE" == et10000)
 AM_CONDITIONAL(ENFINITY, test "$BOXTYPE" == enfinity)
+AM_CONDITIONAL(X2PLUS, test "$BOXTYPE" == x2plus)
 AM_CONDITIONAL(FORMULER1, test "$BOXTYPE" == formuler1)
 AM_CONDITIONAL(FORMULER3, test "$BOXTYPE" == formuler3)
 AM_CONDITIONAL(GBIPBOX, test "$BOXTYPE" == gbipbox)
@@ -280,7 +281,8 @@ BoxBranding/remotes/dmm1/Makefile
 BoxBranding/remotes/dmm2/Makefile
 BoxBranding/remotes/e3hd/Makefile
 BoxBranding/remotes/ebox5000/Makefile
-BoxBranding/remotes/evo/Makefile
+BoxBranding/remotes/evo1/Makefile
+BoxBranding/remotes/evo2/Makefile
 BoxBranding/remotes/et4x00/Makefile
 BoxBranding/remotes/et6x00/Makefile
 BoxBranding/remotes/et6500/Makefile
@@ -302,7 +304,7 @@ BoxBranding/remotes/ini4/Makefile
 BoxBranding/remotes/ini5/Makefile
 BoxBranding/remotes/iqon1/Makefile
 BoxBranding/remotes/iqon2/Makefile
-BoxBranding/remotes/kmt3000/Makefile
+BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
 BoxBranding/remotes/mediabox/Makefile
@@ -311,6 +313,7 @@ BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss1/Makefile
 BoxBranding/remotes/optimuss2/Makefile
+BoxBranding/remotes/relook/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile
@@ -320,6 +323,7 @@ BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
 BoxBranding/remotes/xp1000/Makefile
+BoxBranding/remotes/zgemma/Makefile
 
 
 ])

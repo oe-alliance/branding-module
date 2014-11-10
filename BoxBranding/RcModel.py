@@ -30,12 +30,18 @@ class RcModel:
 			elif model == "me" or model == "minime":
 				remotefolder = 'azboxme'
 
-		elif getMachineBrand() == 'EVO':
-			remotefolder = 'evo'
+		elif getBoxType() in ('enfinity'):
+			remotefolder = 'evo1'
+		elif getBoxType() in ('x2plus'):
+			remotefolder = 'evo2'
 		elif getBoxType() in ('enibox'):
-			remotefolder = 'kmt3000'
-		elif getMachineBrand() == 'VisionNet':
+			remotefolder = 'hdbox'
+		elif getBoxType() in ('mago'):
+			remotefolder = 'relook'
+		elif getBoxType() in ('marvel1'):
 			remotefolder = 'visionnet'
+		elif getBoxType() in ('zgemmash1', 'zgemmas2s'):
+			remotefolder = 'zgemma'
 		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra'):
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
@@ -46,7 +52,7 @@ class RcModel:
 			remotefolder = 'hd2400'
 		elif getMachineBrand() == 'Jepssen':
 			remotefolder = 'mediabox'
-		elif getBoxType() in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'roxxs200hd', 'mediaart200hd'):
+		elif getBoxType() in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd'):
 			remotefolder = 'iqon1'
 		elif getBoxType() in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus'):
 			remotefolder = 'iqon2'
@@ -56,7 +62,7 @@ class RcModel:
 			remotefolder = 'dmm0'
 		elif getBoxType() in ('dm800', 'dm800se', 'dm500hd'):
 			remotefolder = 'dmm1'
-		elif getBoxType() in ('dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2'):
+		elif getBoxType() in ('dm7080', 'dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2'):
 			remotefolder = 'dmm2'
 		elif getBoxType() in ('tmtwin', 'tm2t'):
 			remotefolder = 'tm1'
