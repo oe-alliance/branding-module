@@ -84,7 +84,7 @@ class RcModel:
 			remotefolder = 'ini3'
 		elif getMachineBrand() in ('GI', 'Atemio') or getBoxType() in ('sezammarvel'):
 			remotefolder = 'ini4'
-		elif getBoxType() == 'beyonwizt3':
+		elif getMachineBrand() == 'Beyonwiz':
 			remotefolder = 'ini5'
 		elif getBoxType() in ('optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
 			remotefolder = 'optimuss1'
