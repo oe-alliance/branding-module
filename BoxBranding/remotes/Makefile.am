@@ -22,6 +22,10 @@ if X2PLUS
 SUBDIRS = evo2
 endif
 
+if BRE2ZE
+SUBDIRS = wwio1
+endif
+
 if FORMULER
 SUBDIRS = formuler1
 endif

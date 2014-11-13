@@ -217,6 +217,7 @@ AM_CONDITIONAL(ET8500, test "$BOXTYPE" == et8500)
 AM_CONDITIONAL(ET10000, test "$BOXTYPE" == et10000)
 AM_CONDITIONAL(ENFINITY, test "$BOXTYPE" == enfinity)
 AM_CONDITIONAL(X2PLUS, test "$BOXTYPE" == x2plus)
+AM_CONDITIONAL(BRE2ZE, test "$BOXTYPE" == bre2ze)
 AM_CONDITIONAL(FORMULER1, test "$BOXTYPE" == formuler1)
 AM_CONDITIONAL(FORMULER3, test "$BOXTYPE" == formuler3)
 AM_CONDITIONAL(GBIPBOX, test "$BOXTYPE" == gbipbox)
@@ -322,6 +323,7 @@ BoxBranding/remotes/visionnet/Makefile
 BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
+BoxBranding/remotes/wwio1/Makefile
 BoxBranding/remotes/xp1000/Makefile
 BoxBranding/remotes/zgemma/Makefile
 
