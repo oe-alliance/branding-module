@@ -186,6 +186,10 @@ if VUDUO2
 SUBDIRS = vu3
 endif
 
+if VUZERO
+SUBDIRS = vu
+endif
+
 if XP1000
 SUBDIRS = xp1000
 endif
