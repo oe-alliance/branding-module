@@ -40,6 +40,8 @@ class RcModel:
 			remotefolder = 'hdbox'
 		elif getBoxType() in ('mago'):
 			remotefolder = 'relook'
+		elif getBoxType() in ('tyrant'):
+			remotefolder = 'tyrant'
 		elif getBoxType() in ('marvel1'):
 			remotefolder = 'visionnet'
 		elif getBoxType() in ('zgemmash1', 'zgemmas2s'):

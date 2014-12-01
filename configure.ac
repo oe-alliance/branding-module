@@ -318,6 +318,7 @@ BoxBranding/remotes/optimuss1/Makefile
 BoxBranding/remotes/optimuss2/Makefile
 BoxBranding/remotes/relook/Makefile
 BoxBranding/remotes/sogno/Makefile
+BoxBranding/remotes/tyrant/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile
 BoxBranding/remotes/tm2/Makefile
