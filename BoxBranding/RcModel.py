@@ -46,7 +46,7 @@ class RcModel:
 			remotefolder = 'visionnet'
 		elif getBoxType() in ('zgemmash1', 'zgemmas2s'):
 			remotefolder = 'zgemma'
-		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra'):
+		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra', 'gbultrase', 'gbultraue'):
 			remotefolder = 'gb0'
 		elif getBoxType() == 'gbquadplus':
 			remotefolder = 'gb1'
