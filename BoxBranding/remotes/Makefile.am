@@ -1,3 +1,7 @@
+if 7000S
+SUBDIRS = 7000s
+endif
+
 if AZBOX
 SUBDIRS = azboxme azboxhd azboxelite
 endif

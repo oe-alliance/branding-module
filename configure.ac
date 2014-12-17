@@ -191,6 +191,7 @@ AM_CONDITIONAL(ROXXS, test `echo "$BOXTYPE" | cut -b 1-5` == "roxxs")
 AM_CONDITIONAL(MEDIAART, test `echo "$BOXTYPE" | cut -b 1-4` == "mart")
 AM_CONDITIONAL(FORCE, test `echo "$BOXTYPE" | cut -b 1-5` == "force")
 AM_CONDITIONAL(WORLDVISION, test `echo "$BOXTYPE" | cut -b 1-11` == "worldvision")
+AM_CONDITIONAL(7000S, test "$MACHINE_BUILD" == 7000s)
 AM_CONDITIONAL(SOGNO, test `echo "$BOXTYPE"` == "sogno8800hd")
 AM_CONDITIONAL(UNIBOXHDE, test "$BOXTYPE" == uniboxhde)
 AM_CONDITIONAL(AXODIN, test "$MACHINE_BUILD" == axodin)
@@ -277,6 +278,7 @@ Makefile
 BoxBranding/Makefile
 BoxBranding/lib/Makefile
 BoxBranding/remotes/Makefile
+BoxBranding/remotes/7000s/Makefile
 BoxBranding/remotes/azboxhd/Makefile
 BoxBranding/remotes/azboxme/Makefile
 BoxBranding/remotes/azboxelite/Makefile
