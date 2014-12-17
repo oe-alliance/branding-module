@@ -1,4 +1,4 @@
-if 7000S
+if S7000
 SUBDIRS = 7000s
 endif
 
