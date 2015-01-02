@@ -34,6 +34,8 @@ class RcModel:
 			remotefolder = 'evo1'
 		elif getBoxType() in ('x2plus'):
 			remotefolder = 'evo2'
+		elif getBoxType() in ('xcombo'):
+			remotefolder = 'evo3'
 		elif getBoxType() in ('bre2ze'):
 			remotefolder = 'wwio1'
 		elif getBoxType() in ('enibox'):

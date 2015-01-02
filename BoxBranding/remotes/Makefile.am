@@ -26,6 +26,10 @@ if X2PLUS
 SUBDIRS = evo2
 endif
 
+if XCOMBO
+SUBDIRS = evo3
+endif
+
 if BRE2ZE
 SUBDIRS = wwio1
 endif
