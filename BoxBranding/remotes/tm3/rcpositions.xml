@@ -20,13 +20,10 @@
 		<button name="VOL-" pos="39,208" />
 		<button name="MUTE" pos="76,179" />
 		<button name="EXIT" pos="76,201" />
-		
-		
 		<button name="BOUQUET+" pos="122,184" />
 		<button name="BOUQUET-" pos="113,208" />
-		
 		<button name="INFO" pos="28,238" />
-		<button name="MENU" pos="36,330" />
+		<button name="MENU" pos="124,238" />
 		<button name="OK" pos="77,266" />
 		<button name="UP" pos="77,241" />
 		<button name="DOWN" pos="77,291" />
@@ -70,7 +67,7 @@
 		<button name="BOUQUET+" pos="111,181" />
 		<button name="BOUQUET-" pos="111,206" />
 		<button name="INFO" pos="74,173" />
-		<button name="MENU" pos="36,330" />
+		<button name="MENU" pos="38,235" />
 		<button name="OK" pos="74,262" />
 		<button name="UP" pos="76,235" />
 		<button name="DOWN" pos="76,289" />
@@ -97,82 +94,71 @@
 		<button name="FORWARD" pos="38, 455" />
 		<!-- iq] -->
 	</rc>
+	<!-- This is technomate tm-nano-3t-combo rcu map -->
 	<rc id="2">
-		<button name="POWER" pos="30,44" />
-		<button name="MUTE" pos="80,47" />
-		<button name="HELP" pos="30,68" />
-		<!-- HOME pos="55,68" -->
-		<!-- END pos="80,68" -->
+		<button name="POWER" pos="48,72" />
+		<button name="MUTE" pos="104,76" />
 
-		<!-- ZOOM pos="30,86" -->
-		<!-- UHF pos="55,86" -->
-		<!-- LAN pos="80,86" -->
+		<button name="HELP" pos="46,102" />
+		<!-- HOME pos="75,102" -->
+		<!-- END pos="104,102" -->
 
-		<button name="1" pos="30,104" />
-		<button name="2" pos="55,104" />
-		<button name="3" pos="80,104" />
-		<button name="4" pos="30,124" />
-		<button name="5" pos="55,124" />
-		<button name="6" pos="80,124" />
-		<button name="7" pos="30,144" />
-		<button name="8" pos="55,144" />
-		<button name="9" pos="80,144" />
-		<button name="0" pos="55,164" />
-		<button name="ARROWLEFT" pos="30,164" />
-		<button name="ARROWRIGHT" pos="80,164" />
+		<!-- PIP pos="46,120" -->
+		<!-- MEDIA pos="75,120" -->
+		<!-- LAN pos="104,120" -->
 
-		<button name="VOL+" pos="28,188" />
-		<button name="VOL-" pos="28,214" />
-		<button name="BOUQUET+" pos="83,188" />
-		<button name="BOUQUET-" pos="83,214" />
-		<button name="GUIDE" pos="55,191" />
-		<button name="INFO" pos="55,217" />
+		<button name="1" pos="46,142" />
+		<button name="2" pos="75,142" />
+		<button name="3" pos="104,142" />
+		<button name="4" pos="46,166" />
+		<button name="5" pos="75,166" />
+		<button name="6" pos="104,166" />
+		<button name="7" pos="46,188" />
+		<button name="8" pos="75,188" />
+		<button name="9" pos="104,188" />
+		<button name="0" pos="75,210" />
+		<button name="ARROWLEFT" pos="46,210" />
+		<button name="ARROWRIGHT" pos="104,210" />
+		
+		<button name="VOL+" pos="44,241" />
+		<button name="VOL-" pos="44,278" />
+		<button name="BOUQUET+" pos="104,241" />
+		<button name="BOUQUET-" pos="104,278" />
+		<button name="INFO" pos="73,280" />
+		<!-- EPG pos="75,240" -->
 
-		<button name="RED" pos="24,246" />
-		<button name="GREEN" pos="45,246" />
-		<button name="YELLOW" pos="66,246" />
-		<button name="BLUE" pos="87,246" />
+		<button name="AUDIO" pos="40,305" />
+		<button name="TEXT" pos="62,305" />
+        <button name="SUBTITLE" pos="84,305" />
+		<!-- TIMER pos="107,305" -->
 
-		<button name="MENU" pos="21,279" />
-		<button name="EXIT" pos="88,279" />
-		<!-- SAT pos="21,341" -->
-		<!-- PORV pos="88,341" -->
+		<button name="MENU" pos="36,330" />
+		<button name="EXIT" pos="110,330" />
+		<!-- SAT pos="36,398" -->
+		<button name="PVR" pos="110,398" />
 
-		<button name="OK" pos="54,314" />
-		<button name="UP" pos="55,285" />
-		<button name="DOWN" pos="55,334" />
-		<button name="LEFT" pos="30,310" />
-		<button name="RIGHT" pos="78,310" />		
+		<button name="OK" pos="74,368" />
+		<button name="UP" pos="74,335" />
+		<button name="DOWN" pos="74,390" />
+		<button name="LEFT" pos="47,363" />
+		<button name="RIGHT" pos="98,363" />		
 
-		<button name="AUDIO" pos="23,360" />
-		<button name="TEXT" pos="44,360" />
-        <button name="SUBTITLE" pos="65,360" />
-		<!-- TIMER pos="86,360" -->
+		<button name="RED" pos="40,420" />
+		<button name="GREEN" pos="62,420" />
+		<button name="YELLOW" pos="84,420" />
+		<button name="BLUE" pos="107,420" />
 
-		<button name="PVR" pos="23,381" />
-		<button name="MEDIA" pos="44,381" />
-		<!-- YTUBE pos="65,381" -->
-		<!-- PIP pos="86,381" -->
+		<button name="REWIND" pos="40,442" />
+        <button name="PLAY" pos="62,442" />
+        <button name="PAUSE" pos="84,442" />
+        <button name="PLAYPAUSE" pos="84,442" />
+        <button name="FASTFORWARD" pos="107,442" />
 
-		<button name="REWIND" pos="23,398" />
-        <button name="PLAY" pos="44,398" />
-        <button name="PAUSE" pos="65,398" />
-        <button name="PLAYPAUSE" pos="65,398" />
-        <button name="FASTFORWARD" pos="86,398" />
+		<button name="TV" pos="40,460" />
+		<button name="RECORD" pos="62,460" />
+		<button name="STOP" pos="84,460" /> 
+		<button name="RADIO" pos="107,460" />
 
-		<button name="TV" pos="23,415" />
-		<button name="RECORD" pos="44,415" />
-		<button name="STOP" pos="65,415" /> 
-		<button name="RADIO" pos="86,415" />
-
-		<!-- [iq -->
-		<!-- There are no keys for optimuss OS3 plus -->
-		<button name="DREAMSELECT" pos="51,55" />
-		<button name="TVSELECT" pos="23,415" />
-		<button name="VIDEO" pos="43,148" />
-		<button name="BACK" pos="38, 258" />
-		<button name="FORWARD" pos="38, 455" />
-		<!-- iq] -->
 	</rc>
 
 </rcs>

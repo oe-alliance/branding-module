@@ -138,6 +138,10 @@ if TMNANO3T
 SUBDIRS = tm2
 endif
 
+if TMNANOSE
+SUBDIRS = tm3
+endif
+
 if VENTON
 SUBDIRS = ini0 ini1 ini2
 endif
