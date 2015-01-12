@@ -30,6 +30,10 @@ if XCOMBO
 SUBDIRS = evo3
 endif
 
+if X1PLUS
+SUBDIRS = evo3
+endif
+
 if BRE2ZE
 SUBDIRS = wwio1
 endif
