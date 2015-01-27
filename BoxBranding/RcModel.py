@@ -2,6 +2,12 @@ from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOE
 from Tools.StbHardware import getFPVersion
 import os
 
+boxtype = getBoxType()
+machinebuild = getMachineBuild()
+machinebrand = getMachineBrand()
+brandoem = getBrandOEM()
+
+
 class RcModel:
 	def __init__(self):
 		pass
@@ -30,117 +36,117 @@ class RcModel:
 			elif model == "me" or model == "minime":
 				remotefolder = 'azboxme'
 
-		elif getBoxType() in ('enfinity'):
+		elif boxtype in ('enfinity'):
 			remotefolder = 'evo1'
-		elif getBoxType() in ('x2plus'):
+		elif boxtype in ('x2plus'):
 			remotefolder = 'evo2'
-		elif getBoxType() in ('xcombo', 'x1plus'):
+		elif boxtype in ('xcombo', 'x1plus'):
 			remotefolder = 'evo3'
-		elif getBoxType() in ('bre2ze'):
+		elif boxtype in ('bre2ze'):
 			remotefolder = 'wwio1'
-		elif getBoxType() in ('enibox'):
+		elif boxtype in ('enibox'):
 			remotefolder = 'hdbox'
-		elif getBoxType() in ('mago'):
+		elif boxtype in ('mago'):
 			remotefolder = 'relook'
-		elif getBoxType() in ('tyrant'):
+		elif boxtype in ('tyrant'):
 			remotefolder = 'tyrant'
-		elif getBoxType() in ('marvel1'):
+		elif boxtype in ('marvel1'):
 			remotefolder = 'visionnet'
-		elif getBoxType() in ('zgemmash1', 'zgemmas2s'):
+		elif boxtype in ('zgemmash1', 'zgemmas2s'):
 			remotefolder = 'zgemma'
-		elif getBoxType() in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra', 'gbultrase', 'gbultraue'):
+		elif boxtype in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultra', 'gbultrase', 'gbultraue'):
 			remotefolder = 'gb0'
-		elif getBoxType() == 'gbquadplus':
+		elif boxtype == 'gbquadplus':
 			remotefolder = 'gb1'
-		elif getBoxType() in ('p62'):
+		elif boxtype in ('p62'):
 			remotefolder = '7000s'
-		elif getBoxType() in ('mutant1100'):
+		elif boxtype in ('mutant1100'):
 			remotefolder = 'hd1100'
-		elif getBoxType() in ('mutant2400', 'quadbox2400'):
+		elif boxtype in ('mutant2400', 'quadbox2400'):
 			remotefolder = 'hd2400'
-		elif getMachineBrand() == 'Jepssen':
+		elif machinebrand == 'Jepssen':
 			remotefolder = 'mediabox'
-		elif getBoxType() in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd'):
+		elif boxtype in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd'):
 			remotefolder = 'iqon1'
-		elif getBoxType() in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus', 'force2soild'):
+		elif boxtype in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus', 'force2soild'):
 			remotefolder = 'iqon2'
-		elif getBoxType() in ('formuler1', 'formuler3'):
+		elif boxtype in ('formuler1', 'formuler3'):
 			remotefolder = 'formuler1'
-		elif getBoxType() == 'dm8000':
+		elif boxtype == 'dm8000':
 			remotefolder = 'dmm0'
-		elif getBoxType() in ('dm800', 'dm800se', 'dm500hd'):
+		elif boxtype in ('dm800', 'dm800se', 'dm500hd'):
 			remotefolder = 'dmm1'
-		elif getBoxType() in ('dm7080', 'dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2', 'dm820'):
+		elif boxtype in ('dm7080', 'dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2', 'dm820'):
 			remotefolder = 'dmm2'
-		elif getBoxType() in ('tmtwin', 'tm2t'):
+		elif boxtype in ('tmtwin', 'tm2t'):
 			remotefolder = 'tm1'
-		elif getBoxType() in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano3t', 'tmnano2super'):
+		elif boxtype in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano3t', 'tmnano2super'):
 			remotefolder = 'tm2'
-		elif getBoxType() in ('tmnanose'):
+		elif boxtype in ('tmnanose'):
 			remotefolder = 'tm3'
-		elif getBoxType() == 'uniboxhd1':
+		elif boxtype == 'uniboxhd1':
 			fp_version = str(getFPVersion())
 			if fp_version.startswith('1'):
 				remotefolder = 'ini0'
 			else:
 				remotefolder = 'ini2'
-		elif getBoxType() in ('uniboxhd2', 'uniboxhd3'):
+		elif boxtype in ('uniboxhd2', 'uniboxhd3'):
 			remotefolder = 'ini1'
-		elif getBoxType() == 'uniboxhde':
+		elif boxtype == 'uniboxhde':
 			remotefolder = 'uniboxhde'
-		elif getBoxType() in ('sezam1000hd', 'sezam5000hd'):
+		elif boxtype in ('sezam1000hd', 'sezam5000hd'):
 			remotefolder = 'ini2'
-		elif getMachineBrand() == 'Miraclebox': 
+		elif machinebrand == 'Miraclebox': 
 			remotefolder = 'ini3'
-		elif getMachineBrand() in ('GI', 'Atemio') or getBoxType() in ('sezammarvel'):
+		elif machinebrand in ('GI', 'Atemio') or boxtype in ('sezammarvel'):
 			remotefolder = 'ini4'
-		elif getMachineBrand() == 'Beyonwiz':
+		elif machinebrand == 'Beyonwiz':
 			remotefolder = 'ini5'
-		elif getBoxType() in ('optimussos', 'optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
+		elif boxtype in ('optimussos', 'optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
 			remotefolder = 'optimuss1'
-		elif getBoxType() in ('optimussos3plus'):
+		elif boxtype in ('optimussos3plus'):
 			remotefolder = 'optimuss2'
-		elif getBoxType() == 'sogno8800hd':
+		elif boxtype == 'sogno8800hd':
 			remotefolder = 'sogno'
-		elif getBoxType() in ('et4x00'):
+		elif boxtype in ('et4x00'):
 			remotefolder = 'et4x00'
-		elif getBoxType() in ('et6x00', 'et6000', 'et5x00', 'et5000'):
+		elif boxtype in ('et6x00', 'et6000', 'et5x00', 'et5000'):
 			remotefolder = 'et6x00'
-		elif getBoxType() == 'et6500':
+		elif boxtype == 'et6500':
 			remotefolder = 'et6500'
-		elif getBoxType() in ('et8000', 'et8500', 'et10000'):
+		elif boxtype in ('et8000', 'et8500', 'et10000'):
 			remotefolder = 'et8000'
-		elif getBoxType() in ('et9000', 'et9x00', 'et9200'):
+		elif boxtype in ('et9000', 'et9x00', 'et9200'):
 			remotefolder = 'et9x00'
-		elif getBoxType() in ('et9500'):
+		elif boxtype in ('et9500'):
 			remotefolder = 'et9500'
-		elif getBoxType() in ('et7000', 'et7500'):
+		elif boxtype in ('et7000', 'et7500'):
 			remotefolder = 'et7x00'
-		elif getBoxType() in ('vusolo', 'vusolo2', 'vusolose', 'vuduo', 'vuuno', 'vuzero'):
+		elif boxtype in ('vusolo', 'vusolo2', 'vusolose', 'vuduo', 'vuuno', 'vuzero'):
 			remotefolder = 'vu'
-		elif getBoxType() == 'vuultimo':
+		elif boxtype == 'vuultimo':
 			remotefolder = 'vu2'
-		elif getBoxType() == 'vuduo2':
+		elif boxtype == 'vuduo2':
 			remotefolder = 'vu3'
-		elif getBoxType() in ('starsatlx', 'axodin', 'axodinc', 'odinm6'):
+		elif boxtype in ('starsatlx', 'axodin', 'axodinc', 'odinm6'):
 			remotefolder = 'odinm6'
-		elif getBoxType() in ('ixussone'):
+		elif boxtype in ('ixussone'):
 			remotefolder = 'ixussone'
-		elif getBoxType() in ('ixusszero'):
+		elif boxtype in ('ixusszero'):
 			remotefolder = 'ixusszero'
-		elif getMachineBuild() == 'cube':
+		elif machinebuild == 'cube':
 			remotefolder = 'cube'
-		elif getMachineBuild().startswith('ebox'):
+		elif machinebuild.startswith('ebox'):
 			remotefolder = 'ebox5000'
-		elif getMachineBuild() == 'e3hd':
+		elif machinebuild == 'e3hd':
 			remotefolder = 'e3hd'
-		elif getMachineBuild() == 'odinm7':
+		elif machinebuild == 'odinm7':
 			remotefolder = 'odinm7'
-		elif getMachineBuild() == 'odinm9':
+		elif machinebuild == 'odinm9':
 			remotefolder = 'odinm9'
-		elif getMachineBuild() == 'xp1000':
+		elif machinebuild == 'xp1000':
 			remotefolder = 'xp1000'
-		elif getBrandOEM() == 'fulan':
+		elif brandoem == 'fulan':
 			remotefolder = 'fulan'
 
 		return remotefolder
