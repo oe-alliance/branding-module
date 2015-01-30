@@ -151,7 +151,7 @@ SUBDIRS = ini0 ini1 ini2
 endif
 
 if INI
-SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5
+SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5 ini6
 endif
 
 if MIRACLEBOX
@@ -172,6 +172,10 @@ endif
 
 if BEYONWIZ
 SUBDIRS = ini5
+endif
+
+if BWIDOW
+SUBDIRS = ini6
 endif
 
 if VUSOLO
