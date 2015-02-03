@@ -114,6 +114,10 @@ if HD1100
 SUBDIRS = hd1100
 endif
 
+if HD1200
+SUBDIRS = hd1100
+endif
+
 if TMTWINOE 
 SUBDIRS = tm1
 endif
