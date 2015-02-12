@@ -166,6 +166,7 @@ AM_CONDITIONAL(CUBE, test `echo "$BRAND_OEM"` == "cube")
 AM_CONDITIONAL(DREAMBOX, test `echo "$BRAND_OEM"` == "dreambox")
 AM_CONDITIONAL(TECHNOMATE, test `echo "$BOXTYPE" | cut -b 1-2` == "tm")
 AM_CONDITIONAL(IQON, test `echo "$BOXTYPE" | cut -b 1-4` == "iqon")
+AM_CONDITIONAL(MEGASAT, test `echo "$BOXTYPE" | cut -b 1-4` == "mega")
 AM_CONDITIONAL(VUPLUS, test `echo "$BRAND_OEM"` == "vuplus")
 AM_CONDITIONAL(XTREND, test `echo "$BRAND_OEM"` == "xtrend")
 AM_CONDITIONAL(DAGS, test `echo "$BRAND_OEM" | cut -b 1-4` == "dags")
@@ -321,6 +322,8 @@ BoxBranding/remotes/iqon2/Makefile
 BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
+BoxBranding/remotes/megasat1/Makefile
+BoxBranding/remotes/megasat2/Makefile
 BoxBranding/remotes/mediabox/Makefile
 BoxBranding/remotes/odinm6/Makefile
 BoxBranding/remotes/odinm7/Makefile

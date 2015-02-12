@@ -102,6 +102,10 @@ if IXUSSDUO
 SUBDIRS = ixusszero
 endif
 
+if MEGASAT
+SUBDIRS = megasat1 megasat2
+endif
+
 if ODIN
 SUBDIRS = odinm9 odinm7 odinm6 e3hd
 endif

@@ -104,6 +104,10 @@ class RcModel:
 			remotefolder = 'ini5'
 		elif machinebrand == 'SPACE':
 			remotefolder = 'ini6'
+		elif boxtype in ('megaforce2'):
+			remotefolder = 'megasat1'
+		elif boxtype in ('megaforce1plus'):
+			remotefolder = 'megasat2'
 		elif boxtype in ('optimussos', 'optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
 			remotefolder = 'optimuss1'
 		elif boxtype in ('optimussos3plus'):
