@@ -162,6 +162,7 @@ AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 
 AM_CONDITIONAL(AIRDIGITAL, test `echo "$BRAND_OEM"` == "airdigital")
 AM_CONDITIONAL(AZBOX, test `echo "$BRAND_OEM"` == "azbox")
+AM_CONDITIONAL(BROADMEDIA, test `echo "$BRAND_OEM"` == "broadmedia")
 AM_CONDITIONAL(CUBE, test `echo "$BRAND_OEM"` == "cube")
 AM_CONDITIONAL(DREAMBOX, test `echo "$BRAND_OEM"` == "dreambox")
 AM_CONDITIONAL(TECHNOMATE, test `echo "$BOXTYPE" | cut -b 1-2` == "tm")
@@ -306,6 +307,7 @@ BoxBranding/remotes/et9500/Makefile
 BoxBranding/remotes/et9x00/Makefile
 BoxBranding/remotes/formuler1/Makefile
 BoxBranding/remotes/fulan/Makefile
+BoxBranding/remotes/g300/Makefile
 BoxBranding/remotes/gb0/Makefile
 BoxBranding/remotes/gb1/Makefile
 BoxBranding/remotes/hd1100/Makefile

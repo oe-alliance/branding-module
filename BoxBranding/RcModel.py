@@ -146,6 +146,8 @@ class RcModel:
 			remotefolder = 'ebox5000'
 		elif machinebuild == 'e3hd':
 			remotefolder = 'e3hd'
+		elif machinebuild == 'g300':
+			remotefolder = 'g300'
 		elif machinebuild == 'odinm7':
 			remotefolder = 'odinm7'
 		elif machinebuild == 'odinm9':

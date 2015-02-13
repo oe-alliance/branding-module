@@ -10,6 +10,10 @@ if CUBE
 SUBDIRS = cube
 endif
 
+if BROADMEDIA
+SUBDIRS = g300
+endif
+
 if DREAMBOX
 SUBDIRS = dmm0 dmm1 dmm2
 endif
