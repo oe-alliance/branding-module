@@ -179,6 +179,7 @@ AM_CONDITIONAL(SKYLAKE, test `echo "$BRAND_OEM"` == "skylake")
 AM_CONDITIONAL(FORMULER, test `echo "$BRAND_OEM"` == "formuler")
 AM_CONDITIONAL(TRIPLEDOT, test `echo "$BRAND_OEM"` == "tripledot")
 AM_CONDITIONAL(FULAN, test `echo "$BRAND_OEM"` == "fulan")
+AM_CONDITIONAL(XCORE, test `echo "$BRAND_OEM"` == "xcore")
 AM_CONDITIONAL(SEZAM, test `echo "$BOXTYPE" | cut -b 1-5` == "sezam")
 AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
@@ -344,6 +345,7 @@ BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
 BoxBranding/remotes/wwio1/Makefile
+BoxBranding/remotes/xcore1/Makefile
 BoxBranding/remotes/xp1000/Makefile
 BoxBranding/remotes/zgemma/Makefile
 

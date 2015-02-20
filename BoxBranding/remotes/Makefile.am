@@ -222,6 +222,10 @@ if VUZERO
 SUBDIRS = vu
 endif
 
+if XCORE
+SUBDIRS = xcore1
+endif
+
 if XP1000
 SUBDIRS = xp1000
 endif

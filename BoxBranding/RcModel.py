@@ -140,6 +140,8 @@ class RcModel:
 			remotefolder = 'ixussone'
 		elif boxtype in ('ixusszero'):
 			remotefolder = 'ixusszero'
+		elif boxtype in ('tomcat'):
+			remotefolder = 'xcore1'
 		elif machinebuild == 'cube':
 			remotefolder = 'cube'
 		elif machinebuild.startswith('ebox'):
