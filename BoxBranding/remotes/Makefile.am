@@ -42,6 +42,10 @@ if BRE2ZE
 SUBDIRS = wwio1
 endif
 
+if NANO
+SUBDIRS = wwio2
+endif
+
 if FORMULER
 SUBDIRS = formuler1
 endif
