@@ -1,3 +1,7 @@
+if NANO
+SUBDIRS = wwio2
+endif
+
 if S7000
 SUBDIRS = 7000s
 endif
@@ -40,10 +44,6 @@ endif
 
 if BRE2ZE
 SUBDIRS = wwio1
-endif
-
-if NANO
-SUBDIRS = wwio2
 endif
 
 if FORMULER
