@@ -3,7 +3,7 @@ SUBDIRS = 7000s
 endif
 
 if NANO
-SUBDIRS += wwio2
+SUBDIRS = wwio2
 endif
 
 if AZBOX
