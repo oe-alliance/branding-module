@@ -1,9 +1,5 @@
 if S7000
-SUBDIRS = 7000s
-endif
-
-if NANO
-SUBDIRS = wwio2
+SUBDIRS = 7000s wwio2
 endif
 
 if AZBOX
