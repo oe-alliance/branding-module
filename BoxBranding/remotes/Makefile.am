@@ -1,9 +1,9 @@
-if NANO
-SUBDIRS = wwio2
-endif
-
 if S7000
 SUBDIRS = 7000s
+endif
+
+if NANO
+SUBDIRS += wwio2
 endif
 
 if AZBOX
@@ -243,6 +243,6 @@ SUBDIRS = uniboxhde
 endif
 
 if AIRDIGITAL
-SUBDIRS = zgemma
+SUBDIRS = zgemma1 zgemma2
 endif
 
