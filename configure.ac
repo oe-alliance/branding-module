@@ -259,6 +259,7 @@ AM_CONDITIONAL(ODINM7, test "$MACHINE_BUILD" == odinm7)
 AM_CONDITIONAL(ODINM9, test "$MACHINE_BUILD" == odinm9)
 AM_CONDITIONAL(OPTIMUSSOS1, test "$BOXTYPE" == optimussos1)
 AM_CONDITIONAL(OPTIMUSSOS2, test "$BOXTYPE" == optimussos2)
+AM_CONDITIONAL(SF3038, test "$BOXTYPE" == sf3038)
 AM_CONDITIONAL(SOGNO8800HD, test "$BOXTYPE" == sogno8800hd)
 AM_CONDITIONAL(TMTWINOE, test "$BOXTYPE" == tmtwin)
 AM_CONDITIONAL(TM2TOE, test "$BOXTYPE" == tm2t)
@@ -287,7 +288,6 @@ Makefile
 BoxBranding/Makefile
 BoxBranding/lib/Makefile
 BoxBranding/remotes/Makefile
-BoxBranding/remotes/7000s/Makefile
 BoxBranding/remotes/azboxhd/Makefile
 BoxBranding/remotes/azboxme/Makefile
 BoxBranding/remotes/azboxelite/Makefile
@@ -335,6 +335,7 @@ BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss1/Makefile
 BoxBranding/remotes/optimuss2/Makefile
 BoxBranding/remotes/relook/Makefile
+BoxBranding/remotes/sf3038/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/tyrant/Makefile
 BoxBranding/remotes/uniboxhde/Makefile

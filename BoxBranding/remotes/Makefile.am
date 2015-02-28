@@ -1,5 +1,5 @@
 if S7000
-SUBDIRS = 7000s wwio2
+SUBDIRS = wwio2
 endif
 
 if AZBOX
@@ -12,6 +12,10 @@ endif
 
 if BROADMEDIA
 SUBDIRS = g300
+endif
+
+if SF3038
+SUBDIRS = sf3038
 endif
 
 if DREAMBOX

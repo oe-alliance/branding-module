@@ -38,6 +38,10 @@ class RcModel:
 
 		elif boxtype in ('enfinity'):
 			remotefolder = 'evo1'
+		elif boxtype in ('broadmedia300'):
+			remotefolder = 'g300'
+		elif boxtype in ('sf3038'):
+			remotefolder = 'sf3038'
 		elif boxtype in ('x2plus'):
 			remotefolder = 'evo2'
 		elif boxtype in ('xcombo', 'x1plus'):
@@ -62,8 +66,6 @@ class RcModel:
 			remotefolder = 'gb0'
 		elif boxtype == 'gbquadplus':
 			remotefolder = 'gb1'
-		elif boxtype in ('p62'):
-			remotefolder = '7000s'
 		elif boxtype in ('mutant1100', 'mutant1200'):
 			remotefolder = 'hd1100'
 		elif boxtype in ('mutant2400', 'quadbox2400'):
@@ -152,8 +154,6 @@ class RcModel:
 			remotefolder = 'ebox5000'
 		elif machinebuild == 'e3hd':
 			remotefolder = 'e3hd'
-		elif machinebuild == 'g300':
-			remotefolder = 'g300'
 		elif machinebuild == 'odinm7':
 			remotefolder = 'odinm7'
 		elif machinebuild == 'odinm9':
