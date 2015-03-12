@@ -74,7 +74,7 @@ class RcModel:
 			remotefolder = 'mediabox'
 		elif boxtype in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd'):
 			remotefolder = 'iqon1'
-		elif boxtype in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus', 'force2'):
+		elif boxtype in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus', 'force2', 'force2plus'):
 			remotefolder = 'iqon2'
 		elif boxtype in ('formuler1', 'formuler3'):
 			remotefolder = 'formuler1'
@@ -88,7 +88,7 @@ class RcModel:
 			remotefolder = 'tm1'
 		elif boxtype in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano3t', 'tmnano2super'):
 			remotefolder = 'tm2'
-		elif boxtype in ('tmnanose'):
+		elif boxtype in ('tmnanose', 'tmnanocombo'):
 			remotefolder = 'tm3'
 		elif boxtype == 'uniboxhd1':
 			fp_version = str(getFPVersion())

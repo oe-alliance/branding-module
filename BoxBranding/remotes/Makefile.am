@@ -166,6 +166,10 @@ if TMNANOSE
 SUBDIRS = tm3
 endif
 
+if TMNANOCOMBO
+SUBDIRS = tm3
+endif
+
 if VENTON
 SUBDIRS = ini0 ini1 ini2
 endif
