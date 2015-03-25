@@ -98,61 +98,62 @@
 		<!-- iq] -->
 	</rc>
 	<rc id="2">
-		<button name="POWER" pos="93,23" />
-		<button name="DREAMSELECT" pos="51,55" />
-		<button name="TVSELECT" pos="97,55" />
-		<button name="1" pos="38,81" />
-		<button name="2" pos="75,320" />
-		<button name="3" pos="113,81" />
-		<button name="4" pos="38,102" />
-		<button name="5" pos="77,102" />
-		<button name="6" pos="113,102" />
-		<button name="7" pos="38,122" />
-		<button name="8" pos="75,380" />
-		<button name="9" pos="113,122" />
-		<button name="ARROWLEFT" pos="50,258" />
-		<button name="0" pos="75,410" />
-		<button name="ARROWRIGHT" pos="100,258" />
-		<button name="VOL+" pos="31,181" />
-		<button name="VOL-" pos="42,206" />
-		<button name="MUTE" pos="76,172" />
-		<button name="EXIT" pos="115,234" />
+		<button name="POWER" pos="78,23" />
+		<button name="DREAMSELECT" pos="36,55" />
+		<button name="TVSELECT" pos="82,55" />
+		<button name="1" pos="23,81" />
+		<button name="2" pos="60,320" />
+		<button name="3" pos="98,81" />
+		<button name="4" pos="23,102" />
+		<button name="5" pos="62,102" />
+		<button name="6" pos="98,102" />
+		<button name="7" pos="23,122" />
+		<button name="8" pos="60,380" />
+		<button name="9" pos="98,122" />
+		<button name="ARROWLEFT" pos="25,160" />
+		<button name="0" pos="54,160" />
+		<button name="ARROWRIGHT" pos="83,160" />
+		<button name="VOL+" pos="16,181" />
+		<button name="VOL-" pos="27,206" />
+		<button name="MUTE" pos="61,172" />
+		<button name="EXIT" pos="100,234" />
 		
 		<!-- here -->
-		  <button name="BOUQUET+" pos="106,241" />
-		  <button name="BOUQUET-" pos="106,278" />
-		  <button name="INFO" pos="75,250" />
-		  <button name="MENU" pos="38,330" />
-		  <button name="OK" pos="76,362" />
-		  <button name="UP" pos="74,335" />
-		  <button name="DOWN" pos="74,390" />
-		  <button name="LEFT" pos="47,363" />
-		  <button name="RIGHT" pos="104,363" />		
-		  <button name="AUDIO" pos="41,305" />
+		  <button name="BOUQUET+" pos="91,241" />
+		  <button name="BOUQUET-" pos="91,278" />
+		  <button name="INFO" pos="54,219" />
+		  <button name="MENU" pos="18,280" />
+		  <button name="OK" pos="55,320" />
+		  <button name="UP" pos="55,290" />
+		  <button name="DOWN" pos="55,340" />
+		  <button name="LEFT" pos="26,315" />
+		  <button name="RIGHT" pos="82,315" />		
+		  <button name="AUDIO" pos="20,250" />
 
-		<button name="VIDEO" pos="43,148" />
-		<button name="RED" pos="54,480" />
-		<button name="GREEN" pos="62,330" />
-		<button name="YELLOW" pos="89,330" />
-		<button name="BLUE" pos="114,431" />
-		<button name="TV" pos="38,480" />
-		<button name="RADIO" pos="113,480" />
-		<button name="TEXT" pos="75,120" />
-		<button name="HELP" pos="114,362" />
+		<button name="VIDEO" pos="28,98" />
+		<button name="RED" pos="21,372" />
+		<button name="GREEN" pos="44,372" />
+		<button name="YELLOW" pos="66,372" />
+		<button name="BLUE" pos="89,372" />
+		<button name="TV" pos="21,432" />
+		<button name="RADIO" pos="88,432" />
+		<button name="TEXT" pos="44,250" />
+		<button name="HELP" pos="99,312" />
+		<button name="PVR" pos="21,393" />
 		<!-- [iq] Added Remocon Position Key-->
 		<!-- here -->
-		  <button name="RECORD" pos="67,476" />
+		  <button name="RECORD" pos="43,432" />
 		
-        <button name="PLAYPAUSE" pos="88,455" />
-        <button name="STOP" pos="90,480" /> 
-        <button name="SUBTITLE" pos="77,123" />
-        <button name="PLAY" pos="65,460" />
-        <button name="PAUSE" pos="90,480" />
-        <button name="FASTFORWARD" pos="114,460" />
-        <button name="REWIND" pos="38,460" />
+        <button name="PLAYPAUSE" pos="73,455" />
+        <button name="STOP" pos="66,432" /> 
+        <button name="SUBTITLE" pos="62,123" />
+        <button name="PLAY" pos="50,460" />
+        <button name="PAUSE" pos="66,412" />
+        <button name="FASTFORWARD" pos="99,460" />
+        <button name="REWIND" pos="23,460" />
 		<!-- [iq -->
-		<button name="BACK" pos="38, 258" />
-		<button name="FORWARD" pos="38, 455" />
+		<button name="BACK" pos="23, 258" />
+		<button name="FORWARD" pos="23, 455" />
 		<!-- iq] -->
 	</rc>
 

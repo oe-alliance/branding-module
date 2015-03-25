@@ -12,26 +12,26 @@
 		<button name="7" pos="38,325" />
 		<button name="8" pos="75,325" />
 		<button name="9" pos="105,327" />
-		<button name="ARROWLEFT" pos="46,211" />
+		<button name="ARROWLEFT" pos="38,356" />
 		<button name="0" pos="72,356" />
-		<button name="ARROWRIGHT" pos="97,210" />
+		<button name="ARROWRIGHT" pos="105,356" />
 		<button name="VOL+" pos="36,121" />
 		<button name="VOL-" pos="36,148" />
 		<button name="MUTE" pos="36,22" />
 		<button name="EXIT" pos="109,179" />
 		<button name="BOUQUET+" pos="106,119" />
 		<button name="BOUQUET-" pos="106,152" />
-		<button name="INFO" pos="74,173" />
-		<button name="MENU" pos="38,235" />
+		<button name="INFO" pos="110,243" />
+		<button name="MENU" pos="34,173" />
 		<button name="OK" pos="71,209" />
 		<button name="UP" pos="71,183" />
 		<button name="DOWN" pos="71,238" />
 		<button name="LEFT" pos="47,210" />
-		<button name="RIGHT" pos="103,209" />
+		<button name="RIGHT" pos="100,209" />
 		<button name="AUDIO" pos="70,149" />
 		<button name="VIDEO" pos="36,191" />
-		<button name="PVR" pos="72,94" />
-		<button name="RED" pos="34,383" />
+		<button name="PVR" pos="37,94" />
+		<button name="RED" pos="34,384" />
 		<button name="GREEN" pos="59,384" />
 		<button name="YELLOW" pos="85,384" />
 		<button name="BLUE" pos="110,384" />
@@ -42,7 +42,8 @@
 		<!-- [iq] Added Remocon Position Key-->
 		<button name="RECORD" pos="58,432" />
         <button name="PLAYPAUSE" pos="58,408" />
-        <button name="STOP" pos="85,433" /> 
+        <button name="STOP" pos="85,433" />
+        <button name="PAUSE" pos="85,408" />
         <button name="SUBTITLE" pos="70,70" />
         <button name="PLAY" pos="58,408" />
 		<!-- [iq -->
