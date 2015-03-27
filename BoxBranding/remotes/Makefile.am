@@ -258,3 +258,7 @@ if AIRDIGITAL
 SUBDIRS = zgemma1 zgemma2
 endif
 
+if TRIPLEX
+SUBDIRS = triplex
+endif
+
