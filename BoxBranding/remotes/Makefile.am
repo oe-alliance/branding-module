@@ -166,7 +166,7 @@ if TMNANOSE
 SUBDIRS = tm3
 endif
 
-if TMNANOCOMBO
+if TMNANOSECOMBO
 SUBDIRS = tm3
 endif
 
