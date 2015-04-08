@@ -1,3 +1,7 @@
+if S7100
+SUBDIRS = nanopro
+endif
+
 if S7000
 SUBDIRS = wwio2
 endif
@@ -257,4 +261,3 @@ endif
 if TRIPLEX
 SUBDIRS = triplex
 endif
-

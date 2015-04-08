@@ -197,6 +197,7 @@ AM_CONDITIONAL(NANO, test `echo "$BOXTYPE" | cut -b 1-4` == "nano")
 AM_CONDITIONAL(FORCE, test `echo "$BOXTYPE" | cut -b 1-5` == "force")
 AM_CONDITIONAL(WORLDVISION, test `echo "$BOXTYPE" | cut -b 1-11` == "worldvision")
 AM_CONDITIONAL(S7000, test `echo "$MACHINE_BUILD"` == "7000s")
+AM_CONDITIONAL(S7100, test `echo "$MACHINE_BUILD"` == "7100s")
 AM_CONDITIONAL(SOGNO, test `echo "$BOXTYPE"` == "sogno8800hd")
 AM_CONDITIONAL(UNIBOXHDE, test "$BOXTYPE" == uniboxhde)
 AM_CONDITIONAL(AXODIN, test "$MACHINE_BUILD" == axodin)
@@ -333,6 +334,7 @@ BoxBranding/remotes/ixusszero/Makefile
 BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
 BoxBranding/remotes/mediabox/Makefile
+BoxBranding/remotes/nanopro/Makefile
 BoxBranding/remotes/odinm6/Makefile
 BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
