@@ -1,5 +1,5 @@
 if S7100
-SUBDIRS = nanopro
+SUBDIRS = red1
 endif
 
 if S7000

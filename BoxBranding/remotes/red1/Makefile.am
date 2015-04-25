@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/nanopro
+installdir = /usr/share/enigma2/rc_models/red1
 
 dist_install_DATA = \
 	rc.png \

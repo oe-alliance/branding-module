@@ -334,7 +334,7 @@ BoxBranding/remotes/ixusszero/Makefile
 BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
 BoxBranding/remotes/mediabox/Makefile
-BoxBranding/remotes/nanopro/Makefile
+BoxBranding/remotes/red1/Makefile
 BoxBranding/remotes/odinm6/Makefile
 BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
