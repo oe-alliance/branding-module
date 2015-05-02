@@ -344,6 +344,11 @@ const char *_getImageBuild()
 	return IMAGEBUILD;
 }
 
+const char *_getImageType()
+{
+	return DISTRO_TYPE;
+}
+
 const char *_getImageDistro()
 {
 	return DISTRO;

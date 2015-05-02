@@ -13,6 +13,7 @@ const char *_getBrandOEM();
 const char *_getDriverDate();
 const char *_getImageVersion();
 const char *_getImageBuild();
+const char *_getImageType();
 const char *_getImageDistro();
 const char *_getImageFolder();
 const char *_getImageFileSystem();

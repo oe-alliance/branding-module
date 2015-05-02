@@ -91,6 +91,11 @@ static PyObject* getImageBuild(PyObject* self)
     return Py_BuildValue("s", _getImageBuild());
 }
 
+static PyObject* getImageType(PyObject* self)
+{
+    return Py_BuildValue("s", _getImageType());
+}
+
 static PyObject* getImageDistro(PyObject* self)
 {
     return Py_BuildValue("s", _getImageDistro());
@@ -125,6 +130,7 @@ static PyMethodDef boxbrandingMethods[] = {
 	{ "getDriverDate", getDriverDate, METH_NOARGS },
 	{ "getImageVersion", getImageVersion, METH_NOARGS },
 	{ "getImageBuild", getImageBuild, METH_NOARGS },
+	{ "getImageType", getImageType, METH_NOARGS },
 	{ "getImageDistro", getImageDistro, METH_NOARGS },
 	{ "getImageFolder", getImageFolder, METH_NOARGS },
 	{ "getImageFileSystem", getImageFileSystem, METH_NOARGS },
