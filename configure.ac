@@ -40,6 +40,12 @@ AC_ARG_WITH(distro,
 AC_SUBST(DISTRO)
 AC_DEFINE_UNQUOTED(DISTRO,"$DISTRO",[distro name])
 
+AC_ARG_WITH(imagetype,
+	[  --with-imagetype=NAME imagetype name [[release,developer,...]]],
+	[DISTRO_TYPE="$withval"],[DISTRO_TYPE="release"])
+AC_SUBST(DISTRO_TYPE)
+AC_DEFINE_UNQUOTED(DISTRO_TYPE,"$DISTRO_TYPE",[imagetype name])
+
 AC_ARG_WITH(machinebrand,
 	[  --with-machinebrand=NAME brand name [[Vu,Xtrend,...]]],
 	[MACHINE_BRAND="$withval"],[MACHINE_BRAND="Vu+"])
