@@ -171,7 +171,7 @@ class RcModel:
 		elif brandoem == 'fulan':
 			remotefolder = 'fulan'
 		elif brandoem == 'wetek':
-			remotefolder = 'wetekplay'
+			remotefolder = 'wetek'
 
 		return remotefolder
 		
