@@ -21,11 +21,11 @@
 		<button name="BOUQUET-" pos="89,303" />
 		<button name="INFO" pos="92,147" />
 		<button name="MENU" pos="22,243" />
-		<button name="OK" pos="55,180" />
-		<button name="UP" pos="55,154" />
-		<button name="DOWN" pos="55,206" />
-		<button name="LEFT" pos="29,180" />
-		<button name="RIGHT" pos="81,180" />
+		<button name="OK" pos="80,229" />
+		<button name="UP" pos="80,192" />
+		<button name="DOWN" pos="80,263" />
+		<button name="LEFT" pos="31,229" />
+		<button name="RIGHT" pos="120,229" />
 		<button name="AUDIO" pos="44,396" />
 		<button name="RED" pos="20,332" />
 		<button name="GREEN" pos="44,332" />

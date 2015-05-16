@@ -261,3 +261,7 @@ endif
 if TRIPLEX
 SUBDIRS = triplex
 endif
+
+if WETEC
+SUBDIRS = wetec
+endif
