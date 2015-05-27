@@ -366,6 +366,7 @@ BoxBranding/remotes/wwio1/Makefile
 BoxBranding/remotes/wwio2/Makefile
 BoxBranding/remotes/xcore1/Makefile
 BoxBranding/remotes/xcore2/Makefile
+BoxBranding/remotes/xcore3/Makefile
 BoxBranding/remotes/xp1000/Makefile
 BoxBranding/remotes/zgemma1/Makefile
 BoxBranding/remotes/zgemma2/Makefile
