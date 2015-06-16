@@ -239,7 +239,7 @@ SUBDIRS = vu
 endif
 
 if XCORE
-SUBDIRS = xcore1 xcore2
+SUBDIRS = xcore1 xcore2 xcore3
 endif
 
 if XP1000
