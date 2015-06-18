@@ -206,6 +206,10 @@ if BWIDOW
 SUBDIRS = ini6
 endif
 
+if FEGASUS
+SUBDIRS = ini6
+endif
+
 if VUSOLO
 SUBDIRS = vu
 endif
