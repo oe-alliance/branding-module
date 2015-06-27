@@ -199,7 +199,7 @@ SUBDIRS = ini4
 endif
 
 if BEYONWIZ
-SUBDIRS = ini5
+SUBDIRS = ini5 ini7
 endif
 
 if BWIDOW

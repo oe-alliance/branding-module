@@ -112,8 +112,10 @@ class RcModel:
 			remotefolder = 'ini3'
 		elif machinebrand in ('GI', 'Atemio') or boxtype in ('sezammarvel'):
 			remotefolder = 'ini4'
-		elif machinebrand == 'Beyonwiz':
+		elif boxtype in ('beyonwizt2', 'beyonwizt3'):
 			remotefolder = 'ini5'
+		elif boxtype in ('beyonwizt4'):
+			remotefolder = 'ini7'
 		elif machinebrand in ('SPACE', 'FEGASUS'):
 			remotefolder = 'ini6'
 		elif boxtype in ('megaforce2'):
