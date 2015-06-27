@@ -2,10 +2,6 @@ if S7100
 SUBDIRS = red1
 endif
 
-if S7000
-SUBDIRS = wwio2
-endif
-
 if AZBOX
 SUBDIRS = azboxme azboxhd azboxelite
 endif
@@ -183,7 +179,7 @@ SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5 ini6
 endif
 
 if MIRACLEBOX
-SUBDIRS = ini3
+SUBDIRS = ini3 mb1
 endif
 
 if XPEED

@@ -341,6 +341,7 @@ BoxBranding/remotes/iqon2/Makefile
 BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
+BoxBranding/remotes/mb1/Makefile
 BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
 BoxBranding/remotes/mediabox/Makefile
@@ -366,7 +367,6 @@ BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
 BoxBranding/remotes/wetek/Makefile
 BoxBranding/remotes/wwio1/Makefile
-BoxBranding/remotes/wwio2/Makefile
 BoxBranding/remotes/xcore1/Makefile
 BoxBranding/remotes/xcore2/Makefile
 BoxBranding/remotes/xcore3/Makefile
