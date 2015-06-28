@@ -179,7 +179,7 @@ SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5 ini6
 endif
 
 if MIRACLEBOX
-SUBDIRS = ini3 mb1
+SUBDIRS = ini3
 endif
 
 if XPEED
