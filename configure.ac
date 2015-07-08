@@ -336,6 +336,7 @@ BoxBranding/remotes/ini4/Makefile
 BoxBranding/remotes/ini5/Makefile
 BoxBranding/remotes/ini6/Makefile
 BoxBranding/remotes/ini7/Makefile
+BoxBranding/remotes/ini8/Makefile
 BoxBranding/remotes/iqon1/Makefile
 BoxBranding/remotes/iqon2/Makefile
 BoxBranding/remotes/hdbox/Makefile
