@@ -2,6 +2,10 @@ if S7100
 SUBDIRS = red1
 endif
 
+if S7300
+SUBDIRS = red1
+endif
+
 if AZBOX
 SUBDIRS = azboxme azboxhd azboxelite
 endif
