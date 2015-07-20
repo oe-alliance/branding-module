@@ -3,7 +3,7 @@ SUBDIRS = red1
 endif
 
 if S7300
-SUBDIRS = red1
+SUBDIRS = ax1
 endif
 
 if AZBOX
