@@ -204,6 +204,7 @@ AM_CONDITIONAL(MEDIAART, test `echo "$BOXTYPE" | cut -b 1-4` == "mart")
 AM_CONDITIONAL(NANO, test `echo "$BOXTYPE" | cut -b 1-4` == "nano")
 AM_CONDITIONAL(FORCE, test `echo "$BOXTYPE" | cut -b 1-5` == "force")
 AM_CONDITIONAL(WORLDVISION, test `echo "$BOXTYPE" | cut -b 1-11` == "worldvision")
+AM_CONDITIONAL(XPEEDLXC, test `echo "$BOXTYPE" | cut -b 1-8` == "xpeedlxc")
 AM_CONDITIONAL(S7000, test `echo "$MACHINE_BUILD"` == "7000s")
 AM_CONDITIONAL(S7100, test `echo "$MACHINE_BUILD"` == "7100s")
 AM_CONDITIONAL(S7300, test `echo "$MACHINE_BUILD"` == "7300s")
@@ -328,6 +329,7 @@ BoxBranding/remotes/fulan/Makefile
 BoxBranding/remotes/g300/Makefile
 BoxBranding/remotes/gb0/Makefile
 BoxBranding/remotes/gb1/Makefile
+BoxBranding/remotes/gi1/Makefile
 BoxBranding/remotes/hd1100/Makefile
 BoxBranding/remotes/hd2400/Makefile
 BoxBranding/remotes/ini0/Makefile
