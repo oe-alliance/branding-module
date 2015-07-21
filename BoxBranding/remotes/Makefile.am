@@ -186,12 +186,8 @@ if MIRACLEBOX
 SUBDIRS = ini3
 endif
 
-if XPEEDLXC
-SUBDIRS = gi1
-endif
-
 if XPEED
-SUBDIRS = ini4
+SUBDIRS = ini4 gi1
 endif
 
 if SEZAM
