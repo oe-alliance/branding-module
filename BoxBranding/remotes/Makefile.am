@@ -58,6 +58,10 @@ if FULAN
 SUBDIRS = fulan
 endif
 
+if FUSIONHD
+SUBDIRS = fusionhd
+endif
+
 if TRIPLEDOT
 SUBDIRS = hdbox relook tyrant sf108
 endif
