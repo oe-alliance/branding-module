@@ -178,6 +178,10 @@ if TMNANOSECOMBO
 SUBDIRS = tm3
 endif
 
+if TMNANOSEM2
+SUBDIRS = tm3
+endif
+
 if VENTON
 SUBDIRS = ini0 ini1 ini2
 endif
