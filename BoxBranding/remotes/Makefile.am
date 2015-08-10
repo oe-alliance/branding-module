@@ -6,6 +6,10 @@ if S7300
 SUBDIRS = ax1
 endif
 
+if E4HD
+SUBDIRS = e4hd
+endif
+
 if AZBOX
 SUBDIRS = azboxme azboxhd azboxelite
 endif
