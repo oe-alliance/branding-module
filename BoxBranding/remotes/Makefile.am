@@ -1,3 +1,5 @@
+SUBDIRS =
+
 if S7100
 SUBDIRS = red1
 endif
@@ -187,39 +189,39 @@ SUBDIRS = tm3
 endif
 
 if VENTON
-SUBDIRS = ini0 ini1 ini2
+SUBDIRS += ini0 ini1 ini2
 endif
 
 if INI
-SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5 ini6 ini7 ini8
+SUBDIRS += ini0 ini1 ini2 ini3 ini4 ini5 ini6 ini7 ini8
 endif
 
 if MIRACLEBOX
-SUBDIRS = ini3
+SUBDIRS += ini3
 endif
 
 if XPEED
-SUBDIRS = ini4 gi1
+SUBDIRS += ini4 gi1
 endif
 
 if SEZAM
-SUBDIRS = ini2 ini4
+SUBDIRS += ini2 ini4
 endif
 
 if ATEMIO
-SUBDIRS = ini4
+SUBDIRS += ini4
 endif
 
 if BEYONWIZ
-SUBDIRS = ini5 ini7
+SUBDIRS += ini5 ini7
 endif
 
 if BWIDOW
-SUBDIRS = ini6
+SUBDIRS += ini6
 endif
 
 if FEGASUS
-SUBDIRS = ini6
+SUBDIRS += ini6
 endif
 
 if VUSOLO
