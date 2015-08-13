@@ -191,7 +191,7 @@ SUBDIRS = ini0 ini1 ini2
 endif
 
 if INI
-SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5 ini6 ini8
+SUBDIRS = ini0 ini1 ini2 ini3 ini4 ini5 ini6 ini7 ini8
 endif
 
 if MIRACLEBOX
