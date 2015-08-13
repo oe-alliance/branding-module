@@ -6,14 +6,14 @@
 
 /** detecting whether base is starts with str
  */
-bool startsWith (char* base, char* str) 
+bool startsWith (char* base, char* str)
 {
     return (strstr(base, str) - base) == 0;
 }
 
 /** detecting whether base is ends with str
  */
-bool endsWith (char* base, char* str) 
+bool endsWith (char* base, char* str)
 {
     int blen = strlen(base);
     int slen = strlen(str);
@@ -34,6 +34,8 @@ int fileExist(const char* filename){
 }
 
 /** reading file and return value from it
+ * This function allocates memory for the returned string.
+ * The caller must call free() to prevent memory leaks.
  * */
 char* ReadProcEntry(char *filename)
 {
@@ -42,7 +44,7 @@ char* ReadProcEntry(char *filename)
 	char *real_boxtype_name = NULL;
 	char c;
 	int i = 0;
-	
+
 	if(boxtype_file)
 	{
 		while ((c = fgetc(boxtype_file)) != EOF && i < sizeof(boxtype_name) - 2)
@@ -59,59 +61,66 @@ char* ReadProcEntry(char *filename)
 		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
 		if (real_boxtype_name)
 			strcpy(real_boxtype_name, boxtype_name);
-		
+
 		fclose(boxtype_file);
 	}
 	else
 		puts("[BRANDING] Can not open this proc entry!\n");
-	
+
 	return real_boxtype_name;
 }
 
-const char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE=ventonhdx DISTRO=openvix -> it will return uniboxhd1   for a UniBox HD1
+char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE=ventonhdx DISTRO=openvix -> it will return uniboxhd1   for a UniBox HD1
 {
 	// this ugly code will be removed after we will switch tottaly to OE-A 2.0
 	char *boxtype_name = NULL;
-	char *vu_boxtype_name = NULL;
-	
+
 	if(strcmp(BOXTYPE, "xpeedlx") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-		if(strcmp(boxtype_name, "ini-1000lx") == 0) 
+		if(strcmp(boxtype_name, "ini-1000lx") == 0)
 		{
-			return "xpeedlx2t";
+			free(boxtype_name);
+			return strdup("xpeedlx2t");
 		}
-		else if(strcmp(boxtype_name, "ini-1000de") == 0) 
+		else if(strcmp(boxtype_name, "ini-1000de") == 0)
 		{
+			free(boxtype_name);
 			boxtype_name = ReadProcEntry("/proc/stb/fp/version");
 			if(startsWith(boxtype_name, "2"))
 			{
-				return "xpeedlx2";
+				free(boxtype_name);
+				return strdup("xpeedlx2");
 			}
 			else
 			{
-				return "xpeedlx1";
+				free(boxtype_name);
+				return strdup("xpeedlx1");
 			}
 		}
-	}  
+	}
 	else if(strcmp(BOXTYPE, "ventonhdx") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
-		if(strcmp(boxtype_name, "ini-3000") == 0) 
+		if(strcmp(boxtype_name, "ini-3000") == 0)
 		{
-			return "uniboxhd1";
+			free(boxtype_name);
+			return strdup("uniboxhd1");
 		}
-		else if(strcmp(boxtype_name, "ini-5000") == 0) 
+		else if(strcmp(boxtype_name, "ini-5000") == 0)
 		{
-			return "uniboxhd2";
+			free(boxtype_name);
+			return strdup("uniboxhd2");
 		}
-		else if(strcmp(boxtype_name, "ini-7000") == 0) 
+		else if(strcmp(boxtype_name, "ini-7000") == 0)
 		{
-			return "uniboxhd3";
+			free(boxtype_name);
+			return strdup("uniboxhd3");
 		}
-		else if(strcmp(boxtype_name, "ini-7012") == 0) 
+		else if(strcmp(boxtype_name, "ini-7012") == 0)
 		{
-			return "uniboxhd3";
+			free(boxtype_name);
+			return strdup("uniboxhd3");
 		}
 	}
 	else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0 || strcmp(BOXTYPE, "et7x00") == 0)
@@ -119,189 +128,203 @@ const char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x M
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		return boxtype_name;
 	}
-	else
-	{
-		return BOXTYPE;  
-	}
+	return strdup(BOXTYPE);
 }
 
 /** detecting real Box Name for OSD Translations
  */
-const char *_getMachineName()
+char *_getMachineName()
 {
 	char *boxtype_name = NULL;
 	if(fileExist("/proc/stb/info/boxtype"))
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		/** INI DETECTION */
-		if(strcmp(boxtype_name, "ini-3000") == 0) 
+		if(strcmp(boxtype_name, "ini-3000") == 0)
 		{
-			return "HD-1";
+			free(boxtype_name);
+			return strdup("HD-1");
 		}
-		else if(strcmp(boxtype_name, "ini-5000") == 0) 
+		else if(strcmp(boxtype_name, "ini-5000") == 0)
 		{
-			return "HD-2";
+			free(boxtype_name);
+			return strdup("HD-2");
 		}
-		else if(strcmp(boxtype_name, "ini-7000") == 0) 
+		else if(strcmp(boxtype_name, "ini-7000") == 0)
 		{
-			return "HD-3";
+			free(boxtype_name);
+			return strdup("HD-3");
 		}
-		else if(strcmp(boxtype_name, "ini-7012") == 0) 
+		else if(strcmp(boxtype_name, "ini-7012") == 0)
 		{
-			return "HD-3";
+			free(boxtype_name);
+			return strdup("HD-3");
 		}
-		else if(strcmp(boxtype_name, "ini-1000lx") == 0) 
+		else if(strcmp(boxtype_name, "ini-1000lx") == 0)
 		{
-			return "LX-2T";
+			free(boxtype_name);
+			return strdup("LX-2T");
 		}
 		/** XTREND DETECTION */
-		else if(strcmp(boxtype_name, "et4x00") == 0) 
+		else if(strcmp(boxtype_name, "et4x00") == 0)
 		{
-			return "ET4x00";
+			free(boxtype_name);
+			return strdup("ET4x00");
 		}
-		else if(strcmp(boxtype_name, "et4000") == 0) 
+		else if(strcmp(boxtype_name, "et4000") == 0)
 		{
-			return "ET4000";
+			free(boxtype_name);
+			return strdup("ET4000");
 		}
-		else if(strcmp(boxtype_name, "et5x00") == 0) 
+		else if(strcmp(boxtype_name, "et5x00") == 0)
 		{
-			return "ET5x00";
+			free(boxtype_name);
+			return strdup("ET5x00");
 		}
-		else if(strcmp(boxtype_name, "et5000") == 0) 
+		else if(strcmp(boxtype_name, "et5000") == 0)
 		{
-			return "ET5000";
-		}		
-		else if(strcmp(boxtype_name, "et6000") == 0) 
-		{
-			return "ET6000";
+			free(boxtype_name);
+			return strdup("ET5000");
 		}
-		else if(strcmp(boxtype_name, "et6500") == 0) 
+		else if(strcmp(boxtype_name, "et6000") == 0)
 		{
-			return "ET6500";
+			free(boxtype_name);
+			return strdup("ET6000");
 		}
-		else if(strcmp(boxtype_name, "et7000") == 0) 
+		else if(strcmp(boxtype_name, "et6500") == 0)
 		{
-			return "ET7000";
+			free(boxtype_name);
+			return strdup("ET6500");
 		}
-		else if(strcmp(boxtype_name, "et7500") == 0) 
+		else if(strcmp(boxtype_name, "et7000") == 0)
 		{
-			return "ET7500";
+			free(boxtype_name);
+			return strdup("ET7000");
 		}
-		else if(strcmp(boxtype_name, "et9x00") == 0) 
+		else if(strcmp(boxtype_name, "et7500") == 0)
 		{
-			return "ET9x00";
+			free(boxtype_name);
+			return strdup("ET7500");
 		}
-		else if(strcmp(boxtype_name, "et9000") == 0) 
+		else if(strcmp(boxtype_name, "et9x00") == 0)
 		{
-			return "ET9000";
+			free(boxtype_name);
+			return strdup("ET9x00");
 		}
-		else if(strcmp(boxtype_name, "et9200") == 0) 
+		else if(strcmp(boxtype_name, "et9000") == 0)
 		{
-			return "ET9200";
+			free(boxtype_name);
+			return strdup("ET9000");
 		}
-		else if(strcmp(boxtype_name, "et9500") == 0) 
+		else if(strcmp(boxtype_name, "et9200") == 0)
 		{
-			return "ET9500";
+			free(boxtype_name);
+			return strdup("ET9200");
+		}
+		else if(strcmp(boxtype_name, "et9500") == 0)
+		{
+			free(boxtype_name);
+			return strdup("ET9500");
 		}
 		else /** if there is not matching STB name, return value from proc */
 		{
-			return MACHINE_NAME;
+			/*
+			 * TODO: The comment above and the code disagree.
+			 *
+			 * Which should it be? Right now it's the compile time string supplied via configure.
+			 */
+			free(boxtype_name);
+			return strdup(MACHINE_NAME);
 		}
 	}
 	/** AzBOX DETECTION */
-	else if(fileExist("/proc/stb/info/azmodel"))
-	{	
-		if(fileExist("/proc/stb/info/model"))
+	else if (fileExist("/proc/stb/info/azmodel") && fileExist("/proc/stb/info/model"))
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/model");
+		if(strcmp(boxtype_name, "me") == 0)
 		{
-			boxtype_name = ReadProcEntry("/proc/stb/info/model");
-			if(strcmp(boxtype_name, "me") == 0) 
-			{
-				return "Me";
-			}
-			else if(strcmp(boxtype_name, "minime") == 0) 
-			{
-				return "Mini Me";
-			}
-			else if(strcmp(boxtype_name, "premium") == 0) 
-			{
-				return "Premium";
-			}
-			else if(strcmp(boxtype_name, "premium+") == 0) 
-			{
-				return "Premium+";
-			}
-			else if(strcmp(boxtype_name, "elite") == 0) 
-			{
-				return "Elite";
-			}
-			else if(strcmp(boxtype_name, "ultra") == 0) 
-			{
-				return "Ultra";
-			}
-			else
-			{
-				return MACHINE_NAME;
-			}
+			free(boxtype_name);
+			return strdup("Me");
+		}
+		else if(strcmp(boxtype_name, "minime") == 0)
+		{
+			free(boxtype_name);
+			return strdup("Mini Me");
+		}
+		else if(strcmp(boxtype_name, "premium") == 0)
+		{
+			free(boxtype_name);
+			return strdup("Premium");
+		}
+		else if(strcmp(boxtype_name, "premium+") == 0)
+		{
+			free(boxtype_name);
+			return strdup("Premium+");
+		}
+		else if(strcmp(boxtype_name, "elite") == 0)
+		{
+			free(boxtype_name);
+			return strdup("Elite");
+		}
+		else if(strcmp(boxtype_name, "ultra") == 0)
+		{
+			free(boxtype_name);
+			return strdup("Ultra");
 		}
 		else
 		{
-			return MACHINE_NAME;
+			free(boxtype_name);
 		}
 	}
-	else
-	{
-		return MACHINE_NAME;
-	}
+	return strdup(MACHINE_NAME);
 }
 
-const char *_getMachineBrand()
+char *_getMachineBrand()
 {
-	char *boxtype_name = NULL;
-	
-	return MACHINE_BRAND;
+	return strdup(MACHINE_BRAND);
 }
 
-const char *_getBrandOEM()
+char *_getBrandOEM()
 {
-	return BRAND_OEM;  
+	return strdup(BRAND_OEM);
 }
 
-const char *_getDriverDate()
+char *_getDriverDate()
 {
 	FILE *driver_file;
 	int len = 0;
 	char *real_driver_date = NULL;
 	char driver_date[30];
-	
+
 	/** INI has in each driver build date - NO NEEED TAKE IT FROM BB FILE*/
-	if((driver_file = fopen("/proc/stb/info/boxtype", "r")) != NULL) 
+	if((driver_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
 	{
 		fgets(driver_date, sizeof(driver_date), driver_file);
 		fclose(driver_file);
-		
+
 		if(startsWith(driver_date, "ini"))
 		{
 			if((driver_file = fopen("/proc/stb/info/version", "r")) != NULL)
 			{
 				fgets(driver_date, sizeof(driver_date), driver_file);
 				fclose(driver_file);
-				
+
 				real_driver_date = malloc(strlen(driver_date) + 1);
 				if (real_driver_date)
 					strcpy(real_driver_date, driver_date);
 				len = strlen(real_driver_date);
 				if (len > 0 && real_driver_date[len - 1 ] == '\n')
-					real_driver_date[len - 1] = '\0';                                
+					real_driver_date[len - 1] = '\0';
 				return real_driver_date;
 			}
 			else
 			{
-				return DRIVERDATE;
+				return strdup(DRIVERDATE);
 			}
 		}
 		else // if it is not INI box, but use same proc entry, just return passed from BB drivers date
 		{
-			return DRIVERDATE;
+			return strdup(DRIVERDATE);
 		}
 	}
 	/** DAGS has in each driver build date - NO NEEED TAKE IT FROM BB FILE*/
@@ -309,146 +332,145 @@ const char *_getDriverDate()
 	{
 		fgets(driver_date, sizeof(driver_date), driver_file);
 		fclose(driver_file);
-		
+
 		if((driver_file = fopen("/proc/stb/info/buildate", "r")) != NULL)
 		{
 			fgets(driver_date, sizeof(driver_date), driver_file);
 			fclose(driver_file);
-			
+
 			real_driver_date = malloc(strlen(driver_date) + 1);
 			if (real_driver_date)
 				strcpy(real_driver_date, driver_date);
 			len = strlen(real_driver_date);
 			if (len > 0 && real_driver_date[len - 1 ] == '\n')
-				real_driver_date[len - 1] = '\0';                                
+				real_driver_date[len - 1] = '\0';
 			return real_driver_date;
 		}
 		else
 		{
-			return DRIVERDATE;
+			return strdup(DRIVERDATE);
 		}
 	}
 	else
-	{  
-		return DRIVERDATE;  
+	{
+		return strdup(DRIVERDATE);
 	}
 }
 
-const char *_getImageVersion()
+char *_getImageVersion()
 {
-	return IMAGEVERSION;
+	return strdup(IMAGEVERSION);
 }
 
-const char *_getImageBuild()
+char *_getImageBuild()
 {
-	return IMAGEBUILD;
+	return strdup(IMAGEBUILD);
 }
 
-const char *_getImageType()
+char *_getImageType()
 {
-	return DISTRO_TYPE;
+	return strdup(DISTRO_TYPE);
 }
 
-const char *_getImageDistro()
+char *_getImageDistro()
 {
-	return DISTRO;
+	return strdup(DISTRO);
 }
 
-const char *_getImageFolder()
+char *_getImageFolder()
 {
-	return IMAGEDIR;
+	return strdup(IMAGEDIR);
 }
 
-const char *_getImageFileSystem()
+char *_getImageFileSystem()
 {
-	return IMAGE_FSTYPES;
+	return strdup(IMAGE_FSTYPES);
 }
 
-const char *_getOEVersion()
+char *_getOEVersion()
 {
-	return OE_VER;  
+	return strdup(OE_VER);
 }
 
-const char *_getMachineBuild()
+char *_getMachineBuild()
 {
 	// this will return BUILD MACHINE e.x MACHINE=mbtwin DISTRO=openvix -> it will return inihdx
-	return MACHINE_BUILD;
+	return strdup(MACHINE_BUILD);
 }
 
-const char *_getMachineMake()
+char *_getMachineMake()
 {
 	// this will return MAKE MACHINE e.x MACHINE=mbtwin DISTRO=openvix -> it will return mbtwin
-	return MACHINE_MAKE;
+	return strdup(MACHINE_MAKE);
 }
 
-const char *_getMachineMtdRoot()
+char *_getMachineMtdRoot()
 {
-	return MTD_ROOTFS;
+	return strdup(MTD_ROOTFS);
 }
 
-const char *_getMachineRootFile()
+char *_getMachineRootFile()
 {
-	return ROOTFS_FILE;
+	return strdup(ROOTFS_FILE);
 }
 
-const char *_getMachineMtdKernel()
+char *_getMachineMtdKernel()
 {
-	return MTD_KERNEL;
+	return strdup(MTD_KERNEL);
 }
 
-const char *_getMachineKernelFile()
+char *_getMachineKernelFile()
 {
-	return KERNEL_FILE;
+	return strdup(KERNEL_FILE);
 }
 
-const char *_getMachineMKUBIFS()
+char *_getMachineMKUBIFS()
 {
-	return MKUBIFS_ARGS;
+	return strdup(MKUBIFS_ARGS);
 }
 
-const char *_getMachineUBINIZE()
+char *_getMachineUBINIZE()
 {
-	return UBINIZE_ARGS;
+	return strdup(UBINIZE_ARGS);
 }
 
-const char *_getMachineProcModel() // return just value from proc entry
+char *_getMachineProcModel() // return just value from proc entry
 {
 	FILE *boxtype_file;
 	char boxtype_name[20];
 	char *real_boxtype_name = NULL;
-	char *vu_boxtype_name = NULL;
 	int len;
-	
+
 	if((boxtype_file = fopen("/proc/stb/info/hwmodel", "r")) != NULL)
 	{
 		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
 		fclose(boxtype_file);
-		
+
 		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
 		if (real_boxtype_name)
 			strcpy(real_boxtype_name, boxtype_name);
 		len = strlen(real_boxtype_name);
 		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-			real_boxtype_name[len - 1] = '\0';                                
+			real_boxtype_name[len - 1] = '\0';
 		return real_boxtype_name;
 	}
 	else if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
 	{
 		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
 		fclose(boxtype_file);
-		
+
 		if(strcmp(boxtype_name, "gigablue\n") == 0)
 		{
 			if((boxtype_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
 			{
 				fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-				fclose(boxtype_file); 
-				
+				fclose(boxtype_file);
+
 				if((boxtype_file = fopen("/proc/stb/info/gbmodel", "r")) != NULL)
 				{
 					fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-					fclose(boxtype_file);  
-					
+					fclose(boxtype_file);
+
 				}
 			}
 		}
@@ -457,31 +479,31 @@ const char *_getMachineProcModel() // return just value from proc entry
 			strcpy(real_boxtype_name, boxtype_name);
 		len = strlen(real_boxtype_name);
 		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-			real_boxtype_name[len - 1] = '\0';                                
+			real_boxtype_name[len - 1] = '\0';
 		return real_boxtype_name;
 	}
 	/** AzBOX DETECTION */
 	else if((boxtype_file = fopen("/proc/stb/info/azmodel", "r")) != NULL)
 	{
 		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-		fclose(boxtype_file); 
-		
+		fclose(boxtype_file);
+
 		if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
 		{
 			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file); 
-			
+			fclose(boxtype_file);
+
 			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
 			if (real_boxtype_name)
 				strcpy(real_boxtype_name, boxtype_name);
 			len = strlen(real_boxtype_name);
 			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-				real_boxtype_name[len - 1] = '\0';                                
+				real_boxtype_name[len - 1] = '\0';
 			return real_boxtype_name;
 		}
 		else
 		{
-			return MACHINE_NAME;
+			return strdup(MACHINE_NAME);
 		}
 	}
 	/** VU+ DETECTION */
@@ -489,23 +511,14 @@ const char *_getMachineProcModel() // return just value from proc entry
 	{
 		fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
 		fclose(boxtype_file);
-		
-		real_boxtype_name = malloc(strlen(boxtype_name) + 1);
+
+		real_boxtype_name = malloc(strlen(boxtype_name) + 3);
 		if (real_boxtype_name)
-			strcpy(real_boxtype_name, boxtype_name);
+			sprintf(real_boxtype_name, "vu%s", boxtype_name);
 		len = strlen(real_boxtype_name);
 		if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-			real_boxtype_name[len - 1] = '\0';    
-		
-		sprintf(real_boxtype_name, "vu%s", boxtype_name);
-		
-		vu_boxtype_name = malloc(strlen(real_boxtype_name) + 1);
-		if (vu_boxtype_name)
-			strcpy(vu_boxtype_name, real_boxtype_name);
-		len = strlen(vu_boxtype_name);
-		if (len > 0 && vu_boxtype_name[len - 1 ] == '\n')
-			vu_boxtype_name[len - 1] = '\0';
-		return vu_boxtype_name;
+			real_boxtype_name[len - 1] = '\0';
+		return real_boxtype_name;
 	}
 	/** DMM DETECTION */
 	else
@@ -513,18 +526,15 @@ const char *_getMachineProcModel() // return just value from proc entry
 		if((boxtype_file = fopen("/proc/stb/info/model", "r")) != NULL)
 		{
 			fgets(boxtype_name, sizeof(boxtype_name), boxtype_file);
-			fclose(boxtype_file); 
+			fclose(boxtype_file);
 			real_boxtype_name = malloc(strlen(boxtype_name) + 1);
 			if (real_boxtype_name)
 				strcpy(real_boxtype_name, boxtype_name);
 			len = strlen(real_boxtype_name);
 			if (len > 0 && real_boxtype_name[len - 1 ] == '\n')
-				real_boxtype_name[len - 1] = '\0';                                
+				real_boxtype_name[len - 1] = '\0';
 			return real_boxtype_name;
 		}
-		else
-		{
-			return MACHINE_NAME;
-		}
-	}  
+	}
+	return strdup(MACHINE_NAME);
 }
