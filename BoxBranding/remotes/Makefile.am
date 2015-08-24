@@ -97,7 +97,7 @@ SUBDIRS += iqon1
 endif
 
 if FORCE
-SUBDIRS += iqon2
+SUBDIRS += iqon2 iqon1
 endif
 
 if WORLDVISION

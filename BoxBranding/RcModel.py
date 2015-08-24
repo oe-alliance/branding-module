@@ -80,9 +80,9 @@ class RcModel:
 			remotefolder = 'mediabox'
 		elif machinebrand == 'XSARIUS':
 			remotefolder = 'fusionhd'
-		elif boxtype in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd'):
+		elif boxtype in ('iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd', 'force2se', 'force2', 'force2plus'):
 			remotefolder = 'iqon1'
-		elif boxtype in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus', 'force2', 'force2plus'):
+		elif boxtype in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus'):
 			remotefolder = 'iqon2'
 		elif boxtype in ('formuler1', 'formuler3'):
 			remotefolder = 'formuler1'
