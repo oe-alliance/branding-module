@@ -277,6 +277,7 @@ AM_CONDITIONAL(OPTIMUSSOS2, test "$BOXTYPE" == optimussos2)
 AM_CONDITIONAL(SF108, test "$BOXTYPE" == sf108)
 AM_CONDITIONAL(SF3038, test "$BOXTYPE" == sf3038)
 AM_CONDITIONAL(SOGNO8800HD, test "$BOXTYPE" == sogno8800hd)
+AM_CONDITIONAL(T2CABLE, test "$BOXTYPE" == t2cable)
 AM_CONDITIONAL(TMTWINOE, test "$BOXTYPE" == tmtwin)
 AM_CONDITIONAL(TM2TOE, test "$BOXTYPE" == tm2t)
 AM_CONDITIONAL(TMSINGLE, test "$BOXTYPE" == tmsingle)
@@ -320,6 +321,7 @@ BoxBranding/remotes/ebox5000/Makefile
 BoxBranding/remotes/evo1/Makefile
 BoxBranding/remotes/evo2/Makefile
 BoxBranding/remotes/evo3/Makefile
+BoxBranding/remotes/evo4/Makefile
 BoxBranding/remotes/et4x00/Makefile
 BoxBranding/remotes/et6x00/Makefile
 BoxBranding/remotes/et6500/Makefile

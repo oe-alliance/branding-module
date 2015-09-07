@@ -52,6 +52,10 @@ if X1PLUS
 SUBDIRS += evo3
 endif
 
+if T2CABLE
+SUBDIRS += evo4
+endif
+
 if BRE2ZE
 SUBDIRS += wwio1
 endif
