@@ -383,6 +383,7 @@ BoxBranding/remotes/xp1000/Makefile
 BoxBranding/remotes/fusionhd/Makefile
 BoxBranding/remotes/zgemma1/Makefile
 BoxBranding/remotes/zgemma2/Makefile
+BoxBranding/remotes/zgemma3/Makefile
 
 
 ])
