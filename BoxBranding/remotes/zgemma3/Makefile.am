@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma3/rc_models/zgemma3
+installdir = /usr/share/enigma2/rc_models/zgemma3
 
 dist_install_DATA = \
 	rc.png \
