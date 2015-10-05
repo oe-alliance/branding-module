@@ -56,6 +56,10 @@ if T2CABLE
 SUBDIRS += evo4
 endif
 
+if EVOMINI
+SUBDIRS += evo5
+endif
+
 if BRE2ZE
 SUBDIRS += wwio1
 endif
