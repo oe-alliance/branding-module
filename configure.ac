@@ -372,6 +372,7 @@ BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile
 BoxBranding/remotes/tm2/Makefile
 BoxBranding/remotes/tm3/Makefile
+BoxBranding/remotes/tm4/Makefile
 BoxBranding/remotes/visionnet/Makefile
 BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile

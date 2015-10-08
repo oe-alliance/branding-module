@@ -193,7 +193,7 @@ SUBDIRS += tm3
 endif
 
 if TMNANOSEM2
-SUBDIRS += tm3
+SUBDIRS += tm4
 endif
 
 if VENTON
