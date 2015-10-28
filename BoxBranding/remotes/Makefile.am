@@ -88,6 +88,10 @@ if XTREND
 SUBDIRS += et4x00 et6x00 et6500 et8000 et9x00 et9500 et7x00
 endif
 
+if ET7X00MINI
+SUBDIRS += et7x00mini
+endif
+
 if GIGABLUE
 SUBDIRS += gb0 gb1
 endif
