@@ -268,6 +268,10 @@ if VUZERO
 SUBDIRS += vu
 endif
 
+if VUSOLO4K
+SUBDIRS += vu
+endif
+
 if XCORE
 SUBDIRS += xcore1 xcore2 xcore3
 endif
