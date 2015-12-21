@@ -164,6 +164,10 @@ if HD500C
 SUBDIRS += hd1100
 endif
 
+if PROTEK9900LX
+SUBDIRS += protek1
+endif
+
 if TMTWINOE 
 SUBDIRS += tm1
 endif

@@ -277,6 +277,7 @@ AM_CONDITIONAL(ODINM7, test "$MACHINE_BUILD" == odinm7)
 AM_CONDITIONAL(ODINM9, test "$MACHINE_BUILD" == odinm9)
 AM_CONDITIONAL(OPTIMUSSOS1, test "$BOXTYPE" == optimussos1)
 AM_CONDITIONAL(OPTIMUSSOS2, test "$BOXTYPE" == optimussos2)
+AM_CONDITIONAL(PROTEK9900LX, test "$BOXTYPE" == protek9900lx)
 AM_CONDITIONAL(SF108, test "$BOXTYPE" == sf108)
 AM_CONDITIONAL(SF3038, test "$BOXTYPE" == sf3038)
 AM_CONDITIONAL(SOGNO8800HD, test "$BOXTYPE" == sogno8800hd)
@@ -367,6 +368,7 @@ BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss1/Makefile
 BoxBranding/remotes/optimuss2/Makefile
 BoxBranding/remotes/relook/Makefile
+BoxBranding/remotes/protek1/Makefile
 BoxBranding/remotes/sf108/Makefile
 BoxBranding/remotes/sf3038/Makefile
 BoxBranding/remotes/sogno/Makefile
