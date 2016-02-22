@@ -32,6 +32,10 @@ if SF3038
 SUBDIRS += sf3038
 endif
 
+if SF98
+SUBDIRS += sf98
+endif
+
 if DREAMBOX
 SUBDIRS += dmm0 dmm1 dmm2
 endif
