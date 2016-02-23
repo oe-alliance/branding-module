@@ -305,7 +305,7 @@ SUBDIRS += uniboxhde
 endif
 
 if AIRDIGITAL
-SUBDIRS += zgemma1 zgemma2 zgemma3
+SUBDIRS += zgemma1 zgemma2 zgemma3 zgemma4
 endif
 
 if TRIPLEX

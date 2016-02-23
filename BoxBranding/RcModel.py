@@ -72,10 +72,12 @@ class RcModel:
 			remotefolder = 'protek1'
 		elif boxtype in ('zgemmash1', 'zgemmas2s'):
 			remotefolder = 'zgemma1'
-		elif boxtype in ('zgemmash2', 'zgemmass','zgemmaslc'):
+		elif boxtype in ('zgemmash2', 'zgemmass', 'zgemmaslc'):
 			remotefolder = 'zgemma2'
-		elif boxtype in ('zgemmahs', 'zgemmah2s', 'zgemmah2h'):
+		elif boxtype in ('zgemmahs', 'zgemmah2s', 'zgemmah2h','zgemmah5' ):
 			remotefolder = 'zgemma3'
+		elif boxtype in ('zgemmai55'):
+			remotefolder = 'zgemma4'
 		elif boxtype in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultrase', 'gbultraue', 'gbx1', 'gbx3'):
 			remotefolder = 'gb0'
 		elif boxtype == 'gbquadplus':
