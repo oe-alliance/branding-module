@@ -110,7 +110,7 @@ class RcModel:
 			remotefolder = 'tm2'
 		elif boxtype in ('tmnanose', 'tmnanosecombo'):
 			remotefolder = 'tm3'
-		elif boxtype in ('tmnanosem2'):
+		elif boxtype in ('tmnanosem2', 'tmnanoseplus'):
 			remotefolder = 'tm4'
 		elif boxtype == 'uniboxhd1':
 			fp_version = str(getFPVersion())

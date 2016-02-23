@@ -208,6 +208,10 @@ if TMNANOSE
 SUBDIRS += tm3
 endif
 
+if TMNANOSEPLUS
+SUBDIRS += tm4
+endif
+
 if TMNANOSECOMBO
 SUBDIRS += tm3
 endif
