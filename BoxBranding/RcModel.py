@@ -44,6 +44,8 @@ class RcModel:
 			remotefolder = 'sf108'
 		elif boxtype in ('sf3038'):
 			remotefolder = 'sf3038'
+		elif boxtype in ('sf98'):
+			remotefolder = 'sf98'
 		elif boxtype in ('x2plus'):
 			remotefolder = 'evo2'
 		elif boxtype in ('xcombo', 'x1plus'):
