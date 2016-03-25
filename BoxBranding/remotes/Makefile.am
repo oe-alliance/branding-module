@@ -168,6 +168,10 @@ if HD1265
 SUBDIRS += hd1100
 endif
 
+if HD1500
+SUBDIRS += hd1100
+endif
+
 if HD500C
 SUBDIRS += hd1100
 endif
