@@ -84,6 +84,10 @@ if FUSIONHD
 SUBDIRS += fusionhd
 endif
 
+if PUREHD
+SUBDIRS += fusionhd
+endif
+
 if TRIPLEDOT
 SUBDIRS += hdbox relook tyrant sf108
 endif
