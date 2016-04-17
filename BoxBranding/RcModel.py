@@ -130,7 +130,7 @@ class RcModel:
 			remotefolder = 'gi1'
 		elif machinebrand == 'Miraclebox':
 			remotefolder = 'ini3'
-		elif boxtype in ('xpeedlx', 'xpeedlx3', 'atemio5x00', 'atemio6000', 'atemio6100', 'atemio6200', 'atemionemesis', 'sezammarvel'):
+		elif boxtype in ('xpeedlx', 'xpeedlx2', 'xpeedlx3', 'atemio5x00', 'atemio6000', 'atemio6100', 'atemio6200', 'atemionemesis', 'sezammarvel'):
 			remotefolder = 'ini4'
 		elif boxtype in ('beyonwizt3'):
 			remotefolder = 'ini5'
