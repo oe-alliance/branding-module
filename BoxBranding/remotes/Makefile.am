@@ -1,7 +1,7 @@
 SUBDIRS =
 
 if S7100
-SUBDIRS += red1
+SUBDIRS += red1 red2
 endif
 
 if S7300
