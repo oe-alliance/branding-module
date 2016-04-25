@@ -21,17 +21,17 @@
 		<button name="VOL+" pos="23,194" />
 		<button name="VOL-" pos="23,221" />
 		<button name="BOUQUET+" pos="101,194" />
-		<button name="BOUQUET-" pos="101,122" />
+		<button name="BOUQUET-" pos="101,221" />
 		<button name="EPG" pos="61,226" />
 
-		<button name="MENU" pos="23,158" />
+		<button name="MENU" pos="23,258" />
 		<button name="EXIT" pos="99,258" />
 		<button name="OK" pos="61,294" />
 		<button name="UP" pos="61,258" />
 		<button name="DOWN" pos="61,333" />
 		<button name="LEFT" pos="23,294" />
 		<button name="RIGHT" pos="100,294" />
-		<button name="INFO" pos="23,233" />
+		<button name="INFO" pos="23,333" />
 
 		<button name="RED" pos="19,360" />
 		<button name="GREEN" pos="48,360" />
