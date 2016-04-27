@@ -17,6 +17,7 @@ char *_getBrandOEM();
 char *_getDriverDate();
 char *_getImageVersion();
 char *_getImageBuild();
+char *_getImageDevBuild();
 char *_getImageType();
 char *_getImageDistro();
 char *_getImageFolder();

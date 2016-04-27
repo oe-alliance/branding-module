@@ -33,6 +33,7 @@ MAKE_STRING_FUNCTION(getOEVersion)
 MAKE_STRING_FUNCTION(getDriverDate)
 MAKE_STRING_FUNCTION(getImageVersion)
 MAKE_STRING_FUNCTION(getImageBuild)
+MAKE_STRING_FUNCTION(getImageDevBuild)
 MAKE_STRING_FUNCTION(getImageType)
 MAKE_STRING_FUNCTION(getImageDistro)
 MAKE_STRING_FUNCTION(getImageFolder)
@@ -57,6 +58,7 @@ static PyMethodDef boxbrandingMethods[] = {
 	{ "getDriverDate", getDriverDate, METH_NOARGS, NULL },
 	{ "getImageVersion", getImageVersion, METH_NOARGS, NULL },
 	{ "getImageBuild", getImageBuild, METH_NOARGS, NULL },
+	{ "getImageDevBuild", getImageDevBuild, METH_NOARGS, NULL },
 	{ "getImageType", getImageType, METH_NOARGS, NULL },
 	{ "getImageDistro", getImageDistro, METH_NOARGS, NULL },
 	{ "getImageFolder", getImageFolder, METH_NOARGS, NULL },

@@ -367,6 +367,11 @@ char *_getImageBuild()
 	return strdup(IMAGEBUILD);
 }
 
+char *_getImageDevBuild()
+{
+	return strdup(IMAGEDEVBUILD);
+}
+
 char *_getImageType()
 {
 	return strdup(DISTRO_TYPE);

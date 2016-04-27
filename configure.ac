@@ -88,6 +88,12 @@ AC_ARG_WITH(imagebuild,
 AC_SUBST(IMAGEBUILD)
 AC_DEFINE_UNQUOTED(IMAGEBUILD,"$IMAGEBUILD",[build number])
 
+AC_ARG_WITH(imagedevbuild,
+	[  --with-imagedevbuild=NAME dev build number [[628]]],
+	[IMAGEDEVBUILD="$withval"],[IMAGEDEVBUILD=""])
+AC_SUBST(IMAGEDEVBUILD)
+AC_DEFINE_UNQUOTED(IMAGEDEVBUILD,"$IMAGEDEVBUILD",[build number])
+
 AC_ARG_WITH(imagedir,
 	[  --with-imagedir=NAME imagedir folder [[628]]],
 	[IMAGEDIR="$withval"],[IMAGEDIR=""])
