@@ -101,6 +101,7 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 	}
 	else if(strcmp(BOXTYPE, "twinboxlcd") == 0)
 	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		if(strcmp(boxtype_name, "7200S") == 0)
 		{
 			free(boxtype_name);
