@@ -99,6 +99,14 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 			}
 		}
 	}
+	else if(strcmp(BOXTYPE, "twinboxlcd") == 0)
+	{
+		if(strcmp(boxtype_name, "7200S") == 0)
+		{
+			free(boxtype_name);
+			return strdup("twinboxlcdci");
+		}
+	}
 	else if(strcmp(BOXTYPE, "ventonhdx") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
@@ -225,6 +233,14 @@ char *_getMachineName()
 		{
 			free(boxtype_name);
 			return strdup("ET9500");
+		}
+		else if(strcmp(BOXTYPE, "twinboxlcd") == 0)
+		{
+			if(strcmp(boxtype_name, "7200S") == 0)
+			{
+				free(boxtype_name);
+				return strdup("TWINBOX LCD CI");
+			}
 		}
 		else /** if there is not matching STB name, return value from proc */
 		{
