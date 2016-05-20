@@ -36,6 +36,10 @@ if SF3038
 SUBDIRS += sf3038
 endif
 
+if SF128-SF138
+SUBDIRS += sf3038
+endif
+
 if SF98
 SUBDIRS += sf98
 endif
