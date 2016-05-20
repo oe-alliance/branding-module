@@ -213,6 +213,7 @@ AM_CONDITIONAL(WORLDVISION, test `echo "$BOXTYPE" | cut -b 1-11` == "worldvision
 AM_CONDITIONAL(FUSIONHD, test `echo "$BOXTYPE" | cut -b 1-8` == "fusionhd")
 AM_CONDITIONAL(S7000, test `echo "$MACHINE_BUILD"` == "7000s")
 AM_CONDITIONAL(S7100, test `echo "$MACHINE_BUILD"` == "7100s")
+AM_CONDITIONAL(S7210, test `echo "$MACHINE_BUILD"` == "7210s")
 AM_CONDITIONAL(S7300, test `echo "$MACHINE_BUILD"` == "7300s")
 AM_CONDITIONAL(S7400, test `echo "$MACHINE_BUILD"` == "7400s")
 AM_CONDITIONAL(SOGNO, test `echo "$BOXTYPE"` == "sogno8800hd")
@@ -384,6 +385,7 @@ BoxBranding/remotes/relook/Makefile
 BoxBranding/remotes/protek1/Makefile
 BoxBranding/remotes/sf98/Makefile
 BoxBranding/remotes/sf108/Makefile
+BoxBranding/remotes/sf2x8/Makefile
 BoxBranding/remotes/sf3038/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/triplex/Makefile

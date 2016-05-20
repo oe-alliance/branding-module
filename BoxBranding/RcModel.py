@@ -60,6 +60,8 @@ class RcModel:
 			remotefolder = 'red1'
 		elif boxtype in ('singleboxlcd', 'twinboxlcdci'):
 			remotefolder = 'red2'
+		elif boxtype in ('sf208', 'sf228'):
+			remotefolder = 'sf2x8'
 		elif boxtype in ('odin2hybrid', 'odinplus'):
 			remotefolder = 'ax1'
 		elif boxtype in ('e4hd', 'e4hdhybrid'):

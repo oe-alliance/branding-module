@@ -4,6 +4,10 @@ if S7100
 SUBDIRS += red1 red2
 endif
 
+if S7210
+SUBDIRS += sf2x8
+endif
+
 if S7300
 SUBDIRS += ax1
 endif
