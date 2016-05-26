@@ -52,7 +52,7 @@ class RcModel:
 			remotefolder = 'evo3'
 		elif boxtype in ('t2cable'):
 			remotefolder = 'evo4'
-		elif boxtype == 'evomini':
+		elif boxtype in ('evomini', 'evominiplus'):
 			remotefolder = 'evo5'
 		elif boxtype in ('bre2ze'):
 			remotefolder = 'wwio1'
