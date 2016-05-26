@@ -1,5 +1,9 @@
 SUBDIRS =
 
+if AX51
+SUBDIRS += ax2
+endif
+
 if S7100
 SUBDIRS += red1 red2
 endif
@@ -188,7 +192,7 @@ if HD500C
 SUBDIRS += hd1100
 endif
 
-if HD51
+if MUTANT51
 SUBDIRS += hd1100
 endif
 

@@ -64,6 +64,8 @@ class RcModel:
 			remotefolder = 'sf2x8'
 		elif boxtype in ('odin2hybrid', 'odinplus'):
 			remotefolder = 'ax1'
+		elif boxtype in ('ax51'):
+			remotefolder = 'ax2'
 		elif boxtype in ('e4hd', 'e4hdhybrid'):
 			remotefolder = 'e4hd'
 		elif boxtype in ('enibox'):
@@ -88,7 +90,7 @@ class RcModel:
 			remotefolder = 'gb0'
 		elif boxtype == 'gbquadplus':
 			remotefolder = 'gb1'
-		elif boxtype in ('mutant1100', 'mutant1200', 'mutant500c', 'vizyonvita', 'mutant1265', 'mutant1500', 'mutant51', 'ax51'):
+		elif boxtype in ('mutant1100', 'mutant1200', 'mutant500c', 'vizyonvita', 'mutant1265', 'mutant1500', 'mutant51'):
 			remotefolder = 'hd1100'
 		elif boxtype in ('mutant2400', 'quadbox2400'):
 			remotefolder = 'hd2400'

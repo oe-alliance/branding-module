@@ -211,6 +211,7 @@ AM_CONDITIONAL(NANO, test `echo "$BOXTYPE" | cut -b 1-4` == "nano")
 AM_CONDITIONAL(FORCE, test `echo "$BOXTYPE" | cut -b 1-5` == "force")
 AM_CONDITIONAL(WORLDVISION, test `echo "$BOXTYPE" | cut -b 1-11` == "worldvision")
 AM_CONDITIONAL(FUSIONHD, test `echo "$BOXTYPE" | cut -b 1-8` == "fusionhd")
+AM_CONDITIONAL(AX51, test "$BOXTYPE" == ax51)
 AM_CONDITIONAL(S7000, test `echo "$MACHINE_BUILD"` == "7000s")
 AM_CONDITIONAL(S7100, test `echo "$MACHINE_BUILD"` == "7100s")
 AM_CONDITIONAL(S7210, test `echo "$MACHINE_BUILD"` == "7210s")
@@ -281,7 +282,7 @@ AM_CONDITIONAL(HD1200, test "$MACHINE_BUILD" == hd1200)
 AM_CONDITIONAL(HD1265, test "$MACHINE_BUILD" == hd1265)
 AM_CONDITIONAL(HD1100, test "$MACHINE_BUILD" == hd1100)
 AM_CONDITIONAL(HD500C, test "$MACHINE_BUILD" == hd500c)
-AM_CONDITIONAL(HD51, test "$MACHINE_BUILD" == hd51)
+AM_CONDITIONAL(MUTANT51, test "$BOXTYPE" == mutant51)
 AM_CONDITIONAL(ODINM6, test "$BOXTYPE" == odinm6)
 AM_CONDITIONAL(ODINM7, test "$MACHINE_BUILD" == odinm7)
 AM_CONDITIONAL(ODINM9, test "$MACHINE_BUILD" == odinm9)
@@ -327,6 +328,7 @@ BoxBranding/Makefile
 BoxBranding/lib/Makefile
 BoxBranding/remotes/Makefile
 BoxBranding/remotes/ax1/Makefile
+BoxBranding/remotes/ax2/Makefile
 BoxBranding/remotes/azboxhd/Makefile
 BoxBranding/remotes/azboxme/Makefile
 BoxBranding/remotes/azboxelite/Makefile
