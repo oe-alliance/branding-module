@@ -76,8 +76,10 @@ class RcModel:
 			remotefolder = 'tyrant'
 		elif boxtype in ('marvel1'):
 			remotefolder = 'visionnet'
-		elif boxtype in ('protek9900lx'):
+		elif boxtype in ('9900lx'):
 			remotefolder = 'protek1'
+		elif boxtype in ('9910lx'):
+			remotefolder = 'protek2'
 		elif boxtype in ('zgemmash1', 'zgemmas2s'):
 			remotefolder = 'zgemma1'
 		elif boxtype in ('zgemmash2', 'zgemmass', 'zgemmaslc'):

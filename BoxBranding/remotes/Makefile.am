@@ -12,6 +12,10 @@ if S7210
 SUBDIRS += sf2x8
 endif
 
+if S7220
+SUBDIRS += protek2
+endif
+
 if S7300
 SUBDIRS += ax1
 endif
