@@ -184,6 +184,10 @@ if HD2400
 SUBDIRS += hd2400
 endif
 
+if HD11
+SUBDIRS += hd11
+endif
+
 if HD1100
 SUBDIRS += hd1100
 endif
