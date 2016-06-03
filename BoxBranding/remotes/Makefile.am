@@ -185,7 +185,7 @@ SUBDIRS += hd2400
 endif
 
 if HD11
-SUBDIRS += hd11
+SUBDIRS += hd1100
 endif
 
 if HD1100
