@@ -87,7 +87,7 @@ class RcModel:
 		elif boxtype in ('zgemmahs', 'zgemmah2s', 'zgemmah2h','zgemmah5' ):
 			remotefolder = 'zgemma3'
 		elif boxtype in ('zgemmai55'):
-			remotefolder = 'zgemma4'
+			remotefolder = 'zgemma5'
 		elif boxtype in ('gbuhdquad', 'gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultrase', 'gbultraue', 'gbx1', 'gbx3', 'gbx2'):
 			remotefolder = 'gb0'
 		elif boxtype == 'gbquadplus':

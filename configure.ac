@@ -418,6 +418,7 @@ BoxBranding/remotes/zgemma1/Makefile
 BoxBranding/remotes/zgemma2/Makefile
 BoxBranding/remotes/zgemma3/Makefile
 BoxBranding/remotes/zgemma4/Makefile
+BoxBranding/remotes/zgemma5/Makefile
 
 ])
 AC_OUTPUT
