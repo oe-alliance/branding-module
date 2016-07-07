@@ -132,7 +132,21 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 			return strdup("uniboxhd3");
 		}
 	}
-	else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0 || strcmp(BOXTYPE, "et7x00") == 0)
+	else if(strcmp(BOXTYPE, "et7x00") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/chipset");
+		if(startsWith(boxtype_name, "bcm73625"))
+		{
+			free(boxtype_name);
+			return strdup("et7100");
+		}
+		else
+		{
+			boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
+			return boxtype_name;
+		}
+	}
+	else if(strcmp(BOXTYPE, "et6x00") == 0 || strcmp(BOXTYPE, "et9x00") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		return boxtype_name;
@@ -208,7 +222,17 @@ char *_getMachineName()
 		else if(strcmp(boxtype_name, "et7000") == 0)
 		{
 			free(boxtype_name);
-			return strdup("ET7000");
+			boxtype_name = ReadProcEntry("/proc/stb/info/chipset");
+			if(startsWith(boxtype_name, "bcm73625"))
+			{
+				free(boxtype_name);
+				return strdup("ET7100");
+			}
+			else
+			{
+				free(boxtype_name);
+				return strdup("ET7000");
+			}
 		}
 		else if(strcmp(boxtype_name, "et7500") == 0)
 		{
