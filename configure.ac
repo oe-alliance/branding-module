@@ -349,6 +349,8 @@ BoxBranding/remotes/evo2/Makefile
 BoxBranding/remotes/evo3/Makefile
 BoxBranding/remotes/evo4/Makefile
 BoxBranding/remotes/evo5/Makefile
+BoxBranding/remotes/evo6/Makefile
+BoxBranding/remotes/evo7/Makefile
 BoxBranding/remotes/et4x00/Makefile
 BoxBranding/remotes/et6x00/Makefile
 BoxBranding/remotes/et6500/Makefile
