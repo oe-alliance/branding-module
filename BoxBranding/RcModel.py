@@ -62,9 +62,9 @@ class RcModel:
 			remotefolder = 'wwio1'
 		elif boxtype in ('twinboxlcd'):
 			remotefolder = 'red1'
-		elif boxtype in ('singleboxlcd', 'twinboxlcdci'):
+		elif boxtype in ('singleboxlcd', 'twinboxlcdci', 'twinboxlcdci5'):
 			remotefolder = 'red2'
-		elif boxtype in ('sf208', 'sf228'):
+		elif boxtype in ('sf208', 'sf228', 'sf238'):
 			remotefolder = 'sf2x8'
 		elif boxtype in ('odin2hybrid', 'odinplus'):
 			remotefolder = 'ax1'
@@ -82,7 +82,7 @@ class RcModel:
 			remotefolder = 'visionnet'
 		elif boxtype in ('9900lx'):
 			remotefolder = 'protek1'
-		elif boxtype in ('9910lx'):
+		elif boxtype in ('9910lx','9915lx'):
 			remotefolder = 'protek2'
 		elif boxtype in ('zgemmash1', 'zgemmas2s'):
 			remotefolder = 'zgemma1'

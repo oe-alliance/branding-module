@@ -8,11 +8,23 @@ if S7100
 SUBDIRS += red1 red2
 endif
 
+if S7105
+SUBDIRS += red1 red2
+endif
+
 if S7210
 SUBDIRS += sf2x8
 endif
 
+if S7215
+SUBDIRS += sf2x8
+endif
+
 if S7220
+SUBDIRS += protek2
+endif
+
+if S7225
 SUBDIRS += protek2
 endif
 
