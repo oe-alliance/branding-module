@@ -220,6 +220,10 @@ if HD500C
 SUBDIRS += hd1100
 endif
 
+if HD530C
+SUBDIRS += hd1100
+endif
+
 if MUTANT51
 SUBDIRS += hd1100
 endif
