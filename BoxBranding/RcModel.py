@@ -194,7 +194,7 @@ class RcModel:
 			remotefolder = 'xcore2'
 		elif boxtype in ('spycat','spycatmini'):
 			remotefolder = 'xcore1'
-		elif boxtype in ('osmini', 'osminiplus'):
+		elif boxtype in ('osmini', 'osminiplus', 'osmega'):
 			remotefolder = 'xcore3'
 		elif machinebuild == 'cube':
 			remotefolder = 'cube'
