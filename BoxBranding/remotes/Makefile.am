@@ -276,6 +276,10 @@ if TMNANOSEM2
 SUBDIRS += tm4
 endif
 
+if TMNANOSEM2PLUS
+SUBDIRS += tm4
+endif
+
 if VENTON
 SUBDIRS += ini0 ini1 ini2
 endif
