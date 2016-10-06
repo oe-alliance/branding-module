@@ -376,6 +376,10 @@ if TRIPLEX
 SUBDIRS += triplex
 endif
 
+if ULTRABOX
+SUBDIRS += triplex
+endif
+
 if WETEK
 SUBDIRS += wetek
 endif
