@@ -317,7 +317,7 @@ char *_getMachineName()
 			free(boxtype_name);
 		}
 	}
-	else if fileExist("/proc/stb/info/model"))
+	else if (fileExist("/proc/stb/info/model"))
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/model");
 		if(strcmp(boxtype_name, "dm525") == 0)
