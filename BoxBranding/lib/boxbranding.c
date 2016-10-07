@@ -317,6 +317,20 @@ char *_getMachineName()
 			free(boxtype_name);
 		}
 	}
+	else if fileExist("/proc/stb/info/model"))
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/model");
+		if(strcmp(boxtype_name, "dm525") == 0)
+		{
+			free(boxtype_name);
+			return strdup("DM525");
+		}
+		else
+		{
+			free(boxtype_name);
+			return strdup(MACHINE_NAME);
+		}
+	}
 	return strdup(MACHINE_NAME);
 }
 
