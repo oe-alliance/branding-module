@@ -151,6 +151,20 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 		boxtype_name = ReadProcEntry("/proc/stb/info/boxtype");
 		return boxtype_name;
 	}
+	else if(strcmp(BOXTYPE, "dm520") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/model");
+		if(strcmp(boxtype_name, "dm525") == 0)
+		{
+			free(boxtype_name);
+			return strdup("dm525");
+		}
+		else
+		{
+			free(boxtype_name);
+			return strdup(BOXTYPE);
+		}
+	}
 	return strdup(BOXTYPE);
 }
 
