@@ -349,6 +349,7 @@ BoxBranding/remotes/dmm1/Makefile
 BoxBranding/remotes/dmm2/Makefile
 BoxBranding/remotes/e3hd/Makefile
 BoxBranding/remotes/e4hd/Makefile
+BoxBranding/remotes/e4hdcombo/Makefile
 BoxBranding/remotes/ebox5000/Makefile
 BoxBranding/remotes/evo1/Makefile
 BoxBranding/remotes/evo2/Makefile

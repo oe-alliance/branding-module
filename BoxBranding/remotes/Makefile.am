@@ -37,7 +37,7 @@ SUBDIRS += ax1
 endif
 
 if E4HD
-SUBDIRS += e4hd
+SUBDIRS += e4hd e4hdcombo
 endif
 
 if AZBOX
