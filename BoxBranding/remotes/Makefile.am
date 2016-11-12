@@ -356,6 +356,14 @@ if VUSOLO4K
 SUBDIRS += vu
 endif
 
+if VUUNO4K
+SUBDIRS += vu
+endif
+
+if VUULTIMO4K
+SUBDIRS += vu
+endif
+
 if XCORE
 SUBDIRS += xcore1 xcore2 xcore3
 endif
