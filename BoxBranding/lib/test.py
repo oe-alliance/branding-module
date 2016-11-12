@@ -1,5 +1,4 @@
 import boxbranding
-
 print "getMachineBuild=%s<" %boxbranding.getMachineBuild()
 print "getMachineProcModel=%s<" %boxbranding.getMachineProcModel()
 print "getMachineBrand=%s<" %boxbranding.getMachineBrand()
@@ -19,3 +18,6 @@ print "getImageBuild=%s<" %boxbranding.getImageBuild()
 print "getImageDistro=%s<" %boxbranding.getImageDistro()
 print "getImageFolder=%s<" %boxbranding.getImageFolder()
 print "getImageFileSystem=%s<" %boxbranding.getImageFileSystem()
+print "getImageDevBuild=%s<" %boxbranding.getImageDevBuild()
+print "getImageType=%s<" %boxbranding.getImageType()
+print "getMachineMake=%s<" %boxbranding.getMachineMake()
