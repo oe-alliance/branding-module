@@ -98,7 +98,7 @@ class RcModel:
 			remotefolder = 'gb0'
 		elif boxtype == 'gbquadplus':
 			remotefolder = 'gb1'
-		elif boxtype in ('mutant11', 'mutant1100', 'mutant1200', 'mutant530c', 'mutant500c', 'vizyonvita', 'mutant1265', 'mutant1500', 'mutant51'):
+		elif boxtype in ('mutant11', 'mutant1100', 'mutant1200', 'mutant530c', 'mutant500c', 'vizyonvita', 'mutant1265', 'mutant1500', 'mutant51', 'bcm7251s'):
 			remotefolder = 'hd1100'
 		elif boxtype in ('mutant2400', 'quadbox2400'):
 			remotefolder = 'hd2400'
