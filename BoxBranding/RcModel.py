@@ -143,7 +143,7 @@ class RcModel:
 		elif boxtype in ('xpeedlxcs2', 'xpeedlxcc'):
 			remotefolder = 'gi1'
 		elif machinebrand == 'Miraclebox':
-			if boxtype in ('mbmicro', 'mbtwinplus'):
+			if boxtype in ('mbmicro', 'mbmicrov2', 'mbtwinplus'):
 				remotefolder = 'miraclebox'
 			else:
 				remotefolder = 'ini3'
