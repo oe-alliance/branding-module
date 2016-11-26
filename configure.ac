@@ -424,6 +424,7 @@ BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
 BoxBranding/remotes/vu3/Makefile
 BoxBranding/remotes/wetek/Makefile
+BoxBranding/remotes/wetek2/Makefile
 BoxBranding/remotes/wwio1/Makefile
 BoxBranding/remotes/xcore1/Makefile
 BoxBranding/remotes/xcore2/Makefile

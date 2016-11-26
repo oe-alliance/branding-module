@@ -401,5 +401,5 @@ SUBDIRS += triplex
 endif
 
 if WETEK
-SUBDIRS += wetek
+SUBDIRS += wetek wetek2
 endif
