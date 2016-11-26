@@ -185,6 +185,7 @@ AM_CONDITIONAL(XTREND, test `echo "$BRAND_OEM"` == "xtrend")
 AM_CONDITIONAL(DAGS, test `echo "$BRAND_OEM" | cut -b 1-4` == "dags")
 AM_CONDITIONAL(GIGABLUE, test `echo "$BRAND_OEM"` == "gigablue")
 AM_CONDITIONAL(ODIN, test `echo "$BRAND_OEM" | cut -b 1-4` == "odin")
+AM_CONDITIONAL(MIRACLEBOX, test `echo "$BOXTYPE" | cut -b 1-2` == "mb")
 AM_CONDITIONAL(INI, test `echo "$BRAND_OEM" | cut -b 1-3` == "ini")
 AM_CONDITIONAL(XP, test `echo "$BRAND_OEM"` == "xp")
 AM_CONDITIONAL(SKYLAKE, test `echo "$BRAND_OEM"` == "skylake")
@@ -196,7 +197,6 @@ AM_CONDITIONAL(XCORE, test `echo "$BRAND_OEM"` == "xcore")
 AM_CONDITIONAL(SEZAM, test `echo "$BOXTYPE" | cut -b 1-5` == "sezam")
 AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
-AM_CONDITIONAL(MIRACLEBOX, test `echo "$BOXTYPE" | cut -b 1-2` == "mb")
 AM_CONDITIONAL(ATEMIO, test `echo "$BOXTYPE" | cut -b 1-6` == "atemio")
 AM_CONDITIONAL(BEYONWIZ, test `echo "$BOXTYPE" | cut -b 1-8` == "beyonwiz")
 AM_CONDITIONAL(BWIDOW, test `echo "$BOXTYPE" | cut -b 1-6` == "bwidow")
@@ -393,6 +393,7 @@ BoxBranding/remotes/iqon2/Makefile
 BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
+BoxBranding/remotes/miraclebox/Makefile
 BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
 BoxBranding/remotes/mediabox/Makefile
