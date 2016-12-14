@@ -112,6 +112,10 @@ if BRE2ZE
 SUBDIRS += wwio1
 endif
 
+if BRE2ZET2C
+SUBDIRS += wwio1
+endif
+
 if BRE2ZE4K
 SUBDIRS += wwio1
 endif
