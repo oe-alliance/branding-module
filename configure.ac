@@ -394,6 +394,7 @@ BoxBranding/remotes/ini7/Makefile
 BoxBranding/remotes/ini8/Makefile
 BoxBranding/remotes/iqon1/Makefile
 BoxBranding/remotes/iqon2/Makefile
+BoxBranding/remotes/iqon3/Makefile
 BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
