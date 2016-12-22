@@ -253,6 +253,7 @@ AM_CONDITIONAL(ET10000, test "$BOXTYPE" == et10000)
 AM_CONDITIONAL(ENFINITY, test "$BOXTYPE" == enfinity)
 AM_CONDITIONAL(EVOMINI, test "$BOXTYPE" == evomini)
 AM_CONDITIONAL(EVOMINIPLUS, test "$BOXTYPE" == evominiplus)
+AM_CONDITIONAL(EVOSLIM, test "$BOXTYPE" == evoslim)
 AM_CONDITIONAL(X1PLUS, test "$BOXTYPE" == x1plus)
 AM_CONDITIONAL(X2PLUS, test "$BOXTYPE" == x2plus)
 AM_CONDITIONAL(XCOMBO, test "$BOXTYPE" == xcombo)
@@ -367,6 +368,7 @@ BoxBranding/remotes/evo4/Makefile
 BoxBranding/remotes/evo5/Makefile
 BoxBranding/remotes/evo6/Makefile
 BoxBranding/remotes/evo7/Makefile
+BoxBranding/remotes/evo8/Makefile
 BoxBranding/remotes/et4x00/Makefile
 BoxBranding/remotes/et6x00/Makefile
 BoxBranding/remotes/et6500/Makefile

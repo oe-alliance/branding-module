@@ -108,6 +108,10 @@ if EVOMINIPLUS
 SUBDIRS += evo5
 endif
 
+if EVOSLIM
+SUBDIRS += evo8
+endif
+
 if BRE2ZE
 SUBDIRS += wwio1
 endif
