@@ -411,3 +411,7 @@ endif
 if WETEK
 SUBDIRS += wetek wetek2
 endif
+
+if HARDKERNEL
+SUBDIRS += hardkernel
+endif

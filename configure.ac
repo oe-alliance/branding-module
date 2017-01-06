@@ -191,6 +191,7 @@ AM_CONDITIONAL(XP, test `echo "$BRAND_OEM"` == "xp")
 AM_CONDITIONAL(SKYLAKE, test `echo "$BRAND_OEM"` == "skylake")
 AM_CONDITIONAL(FORMULER, test `echo "$BRAND_OEM"` == "formuler")
 AM_CONDITIONAL(TRIPLEDOT, test `echo "$BRAND_OEM"` == "tripledot")
+AM_CONDITIONAL(HARDKERNEL, test `echo "$BRAND_OEM"` == "hardkernel")
 AM_CONDITIONAL(WETEK, test `echo "$BRAND_OEM"` == "wetek")
 AM_CONDITIONAL(FULAN, test `echo "$BRAND_OEM"` == "fulan")
 AM_CONDITIONAL(XCORE, test `echo "$BRAND_OEM"` == "xcore")
@@ -443,6 +444,7 @@ BoxBranding/remotes/zgemma2/Makefile
 BoxBranding/remotes/zgemma3/Makefile
 BoxBranding/remotes/zgemma4/Makefile
 BoxBranding/remotes/zgemma5/Makefile
+BoxBranding/remotes/hardkernel/Makefile
 
 ])
 AC_OUTPUT
