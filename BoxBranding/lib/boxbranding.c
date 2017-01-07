@@ -446,6 +446,11 @@ char *_getImageType()
 	return strdup(DISTRO_TYPE);
 }
 
+char *_getImageArch()
+{
+	return strdup(ARCH_TYPE);
+}
+
 char *_getImageDistro()
 {
 	return strdup(DISTRO);

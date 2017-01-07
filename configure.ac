@@ -46,6 +46,12 @@ AC_ARG_WITH(imagetype,
 AC_SUBST(DISTRO_TYPE)
 AC_DEFINE_UNQUOTED(DISTRO_TYPE,"$DISTRO_TYPE",[imagetype name])
 
+AC_ARG_WITH(arch,
+	[  --with-arch=NAME arch name [[mipsel32,sh4...]]],
+	[ARCH_TYPE="$withval"],[ARCH_TYPE="mipsel32"])
+AC_SUBST(ARCH_TYPE)
+AC_DEFINE_UNQUOTED(ARCH_TYPE,"$ARCH_TYPE",[arch name])
+
 AC_ARG_WITH(machinebrand,
 	[  --with-machinebrand=NAME brand name [[Vu,Xtrend,...]]],
 	[MACHINE_BRAND="$withval"],[MACHINE_BRAND="Vu+"])

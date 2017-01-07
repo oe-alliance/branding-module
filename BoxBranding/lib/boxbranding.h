@@ -32,5 +32,6 @@ char *_getMachineKernelFile();
 char *_getMachineMKUBIFS();
 char *_getMachineUBINIZE();
 char *_getMachineProcModel();
+char *_getImageArch();
 
 #endif
