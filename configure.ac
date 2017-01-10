@@ -271,21 +271,21 @@ AM_CONDITIONAL(BRE2ZE4K, test "$BOXTYPE" == bre2ze4k)
 AM_CONDITIONAL(TRIPLEX, test "$BOXTYPE" == triplex)
 AM_CONDITIONAL(FORMULER1, test "$BOXTYPE" == formuler1)
 AM_CONDITIONAL(FORMULER3, test "$BOXTYPE" == formuler3)
-AM_CONDITIONAL(GBIPBOX, test "$BOXTYPE" == gbipbox)
-AM_CONDITIONAL(GBX1, test "$BOXTYPE" == gbx1)
-AM_CONDITIONAL(GBX2, test "$BOXTYPE" == gbx2)
-AM_CONDITIONAL(GBX3, test "$BOXTYPE" == gbx3)
-AM_CONDITIONAL(GBX3H, test "$BOXTYPE" == gbx3h)
-AM_CONDITIONAL(GBULTRASE, test "$BOXTYPE" == gbultrase)
-AM_CONDITIONAL(GBULTRAUE, test "$BOXTYPE" == gbultraue)
-AM_CONDITIONAL(GBULTRAUEH, test "$BOXTYPE" == gbultraueh)
+AM_CONDITIONAL(GBIPBOX, test "$MACHINE_BUILD" == gbipbox)
+AM_CONDITIONAL(GBX1, test "$MACHINE_BUILD" == gbx1)
+AM_CONDITIONAL(GBX2, test "$MACHINE_BUILD" == gbx2)
+AM_CONDITIONAL(GBX3, test "$MACHINE_BUILD" == gbx3)
+AM_CONDITIONAL(GBX3H, test "$MACHINE_BUILD" == gbx3h)
+AM_CONDITIONAL(GBULTRASE, test "$MACHINE_BUILD" == gbultrase)
+AM_CONDITIONAL(GBULTRAUE, test "$MACHINE_BUILD" == gbultraue)
+AM_CONDITIONAL(GBULTRAUEH, test "$MACHINE_BUILD" == gbultraueh)
 AM_CONDITIONAL(GB800SOLO, test "$BOXTYPE" == gb800solo)
-AM_CONDITIONAL(GB800SE, test "$BOXTYPE" == gb800se)
-AM_CONDITIONAL(GB800UE, test "$BOXTYPE" == gb800ue)
-AM_CONDITIONAL(GB800SEPLUS, test "$BOXTYPE" == gb800seplus)
-AM_CONDITIONAL(GB800UEPLUS, test "$BOXTYPE" == gb800ueplus)
-AM_CONDITIONAL(GBQUADPLUS, test "$BOXTYPE" == gbquadplus)
-AM_CONDITIONAL(GBQUAD, test "$BOXTYPE" == gbquad)
+AM_CONDITIONAL(GB800SE, test "$MACHINE_BUILD" == gb800se)
+AM_CONDITIONAL(GB800UE, test "$MACHINE_BUILD" == gb800ue)
+AM_CONDITIONAL(GB800SEPLUS, test "$MACHINE_BUILD" == gb800seplus)
+AM_CONDITIONAL(GB800UEPLUS, test "$MACHINE_BUILD" == gb800ueplus)
+AM_CONDITIONAL(GBQUADPLUS, test "$MACHINE_BUILD" == gbquadplus)
+AM_CONDITIONAL(GBQUAD, test "$MACHINE_BUILD" == gbquad)
 AM_CONDITIONAL(INIHDX, test "$MACHINE_BUILD" == inihdx)
 AM_CONDITIONAL(INIHDE, test "$MACHINE_BUILD" == inihde)
 AM_CONDITIONAL(INIHDP, test "$MACHINE_BUILD" == inihdp)
@@ -390,6 +390,7 @@ BoxBranding/remotes/fulan/Makefile
 BoxBranding/remotes/g300/Makefile
 BoxBranding/remotes/gb0/Makefile
 BoxBranding/remotes/gb1/Makefile
+BoxBranding/remotes/gb2/Makefile
 BoxBranding/remotes/gi1/Makefile
 BoxBranding/remotes/hd1100/Makefile
 BoxBranding/remotes/hd2400/Makefile
