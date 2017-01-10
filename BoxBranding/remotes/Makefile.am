@@ -136,6 +136,10 @@ if FUSIONHD
 SUBDIRS += fusionhd
 endif
 
+if FUSION4K
+SUBDIRS += fusionhd
+endif
+
 if PUREHD
 SUBDIRS += fusionhd
 endif
