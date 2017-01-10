@@ -161,7 +161,7 @@ SUBDIRS += et7x00mini
 endif
 
 if GIGABLUE
-SUBDIRS += gb0 gb1
+SUBDIRS += gb0 gb1 gb2
 endif
 
 if IQON

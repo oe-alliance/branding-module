@@ -96,10 +96,12 @@ class RcModel:
 			remotefolder = 'zgemma3'
 		elif boxtype in ('zgemmai55'):
 			remotefolder = 'zgemma5'
-		elif boxtype in ('gbuhdquad', 'gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultrase', 'gbultraue', 'gbultraueh', 'gbx1', 'gbx3', 'gbx3h', 'gbx2'):
+		elif boxtype in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultrase', 'gbultraue', 'gbx1', 'gbx3', 'gbx2'):
 			remotefolder = 'gb0'
 		elif boxtype == 'gbquadplus':
 			remotefolder = 'gb1'
+		elif boxtype in ('gbuhdquad', 'gbx3h', 'gbultraueh'):
+			remotefolder = 'gb2'
 		elif boxtype in ('mutant11', 'mutant1100', 'mutant1200', 'mutant530c', 'mutant500c', 'vizyonvita', 'mutant1265', 'mutant1500', 'mutant51', 'bcm7251s'):
 			remotefolder = 'hd1100'
 		elif boxtype in ('mutant2400', 'quadbox2400'):
