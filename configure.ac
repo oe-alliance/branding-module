@@ -286,6 +286,7 @@ AM_CONDITIONAL(GB800SEPLUS, test "$BOXTYPE" == gb800seplus)
 AM_CONDITIONAL(GB800UEPLUS, test "$BOXTYPE" == gb800ueplus)
 AM_CONDITIONAL(GBQUADPLUS, test "$BOXTYPE" == gbquadplus)
 AM_CONDITIONAL(GBQUAD, test "$BOXTYPE" == gbquad)
+AM_CONDITIONAL(GBUHDQUAD, test "$BOXTYPE" == gbuhdquad)
 AM_CONDITIONAL(INIHDX, test "$MACHINE_BUILD" == inihdx)
 AM_CONDITIONAL(INIHDE, test "$MACHINE_BUILD" == inihde)
 AM_CONDITIONAL(INIHDP, test "$MACHINE_BUILD" == inihdp)
@@ -390,6 +391,7 @@ BoxBranding/remotes/fulan/Makefile
 BoxBranding/remotes/g300/Makefile
 BoxBranding/remotes/gb0/Makefile
 BoxBranding/remotes/gb1/Makefile
+BoxBranding/remotes/gb2/Makefile
 BoxBranding/remotes/gi1/Makefile
 BoxBranding/remotes/hd1100/Makefile
 BoxBranding/remotes/hd2400/Makefile
