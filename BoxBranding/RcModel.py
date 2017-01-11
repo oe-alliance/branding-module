@@ -58,8 +58,6 @@ class RcModel:
 			remotefolder = 'evo6'
 		elif boxtype in ('novacombo', 'novatwin'):
 			remotefolder = 'evo7'
-		elif boxtype in ('evoslim'):
-			remotefolder = 'evo8'
 		elif boxtype in ('bre2ze','bre2ze4k','bre2zet2c'):
 			remotefolder = 'wwio1'
 		elif boxtype in ('twinboxlcd'):
@@ -221,6 +219,8 @@ class RcModel:
 			remotefolder = 'xp1000'
 		elif brandoem == 'fulan':
 			remotefolder = 'fulan'
+		elif boxtype in ('evoslim'):
+			remotefolder = 'evo8'
 		elif boxtype in ('wetekplay'):
 			remotefolder = 'wetek'
 		elif boxtype in ('wetekplay2'):
