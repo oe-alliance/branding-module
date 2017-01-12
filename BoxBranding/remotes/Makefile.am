@@ -136,7 +136,7 @@ if FUSIONHD
 SUBDIRS += fusionhd
 endif
 
-if FUSION4K
+if REVO4K
 SUBDIRS += fusionhd
 endif
 
