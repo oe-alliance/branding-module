@@ -36,6 +36,7 @@ MAKE_STRING_FUNCTION(getImageBuild)
 MAKE_STRING_FUNCTION(getImageDevBuild)
 MAKE_STRING_FUNCTION(getImageType)
 MAKE_STRING_FUNCTION(getImageDistro)
+MAKE_STRING_FUNCTION(getFeedsUrl)
 MAKE_STRING_FUNCTION(getImageFolder)
 MAKE_STRING_FUNCTION(getImageFileSystem)
 MAKE_STRING_FUNCTION(getImageArch)
@@ -62,6 +63,7 @@ static PyMethodDef boxbrandingMethods[] = {
 	{ "getImageDevBuild", getImageDevBuild, METH_NOARGS, NULL },
 	{ "getImageType", getImageType, METH_NOARGS, NULL },
 	{ "getImageDistro", getImageDistro, METH_NOARGS, NULL },
+	{ "getFeedsUrl", getFeedsUrl, METH_NOARGS, NULL },
 	{ "getImageFolder", getImageFolder, METH_NOARGS, NULL },
 	{ "getImageFileSystem", getImageFileSystem, METH_NOARGS, NULL },
 	{ "getImageArch", getImageArch, METH_NOARGS, NULL },

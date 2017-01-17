@@ -100,6 +100,12 @@ AC_ARG_WITH(imagedevbuild,
 AC_SUBST(IMAGEDEVBUILD)
 AC_DEFINE_UNQUOTED(IMAGEDEVBUILD,"$IMAGEDEVBUILD",[build number])
 
+AC_ARG_WITH(feedsurl,
+	[  --with-feedsurl=NAME feeds url  [[628]]],
+	[FEEDSURL="$withval"],[FEEDSURL=""])
+AC_SUBST(FEEDSURL)
+AC_DEFINE_UNQUOTED(FEEDSURL,"$FEEDSURL",[feeds url ])
+
 AC_ARG_WITH(imagedir,
 	[  --with-imagedir=NAME imagedir folder [[628]]],
 	[IMAGEDIR="$withval"],[IMAGEDIR=""])

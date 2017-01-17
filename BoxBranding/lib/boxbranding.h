@@ -20,6 +20,7 @@ char *_getImageBuild();
 char *_getImageDevBuild();
 char *_getImageType();
 char *_getImageDistro();
+char *_getFeedsUrl();
 char *_getImageFolder();
 char *_getImageFileSystem();
 char *_getOEVersion();

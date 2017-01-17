@@ -456,6 +456,11 @@ char *_getImageDistro()
 	return strdup(DISTRO);
 }
 
+char *_getFeedsUrl()
+{
+	return strdup(FEEDSURL);
+}
+
 char *_getImageFolder()
 {
 	return strdup(IMAGEDIR);
