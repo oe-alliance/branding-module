@@ -413,7 +413,7 @@ SUBDIRS += triplex
 endif
 
 if WETEK
-SUBDIRS += wetek wetek2
+SUBDIRS += wetek wetek2 wetek3
 endif
 
 if HARDKERNEL
