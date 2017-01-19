@@ -252,6 +252,14 @@ if BCM7251S
 SUBDIRS += hd1100
 endif
 
+if VS1000
+SUBDIRS += hd1100
+endif
+
+if VS1500
+SUBDIRS += hd1100
+endif
+
 if PROTEK9900LX
 SUBDIRS += protek1
 endif
