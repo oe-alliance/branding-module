@@ -312,8 +312,8 @@ if TMNANOSEM2PLUS
 SUBDIRS += tm4
 endif
 
-if TRIVIARMINI
-SUBDIRS += triviar
+if TIVIARMIN
+SUBDIRS += tiviar
 endif
 
 if VENTON

@@ -275,7 +275,7 @@ AM_CONDITIONAL(BRE2ZE, test "$BOXTYPE" == bre2ze)
 AM_CONDITIONAL(BRE2ZET2C, test "$BOXTYPE" == bre2zet2c)
 AM_CONDITIONAL(BRE2ZE4K, test "$BOXTYPE" == bre2ze4k)
 AM_CONDITIONAL(TRIPLEX, test "$BOXTYPE" == triplex)
-AM_CONDITIONAL(TRIVIARMINI, test "$BOXTYPE" == triviarmini)
+AM_CONDITIONAL(TIVIARMIN, test "$BOXTYPE" == tiviarmin)
 AM_CONDITIONAL(FORMULER1, test "$BOXTYPE" == formuler1)
 AM_CONDITIONAL(FORMULER3, test "$BOXTYPE" == formuler3)
 AM_CONDITIONAL(GBIPBOX, test "$BOXTYPE" == gbipbox)
@@ -439,7 +439,7 @@ BoxBranding/remotes/sf2x8/Makefile
 BoxBranding/remotes/sf3038/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/triplex/Makefile
-BoxBranding/remotes/triviar/Makefile
+BoxBranding/remotes/tiviar/Makefile
 BoxBranding/remotes/tyrant/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile
