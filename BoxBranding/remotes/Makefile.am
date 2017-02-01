@@ -308,6 +308,10 @@ if TMNANOSEM2
 SUBDIRS += tm4
 endif
 
+if TMNANOM3
+SUBDIRS += tm5
+endif
+
 if TMNANOSEM2PLUS
 SUBDIRS += tm4
 endif
