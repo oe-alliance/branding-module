@@ -312,6 +312,10 @@ if TMNANOM3
 SUBDIRS += tm5
 endif
 
+if TMTWIN4K 
+SUBDIRS += tm5
+endif
+
 if TMNANOSEM2PLUS
 SUBDIRS += tm4
 endif
