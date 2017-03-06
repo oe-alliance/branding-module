@@ -160,7 +160,7 @@ if ET7X00MINI
 SUBDIRS += et7x00mini
 endif
 
-if ET11000
+if GI11000
 SUBDIRS += et7x00mini
 endif
 
