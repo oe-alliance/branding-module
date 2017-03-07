@@ -238,6 +238,7 @@ AM_CONDITIONAL(S7300, test `echo "$MACHINE_BUILD"` == "7300s")
 AM_CONDITIONAL(S7400, test `echo "$MACHINE_BUILD"` == "7400s")
 AM_CONDITIONAL(SOGNO, test `echo "$BOXTYPE"` == "sogno8800hd")
 AM_CONDITIONAL(UNIBOXHDE, test "$BOXTYPE" == uniboxhde)
+AM_CONDITIONAL(ALPHATRIPLE, test "$MACHINE_BUILD" == alphatriple)
 AM_CONDITIONAL(AXODIN, test "$MACHINE_BUILD" == axodin)
 AM_CONDITIONAL(AXODINC, test "$MACHINE_BUILD" == axodinc)
 AM_CONDITIONAL(AZBOXME, test "$BOXTYPE" == azboxme)
@@ -436,6 +437,7 @@ BoxBranding/remotes/optimuss2/Makefile
 BoxBranding/remotes/relook/Makefile
 BoxBranding/remotes/protek1/Makefile
 BoxBranding/remotes/protek2/Makefile
+BoxBranding/remotes/sab1/Makefile
 BoxBranding/remotes/sf98/Makefile
 BoxBranding/remotes/sf108/Makefile
 BoxBranding/remotes/sf2x8/Makefile

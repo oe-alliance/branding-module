@@ -40,6 +40,10 @@ if E4HD
 SUBDIRS += e4hd e4hdcombo
 endif
 
+if ALPHATRIPLE
+SUBDIRS += sab1
+endif
+
 if AZBOX
 SUBDIRS += azboxme azboxhd azboxelite
 endif
