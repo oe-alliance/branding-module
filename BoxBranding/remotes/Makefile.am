@@ -321,7 +321,7 @@ SUBDIRS += tm5
 endif
 
 if TMTWIN4K 
-SUBDIRS += tm5
+SUBDIRS += tm6
 endif
 
 if TMNANOSEM2PLUS
