@@ -116,6 +116,10 @@ if EVOSLIM
 SUBDIRS += evo8
 endif
 
+if EVOPANDA
+SUBDIRS += evo8
+endif
+
 if BRE2ZE
 SUBDIRS += wwio1
 endif
