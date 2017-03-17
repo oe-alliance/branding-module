@@ -106,6 +106,8 @@ class RcModel:
 			remotefolder = 'hd1100'
 		elif boxtype in ('mutant2400', 'quadbox2400'):
 			remotefolder = 'hd2400'
+		elif boxtype in ('revo4k'):
+			remotefolder = 'revo'
 		elif machinebrand == 'Jepssen':
 			remotefolder = 'mediabox'
 		elif machinebrand == 'XSARIUS':

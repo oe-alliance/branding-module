@@ -436,6 +436,7 @@ BoxBranding/remotes/odinm9/Makefile
 BoxBranding/remotes/optimuss1/Makefile
 BoxBranding/remotes/optimuss2/Makefile
 BoxBranding/remotes/relook/Makefile
+BoxBranding/remotes/revo/Makefile
 BoxBranding/remotes/protek1/Makefile
 BoxBranding/remotes/protek2/Makefile
 BoxBranding/remotes/sab1/Makefile

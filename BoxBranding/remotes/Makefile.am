@@ -145,7 +145,7 @@ SUBDIRS += fusionhd
 endif
 
 if REVO4K
-SUBDIRS += fusionhd
+SUBDIRS += revo
 endif
 
 if PUREHD
