@@ -148,6 +148,10 @@ if REVO4K
 SUBDIRS += revo
 endif
 
+if GALAXY4K
+SUBDIRS += revo
+endif
+
 if PUREHD
 SUBDIRS += fusionhd
 endif
