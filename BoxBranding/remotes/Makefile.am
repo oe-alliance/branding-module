@@ -332,6 +332,10 @@ if TMTWIN4K
 SUBDIRS += tm6
 endif
 
+if TM4KSUPER 
+SUBDIRS += tm6
+endif
+
 if TMNANOSEM2PLUS
 SUBDIRS += tm4
 endif
