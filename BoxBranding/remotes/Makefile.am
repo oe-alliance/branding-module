@@ -144,6 +144,10 @@ if FUSIONHD
 SUBDIRS += fusionhd
 endif
 
+if FUSIONHDSE
+SUBDIRS += fusionhd
+endif
+
 if REVO4K
 SUBDIRS += revo
 endif
