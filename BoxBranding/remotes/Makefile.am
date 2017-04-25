@@ -160,6 +160,10 @@ if PUREHD
 SUBDIRS += fusionhd
 endif
 
+if PUREHDSE
+SUBDIRS += fusionhd
+endif
+
 if TRIPLEDOT
 SUBDIRS += hdbox relook tyrant sf108
 endif
