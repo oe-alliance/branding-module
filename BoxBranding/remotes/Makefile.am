@@ -467,3 +467,7 @@ endif
 if HARDKERNEL
 SUBDIRS += hardkernel
 endif
+
+if VALALINUX
+SUBDIRS += vala
+endif

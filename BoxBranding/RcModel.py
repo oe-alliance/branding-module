@@ -237,6 +237,8 @@ class RcModel:
 			remotefolder = 'wetek3'
 		elif boxtype in ('odroidc2'):
 			remotefolder = 'hardkernel'
+		elif boxtype in ('valalinux'):
+			remotefolder = 'vala'
 
 		return remotefolder
 		

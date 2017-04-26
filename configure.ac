@@ -368,6 +368,7 @@ AM_CONDITIONAL(VENTONHDX, test "$BOXTYPE" == ventonhdx)
 AM_CONDITIONAL(XP1000, test "$MACHINE_BUILD" == xp1000)
 AM_CONDITIONAL(XP1000MAX, test "$BOXTYPE" == xp1000max)
 AM_CONDITIONAL(XP1000MK, test "$BOXTYPE" == xp1000mk)
+AM_CONDITIONAL(VALALINUX, test "$BOXTYPE" == valalinux)
 
 AC_CONFIG_FILES([
 Makefile
@@ -471,6 +472,7 @@ BoxBranding/remotes/xcore1/Makefile
 BoxBranding/remotes/xcore2/Makefile
 BoxBranding/remotes/xcore3/Makefile
 BoxBranding/remotes/xp1000/Makefile
+BoxBranding/remotes/vala/Makefile
 BoxBranding/remotes/fusionhd/Makefile
 BoxBranding/remotes/zgemma1/Makefile
 BoxBranding/remotes/zgemma2/Makefile
