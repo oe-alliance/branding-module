@@ -70,7 +70,7 @@ class RcModel:
 			remotefolder = 'sf2x8'
 		elif boxtype in ('odin2hybrid', 'odinplus'):
 			remotefolder = 'ax1'
-		elif boxtype in ('ax51'):
+		elif boxtype in ('ax51',('axultra'):
 			remotefolder = 'ax2'
 		elif boxtype in ('e4hd', 'e4hdhybrid'):
 			remotefolder = 'e4hd'
