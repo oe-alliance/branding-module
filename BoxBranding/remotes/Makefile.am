@@ -40,6 +40,10 @@ if S7400
 SUBDIRS += ax1
 endif
 
+if S8100
+SUBDIRS += hd2400
+endif
+
 if E4HD
 SUBDIRS += e4hd e4hdcombo
 endif
