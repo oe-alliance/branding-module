@@ -444,6 +444,10 @@ if XCORE
 SUBDIRS += xcore1 xcore2 xcore3
 endif
 
+if OSNINO
+SUBDIRS += xcore3
+endif
+
 if XP1000
 SUBDIRS += xp1000
 endif
