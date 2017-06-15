@@ -445,7 +445,7 @@ SUBDIRS += xcore1 xcore2 xcore3
 endif
 
 if OSNINO
-SUBDIRS += xcore3
+SUBDIRS += edision1
 endif
 
 if XP1000
