@@ -230,6 +230,7 @@ AM_CONDITIONAL(GALAXY4K, test "$BOXTYPE" == galaxy4k)
 AM_CONDITIONAL(AX51, test "$BOXTYPE" == ax51)
 AM_CONDITIONAL(AXULTRA, test "$BOXTYPE" == axultra)
 AM_CONDITIONAL(BCM7251S, test "$BOXTYPE" == bcm7251s)
+AM_CONDITIONAL(BEYONWIZU4, test "$BOXTYPE" == beyonwizu4)
 AM_CONDITIONAL(S7000, test `echo "$MACHINE_BUILD"` == "7000s")
 AM_CONDITIONAL(S7100, test `echo "$MACHINE_BUILD"` == "7100s")
 AM_CONDITIONAL(S7105, test `echo "$MACHINE_BUILD"` == "7105s")
@@ -384,6 +385,7 @@ BoxBranding/remotes/ax2/Makefile
 BoxBranding/remotes/azboxhd/Makefile
 BoxBranding/remotes/azboxme/Makefile
 BoxBranding/remotes/azboxelite/Makefile
+BoxBranding/remotes/beyonwiz1/Makefile
 BoxBranding/remotes/cube/Makefile
 BoxBranding/remotes/dmm0/Makefile
 BoxBranding/remotes/dmm1/Makefile
