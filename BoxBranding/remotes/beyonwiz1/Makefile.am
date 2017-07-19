@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/beyonwiz
+installdir = /usr/share/enigma2/rc_models/beyonwiz1
 
 dist_install_DATA = \
 	rc.png \
