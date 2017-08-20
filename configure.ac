@@ -382,6 +382,7 @@ BoxBranding/lib/Makefile
 BoxBranding/remotes/Makefile
 BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile
+BoxBranding/remotes/ax51/Makefile
 BoxBranding/remotes/azboxhd/Makefile
 BoxBranding/remotes/azboxme/Makefile
 BoxBranding/remotes/azboxelite/Makefile
