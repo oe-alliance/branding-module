@@ -1,0 +1,46 @@
+<rcs>
+	<rc id="2">
+		<button name="POWER" pos="28,50" />
+		<button name="1" pos="31,131" />
+		<button name="2" pos="69,131" />
+		<button name="3" pos="110,131" />
+		<button name="4" pos="31,157" />
+		<button name="5" pos="69,157" />
+		<button name="6" pos="110,157" />
+		<button name="7" pos="31,183" />
+		<button name="8" pos="69,183" />
+		<button name="9" pos="110,183" />
+		<button name="ARROWLEFT" pos="31,211" />
+		<button name="0" pos="70,211" />
+		<button name="ARROWRIGHT" pos="110,211" />
+		<button name="VOL+" pos="29,377" />
+		<button name="VOL-" pos="29,408" />
+		<button name="MUTE" pos="113,50" />
+		<button name="EXIT" pos="28,344" />
+		<button name="BOUQUET+" pos="110,376" />
+		<button name="BOUQUET-" pos="110,408" />
+		<button name="INFO" pos="115,263" />
+		<button name="MENU" pos="27,262" />
+		<button name="OK" pos="71,304" />
+		<button name="UP" pos="71,276" />
+		<button name="DOWN" pos="71,333" />
+		<button name="LEFT" pos="42,305" />
+		<button name="RIGHT" pos="99,205" />
+		<button name="AUDIO" pos="31,102" />
+		<button name="RED" pos="27,238" />
+		<button name="GREEN" pos="56,238" />
+		<button name="YELLOW" pos="85,238" />
+		<button name="BLUE" pos="114,238" />
+		<button name="TV" pos="55,76" />
+		<button name="RADIO" pos="83,77" />
+		<button name="TEXT" pos="110,102" />
+		<button name="HELP" pos="112,76" />
+		<button name="PVR" pos="71,408" />
+		<button name="RECORD" pos="71,447" />
+		<button name="PLAY" pos="108,490" />
+		<button name="PAUSE" pos="108,490" />
+		<button name="REWIND" pos="32,468" />
+		<button name="FASTFORWARD" pos="108,468" />
+		<button name="STOP" pos="32,490" />
+	</rc>
+</rcs>

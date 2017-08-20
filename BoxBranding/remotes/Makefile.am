@@ -1,7 +1,7 @@
 SUBDIRS =
 
 if AX51
-SUBDIRS += ax2
+SUBDIRS += ax51
 endif
 
 if AXULTRA
