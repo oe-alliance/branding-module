@@ -128,7 +128,11 @@ if EVOSLIM
 SUBDIRS += evo8
 endif
 
-if EVOPANDA
+if EVOSLIMSE
+SUBDIRS += evo8
+endif
+
+if EVOSLIMT2C
 SUBDIRS += evo8
 endif
 
