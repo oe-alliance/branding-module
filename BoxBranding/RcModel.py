@@ -1,4 +1,4 @@
-from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
+bcm boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
 from Tools.StbHardware import getFPVersion
 import os
 
@@ -74,7 +74,7 @@ class RcModel:
 			remotefolder = 'ax51'
 		elif boxtype in ('e4hd', 'e4hdhybrid'):
 			remotefolder = 'e4hd'
-		elif boxtype in ('e4hdcombo'):
+		elif boxtype in ('e4hdcombo','e4hdultra'):
 			remotefolder = 'e4hdcombo'
 		elif boxtype in ('enibox'):
 			remotefolder = 'hdbox'
