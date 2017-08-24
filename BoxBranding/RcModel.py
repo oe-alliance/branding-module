@@ -1,4 +1,4 @@
-bcm boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
+from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
 from Tools.StbHardware import getFPVersion
 import os
 
