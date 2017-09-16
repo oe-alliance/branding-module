@@ -165,6 +165,20 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 			return strdup(BOXTYPE);
 		}
 	}
+	else if(strcmp(BOXTYPE, "dm900") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/model");
+		if(strcmp(boxtype_name, "dm920") == 0)
+		{
+			free(boxtype_name);
+			return strdup("dm920");
+		}
+		else
+		{
+			free(boxtype_name);
+			return strdup(BOXTYPE);
+		}
+	}
 	return strdup(BOXTYPE);
 }
 
@@ -338,6 +352,11 @@ char *_getMachineName()
 		{
 			free(boxtype_name);
 			return strdup("DM525");
+		}
+		else if(strcmp(boxtype_name, "dm920") == 0)
+		{
+			free(boxtype_name);
+			return strdup("DM920");
 		}
 		else
 		{
