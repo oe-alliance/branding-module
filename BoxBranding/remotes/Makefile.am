@@ -491,3 +491,7 @@ endif
 if VALALINUX
 SUBDIRS += vala
 endif
+
+if VIPER
+SUBDIRS += amiko1 amiko2
+endif

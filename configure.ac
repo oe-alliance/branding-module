@@ -222,6 +222,7 @@ AM_CONDITIONAL(ROXXS, test `echo "$BOXTYPE" | cut -b 1-5` == "roxxs")
 AM_CONDITIONAL(MEDIAART, test `echo "$BOXTYPE" | cut -b 1-4` == "mart")
 AM_CONDITIONAL(NANO, test `echo "$BOXTYPE" | cut -b 1-4` == "nano")
 AM_CONDITIONAL(FORCE, test `echo "$BOXTYPE" | cut -b 1-5` == "force")
+AM_CONDITIONAL(VIPER, test `echo "$BOXTYPE" | cut -b 1-5` == "viper")
 AM_CONDITIONAL(WORLDVISION, test `echo "$BOXTYPE" | cut -b 1-11` == "worldvision")
 AM_CONDITIONAL(FUSIONHD, test "$BOXTYPE" == fusionhd)
 AM_CONDITIONAL(FUSIONHDSE, test "$BOXTYPE" == fusionhdse)
@@ -381,6 +382,8 @@ Makefile
 BoxBranding/Makefile
 BoxBranding/lib/Makefile
 BoxBranding/remotes/Makefile
+BoxBranding/remotes/amiko1/Makefile
+BoxBranding/remotes/amiko2/Makefile
 BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile
 BoxBranding/remotes/ax51/Makefile

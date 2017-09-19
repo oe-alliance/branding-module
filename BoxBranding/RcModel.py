@@ -36,6 +36,10 @@ class RcModel:
 			elif model == "me" or model == "minime":
 				remotefolder = 'azboxme'
 
+		elif boxtype in ('vipert2c','vipercombo'):
+			remotefolder = 'amiko2'
+		elif boxtype in ('vipercombohdd'):
+			remotefolder = 'amiko1'
 		elif boxtype in ('enfinity'):
 			remotefolder = 'evo1'
 		elif boxtype in ('alphatriple'):
