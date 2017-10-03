@@ -23,7 +23,30 @@ class RcModel:
 		fp.close()
 		return out.split()[0]
 
-	def getRcFolder(self):
+	def process(self, line):
+		if line.lower().startswith('config.usage.rc_model='):
+			parts = line.split('=')
+			folder = parts[-1].rstrip()
+			if os.path.isfile('/usr/share/enigma2/rc_models/'+ folder + '/rc.png') and os.path.isfile('/usr/share/enigma2/rc_models/'+ folder + '/rcpositions.xml') and os.path.isfile('/usr/share/enigma2/rc_models/'+ folder + '/remote.html'):
+				return folder
+		return None
+
+	# Don't try to be clever and use E2 functions here ...
+	def readE2Settings(self):
+		if os.path.isfile('/etc/enigma2/settings'):
+			with open('/etc/enigma2/settings') as config:
+				for line in config:
+					ret = self.process(line)
+					if ret is not None:
+						return ret
+		return None
+
+	def getRcFolder(self, GetDefault=False):
+		if not GetDefault:
+			ret = self.readE2Settings()
+			if ret is not None:
+				return ret
+
 		remotefolder = 'dmm0'
 		if os.path.exists('/proc/stb/info/azmodel'):
 			f = open("/proc/stb/info/model",'r')
