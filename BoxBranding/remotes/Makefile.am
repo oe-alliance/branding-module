@@ -68,6 +68,10 @@ if BROADMEDIA
 SUBDIRS += g300
 endif
 
+if SF5008
+SUBDIRS += sf5008
+endif
+
 if SF4008
 SUBDIRS += sf3038
 endif

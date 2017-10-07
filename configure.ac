@@ -339,6 +339,7 @@ AM_CONDITIONAL(SF128, test "$BOXTYPE" == sf128)
 AM_CONDITIONAL(SF138, test "$BOXTYPE" == sf138)
 AM_CONDITIONAL(SF3038, test "$BOXTYPE" == sf3038)
 AM_CONDITIONAL(SF4008, test "$BOXTYPE" == sf4008)
+AM_CONDITIONAL(SF5008, test "$BOXTYPE" == sf5008)
 AM_CONDITIONAL(SOGNO8800HD, test "$BOXTYPE" == sogno8800hd)
 AM_CONDITIONAL(T2CABLE, test "$BOXTYPE" == t2cable)
 AM_CONDITIONAL(TMTWINOE, test "$BOXTYPE" == tmtwin)
@@ -461,6 +462,7 @@ BoxBranding/remotes/sf98/Makefile
 BoxBranding/remotes/sf108/Makefile
 BoxBranding/remotes/sf2x8/Makefile
 BoxBranding/remotes/sf3038/Makefile
+BoxBranding/remotes/sf5008/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/triplex/Makefile
 BoxBranding/remotes/tiviar/Makefile
