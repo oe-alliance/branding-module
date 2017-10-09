@@ -372,7 +372,7 @@ if TMNANOSEM2PLUS
 SUBDIRS += tm4
 endif
 
-if TIVIARMIN
+if TIVIAR
 SUBDIRS += tiviar
 endif
 

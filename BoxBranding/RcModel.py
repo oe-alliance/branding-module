@@ -89,7 +89,7 @@ class RcModel:
 			remotefolder = 'evo7'
 		elif boxtype in ('bre2ze','bre2ze4k','bre2zet2c'):
 			remotefolder = 'wwio1'
-		elif boxtype in ('tiviarmin'):
+		elif boxtype in ('tiviarmin','tiviaralpha'):
 			remotefolder = 'tiviar'
 		elif boxtype in ('twinboxlcd'):
 			remotefolder = 'red1'
