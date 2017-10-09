@@ -224,6 +224,7 @@ AM_CONDITIONAL(NANO, test `echo "$BOXTYPE" | cut -b 1-4` == "nano")
 AM_CONDITIONAL(FORCE, test `echo "$BOXTYPE" | cut -b 1-5` == "force")
 AM_CONDITIONAL(VIPER, test `echo "$BOXTYPE" | cut -b 1-5` == "viper")
 AM_CONDITIONAL(WORLDVISION, test `echo "$BOXTYPE" | cut -b 1-11` == "worldvision")
+AM_CONDITIONAL(LUNIX, test `echo "$BOXTYPE" | cut -b 1-5` == "lunix")
 AM_CONDITIONAL(FUSIONHD, test "$BOXTYPE" == fusionhd)
 AM_CONDITIONAL(FUSIONHDSE, test "$BOXTYPE" == fusionhdse)
 AM_CONDITIONAL(REVO4K, test "$BOXTYPE" == revo4k)
@@ -457,6 +458,7 @@ BoxBranding/remotes/relook/Makefile
 BoxBranding/remotes/revo/Makefile
 BoxBranding/remotes/protek1/Makefile
 BoxBranding/remotes/protek2/Makefile
+BoxBranding/remotes/qviart1/Makefile
 BoxBranding/remotes/sab1/Makefile
 BoxBranding/remotes/sf98/Makefile
 BoxBranding/remotes/sf108/Makefile

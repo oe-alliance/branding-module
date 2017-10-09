@@ -232,6 +232,10 @@ if JEPSSEN
 SUBDIRS += mediabox
 endif
 
+if LUNIX
+SUBDIRS += qviart1
+endif
+
 if EDISION
 SUBDIRS += optimuss1 optimuss2
 endif
