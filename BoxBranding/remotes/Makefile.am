@@ -373,7 +373,7 @@ SUBDIRS += tm4
 endif
 
 if TIVIAR
-SUBDIRS += tiviar
+SUBDIRS += tiviar1 tiviar2
 endif
 
 if VENTON

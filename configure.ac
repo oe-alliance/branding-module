@@ -467,7 +467,8 @@ BoxBranding/remotes/sf3038/Makefile
 BoxBranding/remotes/sf5008/Makefile
 BoxBranding/remotes/sogno/Makefile
 BoxBranding/remotes/triplex/Makefile
-BoxBranding/remotes/tiviar/Makefile
+BoxBranding/remotes/tiviar1/Makefile
+BoxBranding/remotes/tiviar2/Makefile
 BoxBranding/remotes/tyrant/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/tm1/Makefile
