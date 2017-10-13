@@ -503,3 +503,7 @@ endif
 if VIPER
 SUBDIRS += amiko1 amiko2
 endif
+
+if DINOBOT
+SUBDIRS += dinobot
+endif

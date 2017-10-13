@@ -262,6 +262,7 @@ AM_CONDITIONAL(DM820, test "$BOXTYPE" == dm820)
 AM_CONDITIONAL(DM500HD, test "$BOXTYPE" == dm500hd)
 AM_CONDITIONAL(DM500HDV2, test "$BOXTYPE" == dm500hdv2)
 AM_CONDITIONAL(DM520, test "$BOXTYPE" == dm520)
+AM_CONDITIONAL(DINOBOT, test `echo "$BOXTYPE" | cut -b 1-7` == "dinobot")
 AM_CONDITIONAL(E3HD, test "$BOXTYPE" == e3hd)
 AM_CONDITIONAL(E4HD, test `echo "$BOXTYPE" | cut -b 1-4` == "e4hd")
 AM_CONDITIONAL(ET4X00, test "$BOXTYPE" == et4x00)
@@ -397,6 +398,7 @@ BoxBranding/remotes/cube/Makefile
 BoxBranding/remotes/dmm0/Makefile
 BoxBranding/remotes/dmm1/Makefile
 BoxBranding/remotes/dmm2/Makefile
+BoxBranding/remotes/dinobot/Makefile
 BoxBranding/remotes/e3hd/Makefile
 BoxBranding/remotes/e4hd/Makefile
 BoxBranding/remotes/e4hdcombo/Makefile
