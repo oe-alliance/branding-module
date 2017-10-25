@@ -384,13 +384,13 @@ char *_getDriverDate()
 	char *real_driver_date = NULL;
 	char driver_date[30];
 
-	/** INI has in each driver build date - NO NEEED TAKE IT FROM BB FILE*/
+	/** INI and Beyonwiz have a driver build date - NO NEEED TAKE IT FROM BB FILE*/
 	if((driver_file = fopen("/proc/stb/info/boxtype", "r")) != NULL)
 	{
 		fgets(driver_date, sizeof(driver_date), driver_file);
 		fclose(driver_file);
 
-		if(startsWith(driver_date, "ini"))
+		if(startsWith(driver_date, "beyonwiz") || startsWith(driver_date, "ini"))
 		{
 			if((driver_file = fopen("/proc/stb/info/version", "r")) != NULL)
 			{
