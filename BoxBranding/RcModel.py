@@ -240,6 +240,8 @@ class RcModel:
 			remotefolder = 'vu2'
 		elif boxtype == 'vuduo2':
 			remotefolder = 'vu3'
+		elif boxtype == 'vuuno4kse':
+			remotefolder = 'vu4'
 		elif boxtype in ('starsatlx', 'axodin', 'axodinc', 'odinm6'):
 			remotefolder = 'odinm6'
 		elif boxtype in ('ixussone'):
