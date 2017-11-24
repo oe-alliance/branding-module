@@ -15,18 +15,18 @@
 		<button name="0" pos="67,441" />
 		<button name="ARROWRIGHT" pos="92,204" />
 
-		<button name="INFO" pos="88,169" />
-		<button name="MENU" pos="46,169" />
+		<button name="INFO" pos="88,177" />
+		<button name="MENU" pos="49,177" />
 		<button name="BOUQUET+" pos="81,157" />
 		<button name="BOUQUET-" pos="53,157" />
-		<button name="EPG" pos="99,268" />
-		<button name="EXIT" pos="32,268" />
+		<button name="EPG" pos="102,260" />
+		<button name="EXIT" pos="32,260" />
 
-		<button name="OK" pos="65,232" />
-		<button name="UP" pos="65,186" />
-		<button name="DOWN" pos="65,250" />
-		<button name="LEFT" pos="42,204" />
-		<button name="RIGHT" pos="92,204" />
+		<button name="OK" pos="69,237" />
+		<button name="UP" pos="69,197" />
+		<button name="DOWN" pos="69,247" />
+		<button name="LEFT" pos="44,222" />
+		<button name="RIGHT" pos="94,222" />
 		
 		<button name="TIMER" pos="107,120" />
 		<button name="TV" pos="28,66" />
@@ -38,12 +38,12 @@
 		<button name="YELLOW" pos="79,351" />
 		<button name="BLUE" pos="105,343" />
 
-		<button name="VOL+" pos="21,189" />
-		<button name="VOL-" pos="21,241" />
-		<button name="MUTE" pos="26,42" />
-		<button name="PVR" pos="65,278" />
-		<button name="CH+" pos="110,189" />
-		<button name="CH-" pos="110,240" />
+		<button name="VOL+" pos="24,202" />
+		<button name="VOL-" pos="117,241" />
+		<button name="MUTE" pos="28,51" />
+		<button name="PVR" pos="69,271" />
+		<button name="CH+" pos="113,202" />
+		<button name="CH-" pos="117,231" />
 
 		<button name="AUDIO" pos="51,139" />
 		<button name="TEXT" pos="24,148" />
