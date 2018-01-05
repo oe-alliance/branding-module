@@ -254,7 +254,7 @@ char *_getMachineName()
 			if(startsWith(boxtype_name, "bcm73625"))
 			{
 				free(boxtype_name);
-				return strdup("ET7100");
+				return strdup("ET7100 V2");
 			}
 			else
 			{
