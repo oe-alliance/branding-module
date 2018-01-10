@@ -229,7 +229,7 @@ SUBDIRS += iqon2
 endif
 
 if JEPSSEN
-SUBDIRS += mediabox
+SUBDIRS += mediabox mediabox4k
 endif
 
 if LUNIX
