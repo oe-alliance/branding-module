@@ -519,3 +519,7 @@ endif
 if DINOBOT
 SUBDIRS += dinobot
 endif
+
+if ANADOL4K
+SUBDIRS += anadol4k
+endif

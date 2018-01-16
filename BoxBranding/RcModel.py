@@ -143,6 +143,8 @@ class RcModel:
 			remotefolder = 'hd2400'
 		elif boxtype in ('revo4k','galaxy4k'):
 			remotefolder = 'revo'
+		elif boxtype in ('anadol4k'):
+			remotefolder = 'anadol4k'
 		elif boxtype in ('mediabox4k'):
 			remotefolder = 'mediabox4k'
 		elif boxtype in ('mediabox'):

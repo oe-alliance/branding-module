@@ -230,6 +230,7 @@ AM_CONDITIONAL(FUSIONHD, test "$BOXTYPE" == fusionhd)
 AM_CONDITIONAL(FUSIONHDSE, test "$BOXTYPE" == fusionhdse)
 AM_CONDITIONAL(REVO4K, test "$BOXTYPE" == revo4k)
 AM_CONDITIONAL(GALAXY4K, test "$BOXTYPE" == galaxy4k)
+AM_CONDITIONAL(ANADOL4K, test "$BOXTYPE" == anadol4k)
 AM_CONDITIONAL(AX51, test "$BOXTYPE" == ax51)
 AM_CONDITIONAL(AXULTRA, test "$BOXTYPE" == axultra)
 AM_CONDITIONAL(BCM7251S, test "$BOXTYPE" == bcm7251s)
@@ -391,6 +392,7 @@ BoxBranding/lib/Makefile
 BoxBranding/remotes/Makefile
 BoxBranding/remotes/amiko1/Makefile
 BoxBranding/remotes/amiko2/Makefile
+BoxBranding/remotes/anadol4k/Makefile
 BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile
 BoxBranding/remotes/ax51/Makefile
