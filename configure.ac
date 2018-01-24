@@ -506,6 +506,7 @@ BoxBranding/remotes/zgemma2/Makefile
 BoxBranding/remotes/zgemma3/Makefile
 BoxBranding/remotes/zgemma4/Makefile
 BoxBranding/remotes/zgemma5/Makefile
+BoxBranding/remotes/zgemma6/Makefile
 BoxBranding/remotes/hardkernel/Makefile
 
 ])
