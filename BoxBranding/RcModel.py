@@ -127,7 +127,7 @@ class RcModel:
 			remotefolder = 'zgemma3'
 		elif boxtype in ('zgemmai55'):
 			remotefolder = 'zgemma5'
-		elif boxtype in ('zgemmah9s','zgemmah9t'):
+		elif boxtype in ('zgemmah9s','zgemmah9t','zgemmah9splus'):
 			remotefolder = 'zgemma6'
 		elif boxtype in ('dinobot4k','dinobot4kse','dinobot4kl'):
 			remotefolder = 'dinobot'
