@@ -33,12 +33,14 @@ class RcModel:
 
 	# Don't try to be clever and use E2 functions here ...
 	def readE2Settings(self):
-		if os.path.isfile('/etc/enigma2/settings'):
+		try:
 			with open('/etc/enigma2/settings') as config:
 				for line in config:
 					ret = self.process(line)
 					if ret is not None:
 						return ret
+		except IOError as e:
+			print "[RcModel] IOError: '/etc/enigma2/settings' cannot be opened"
 		return None
 
 	def getRcFolder(self, GetDefault=False):
