@@ -435,6 +435,7 @@ BoxBranding/remotes/gb2/Makefile
 BoxBranding/remotes/gb3/Makefile
 BoxBranding/remotes/gi1/Makefile
 BoxBranding/remotes/hd1100/Makefile
+BoxBranding/remotes/hd530c/Makefile
 BoxBranding/remotes/hd2400/Makefile
 BoxBranding/remotes/ini0/Makefile
 BoxBranding/remotes/ini1/Makefile

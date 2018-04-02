@@ -289,7 +289,7 @@ SUBDIRS += hd1100
 endif
 
 if HD530C
-SUBDIRS += hd1100
+SUBDIRS += hd530c
 endif
 
 if MUTANT51
