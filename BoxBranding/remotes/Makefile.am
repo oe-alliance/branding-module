@@ -45,7 +45,7 @@ SUBDIRS += ax1
 endif
 
 if S8100
-SUBDIRS += hd2400
+SUBDIRS += protek2
 endif
 
 if E4HD
