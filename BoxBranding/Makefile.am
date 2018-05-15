@@ -1,6 +1,6 @@
 SUBDIRS = lib remotes
 
-installdir = /usr/lib/enigma2/python/Components
+installdir = $(libdir)/enigma2/python/Components
 
 install_PYTHON = *.py
 
