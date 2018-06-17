@@ -16,6 +16,10 @@ if BEYONWIZU4
 SUBDIRS += beyonwiz1
 endif
 
+if CC1
+SUBDIRS += cc1
+endif
+
 if S7100
 SUBDIRS += red1 red2
 endif
