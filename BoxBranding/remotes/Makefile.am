@@ -533,7 +533,7 @@ SUBDIRS += dinobot
 endif
 
 if AXASHIS
-SUBDIRS += dinobot
+SUBDIRS += axas1
 endif
 
 if ANADOL4K
