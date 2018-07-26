@@ -26,14 +26,18 @@
 		<button name="DOWN" pos="74,255" />
 		<button name="LEFT" pos="49,230" />
 		<button name="RIGHT" pos="97,230" />
+		<button name="PORV" pos="43,404" />
+		<button name="SAT" pos="74,404" />
 		<button name="HELP" pos="103,404" />
-		<button name="PVR" pos="73,344" />
+		<button name="PVR" pos="103,423" />
 		<button name="RED" pos="43,440" />
 		<button name="GREEN" pos="63,440" />
 		<button name="YELLOW" pos="84,440" />
 		<button name="BLUE" pos="105,440" />
 		<button name="REWIND" pos="47,369" />
+		<button name="PLAY" pos="74,369" />
 		<button name="PLAYPAUSE" pos="74,369" />
+		<button name="PAUSE" pos="74,369" />
 		<button name="STOP" pos="74,388" />
 		<button name="FORWARD" pos="101,369" />
 		<button name="TV" pos="41,345" />
