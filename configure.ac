@@ -417,6 +417,7 @@ BoxBranding/remotes/e4hd/Makefile
 BoxBranding/remotes/e4hdcombo/Makefile
 BoxBranding/remotes/ebox5000/Makefile
 BoxBranding/remotes/edision1/Makefile
+BoxBranding/remotes/edision2/Makefile
 BoxBranding/remotes/evo1/Makefile
 BoxBranding/remotes/evo2/Makefile
 BoxBranding/remotes/evo3/Makefile

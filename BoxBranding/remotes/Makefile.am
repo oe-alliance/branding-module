@@ -485,7 +485,7 @@ SUBDIRS += edision1
 endif
 
 if OSNINOPRO
-SUBDIRS += edision1
+SUBDIRS += edision2
 endif
 
 if XP1000
