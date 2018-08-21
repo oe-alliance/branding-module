@@ -84,6 +84,10 @@ if SF4008
 SUBDIRS += sf3038
 endif
 
+if SF8008
+SUBDIRS += sf8008
+endif
+
 if SF3038
 SUBDIRS += sf3038
 endif
