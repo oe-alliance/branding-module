@@ -80,8 +80,6 @@ class RcModel:
 			remotefolder = 'sf3038'
 		elif boxtype in ('sf5008'):
 			remotefolder = 'sf5008'
-		elif boxtype in ('sf8008'):
-			remotefolder = 'sf8008'
 		elif boxtype in ('sf98'):
 			remotefolder = 'sf98'
 		elif boxtype in ('x2plus'):
@@ -293,6 +291,8 @@ class RcModel:
 			remotefolder = 'xp1000'
 		elif brandoem == 'fulan':
 			remotefolder = 'fulan'
+		elif boxtype in ('sf8008'):
+			remotefolder = 'sf8008'
 		elif boxtype in ('evoslim','evoslimse','evoslimt2c'):
 			remotefolder = 'evo8'
 		elif boxtype in ('wetekplay'):
