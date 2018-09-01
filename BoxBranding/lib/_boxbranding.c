@@ -40,6 +40,22 @@ MAKE_STRING_FUNCTION(getFeedsUrl)
 MAKE_STRING_FUNCTION(getImageFolder)
 MAKE_STRING_FUNCTION(getImageFileSystem)
 MAKE_STRING_FUNCTION(getImageArch)
+MAKE_STRING_FUNCTION(getDisplayType)
+MAKE_STRING_FUNCTION(getHaveHDMI)
+MAKE_STRING_FUNCTION(getHaveYUV)
+MAKE_STRING_FUNCTION(getHaveRCA)
+MAKE_STRING_FUNCTION(getHaveAVJACK)
+MAKE_STRING_FUNCTION(getHaveSCART)
+MAKE_STRING_FUNCTION(getHaveSCARTYUV)
+MAKE_STRING_FUNCTION(getHaveDVI)
+MAKE_STRING_FUNCTION(getHaveMiniTV)
+MAKE_STRING_FUNCTION(getHaveHDMIinHD)
+MAKE_STRING_FUNCTION(getHaveHDMIinFHD)
+MAKE_STRING_FUNCTION(getHaveWOL)
+MAKE_STRING_FUNCTION(getHaveWWOL)
+MAKE_STRING_FUNCTION(getHaveTranscoding1)
+MAKE_STRING_FUNCTION(getHaveTranscoding2)
+MAKE_STRING_FUNCTION(getHaveCI)
 
 /* Module specification */
 static PyMethodDef boxbrandingMethods[] = {
@@ -67,6 +83,22 @@ static PyMethodDef boxbrandingMethods[] = {
 	{ "getImageFolder", getImageFolder, METH_NOARGS, NULL },
 	{ "getImageFileSystem", getImageFileSystem, METH_NOARGS, NULL },
 	{ "getImageArch", getImageArch, METH_NOARGS, NULL },
+	{ "getDisplayType", getDisplayType, METH_NOARGS, NULL },
+	{ "getHaveHDMI", getHaveHDMI, METH_NOARGS, NULL },
+	{ "getHaveYUV", getHaveYUV, METH_NOARGS, NULL },
+	{ "getHaveRCA", getHaveRCA, METH_NOARGS, NULL },
+	{ "getHaveAVJACK", getHaveAVJACK, METH_NOARGS, NULL },
+	{ "getHaveSCART", getHaveSCART, METH_NOARGS, NULL },
+	{ "getHaveSCARTYUV", getHaveSCARTYUV, METH_NOARGS, NULL },
+	{ "getHaveDVI", getHaveDVI, METH_NOARGS, NULL },
+	{ "getHaveMiniTV", getHaveMiniTV, METH_NOARGS, NULL },
+	{ "getHavegetHaveHDMIinHD", getHaveHDMIinHD, METH_NOARGS, NULL },
+	{ "getHavegetHaveHDMIinFHD", getHaveHDMIinFHD, METH_NOARGS, NULL },
+	{ "getHavegetHaveWOL", getHaveWOL, METH_NOARGS, NULL },
+	{ "getHavegetHaveWWOL", getHaveWWOL, METH_NOARGS, NULL },
+	{ "getHaveTranscoding1", getHaveTranscoding1, METH_NOARGS, NULL },
+	{ "getHaveTranscoding2", getHaveTranscoding2, METH_NOARGS, NULL },
+	{ "getHaveCI", getHaveCI, METH_NOARGS, NULL },
 	{ NULL, NULL, 0, NULL }
 };
 

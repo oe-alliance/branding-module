@@ -470,6 +470,86 @@ char *_getImageArch()
 	return strdup(ARCH_TYPE);
 }
 
+char *_getDisplayType()
+{
+	return strdup(DISPLAY_TYPE);
+}
+
+char *_getHaveHDMI()
+{
+	return strdup(HAVE_HDMI);
+}
+
+char *_getHaveYUV()
+{
+	return strdup(HAVE_YUV);
+}
+
+char *_getHaveRCA()
+{
+	return strdup(HAVE_RCA);
+}
+
+char *_getHaveAVJACK()
+{
+	return strdup(HAVE_AV_JACK);
+}
+
+char *_getHaveSCART()
+{
+	return strdup(HAVE_SCART);
+}
+
+char *_getHaveSCARTYUV()
+{
+	return strdup(HAVE_SCART_YUV);
+}
+
+char *_getHaveDVI()
+{
+	return strdup(HAVE_DVI);
+}
+
+char *_getHaveMiniTV()
+{
+	return strdup(HAVE_MINITV);
+}
+
+char *_getHaveHDMIinHD()
+{
+	return strdup(HAVE_HDMI_IN_HD);
+}
+
+char *_getHaveHDMIinFHD()
+{
+	return strdup(HAVE_HDMI_IN_FHD);
+}
+
+char *_getHaveWOL()
+{
+	return strdup(HAVE_WOL);
+}
+
+char *_getHaveWWOL()
+{
+	return strdup(HAVE_WWOL);
+}
+
+char *_getHaveTranscoding1()
+{
+	return strdup(HAVE_TRANSCODING_TYPE1);
+}
+
+char *_getHaveTranscoding2()
+{
+	return strdup(HAVE_TRANSCODING_TYPE2);
+}
+
+char *_getHaveCI()
+{
+	return strdup(HAVE_CI);
+}
+
 char *_getImageDistro()
 {
 	return strdup(DISTRO);
