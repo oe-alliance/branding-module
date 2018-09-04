@@ -34,5 +34,21 @@ char *_getMachineMKUBIFS();
 char *_getMachineUBINIZE();
 char *_getMachineProcModel();
 char *_getImageArch();
+char *_getDisplayType();
+char *_getHaveHDMI();
+char *_getHaveYUV();
+char *_getHaveRCA();
+char *_getHaveAVJACK();
+char *_getHaveSCART();
+char *_getHaveSCARTYUV();
+char *_getHaveDVI();
+char *_getHaveMiniTV();
+char *_getHaveHDMIinHD();
+char *_getHaveHDMIinFHD();
+char *_getHaveWOL();
+char *_getHaveWWOL();
+char *_getHaveTranscoding1();
+char *_getHaveTranscoding2();
+char *_getHaveCI();
 
 #endif

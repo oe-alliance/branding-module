@@ -35,7 +35,7 @@ AC_SUBST(OE_VER)
 AC_DEFINE_UNQUOTED(OE_VER,"$OE_VER",[oe name])
 
 AC_ARG_WITH(distro,
-	[  --with-distro=NAME distro name [[openvix,openaaf,...]]],
+	[  --with-distro=NAME distro name [[openvix,openatv,...]]],
 	[DISTRO="$withval"],[DISTRO="egami"])
 AC_SUBST(DISTRO)
 AC_DEFINE_UNQUOTED(DISTRO,"$DISTRO",[distro name])
@@ -51,6 +51,102 @@ AC_ARG_WITH(arch,
 	[ARCH_TYPE="$withval"],[ARCH_TYPE="mipsel32"])
 AC_SUBST(ARCH_TYPE)
 AC_DEFINE_UNQUOTED(ARCH_TYPE,"$ARCH_TYPE",[arch name])
+
+AC_ARG_WITH(display-type,
+	[  --with-display-type=NAME display type [[7segment,textlcd...]]],
+	[DISPLAY_TYPE="$withval"],[DISPLAY_TYPE="textlcd"])
+AC_SUBST(DISPLAY_TYPE)
+AC_DEFINE_UNQUOTED(DISPLAY_TYPE,"$DISPLAY_TYPE",[display type])
+
+AC_ARG_WITH(hdmi,
+	[  --with-hdmi=NAME hdmi [[hdmi......]]],
+	[HAVE_HDMI="$withval"],[HAVE_HDMI="true"])
+AC_SUBST(HAVE_HDMI)
+AC_DEFINE_UNQUOTED(HAVE_HDMI,"$HAVE_HDMI",[hdmi])
+
+AC_ARG_WITH(yuv,
+	[  --with-yuv=NAME yuv [[yuv......]]],
+	[HAVE_YUV="$withval"],[HAVE_YUV="true"])
+AC_SUBST(HAVE_YUV)
+AC_DEFINE_UNQUOTED(HAVE_YUV,"$HAVE_YUV",[yuv])
+
+AC_ARG_WITH(rca,
+	[  --with-rca=NAME rca [[rca......]]],
+	[HAVE_RCA="$withval"],[HAVE_RCA="true"])
+AC_SUBST(HAVE_RCA)
+AC_DEFINE_UNQUOTED(HAVE_RCA,"$HAVE_RCA",[rca])
+
+AC_ARG_WITH(av-jack,
+	[  --with-av-jack=NAME av-jack [[av-jack......]]],
+	[HAVE_AV_JACK="$withval"],[HAVE_AV_JACK="true"])
+AC_SUBST(HAVE_AV_JACK)
+AC_DEFINE_UNQUOTED(HAVE_AV_JACK,"$HAVE_AV_JACK",[av-jack])
+
+AC_ARG_WITH(scart,
+	[  --with-scart=NAME scart [[scart......]]],
+	[HAVE_SCART="$withval"],[HAVE_SCART="true"])
+AC_SUBST(HAVE_SCART)
+AC_DEFINE_UNQUOTED(HAVE_SCART,"$HAVE_SCART",[scart])
+
+AC_ARG_WITH(scart-yuv,
+	[  --with-scart-yuv=NAME scart-yuv [[scart-yuv......]]],
+	[HAVE_SCART_YUV="$withval"],[HAVE_SCART_YUV="true"])
+AC_SUBST(HAVE_SCART_YUV)
+AC_DEFINE_UNQUOTED(HAVE_SCART_YUV,"$HAVE_SCART_YUV",[scart-yuv])
+
+AC_ARG_WITH(dvi,
+	[  --with-dvi=NAME dvi [[dvi......]]],
+	[HAVE_DVI="$withval"],[HAVE_DVI="true"])
+AC_SUBST(HAVE_DVI)
+AC_DEFINE_UNQUOTED(HAVE_DVI,"$HAVE_DVI",[dvi])
+
+AC_ARG_WITH(minitv,
+	[  --with-minitv=NAME minitv [[minitv......]]],
+	[HAVE_MINITV="$withval"],[HAVE_MINITV="true"])
+AC_SUBST(HAVE_MINITV)
+AC_DEFINE_UNQUOTED(HAVE_MINITV,"$HAVE_MINITV",[minitv])
+
+AC_ARG_WITH(hdmi-in-hd,
+	[  --with-hdmi-in-hd=NAME hdmi-in-hd [[hdmi-in-hd......]]],
+	[HAVE_HDMI_IN_HD="$withval"],[HAVE_HDMI_IN_HD="true"])
+AC_SUBST(HAVE_HDMI_IN_HD)
+AC_DEFINE_UNQUOTED(HAVE_HDMI_IN_HD,"$HAVE_HDMI_IN_HD",[hdmi-in-hd])
+
+AC_ARG_WITH(hdmi-in-fhd,
+	[  --with-hdmi-in-fhd=NAME hdmi-in-fhd [[hdmi-in-fhd......]]],
+	[HAVE_HDMI_IN_FHD="$withval"],[HAVE_HDMI_IN_FHD="true"])
+AC_SUBST(HAVE_HDMI_IN_FHD)
+AC_DEFINE_UNQUOTED(HAVE_HDMI_IN_FHD,"$HAVE_HDMI_IN_FHD",[hdmi-in-fhd])
+
+AC_ARG_WITH(wol,
+	[  --with-wol=NAME wol [[wol......]]],
+	[HAVE_WOL="$withval"],[HAVE_WOL="true"])
+AC_SUBST(HAVE_WOL)
+AC_DEFINE_UNQUOTED(HAVE_WOL,"$HAVE_WOL",[wol])
+
+AC_ARG_WITH(wwol,
+	[  --with-wwol=NAME wwol [[wwol......]]],
+	[HAVE_WWOL="$withval"],[HAVE_WWOL="true"])
+AC_SUBST(HAVE_WWOL)
+AC_DEFINE_UNQUOTED(HAVE_WWOL,"$HAVE_WWOL",[wwol])
+
+AC_ARG_WITH(transcoding,
+	[  --with-transcoding=NAME transcoding [[transcoding......]]],
+	[HAVE_TRANSCODING_TYPE1="$withval"],[HAVE_TRANSCODING_TYPE1="true"])
+AC_SUBST(HAVE_TRANSCODING_TYPE1)
+AC_DEFINE_UNQUOTED(HAVE_TRANSCODING_TYPE1,"$HAVE_TRANSCODING_TYPE1",[transcoding])
+
+AC_ARG_WITH(multitranscoding,
+	[  --with-multitranscoding=NAME multitranscoding [[multitranscoding......]]],
+	[HAVE_TRANSCODING_TYPE2="$withval"],[HAVE_TRANSCODING_TYPE2="true"])
+AC_SUBST(HAVE_TRANSCODING_TYPE2)
+AC_DEFINE_UNQUOTED(HAVE_TRANSCODING_TYPE2,"$HAVE_TRANSCODING_TYPE2",[multitranscoding])
+
+AC_ARG_WITH(ci,
+	[  --with-ci=NAME ci [[ci......]]],
+	[HAVE_CI="$withval"],[HAVE_CI="true"])
+AC_SUBST(HAVE_CI)
+AC_DEFINE_UNQUOTED(HAVE_CI,"$HAVE_CI",[ci])
 
 AC_ARG_WITH(machinebrand,
 	[  --with-machinebrand=NAME brand name [[Vu,Xtrend,...]]],
