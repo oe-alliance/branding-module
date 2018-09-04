@@ -492,6 +492,10 @@ if OSNINOPRO
 SUBDIRS += edision2
 endif
 
+if OSMIO4K
+SUBDIRS += edision2
+endif
+
 if XP1000
 SUBDIRS += xp1000
 endif

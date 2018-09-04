@@ -275,7 +275,7 @@ class RcModel:
 			remotefolder = 'xcore3'
 		elif boxtype in ('osnino','osninoplus'):
 			remotefolder = 'edision1'
-		elif boxtype in ('osninopro'):
+		elif boxtype in ('osninopro','osmio4k'):
 			remotefolder = 'edision2'
 		elif machinebuild == 'cube':
 			remotefolder = 'cube'
