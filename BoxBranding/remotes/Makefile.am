@@ -304,6 +304,10 @@ if HD530C
 SUBDIRS += hd530c
 endif
 
+if MUTANT60
+SUBDIRS += hd530c
+endif
+
 if MUTANT51
 SUBDIRS += hd1100
 endif
