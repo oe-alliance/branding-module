@@ -497,7 +497,7 @@ SUBDIRS += edision2
 endif
 
 if OSMIO4K
-SUBDIRS += edision2
+SUBDIRS += edision3
 endif
 
 if XP1000
