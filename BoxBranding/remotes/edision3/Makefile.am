@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/edision2
+installdir = /usr/share/enigma2/rc_models/edision3
 
 dist_install_DATA = \
 	rc.png \
