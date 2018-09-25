@@ -552,3 +552,6 @@ if ANADOL4K
 SUBDIRS += anadol4k
 endif
 
+if USTYM4KPRO
+SUBDIRS += uclan
+endif

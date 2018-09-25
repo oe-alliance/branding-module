@@ -297,6 +297,8 @@ class RcModel:
 			remotefolder = 'fulan'
 		elif boxtype in ('sf8008'):
 			remotefolder = 'sf8008'
+		elif boxtype in ('ustym4kpro'):
+			remotefolder = 'uclan'
 		elif boxtype in ('evoslim','evoslimse','evoslimt2c'):
 			remotefolder = 'evo8'
 		elif boxtype in ('wetekplay'):
