@@ -544,6 +544,10 @@ if DINOBOT
 SUBDIRS += dinobot
 endif
 
+if FERGUSON4K
+SUBDIRS += dinobot
+endif
+
 if AXASHIS
 SUBDIRS += axas1
 endif
