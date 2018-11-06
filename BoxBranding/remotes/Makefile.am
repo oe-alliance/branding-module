@@ -563,3 +563,7 @@ endif
 if USTYM4KPRO
 SUBDIRS += uclan
 endif
+
+if ULTRAV8PLUS
+SUBDIRS += v8plus
+endif
