@@ -585,6 +585,7 @@ BoxBranding/remotes/protek1/Makefile
 BoxBranding/remotes/protek2/Makefile
 BoxBranding/remotes/qviart1/Makefile
 BoxBranding/remotes/qviart2/Makefile
+BoxBranding/remotes/qviart3/Makefile
 BoxBranding/remotes/sab1/Makefile
 BoxBranding/remotes/sf98/Makefile
 BoxBranding/remotes/sf108/Makefile
