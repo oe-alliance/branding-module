@@ -1,54 +1,75 @@
 <rcs>
 	<rc id="2">
-		<button name="POWER" pos="93,23" />
-		<button name="DREAMSELECT" pos="51,55" />
-		<button name="TVSELECT" pos="97,55" />
-		<button name="1" pos="38,81" />
-		<button name="2" pos="62,89" />
-		<button name="3" pos="113,81" />
-		<button name="4" pos="38,102" />
-		<button name="5" pos="77,102" />
-		<button name="6" pos="113,102" />
-		<button name="7" pos="38,122" />
-		<button name="8" pos="62,126" />
-		<button name="9" pos="113,122" />
-		<button name="ARROWLEFT" pos="29,364" />
-		<button name="0" pos="62,364" />
-		<button name="ARROWRIGHT" pos="95,364" />
-		<button name="VOL+" pos="31,181" />
-		<button name="VOL-" pos="42,206" />
-		<button name="MUTE" pos="76,172" />
-		<button name="EXIT" pos="111,234" />
-		<button name="BOUQUET+" pos="111,181" />
-		<button name="BOUQUET-" pos="111,206" />
-		<button name="INFO" pos="100,240" />
-		<button name="MENU" pos="25,173" />
-		<button name="OK" pos="62,208" />
-		<button name="UP" pos="62,183" />
-		<button name="DOWN" pos="62,233" />
-		<button name="LEFT" pos="35,208" />
-		<button name="RIGHT" pos="88,208" />
-		<button name="AUDIO" pos="62,150" />
-		<button name="VIDEO" pos="43,148" />
-		<button name="RED" pos="23,388" />
-		<button name="GREEN" pos="49,388" />
-		<button name="YELLOW" pos="74,388" />
-		<button name="BLUE" pos="100,388" />
-		<button name="TV" pos="24,440" />
-		<button name="RADIO" pos="100,440" />
-		<button name="TEXT" pos="28,66" />
-		<button name="HELP" pos="114,362" />
-		<!-- [iq] Added Remocon Position Key-->
-		<button name="RECORD" pos="49,440" />
-        <button name="PLAYPAUSE" pos="88,455" />
-        <button name="STOP" pos="74,440" /> 
-        <button name="SUBTITLE" pos="77,123" />
-        <button name="PLAY" pos="74,400" />
-		<!-- [iq -->
-		<button name="BACK" pos="38, 258" />
-		<button name="FORWARD" pos="38, 455" />
-		<button name="PVR" pos="28, 90" />
-		<button name="PAUSE" pos="74, 418" />
-		<!-- iq] -->
+		<button name="MUTE" pos="32,21" />
+		<button name="POWER" pos="93,21" />
+
+		<button name="HELP" pos="26,49" />
+		<!-- HOME pos="51,49" -->
+		<!-- LAN pos="74,49" -->
+		<!-- ZOOM pos="99,49" -->
+
+		<!-- END pos="26,69" -->
+		<!-- PLUGINS(YTUBE) pos="51,69" -->
+		<!-- TIMER pos="74,69" -->
+		<button name="AUDIO" pos="99,69" />
+
+		<button name="RED" pos="26,89" />
+		<button name="GREEN" pos="51,89" />
+		<button name="YELLOW" pos="74,89" />
+		<button name="BLUE" pos="99,89" />
+
+		<button name="1" pos="30,109" />
+		<button name="2" pos="63,109" />
+		<button name="3" pos="96,109" />
+		<button name="4" pos="30,130" />
+		<button name="5" pos="63,130" />
+		<button name="6" pos="96,130" />
+		<button name="7" pos="30,150" />
+		<button name="8" pos="63,150" />
+		<button name="9" pos="96,150" />
+		<button name="0" pos="63,171" />
+		<button name="ARROWLEFT" pos="30,171" />
+		<button name="ARROWRIGHT" pos="96,171" />
+		
+		<button name="VOL+" pos="32,194" />
+		<button name="VOL-" pos="32,224" />
+		<button name="BOUQUET+" pos="94,194" />
+		<button name="BOUQUET-" pos="94,224" />
+		<!-- EPG pos="63,198" -->
+		<button name="INFO" pos="63,222" />
+
+
+		<button name="MENU" pos="32,269" />
+		<button name="EXIT" pos="93,269" />
+		<!-- SAT pos="32,323" -->
+		<!-- PORV pos="93,323" -->
+
+		<button name="OK" pos="63,300" />
+		<button name="UP" pos="63,271" />
+		<button name="DOWN" pos="63,324" />
+		<button name="LEFT" pos="32,299" />
+		<button name="RIGHT" pos="94,299" />		
+
+		<button name="PVR" pos="27,351" />
+		<!-- MEDIA pos="51,351" -->
+		<button name="TEXT" pos="75,351" />
+ 		<button name="SUBTITLE" pos="98,351" />
+
+		<button name="REWIND" pos="27,370" />
+		<button name="PLAY" pos="51,370" />
+		<button name="PAUSE" pos="75,370" />
+		<button name="PLAYPAUSE" pos="75,370" />
+		<button name="FASTFORWARD" pos="98,370" />
+
+		<button name="TV" pos="27,390" />
+		<button name="RECORD" pos="51,390" />
+		<button name="STOP" pos="75,390" /> 
+		<button name="RADIO" pos="98,390" />
+
+		<!-- F1(UHF) pos="27,410" -->
+		<!-- F2(PIP) pos="51,410" -->
+		<!-- F3 pos="75,410" -->
+		<!-- F4 pos="98,410" -->
 	</rc>
+
 </rcs>
