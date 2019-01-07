@@ -312,6 +312,10 @@ if MUTANT60
 SUBDIRS += hd60
 endif
 
+if MUTANT61
+SUBDIRS += hd60
+endif
+
 if MUTANT51
 SUBDIRS += hd1100
 endif
