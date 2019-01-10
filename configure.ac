@@ -470,6 +470,8 @@ AM_CONDITIONAL(TMTWIN4K, test "$BOXTYPE" == tmtwin4k)
 AM_CONDITIONAL(TM4KSUPER, test "$BOXTYPE" == tm4ksuper)
 AM_CONDITIONAL(ULTRABOX, test "$BOXTYPE" == ultrabox)
 AM_CONDITIONAL(ULTRAV8PLUS, test "$BOXTYPE" == ultrav8plus)
+AM_CONDITIONAL(ANADOLMULTI, test "$BOXTYPE" == anadolmulti)
+AM_CONDITIONAL(MAXYTEMULTI, test "$BOXTYPE" == maxytecmulti)
 AM_CONDITIONAL(USTYM4KPRO, test "$BOXTYPE" == ustym4kpro)
 AM_CONDITIONAL(VS1000, test "$MACHINE_BUILD" == vs1000)
 AM_CONDITIONAL(VS1500, test "$MACHINE_BUILD" == vs1500)
@@ -621,7 +623,7 @@ BoxBranding/remotes/xcore2/Makefile
 BoxBranding/remotes/xcore3/Makefile
 BoxBranding/remotes/xp1000/Makefile
 BoxBranding/remotes/vala/Makefile
-BoxBranding/remotes/v8plus/Makefile
+BoxBranding/remotes/maxytec1/Makefile
 BoxBranding/remotes/fusionhd/Makefile
 BoxBranding/remotes/zgemma1/Makefile
 BoxBranding/remotes/zgemma2/Makefile

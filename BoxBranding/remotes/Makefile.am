@@ -573,5 +573,13 @@ SUBDIRS += uclan
 endif
 
 if ULTRAV8PLUS
-SUBDIRS += v8plus
+SUBDIRS += maxytec1
+endif
+
+if ANADOLMULTI
+SUBDIRS += maxytec1
+endif
+
+if MAXYTEMULTI
+SUBDIRS += maxytec1
 endif

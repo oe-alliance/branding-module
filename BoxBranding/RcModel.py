@@ -313,8 +313,8 @@ class RcModel:
 			remotefolder = 'hardkernel'
 		elif boxtype in ('valalinux'):
 			remotefolder = 'vala'
-		elif boxtype in ('ultrav8plus'):
-			remotefolder = 'v8plus'
+		elif boxtype in ('ultrav8plus','anadolmulti','maxytecmulti'):
+			remotefolder = 'maxytec1'
 
 		return remotefolder
 		
