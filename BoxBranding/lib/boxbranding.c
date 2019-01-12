@@ -187,6 +187,11 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 			free(boxtype_name);
 			return strdup("sf8008s");
 		}
+		else if(strcmp(boxtype_name, "11") == 0)
+		{
+			free(boxtype_name);
+			return strdup("sf8008t");
+		}
 		else
 		{
 			free(boxtype_name);
@@ -284,6 +289,11 @@ char *_getMachineName()
 			{
 				free(boxtype_name);
 				return strdup("SF8008 4K Single");
+			}
+			else if(startsWith(boxtype_name, "11"))
+			{
+				free(boxtype_name);
+				return strdup("SF8008 4K Twin");
 			}
 			else
 			{
