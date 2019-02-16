@@ -333,6 +333,7 @@ AM_CONDITIONAL(AX60, test "$BOXTYPE" == ax60)
 AM_CONDITIONAL(AXULTRA, test "$BOXTYPE" == axultra)
 AM_CONDITIONAL(BCM7251S, test "$BOXTYPE" == bcm7251s)
 AM_CONDITIONAL(BEYONWIZU4, test "$BOXTYPE" == beyonwizu4)
+AM_CONDITIONAL(BEYONWIZV2, test "$BOXTYPE" == beyonwizv2)
 AM_CONDITIONAL(CC1, test `echo "$MACHINE_BUILD"` == "cc1")
 AM_CONDITIONAL(S7000, test `echo "$MACHINE_BUILD"` == "7000s")
 AM_CONDITIONAL(S7100, test `echo "$MACHINE_BUILD"` == "7100s")
@@ -514,6 +515,7 @@ BoxBranding/remotes/azboxhd/Makefile
 BoxBranding/remotes/azboxme/Makefile
 BoxBranding/remotes/azboxelite/Makefile
 BoxBranding/remotes/beyonwiz1/Makefile
+BoxBranding/remotes/beyonwiz2/Makefile
 BoxBranding/remotes/cc1/Makefile
 BoxBranding/remotes/cube/Makefile
 BoxBranding/remotes/dmm0/Makefile

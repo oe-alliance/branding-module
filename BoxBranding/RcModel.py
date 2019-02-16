@@ -225,6 +225,8 @@ class RcModel:
 			remotefolder = 'ini7'
 		elif boxtype in ('beyonwizu4'):
 			remotefolder = 'beyonwiz1'
+		elif boxtype in ('beyonwizv2'):
+			remotefolder = 'beyonwiz2'
 		elif machinebrand in ('SPACE', 'FEGASUS') or boxtype in ('xpeedlxpro'):
 			remotefolder = 'ini6'
 		elif boxtype in ('opticumtt'):

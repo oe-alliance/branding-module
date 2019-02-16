@@ -20,6 +20,10 @@ if BEYONWIZU4
 SUBDIRS += beyonwiz1
 endif
 
+if BEYONWIZV2
+SUBDIRS += beyonwiz2
+endif
+
 if CC1
 SUBDIRS += cc1
 endif
