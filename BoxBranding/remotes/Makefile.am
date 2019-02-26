@@ -588,8 +588,8 @@ if MAXYTEMULTI
 SUBDIRS += maxytec1
 endif
 
-if IZBOXONE4K
-SUBDIRS += izbox
+if IZIBOXONE4K
+SUBDIRS += izibox
 endif
 
 if HITUBE4K

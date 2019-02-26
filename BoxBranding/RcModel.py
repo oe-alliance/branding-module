@@ -315,8 +315,8 @@ class RcModel:
 			remotefolder = 'vala'
 		elif boxtype in ('ultrav8plus','anadolmulti','maxytecmulti'):
 			remotefolder = 'maxytec1'
-		elif boxtype in ('izboxone4k'):
-			remotefolder = 'izbox'
+		elif boxtype in ('iziboxone4k'):
+			remotefolder = 'izibox'
 		elif boxtype in ('hitube4k'):
 			remotefolder = 'hitube'
 
