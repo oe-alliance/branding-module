@@ -587,3 +587,11 @@ endif
 if MAXYTEMULTI
 SUBDIRS += maxytec1
 endif
+
+if IZBOXONE4K
+SUBDIRS += izbox
+endif
+
+if HITUBE4K
+SUBDIRS += hitube
+endif

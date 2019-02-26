@@ -418,6 +418,7 @@ AM_CONDITIONAL(IQONIOS300HD, test "$BOXTYPE" == iqonios300hd)
 AM_CONDITIONAL(IXUSSONE, test "$BOXTYPE" == ixussone)
 AM_CONDITIONAL(IXUSSZERO, test "$BOXTYPE" == ixusszero)
 AM_CONDITIONAL(IXUSSDUO, test "$BOXTYPE" == ixussduo)
+AM_CONDITIONAL(IZBOXONE4K, test "$BOXTYPE" == izboxone4k)
 AM_CONDITIONAL(MEDIABOX, test "$BOXTYPE" == mediabox)
 AM_CONDITIONAL(MEDIABOX4K, test "$BOXTYPE" == mediabox4k)
 AM_CONDITIONAL(MBTWIN, test "$BOXTYPE" == mbtwin)
@@ -429,6 +430,7 @@ AM_CONDITIONAL(HD1100, test "$MACHINE_BUILD" == hd1100)
 AM_CONDITIONAL(HD11, test "$MACHINE_BUILD" == hd11)
 AM_CONDITIONAL(HD500C, test "$MACHINE_BUILD" == hd500c)
 AM_CONDITIONAL(HD530C, test "$MACHINE_BUILD" == hd530c)
+AM_CONDITIONAL(HITUBE4K, test "$BOXTYPE" == hitube4k)
 AM_CONDITIONAL(MUTANT51, test "$BOXTYPE" == mutant51)
 AM_CONDITIONAL(MUTANT60, test "$BOXTYPE" == mutant60)
 AM_CONDITIONAL(MUTANT61, test "$BOXTYPE" == mutant61)
@@ -557,6 +559,7 @@ BoxBranding/remotes/hd1100/Makefile
 BoxBranding/remotes/hd530c/Makefile
 BoxBranding/remotes/hd2400/Makefile
 BoxBranding/remotes/hd60/Makefile
+BoxBranding/remotes/hitube/Makefile
 BoxBranding/remotes/ini0/Makefile
 BoxBranding/remotes/ini1/Makefile
 BoxBranding/remotes/ini2/Makefile
@@ -572,6 +575,7 @@ BoxBranding/remotes/iqon3/Makefile
 BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
+BoxBranding/remotes/izbox/Makefile
 BoxBranding/remotes/miraclebox/Makefile
 BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
