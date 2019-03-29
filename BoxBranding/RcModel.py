@@ -140,6 +140,10 @@ class RcModel:
 			remotefolder = 'dinobot'
 		elif boxtype in ('axashis4kcombo','axashis4kcomboplus'):
 			remotefolder = 'axas1'
+		elif boxtype in ('axashisc4k'):
+			remotefolder = 'axas2'
+		elif boxtype in ('axashistwin'):
+			remotefolder = 'axas3'
 		elif boxtype in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultrase', 'gbultraue', 'gbx1', 'gbx3'):
 			remotefolder = 'gb0'
 		elif boxtype == 'gbquadplus':

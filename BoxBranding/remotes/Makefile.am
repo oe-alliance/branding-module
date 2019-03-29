@@ -565,7 +565,7 @@ SUBDIRS += dinobot
 endif
 
 if AXASHIS
-SUBDIRS += axas1
+SUBDIRS += axas1 axas2 axas3
 endif
 
 if ANADOL4K
