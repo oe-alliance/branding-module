@@ -18,6 +18,7 @@
 		<button name="VOL-" pos="22,304" />
 		<button name="MUTE" pos="95,24" />
 		<button name="EXIT" pos="57,274" />
+		<button name="EPG" pos="57,304" />
 		<button name="INFO" pos="20,161" />
 		<button name="MENU" pos="94,161" />
 		<button name="OK" pos="57,206" />
@@ -35,10 +36,12 @@
 		<button name="PLAYPAUSE" pos="57,389" />
 		<button name="PLAY" pos="57,389" />
 		<button name="PAUSE" pos="57,389" />
+		<button name="TIMER" pos="22,368" />
 		<button name="STOP" pos="57,368" />
-		<button name="FORWARD" pos="90,389" />
+		<button name="FASTFORWARD" pos="90,389" />
 		<button name="TV" pos="18,23" />
 		<button name="RADIO" pos="18,23" />
+		<button name="SUBTITLE" pos="22,347" />
 		<button name="TEXT" pos="90,347" />
 		<button name="RECORD" pos="90,368" />
 	</rc>
