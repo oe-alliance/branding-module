@@ -45,11 +45,11 @@
 
 		<button name="SUBTITLE" pos="107,108" />
 		<button name="Media" pos="29,108" />
-		<button name="Portal" pos="68,268" />
+		<button name="PLUGIN" pos="68,268" />
 		<button name="TIMER" pos="105,349" />
 		<button name="TEXT" pos="82,108" />
 		<button name="AUDIO" pos="55,108" />
-		<button name="Video" pos="81,125" />
+		<button name="VMODE" pos="82,125" />
 		<button name="FAV" pos="55,155" />
 
 		<button name="REWIND" pos="33,327" />
