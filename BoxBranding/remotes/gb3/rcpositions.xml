@@ -16,6 +16,8 @@
 		<button name="ARROWRIGHT" pos="92,125" />
 		<button name="VOL+" pos="22,270" />
 		<button name="VOL-" pos="22,304" />
+		<button name="BOUQUET+" pos="91,270" />
+		<button name="BOUQUET-" pos="91,304" />
 		<button name="MUTE" pos="95,24" />
 		<button name="EXIT" pos="57,274" />
 		<button name="EPG" pos="57,304" />
