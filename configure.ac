@@ -444,6 +444,7 @@ AM_CONDITIONAL(OSNINOPLUS, test "$BOXTYPE" == osninoplus)
 AM_CONDITIONAL(OSNINOPRO, test "$BOXTYPE" == osninopro)
 AM_CONDITIONAL(OSMIO4K, test `echo "$BOXTYPE" | cut -b 1-7` == "osmio4k")
 AM_CONDITIONAL(PROTEK9900LX, test "$BOXTYPE" == 9900lx)
+AM_CONDITIONAL(PROTEK4KX1, test "$BOXTYPE" == protek4kx1)
 AM_CONDITIONAL(PUREHD, test "$BOXTYPE" == purehd)
 AM_CONDITIONAL(PUREHDSE, test "$BOXTYPE" == purehdse)
 AM_CONDITIONAL(SF98, test "$BOXTYPE" == sf98)
@@ -594,6 +595,7 @@ BoxBranding/remotes/relook/Makefile
 BoxBranding/remotes/revo/Makefile
 BoxBranding/remotes/protek1/Makefile
 BoxBranding/remotes/protek2/Makefile
+BoxBranding/remotes/protek3/Makefile
 BoxBranding/remotes/qviart1/Makefile
 BoxBranding/remotes/qviart2/Makefile
 BoxBranding/remotes/qviart3/Makefile

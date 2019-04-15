@@ -52,6 +52,10 @@ if S7225
 SUBDIRS += protek2
 endif
 
+if PROTEK4KX1
+SUBDIRS += protek3
+endif
+
 if S7300
 SUBDIRS += ax1
 endif
