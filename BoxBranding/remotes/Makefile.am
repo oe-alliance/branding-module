@@ -9,7 +9,7 @@ SUBDIRS += ax51
 endif
 
 if AX60
-SUBDIRS += ax51
+SUBDIRS += ax51 ax3
 endif
 
 if AXULTRA

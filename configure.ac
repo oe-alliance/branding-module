@@ -511,6 +511,7 @@ BoxBranding/remotes/amiko3/Makefile
 BoxBranding/remotes/anadol4k/Makefile
 BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile
+BoxBranding/remotes/ax3/Makefile
 BoxBranding/remotes/ax51/Makefile
 BoxBranding/remotes/ax60/Makefile
 BoxBranding/remotes/axas1/Makefile
