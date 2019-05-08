@@ -573,7 +573,7 @@ SUBDIRS += axas1 axas2 axas3
 endif
 
 if ANADOL4K
-SUBDIRS += anadol4k
+SUBDIRS += anadol1
 endif
 
 if USTYM4KPRO
@@ -585,7 +585,7 @@ SUBDIRS += maxytec1
 endif
 
 if ANADOLMULTI
-SUBDIRS += maxytec1
+SUBDIRS += anadol2
 endif
 
 if MAXYTEMULTI

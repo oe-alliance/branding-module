@@ -167,7 +167,7 @@ class RcModel:
 		elif boxtype in ('revo4k','galaxy4k'):
 			remotefolder = 'revo'
 		elif boxtype in ('anadol4k','anadol4kv2','anadol4kcombo'):
-			remotefolder = 'anadol4k'
+			remotefolder = 'anadol1'
 		elif boxtype in ('mediabox4k'):
 			remotefolder = 'mediabox4k'
 		elif boxtype in ('mediabox'):
@@ -321,8 +321,10 @@ class RcModel:
 			remotefolder = 'hardkernel'
 		elif boxtype in ('valalinux'):
 			remotefolder = 'vala'
-		elif boxtype in ('ultrav8plus','anadolmulti','maxytecmulti'):
+		elif boxtype in ('ultrav8plus','maxytecmulti'):
 			remotefolder = 'maxytec1'
+		elif boxtype in ('anadolmulti'):
+			remotefolder = 'anadol2'
 		elif boxtype in ('iziboxone4k'):
 			remotefolder = 'izibox'
 		elif boxtype in ('hitube4k'):

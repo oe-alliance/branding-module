@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/anadol4k
+installdir = /usr/share/enigma2/rc_models/anadol1
 
 dist_install_DATA = \
 	rc.png \
