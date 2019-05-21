@@ -599,3 +599,11 @@ endif
 if HITUBE4K
 SUBDIRS += hitube
 endif
+
+if SPYCATMINIV2
+SUBDIRS += hitube
+endif
+
+if ANADOLPROHD5
+SUBDIRS += hitube
+endif
