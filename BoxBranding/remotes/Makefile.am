@@ -593,7 +593,7 @@ SUBDIRS += maxytec1
 endif
 
 if IZIBOXONE4K
-SUBDIRS += izibox
+SUBDIRS += izibox1
 endif
 
 if HITUBE4K
@@ -606,4 +606,8 @@ endif
 
 if ANADOLPROHD5
 SUBDIRS += anadol3
+endif
+
+if IZIBOXECOHD
+SUBDIRS += izibox2
 endif
