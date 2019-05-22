@@ -618,6 +618,7 @@ BoxBranding/remotes/tiviar1/Makefile
 BoxBranding/remotes/tiviar2/Makefile
 BoxBranding/remotes/tyrant/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
+BoxBranding/remotes/spycat1/Makefile
 BoxBranding/remotes/tm1/Makefile
 BoxBranding/remotes/tm2/Makefile
 BoxBranding/remotes/tm3/Makefile

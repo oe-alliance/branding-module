@@ -601,7 +601,7 @@ SUBDIRS += hitube
 endif
 
 if SPYCATMINIV2
-SUBDIRS += hitube
+SUBDIRS += spycat1
 endif
 
 if ANADOLPROHD5
