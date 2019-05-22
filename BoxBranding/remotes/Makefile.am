@@ -605,5 +605,5 @@ SUBDIRS += hitube
 endif
 
 if ANADOLPROHD5
-SUBDIRS += hitube
+SUBDIRS += anadol3
 endif
