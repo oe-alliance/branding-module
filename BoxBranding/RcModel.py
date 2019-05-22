@@ -326,7 +326,9 @@ class RcModel:
 		elif boxtype in ('anadolmulti'):
 			remotefolder = 'anadol2'
 		elif boxtype in ('iziboxone4k'):
-			remotefolder = 'izibox'
+			remotefolder = 'izibox1'
+		elif boxtype in ('iziboxecohd'):
+			remotefolder = 'izibox2'
 		elif boxtype in ('hitube4k'):
 			remotefolder = 'hitube'
 		elif boxtype in ('anadolprohd5'):

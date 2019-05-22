@@ -420,6 +420,7 @@ AM_CONDITIONAL(IXUSSONE, test "$BOXTYPE" == ixussone)
 AM_CONDITIONAL(IXUSSZERO, test "$BOXTYPE" == ixusszero)
 AM_CONDITIONAL(IXUSSDUO, test "$BOXTYPE" == ixussduo)
 AM_CONDITIONAL(IZIBOXONE4K, test "$BOXTYPE" == iziboxone4k)
+AM_CONDITIONAL(IZIBOXECOHD, test "$BOXTYPE" == iziboxecohd)
 AM_CONDITIONAL(MEDIABOX, test "$BOXTYPE" == mediabox)
 AM_CONDITIONAL(MEDIABOX4K, test "$BOXTYPE" == mediabox4k)
 AM_CONDITIONAL(MBTWIN, test "$BOXTYPE" == mbtwin)
@@ -584,7 +585,8 @@ BoxBranding/remotes/iqon3/Makefile
 BoxBranding/remotes/hdbox/Makefile
 BoxBranding/remotes/ixussone/Makefile
 BoxBranding/remotes/ixusszero/Makefile
-BoxBranding/remotes/izibox/Makefile
+BoxBranding/remotes/izibox1/Makefile
+BoxBranding/remotes/izibox2/Makefile
 BoxBranding/remotes/miraclebox/Makefile
 BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
