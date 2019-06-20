@@ -475,6 +475,7 @@ AM_CONDITIONAL(TMNANOSEM2PLUS, test "$BOXTYPE" == tmnanosem2plus)
 AM_CONDITIONAL(TMNANOSECOMBO, test "$BOXTYPE" == tmnanosecombo)
 AM_CONDITIONAL(TMTWIN4K, test "$BOXTYPE" == tmtwin4k)
 AM_CONDITIONAL(TM4KSUPER, test "$BOXTYPE" == tm4ksuper)
+AM_CONDITIONAL(TURING, test "$BOXTYPE" == turing)
 AM_CONDITIONAL(ULTRABOX, test "$BOXTYPE" == ultrabox)
 AM_CONDITIONAL(ULTRAV8PLUS, test "$BOXTYPE" == ultrav8plus)
 AM_CONDITIONAL(ANADOLMULTI, test "$BOXTYPE" == anadolmulti)
@@ -619,6 +620,7 @@ BoxBranding/remotes/triplex/Makefile
 BoxBranding/remotes/tiviar1/Makefile
 BoxBranding/remotes/tiviar2/Makefile
 BoxBranding/remotes/tyrant/Makefile
+BoxBranding/remotes/turing/Makefile
 BoxBranding/remotes/uniboxhde/Makefile
 BoxBranding/remotes/spycat1/Makefile
 BoxBranding/remotes/tm1/Makefile

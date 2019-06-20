@@ -611,3 +611,7 @@ endif
 if IZIBOXECOHD
 SUBDIRS += izibox2
 endif
+
+if TURING
+SUBDIRS += turing
+endif
