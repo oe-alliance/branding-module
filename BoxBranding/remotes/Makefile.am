@@ -615,3 +615,7 @@ endif
 if TURING
 SUBDIRS += turing
 endif
+
+if JDHDDUO
+SUBDIRS += jd1
+endif
