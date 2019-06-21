@@ -338,7 +338,7 @@ class RcModel:
 		elif boxtype in ('turing'):
 			remotefolder = 'turing'
 		elif boxtype in ('jdhdduo'):
-			remotefolder = 'jdhdduo'
+			remotefolder = 'jd1'
 
 		return remotefolder
 		
