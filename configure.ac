@@ -304,6 +304,7 @@ AM_CONDITIONAL(WETEK, test `echo "$BRAND_OEM"` == "wetek")
 AM_CONDITIONAL(FULAN, test `echo "$BRAND_OEM"` == "fulan")
 AM_CONDITIONAL(XCORE, test `echo "$BRAND_OEM"` == "xcore")
 AM_CONDITIONAL(ALIEN, test `echo "$BOXTYPE" | cut -b 1-5` == "alien")
+AM_CONDITIONAL(ARIVA, test `echo "$BOXTYPE" | cut -b 1-5` == "ariva")
 AM_CONDITIONAL(SEZAM, test `echo "$BOXTYPE" | cut -b 1-5` == "sezam")
 AM_CONDITIONAL(XPEED, test `echo "$BOXTYPE" | cut -b 1-5` == "xpeed")
 AM_CONDITIONAL(VENTON, test `echo "$BOXTYPE" | cut -b 1-6` == "venton")
@@ -517,6 +518,7 @@ BoxBranding/remotes/amiko4/Makefile
 BoxBranding/remotes/anadol1/Makefile
 BoxBranding/remotes/anadol2/Makefile
 BoxBranding/remotes/anadol3/Makefile
+BoxBranding/remotes/ariva/Makefile
 BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile
 BoxBranding/remotes/ax3/Makefile

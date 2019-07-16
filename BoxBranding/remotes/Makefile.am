@@ -4,6 +4,10 @@ if ALIEN
 SUBDIRS += amiko3
 endif
 
+if ARIVA
+SUBDIRS += ariva
+endif
+
 if AX51
 SUBDIRS += ax51
 endif
