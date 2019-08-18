@@ -600,6 +600,10 @@ if IZIBOXONE4K
 SUBDIRS += izibox1
 endif
 
+if IZIBOXX3
+SUBDIRS += izibox1
+endif
+
 if HITUBE4K
 SUBDIRS += hitube
 endif
