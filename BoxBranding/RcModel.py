@@ -70,6 +70,8 @@ class RcModel:
 			remotefolder = 'amiko1'
 		elif boxtype in ('viper4k',):
 			remotefolder = 'amiko4'
+		elif boxtype in ('viper4k51',):
+			remotefolder = 'amiko5'
 		elif boxtype in ('clap4k',):
 			remotefolder = 'cc1'
 		elif boxtype in ('enfinity',):

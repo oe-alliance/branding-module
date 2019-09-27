@@ -561,7 +561,7 @@ SUBDIRS += vala
 endif
 
 if VIPER
-SUBDIRS += amiko1 amiko2 amiko4
+SUBDIRS += amiko1 amiko2 amiko4 amiko5
 endif
 
 if DINOBOT
