@@ -16,6 +16,10 @@ if AX60
 SUBDIRS += ax51 ax3
 endif
 
+if AX61
+SUBDIRS += ax4
+endif
+
 if AXULTRA
 SUBDIRS += ax2
 endif

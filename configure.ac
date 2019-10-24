@@ -332,6 +332,7 @@ AM_CONDITIONAL(ANADOL4K, test `echo "$BOXTYPE" | cut -b 1-8` == "anadol4k")
 AM_CONDITIONAL(ANADOLPROHD5, test "$BOXTYPE" == anadolprohd5)
 AM_CONDITIONAL(AX51, test "$BOXTYPE" == ax51)
 AM_CONDITIONAL(AX60, test "$BOXTYPE" == ax60)
+AM_CONDITIONAL(AX61, test "$BOXTYPE" == ax61)
 AM_CONDITIONAL(AXULTRA, test "$BOXTYPE" == axultra)
 AM_CONDITIONAL(BCM7251S, test "$BOXTYPE" == bcm7251s)
 AM_CONDITIONAL(BEYONWIZU4, test "$BOXTYPE" == beyonwizu4)
@@ -524,6 +525,7 @@ BoxBranding/remotes/ariva/Makefile
 BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile
 BoxBranding/remotes/ax3/Makefile
+BoxBranding/remotes/ax4/Makefile
 BoxBranding/remotes/ax51/Makefile
 BoxBranding/remotes/ax60/Makefile
 BoxBranding/remotes/axas1/Makefile

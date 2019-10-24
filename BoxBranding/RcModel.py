@@ -114,6 +114,8 @@ class RcModel:
 			remotefolder = 'ax1'
 		elif boxtype in ('ax51','axultra','ax60'):
 			remotefolder = 'ax51'
+		elif boxtype in ('ax61',):
+			remotefolder = 'ax4'
 		elif boxtype in ('e4hd', 'e4hdhybrid'):
 			remotefolder = 'e4hd'
 		elif boxtype in ('e4hdcombo','e4hdultra'):
