@@ -528,6 +528,10 @@ if OSMIO4K
 SUBDIRS += edision3
 endif
 
+if OSMINI4K
+SUBDIRS += edision3
+endif
+
 if XP1000
 SUBDIRS += xp1000
 endif
