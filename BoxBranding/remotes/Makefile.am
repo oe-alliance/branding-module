@@ -265,7 +265,7 @@ SUBDIRS += mediabox mediabox4k
 endif
 
 if LUNIX
-SUBDIRS += qviart1 qviart2 qviart3
+SUBDIRS += qviart1 qviart2 qviart3 qviart4
 endif
 
 if EDISION
