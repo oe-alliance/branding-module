@@ -345,7 +345,7 @@ class RcModel:
 			remotefolder = 'spycat1'
 		elif boxtype in ('turing',):
 			remotefolder = 'turing'
-		elif boxtype in ('jdhdduo',):
+		elif boxtype in ('jdhdduo','vipertwin'):
 			remotefolder = 'jd1'
 		elif boxtype in ('arivatwin','arivacombo'):
 			remotefolder = 'ariva'

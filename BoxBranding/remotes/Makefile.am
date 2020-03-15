@@ -635,3 +635,7 @@ endif
 if JDHDDUO
 SUBDIRS += jd1
 endif
+
+if VIPERTWIN
+SUBDIRS += jd1
+endif
