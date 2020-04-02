@@ -1,360 +1,414 @@
-from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
-from Tools.StbHardware import getFPVersion
-import os
+from os.path import isfile, join as path_join
 
-boxtype = getBoxType()
-machinebuild = getMachineBuild()
-machinebrand = getMachineBrand()
-brandoem = getBrandOEM()
+from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
+
+from Tools.Directories import SCOPE_SKIN, pathExists, resolveFilename
+from Tools.StbHardware import getFPVersion
 
 
 class RcModel:
 	def __init__(self):
-		pass
+		self.boxTypes = {
+			"9900lx": "protek1",
+			"9910lx": "protek2",
+			"9911lx": "protek2",
+			"9920lx": "protek2",
+			"AZModel_elite": "azboxelite",
+			"AZModel_me": "azboxme",
+			"AZModel_minime": "azboxme",
+			"AZModel_premium": "azboxhd",
+			"AZModel_premium+": "azboxhd",
+			"AZModel_ultra": "azboxelite",
+			"BrandOEM_fulan": "fulan",
+			"MachineBrand_FEGASUS": "ini6",
+			"MachineBrand_SPACE": "ini6",
+			"MachineBrand_XSARIUS": "fusionhd",
+			"MachineBrand_ini3": "ini3",
+			"MachineBuild_cube": "cube",
+			"MachineBuild_e3hd": "e3hd",
+			"MachineBuild_ebox": "ebox5000",
+			"MachineBuild_odinm7": "odinm7",
+			"MachineBuild_odinm9": "odinm9",
+			"MachineBuild_xp1000": "xp1000",
+			"alien5": "amiko3",
+			"alphatriple": "sab1",
+			"anadol4k": "anadol1",
+			"anadol4kcombo": "anadol1",
+			"anadol4kv2": "anadol1",
+			"anadolmulti": "anadol2",
+			"anadolprohd5": "anadol3",
+			"arivacombo": "ariva",
+			"arivatwin": "ariva",
+			"atemio5x00": "ini4",
+			"atemio6000": "ini4",
+			"atemio6100": "ini4",
+			"atemio6200": "ini4",
+			"atemionemesis": "ini4",
+			"ax51": "ax51",
+			"ax60": "ax51",
+			"ax61": "ax4",
+			"axashis4kcombo": "axas1",
+			"axashis4kcomboplus": "axas1",
+			"axashisc4k": "axas2",
+			"axashistwin": "axas3",
+			"axodin": "odinm6",
+			"axodinc": "odinm6",
+			"axultra": "ax51",
+			"bcm7251s": "hd1100",
+			"bcm7252": "hd2400",
+			"bcm7358": "xcore2",
+			"beyonwizt2": "ini7",
+			"beyonwizt3": "ini5",
+			"beyonwizt4": "ini7",
+			"beyonwizu4": "beyonwiz1",
+			"beyonwizv2": "beyonwiz2",
+			"bre2ze": "wwio1",
+			"bre2ze4k": "wwio1",
+			"bre2zet2c": "wwio1",
+			"clap4k": "cc1",
+			"dinobot4k": "dinobot",
+			"dinobot4kelite": "dinobot",
+			"dinobot4kl": "dinobot",
+			"dinobot4kmini": "dinobot",
+			"dinobot4kplus": "dinobot",
+			"dinobot4kpro": "dinobot",
+			"dinobot4kse": "dinobot",
+			"dinoboth265": "dinobot",
+			"dinobotu55": "dinobot",
+			"dm500hd": "dmm1",
+			"dm500hdv2": "dmm2",
+			"dm520": "dmm2",
+			"dm525": "dmm2",
+			"dm7020hd": "dmm2",
+			"dm7020hdv2": "dmm2",
+			"dm7080": "dmm2",
+			"dm800": "dmm1",
+			"dm8000": "dmm0",
+			"dm800se": "dmm1",
+			"dm800sev2": "dmm2",
+			"dm820": "dmm2",
+			"dm900": "dmm2",
+			"dm920": "dmm2",
+			"e4hd": "e4hd",
+			"e4hdcombo": "e4hdcombo",
+			"e4hdhybrid": "e4hd",
+			"e4hdultra": "e4hdcombo",
+			"enfinity": "evo1",
+			"enibox": "hdbox",
+			"et10000": "et8000",
+			"et4x00": "et4x00",
+			"et5000": "et6x00",
+			"et5x00": "et6x00",
+			"et6000": "et6x00",
+			"et6500": "et6500",
+			"et6x00": "et6x00",
+			"et7000": "et7x00",
+			"et7100": "et7x00",
+			"et7500": "et7x00",
+			"et7x00mini": "et7x00mini",
+			"et8000": "et8000",
+			"et8500": "et8000",
+			"et8500s": "et8000",
+			"et9000": "et9x00",
+			"et9200": "et9x00",
+			"et9500": "et9500",
+			"et9x00": "et9x00",
+			"evomini": "evo5",
+			"evominiplus": "evo5",
+			"evoslim": "evo8",
+			"evoslimse": "evo8",
+			"evoslimt2c": "evo8",
+			"ferguson4k": "dinobot",
+			"force1": "iqon2",
+			"force1plus": "iqon2",
+			"force2": "iqon1",
+			"force2nano": "iqon1",
+			"force2plus": "iqon1",
+			"force2plushv": "iqon1",
+			"force2se": "iqon1",
+			"force3uhd": "iqon3",
+			"force3uhdplus": "iqon3",
+			"force4": "iqon1",
+			"formuler1": "formuler1",
+			"formuler1tc": "formuler1",
+			"formuler3": "formuler1",
+			"formuler3ip": "formuler1",
+			"formuler4": "formuler1",
+			"formuler4ip": "formuler1",
+			"formuler4turbo": "formuler1",
+			"galaxy4k": "revo",
+			"gb800se": "gb0",
+			"gb800seplus": "gb0",
+			"gb800solo": "gb0",
+			"gb800ue": "gb0",
+			"gb800ueplus": "gb0",
+			"gbip4k": "gb3",
+			"gbipbox": "gb0",
+			"gbquad": "gb0",
+			"gbquad4k": "gb3",
+			"gbquadplus": "gb1",
+			"gbtrio4k": "gb3",
+			"gbue4k": "gb3",
+			"gbultrase": "gb0",
+			"gbultraue": "gb0",
+			"gbultraueh": "gb2",
+			"gbx1": "gb0",
+			"gbx2": "gb2",
+			"gbx3": "gb0",
+			"gbx34k": "gb3",
+			"gbx3h": "gb2",
+			"gi11000": "et7x00mini",
+			"hitube4k": "hitube",
+			"iqonios100hd": "iqon1",
+			"iqonios200hd": "iqon1",
+			"iqonios300hd": "iqon1",
+			"iqonios300hdv2": "iqon1",
+			"ixussone": "ixussone",
+			"ixusszero": "ixusszero",
+			"iziboxecohd": "izibox2",
+			"iziboxone4k": "izibox1",
+			"iziboxx3": "izibox1",
+			"jdhdduo": "jd1",
+			"lunix": "qviart1",
+			"lunix34k": "qviart1",
+			"lunix4k": "qviart3",
+			"lunixco": "qviart4",
+			"mago": "relook",
+			"marvel1": "visionnet",
+			"maxytecmulti": "maxytec1",
+			"mbmicro": "miraclebox",
+			"mbmicrov2": "miraclebox",
+			"mbtwinplus": "miraclebox",
+			"mediaart200hd": "iqon1",
+			"mediabox": "mediabox",
+			"mediabox4k": "mediabox4k",
+			"megaforce1plus": "megasat2",
+			"megaforce2": "megasat1",
+			"mutant11": "hd1100",
+			"mutant1100": "hd1100",
+			"mutant1200": "hd1100",
+			"mutant1265": "hd1100",
+			"mutant1500": "hd1100",
+			"mutant2400": "hd2400",
+			"mutant500c": "hd1100",
+			"mutant51": "hd1100",
+			"mutant530c": "hd530c",
+			"mutant60": "hd60",
+			"mutant61": "hd60",
+			"novacombo": "evo7",
+			"novaip": "evo6",
+			"novatwin": "evo7",
+			"odin2hybrid": "ax1",
+			"odinm6": "odinm6",
+			"odinplus": "ax1",
+			"odroidc2": "hardkernel",
+			"opticumtt": "ini8",
+			"optimussos": "optimuss1",
+			"optimussos1": "optimuss1",
+			"optimussos1plus": "optimuss1",
+			"optimussos2": "optimuss1",
+			"optimussos2plus": "optimuss1",
+			"optimussos3plus": "optimuss2",
+			"osmega": "xcore3",
+			"osmini": "xcore3",
+			"osmini4k": "edision3",
+			"osminiplus": "xcore3",
+			"osmio4k": "edision3",
+			"osmio4kplus": "edision3",
+			"osnino": "edision1",
+			"osninoplus": "edision1",
+			"osninopro": "edision2",
+			"protek4k": "protek2",
+			"protek4kx1": "protek3",
+			"quadbox2400": "hd2400",
+			"revo4k": "revo",
+			"roxxs200hd": "iqon1",
+			"sezam1000hd": "ini2",
+			"sezam5000hd": "ini2",
+			"sezammarvel": "ini4",
+			"sf108": "sf108",
+			"sf128": "sf3038",
+			"sf138": "sf3038",
+			"sf208": "sf2x8",
+			"sf228": "sf2x8",
+			"sf238": "sf2x8",
+			"sf3038": "sf3038",
+			"sf4008": "sf3038",
+			"sf5008": "sf5008",
+			"sf8008": "sf8008",
+			"sf8008m": "sf8008",
+			"sf8008s": "sf8008",
+			"sf8008t": "sf8008",
+			"sf98": "sf98",
+			"singleboxlcd": "red2",
+			"sogno8800hd": "sogno",
+			"spycat": "xcore1",
+			"spycat4k": "xcore1",
+			"spycat4kcombo": "xcore1",
+			"spycat4kmini": "xcore1",
+			"spycatmini": "xcore1",
+			"spycatminiplus": "xcore1",
+			"spycatminiv2": "spycat1",
+			"starsatlx": "odinm6",
+			"t2cable": "evo4",
+			"tiviaraplus": "tiviar1",
+			# "tiviaraplus": "tiviar2",
+			"tiviarmin": "tiviar1",
+			"tm2t": "tm1",
+			"tm4ksuper": "tm6",
+			"tmnano": "tm2",
+			"tmnano2super": "tm2",
+			"tmnano2t": "tm2",
+			"tmnano3t": "tm2",
+			"tmnanom3": "tm5",
+			"tmnanose": "tm3",
+			"tmnanosecombo": "tm3",
+			"tmnanosem2": "tm4",
+			"tmnanosem2plus": "tm4",
+			"tmnanoseplus": "tm4",
+			"tmsingle": "tm2",
+			"tmtwin": "tm1",
+			"tmtwin4k": "tm6",
+			"triplex": "triplex",
+			"turing": "turing",
+			"twinboxlcd": "red1",
+			"twinboxlcdci": "red2",
+			"twinboxlcdci5": "red2",
+			"tyrant": "tyrant",
+			"ultrabox": "triplex",
+			"ultrav8plus": "maxytec1",
+			"uniboxhd1": "ini0" if str(getFPVersion()).startswith("1") else "ini2",
+			"uniboxhd2": "ini1",
+			"uniboxhd3": "ini1",
+			"uniboxhde": "uniboxhde",
+			"ustym4kpro": "uclan",
+			"valalinux": "vala",
+			"vimastec1000": "hd1100",
+			"vimastec1500": "hd1100",
+			"viper4k": "amiko4",
+			"viper4k51": "amiko5",
+			"vipercombo": "amiko2",
+			"vipercombohdd": "amiko1",
+			"viperslim": "amiko2",
+			"vipert2c": "amiko2",
+			"vipertwin": "jd1",
+			"vizyonvita": "hd1100",
+			"vp7358ci": "xcore2",
+			"vuduo": "vu",
+			"vuduo2": "vu3",
+			"vuduo4k": "vu4",
+			"vusolo": "vu",
+			"vusolo2": "vu",
+			"vusolo4k": "vu",
+			"vusolose": "vu",
+			"vuultimo": "vu2",
+			"vuultimo4k": "vu",
+			"vuuno": "vu",
+			"vuuno4k": "vu",
+			"vuuno4kse": "vu4",
+			"vuzero": "vu",
+			"vuzero4k": "vu4",
+			"wetekhub": "wetek3",
+			"wetekplay": "wetek",
+			"wetekplay2": "wetek2",
+			"worldvisionf1": "iqon2",
+			"worldvisionf1plus": "iqon2",
+			"x1plus": "evo3",
+			"x2plus": "evo2",
+			"xcombo": "evo3",
+			"xpeedlx": "ini4",
+			"xpeedlx1": "ini4",
+			"xpeedlx2": "ini4",
+			"xpeedlx3": "ini4",
+			"xpeedlxcc": "gi1",
+			"xpeedlxcs2": "gi1",
+			"xpeedlxpro": "ini6",
+			"zgemmah10": "zgemma3",
+			"zgemmah102h": "zgemma7",
+			"zgemmah102s": "zgemma7",
+			"zgemmah10combo": "zgemma7",
+			"zgemmah2h": "zgemma3",
+			"zgemmah2s": "zgemma3",
+			"zgemmah2splus": "zgemma3",
+			"zgemmah32tc": "zgemma3",
+			"zgemmah3ac": "zgemma3",
+			"zgemmah4": "zgemma3",
+			"zgemmah5": "zgemma3",
+			"zgemmah52s": "zgemma3",
+			"zgemmah52splus": "zgemma3",
+			"zgemmah52tc": "zgemma3",
+			"zgemmah5ac": "zgemma3",
+			"zgemmah6": "zgemma3",
+			"zgemmah7": "zgemma3",
+			"zgemmah7c": "zgemma3",
+			"zgemmah7s": "zgemma3",
+			"zgemmah92h": "zgemma3",
+			"zgemmah92s": "zgemma3",
+			"zgemmah9combo": "zgemma3",
+			"zgemmah9s": "zgemma6",
+			"zgemmah9splus": "zgemma6",
+			"zgemmah9t": "zgemma6",
+			"zgemmah9twin": "zgemma3",
+			"zgemmahs": "zgemma3",
+			"zgemmai55": "zgemma5",
+			"zgemmai55plus": "zgemma3",
+			"zgemmas2s": "zgemma1",
+			"zgemmash1": "zgemma1",
+			"zgemmash2": "zgemma2",
+			"zgemmaslc": "zgemma2",
+			"zgemmass": "zgemma2"
+		}
+		self.machineBrands = {
+			"FEGASUS": "MachineBrand_FEGASUS",
+			"SPACE": "MachineBrand_SPACE",
+			"XSARIUS": "MachineBrand_XSARIUS"
+		}
+		self.machineBuilds = {
+			"cube": "MachineBuild_cube",
+			"e3hd": "MachineBuild_e3hd",
+			"odinm7": "MachineBuild_odinm7",
+			"odinm9": "MachineBuild_odinm9",
+			"xp1000": "MachineBuild_xp1000"
+		}
 
 	def rcIsDefault(self):
-		if self.getRcFolder() != 'dmm0':
-			return False
-		return True
+		# Default RC can only happen with DMM type remote controls.
+		return True if self.getRcFolder() == 'dmm0' else False
 
-	def readFile(self, target):
-		fp = open(target, 'r')
-		out = fp.read()
-		fp.close()
-		return out.split()[0]
+	def getRcFolder(self):
+		boxType = getBoxType()
+		if pathExists("/proc/stb/info/azmodel"):
+			try:
+				with open("/proc/stb/info/model", "r") as fd:
+					model = f.readline().strip()
+					boxType = {
+						"elite": "AZModel_elite",
+						"me": "AZModel_me",
+						"minime": "AZModel_minime",
+						"premium": "AZModel_premium",
+						"premium+": "AZModel_premium+",
+						"ultra": "AZModel_ultra"
+					}.get(model, boxType)
+			except (IOError, OSError):
+				pass
+		elif getMachineBrand() == "Miraclebox" and boxType not in ("mbmicro", "mbmicrov2", "mbtwinplus"):
+			boxType = "MachineBrand_ini3"
+		elif getBrandOEM() == "fulan":
+			boxType = "BrandOEM_fulan"
+		elif getMachineBuild().startswith("ebox"):
+			boxType = "MachineBuild_ebox"
+		boxType = self.machineBrands.get(getMachineBrand(), boxType)
+		boxType = self.machineBuilds.get(getMachineBuild(), boxType)
+		return self.boxTypes.get(boxType, "dmm0")
 
-	def process(self, line):
-		if line.lower().startswith('config.usage.rc_model='):
-			parts = line.split('=')
-			folder = parts[-1].rstrip()
-			if os.path.isfile('/usr/share/enigma2/rc_models/'+ folder + '/rc.png') and os.path.isfile('/usr/share/enigma2/rc_models/'+ folder + '/rcpositions.xml') and os.path.isfile('/usr/share/enigma2/rc_models/'+ folder + '/remote.html'):
-				return folder
-		return None
+	def getRcImg(self):
+		return resolveFilename(SCOPE_SKIN, path_join("rc_models", self.getRcFolder(), "rc.png"))
 
-	# Don't try to be clever and use E2 functions here ...
-	def readE2Settings(self):
-		try:
-			with open('/etc/enigma2/settings') as config:
-				for line in config:
-					ret = self.process(line)
-					if ret is not None:
-						return ret
-		except IOError as e:
-			print "[RcModel] IOError: '/etc/enigma2/settings' cannot be opened"
-		return None
+	def getRcPositions(self):
+		return resolveFilename(SCOPE_SKIN, path_join("rc_models", self.getRcFolder(), "rcpositions.xml"))
 
-	def getRcFolder(self, GetDefault=False):
-		if not GetDefault:
-			ret = self.readE2Settings()
-			if ret is not None:
-				return ret
-
-		remotefolder = 'dmm0'
-		if os.path.exists('/proc/stb/info/azmodel'):
-			f = open("/proc/stb/info/model",'r')
-			model = f.readline().strip()
-			f.close()
-			if model == "premium" or model == "premium+":
-				remotefolder = 'azboxhd'
-			elif model == "elite" or model == "ultra":
-				remotefolder = 'azboxelite'
-			elif model == "me" or model == "minime":
-				remotefolder = 'azboxme'
-
-
-		elif boxtype in ('alien5',):
-			remotefolder = 'amiko3'
-		elif boxtype in ('vipert2c','vipercombo','viperslim'):
-			remotefolder = 'amiko2'
-		elif boxtype in ('vipercombohdd',):
-			remotefolder = 'amiko1'
-		elif boxtype in ('viper4k',):
-			remotefolder = 'amiko4'
-		elif boxtype in ('viper4k51',):
-			remotefolder = 'amiko5'
-		elif boxtype in ('clap4k',):
-			remotefolder = 'cc1'
-		elif boxtype in ('enfinity',):
-			remotefolder = 'evo1'
-		elif boxtype in ('alphatriple',):
-			remotefolder = 'sab1'
-		elif boxtype in ('sf108',):
-			remotefolder = 'sf108'
-		elif boxtype in ('sf3038','sf128','sf138','sf4008'):
-			remotefolder = 'sf3038'
-		elif boxtype in ('sf5008',):
-			remotefolder = 'sf5008'
-		elif boxtype in ('sf98',):
-			remotefolder = 'sf98'
-		elif boxtype in ('x2plus',):
-			remotefolder = 'evo2'
-		elif boxtype in ('xcombo', 'x1plus'):
-			remotefolder = 'evo3'
-		elif boxtype in ('t2cable',):
-			remotefolder = 'evo4'
-		elif boxtype in ('evomini', 'evominiplus'):
-			remotefolder = 'evo5'
-		elif boxtype in ('novaip',):
-			remotefolder = 'evo6'
-		elif boxtype in ('novacombo', 'novatwin'):
-			remotefolder = 'evo7'
-		elif boxtype in ('bre2ze','bre2ze4k','bre2zet2c'):
-			remotefolder = 'wwio1'
-		elif boxtype in ('tiviarmin','tiviaraplus'):
-			remotefolder = 'tiviar1'
-		#elif boxtype in ('tiviaraplus'):
-		#	remotefolder = 'tiviar2'
-		elif boxtype in ('twinboxlcd',):
-			remotefolder = 'red1'
-		elif boxtype in ('singleboxlcd', 'twinboxlcdci', 'twinboxlcdci5'):
-			remotefolder = 'red2'
-		elif boxtype in ('sf208', 'sf228', 'sf238'):
-			remotefolder = 'sf2x8'
-		elif boxtype in ('odin2hybrid', 'odinplus'):
-			remotefolder = 'ax1'
-		elif boxtype in ('ax51','axultra','ax60'):
-			remotefolder = 'ax51'
-		elif boxtype in ('ax61',):
-			remotefolder = 'ax4'
-		elif boxtype in ('e4hd', 'e4hdhybrid'):
-			remotefolder = 'e4hd'
-		elif boxtype in ('e4hdcombo','e4hdultra'):
-			remotefolder = 'e4hdcombo'
-		elif boxtype in ('enibox',):
-			remotefolder = 'hdbox'
-		elif boxtype in ('mago',):
-			remotefolder = 'relook'
-		elif boxtype in ('tyrant',):
-			remotefolder = 'tyrant'
-		elif boxtype in ('marvel1',):
-			remotefolder = 'visionnet'
-		elif boxtype in ('9900lx',):
-			remotefolder = 'protek1'
-		elif boxtype in ('9910lx','9911lx','protek4k','9920lx'):
-			remotefolder = 'protek2'
-		elif boxtype in ('protek4kx1',):
-			remotefolder = 'protek3'
-		elif boxtype in ('zgemmash1', 'zgemmas2s'):
-			remotefolder = 'zgemma1'
-		elif boxtype in ('zgemmash2', 'zgemmass', 'zgemmaslc'):
-			remotefolder = 'zgemma2'
-		elif boxtype in ('zgemmah6','zgemmah4','zgemmahs', 'zgemmah2s', 'zgemmah2h','zgemmah5','zgemmah52s','zgemmah3ac','zgemmah5ac','zgemmah52tc','zgemmah32tc','zgemmah7','zgemmah7s','zgemmah7c','zgemmah52splus', 'zgemmah2splus','zgemmai55plus','zgemmah92h','zgemmah92s','zgemmah9combo','zgemmah9twin','zgemmah10'):
-			remotefolder = 'zgemma3'
-		elif boxtype in ('zgemmai55',):
-			remotefolder = 'zgemma5'
-		elif boxtype in ('zgemmah9s','zgemmah9t','zgemmah9splus'):
-			remotefolder = 'zgemma6'
-		elif boxtype in ('zgemmah102s','zgemmah102h','zgemmah10combo'):
-			remotefolder = 'zgemma7'
-		elif boxtype in ('dinobot4kmini','dinobot4kplus','dinobot4k','dinobot4kse','dinobot4kl','ferguson4k','dinobot4kpro','dinobotu55','dinoboth265','dinobot4kelite'):
-			remotefolder = 'dinobot'
-		elif boxtype in ('axashis4kcombo','axashis4kcomboplus'):
-			remotefolder = 'axas1'
-		elif boxtype in ('axashisc4k',):
-			remotefolder = 'axas2'
-		elif boxtype in ('axashistwin',):
-			remotefolder = 'axas3'
-		elif boxtype in ('gbquad', 'gb800se', 'gb800ue', 'gb800solo', 'gb800seplus', 'gb800ueplus', 'gbipbox', 'gbultrase', 'gbultraue', 'gbx1', 'gbx3'):
-			remotefolder = 'gb0'
-		elif boxtype == 'gbquadplus':
-			remotefolder = 'gb1'
-		elif boxtype in ('gbx2', 'gbx3h', 'gbultraueh'):
-			remotefolder = 'gb2'
-		elif boxtype in ('gbquad4k','gbue4k','gbtrio4k','gbip4k','gbx34k'):
-			remotefolder = 'gb3'
-		elif boxtype in ('mutant11', 'mutant1100', 'mutant1200', 'mutant500c', 'vizyonvita', 'mutant1265', 'mutant1500', 'mutant51', 'bcm7251s', 'vimastec1000', 'vimastec1500'):
-			remotefolder = 'hd1100'
-		elif boxtype in ('mutant530c',):
-			remotefolder = 'hd530c'
-		elif boxtype in ('mutant60','mutant61'):
-			remotefolder = 'hd60'
-		elif boxtype in ('mutant2400', 'quadbox2400', 'bcm7252'):
-			remotefolder = 'hd2400'
-		elif boxtype in ('revo4k','galaxy4k'):
-			remotefolder = 'revo'
-		elif boxtype in ('anadol4k','anadol4kv2','anadol4kcombo'):
-			remotefolder = 'anadol1'
-		elif boxtype in ('mediabox4k',):
-			remotefolder = 'mediabox4k'
-		elif boxtype in ('mediabox',):
-			remotefolder = 'mediabox'
-		elif machinebrand == 'XSARIUS':
-			remotefolder = 'fusionhd'
-		elif boxtype in ('force4','iqonios100hd', 'iqonios200hd', 'iqonios300hd', 'iqonios300hdv2', 'roxxs200hd', 'mediaart200hd', 'force2se', 'force2', 'force2plus', 'force2plushv', 'force2nano'):
-			remotefolder = 'iqon1'
-		elif boxtype in ('force1', 'force1plus', 'worldvisionf1', 'worldvisionf1plus'):
-			remotefolder = 'iqon2'
-		elif boxtype in ('force3uhdplus','force3uhd'):
-			remotefolder = 'iqon3'
-		elif boxtype in ('lunix34k','lunix'):
-			remotefolder = 'qviart1'
-		elif boxtype in ('lunix4k',):
-			remotefolder = 'qviart3'
-		elif boxtype in ('lunixco',):
-			remotefolder = 'qviart4'
-		elif boxtype in ('formuler1', 'formuler3', 'formuler4', 'formuler4turbo', 'formuler1tc', 'formuler3ip', 'formuler4ip'):
-			remotefolder = 'formuler1'
-		elif boxtype in ('triplex', 'ultrabox'):
-			remotefolder = 'triplex'
-		elif boxtype == 'dm8000':
-			remotefolder = 'dmm0'
-		elif boxtype in ('dm800', 'dm800se', 'dm500hd'):
-			remotefolder = 'dmm1'
-		elif boxtype in ('dm7080', 'dm7020hd', 'dm7020hdv2', 'dm800sev2', 'dm500hdv2', 'dm820', 'dm520', 'dm525', 'dm900', 'dm920'):
-			remotefolder = 'dmm2'
-		elif boxtype in ('tmtwin', 'tm2t'):
-			remotefolder = 'tm1'
-		elif boxtype in ('tmsingle', 'tmnano', 'tmnano2t', 'tmnano3t', 'tmnano2super'):
-			remotefolder = 'tm2'
-		elif boxtype in ('tmnanose', 'tmnanosecombo'):
-			remotefolder = 'tm3'
-		elif boxtype in ('tmnanosem2', 'tmnanoseplus','tmnanosem2plus'):
-			remotefolder = 'tm4'
-		elif boxtype in ('tmnanom3',):
-			remotefolder = 'tm5'
-		elif boxtype in ('tmtwin4k','tm4ksuper'):
-			remotefolder = 'tm6'
-		elif boxtype == 'uniboxhd1':
-			fp_version = str(getFPVersion())
-			if fp_version.startswith('1'):
-				remotefolder = 'ini0'
-			else:
-				remotefolder = 'ini2'
-		elif boxtype in ('uniboxhd2', 'uniboxhd3'):
-			remotefolder = 'ini1'
-		elif boxtype == 'uniboxhde':
-			remotefolder = 'uniboxhde'
-		elif boxtype in ('sezam1000hd', 'sezam5000hd'):
-			remotefolder = 'ini2'
-		elif boxtype in ('xpeedlxcs2', 'xpeedlxcc'):
-			remotefolder = 'gi1'
-		elif machinebrand == 'Miraclebox':
-			if boxtype in ('mbmicro', 'mbmicrov2', 'mbtwinplus'):
-				remotefolder = 'miraclebox'
-			else:
-				remotefolder = 'ini3'
-		elif boxtype in ('xpeedlx', 'xpeedlx1', 'xpeedlx2', 'xpeedlx3', 'atemio5x00', 'atemio6000', 'atemio6100', 'atemio6200', 'atemionemesis', 'sezammarvel'):
-			remotefolder = 'ini4'
-		elif boxtype in ('beyonwizt3',):
-			remotefolder = 'ini5'
-		elif boxtype in ('beyonwizt2', 'beyonwizt4'):
-			remotefolder = 'ini7'
-		elif boxtype in ('beyonwizu4',):
-			remotefolder = 'beyonwiz1'
-		elif boxtype in ('beyonwizv2',):
-			remotefolder = 'beyonwiz2'
-		elif machinebrand in ('SPACE', 'FEGASUS') or boxtype in ('xpeedlxpro',):
-			remotefolder = 'ini6'
-		elif boxtype in ('opticumtt',):
-			remotefolder = 'ini8'
-		elif boxtype in ('megaforce2',):
-			remotefolder = 'megasat1'
-		elif boxtype in ('megaforce1plus'):
-			remotefolder = 'megasat2'
-		elif boxtype in ('optimussos', 'optimussos1', 'optimussos2', 'optimussos1plus', 'optimussos2plus'):
-			remotefolder = 'optimuss1'
-		elif boxtype in ('optimussos3plus',):
-			remotefolder = 'optimuss2'
-		elif boxtype == 'sogno8800hd':
-			remotefolder = 'sogno'
-		elif boxtype in ('et4x00',):
-			remotefolder = 'et4x00'
-		elif boxtype in ('et6x00', 'et6000', 'et5x00', 'et5000'):
-			remotefolder = 'et6x00'
-		elif boxtype == 'et6500':
-			remotefolder = 'et6500'
-		elif boxtype in ('et8000', 'et8500' , 'et8500s', 'et10000'):
-			remotefolder = 'et8000'
-		elif boxtype in ('et9000', 'et9x00', 'et9200'):
-			remotefolder = 'et9x00'
-		elif boxtype in ('et9500',):
-			remotefolder = 'et9500'
-		elif boxtype in ('et7000', 'et7500', 'et7100'):
-			remotefolder = 'et7x00'
-		elif boxtype in ('et7x00mini','gi11000'):
-			remotefolder = 'et7x00mini'
-		elif boxtype in ('vusolo', 'vusolo2', 'vusolose', 'vuduo', 'vuuno', 'vuzero', 'vusolo4k', 'vuuno4k', 'vuultimo4k'):
-			remotefolder = 'vu'
-		elif boxtype == 'vuultimo':
-			remotefolder = 'vu2'
-		elif boxtype == 'vuduo2':
-			remotefolder = 'vu3'
-		elif  boxtype in ('vuuno4kse', 'vuzero4k', 'vuduo4k'):
-			remotefolder = 'vu4'
-		elif boxtype in ('starsatlx', 'axodin', 'axodinc', 'odinm6'):
-			remotefolder = 'odinm6'
-		elif boxtype in ('ixussone',):
-			remotefolder = 'ixussone'
-		elif boxtype in ('ixusszero',):
-			remotefolder = 'ixusszero'
-		elif boxtype in ('bcm7358', 'vp7358ci'):
-			remotefolder = 'xcore2'
-		elif boxtype in ('spycat','spycatmini','spycatminiplus','spycat4kmini','spycat4k','spycat4kcombo'):
-			remotefolder = 'xcore1'
-		elif boxtype in ('osmini', 'osminiplus', 'osmega'):
-			remotefolder = 'xcore3'
-		elif boxtype in ('osnino','osninoplus'):
-			remotefolder = 'edision1'
-		elif boxtype in ('osninopro',):
-			remotefolder = 'edision2'
-		elif boxtype in ('osmio4k','osmio4kplus','osmini4k'):
-			remotefolder = 'edision3'
-		elif machinebuild == 'cube':
-			remotefolder = 'cube'
-		elif machinebuild.startswith('ebox'):
-			remotefolder = 'ebox5000'
-		elif machinebuild == 'e3hd':
-			remotefolder = 'e3hd'
-		elif machinebuild == 'odinm7':
-			remotefolder = 'odinm7'
-		elif machinebuild == 'odinm9':
-			remotefolder = 'odinm9'
-		elif machinebuild == 'xp1000':
-			remotefolder = 'xp1000'
-		elif brandoem == 'fulan':
-			remotefolder = 'fulan'
-		elif boxtype in ('sf8008','sf8008s','sf8008t','sf8008m'):
-			remotefolder = 'sf8008'
-		elif boxtype in ('ustym4kpro',):
-			remotefolder = 'uclan'
-		elif boxtype in ('evoslim','evoslimse','evoslimt2c'):
-			remotefolder = 'evo8'
-		elif boxtype in ('wetekplay',):
-			remotefolder = 'wetek'
-		elif boxtype in ('wetekplay2',):
-			remotefolder = 'wetek2'
-		elif boxtype in ('wetekhub',):
-			remotefolder = 'wetek3'
-		elif boxtype in ('odroidc2',):
-			remotefolder = 'hardkernel'
-		elif boxtype in ('valalinux',):
-			remotefolder = 'vala'
-		elif boxtype in ('ultrav8plus','maxytecmulti'):
-			remotefolder = 'maxytec1'
-		elif boxtype in ('anadolmulti',):
-			remotefolder = 'anadol2'
-		elif boxtype in ('iziboxone4k','iziboxx3'):
-			remotefolder = 'izibox1'
-		elif boxtype in ('iziboxecohd',):
-			remotefolder = 'izibox2'
-		elif boxtype in ('hitube4k',):
-			remotefolder = 'hitube'
-		elif boxtype in ('anadolprohd5',):
-			remotefolder = 'anadol3'
-		elif boxtype in ('spycatminiv2',):
-			remotefolder = 'spycat1'
-		elif boxtype in ('turing',):
-			remotefolder = 'turing'
-		elif boxtype in ('jdhdduo','vipertwin'):
-			remotefolder = 'jd1'
-		elif boxtype in ('arivatwin','arivacombo'):
-			remotefolder = 'ariva'
-
-		return remotefolder
-		
 	def getRcLocation(self):
-		baselocation = '/usr/share/enigma2/rc_models/'
-		remotefolder = self.getRcFolder()
-		return baselocation + remotefolder + '/'
+		return resolveFilename(SCOPE_SKIN, path_join("rc_models", self.getRcFolder(), ""))
+
 
 rc_model = RcModel()
