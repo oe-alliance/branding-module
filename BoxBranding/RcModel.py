@@ -291,7 +291,7 @@ class RcModel:
 			"vipercombohdd": "amiko1",
 			"viperslim": "amiko2",
 			"vipert2c": "amiko2",
-			"vipertwin": "jd1",
+			"vipertwin": "amiko6",
 			"vizyonvita": "hd1100",
 			"vp7358ci": "xcore2",
 			"vuduo": "vu",

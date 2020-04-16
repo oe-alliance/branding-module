@@ -569,7 +569,7 @@ SUBDIRS += vala
 endif
 
 if VIPER
-SUBDIRS += amiko1 amiko2 amiko4 amiko5
+SUBDIRS += amiko1 amiko2 amiko4 amiko5 amiko6
 endif
 
 if DINOBOT
@@ -633,9 +633,5 @@ SUBDIRS += turing
 endif
 
 if JDHDDUO
-SUBDIRS += jd1
-endif
-
-if VIPERTWIN
 SUBDIRS += jd1
 endif
