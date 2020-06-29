@@ -24,14 +24,15 @@
 		<button name="BOUQUET-" pos="100,212" />
 		<button name="EPG" pos="62,212" />
 
-		<button name="MENU" pos="23,266" />
-		<button name="EXIT" pos="100,266" />
+		<button name="MENU" pos="22,342" />
+		<button name="EXIT" pos="100,342" />
 		<button name="OK" pos="62,303" />
 		<button name="UP" pos="62,268" />
 		<button name="DOWN" pos="62,340" />
 		<button name="LEFT" pos="25,303" />
 		<button name="RIGHT" pos="97,303" />
-		<button name="INFO" pos="22,342" />
+		<button name="INFO" pos="23,266" />
+		<button name="BACK" pos="100,266" />
 
 		<button name="RED" pos="20,365" />
 		<button name="GREEN" pos="48,365" />
