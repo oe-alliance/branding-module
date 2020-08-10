@@ -604,6 +604,10 @@ if MAXYTEMULTI
 SUBDIRS += maxytec1
 endif
 
+if MAXYTEMULTIPLUS
+SUBDIRS += maxytec1
+endif
+
 if IZIBOXONE4K
 SUBDIRS += izibox1
 endif

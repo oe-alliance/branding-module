@@ -176,6 +176,7 @@ class RcModel:
 			"mago": "relook",
 			"marvel1": "visionnet",
 			"maxytecmulti": "maxytec1",
+			"maxytecmultiplus": "maxytec1",
 			"mbmicro": "miraclebox",
 			"mbmicrov2": "miraclebox",
 			"mbtwinplus": "miraclebox",
