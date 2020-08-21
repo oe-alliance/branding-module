@@ -52,8 +52,8 @@
 		<button keyid="KEY_REWIND" name="REWIND" title="Rewind" pos="26,388" shape="rect" size="28,12" />
 		<button keyid="KEY_PLAYPAUSE" name="PLAYPAUSE" title="Play / Pause" pos="57,388" shape="rect" size="28,12" />
 		<button keyid="KEY_FASTFORWARD" name="FASTFORWARD" title="Fast Forward" pos="88,388" shape="rect" size="28,12" />
-		<button keyid="KEY_F1" remap="KEY_HELP" name="F1" title="F1" pos="26,409" shape="rect" size="28,12" />
+		<button keyid="KEY_F1" remap="KEY_HELP" name="HELP" title="F1 / Help" pos="26,409" shape="rect" size="28,12" />
 		<button keyid="KEY_LIST" name="PLAYLIST" title="Play List" pos="57,409" shape="rect" size="28,12" />
-		<button keyid="KEY_F2" remap="KEY_SCREEN" name="PIP" title="PIP" pos="88,409" shape="rect" size="28,12" />
+		<button keyid="KEY_F2" remap="KEY_SCREEN" name="SCREEN" title="PIP" pos="88,409" shape="rect" size="28,12" />
 	</rc>
 </rcs>
