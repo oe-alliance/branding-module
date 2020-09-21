@@ -300,6 +300,7 @@ class RcModel:
 			"vuduo": "vu",
 			"vuduo2": "vu3",
 			"vuduo4k": "vu4",
+			"vuduo4kse": "vu4",
 			"vusolo": "vu",
 			"vusolo2": "vu",
 			"vusolo4k": "vu",

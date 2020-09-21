@@ -504,6 +504,10 @@ if VUDUO4K
 SUBDIRS += vu4
 endif
 
+if VUDUO4KSE
+SUBDIRS += vu4
+endif
+
 if VUULTIMO4K
 SUBDIRS += vu
 endif
