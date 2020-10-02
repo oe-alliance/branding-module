@@ -1,5 +1,5 @@
 <rcs>
-	<rc id="1">
+	<rc id="2">
 		<button name="POWER" pos="20,23" />
 		<button name="MUTE" pos="95,23" />
 		<button name="SLEEP" pos="20,49" />
@@ -32,10 +32,10 @@
 		<button name="EXIT" pos="13,254" />
 		<button name="EPG" pos="101,254" />
 		<button name="VOL+" pos="22,283" />
-		<button name="PORTAL" pos="58,286" />
+		<button name="PLUGIN" pos="58,286" />
 		<button name="BOUQUET+" pos="93,283" />
 		<button name="VOL-" pos="22,324" />
-		<button name="LIST" pos="57,319" />
+		<button name="VIDEO" pos="57,319" />
 		<button name="BOUQUET-" pos="93,324" />
 		<button name="1" pos="23,353" />
 		<button name="2" pos="58,353" />
