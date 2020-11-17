@@ -284,6 +284,8 @@ class RcModel:
 			"uniboxhd3": "ini1",
 			"uniboxhde": "uniboxhde",
 			"ustym4kpro": "uclan",
+			"ustym4kprosingle": "uclan",
+			"ustym4kprotwin": "uclan",
 			"valalinux": "vala",
 			"vimastec1000": "hd1100",
 			"vimastec1500": "hd1100",
