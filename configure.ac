@@ -330,9 +330,13 @@ AM_CONDITIONAL(REVO4K, test "$BOXTYPE" == revo4k)
 AM_CONDITIONAL(GALAXY4K, test "$BOXTYPE" == galaxy4k)
 AM_CONDITIONAL(ANADOL4K, test `echo "$BOXTYPE" | cut -b 1-8` == "anadol4k")
 AM_CONDITIONAL(ANADOLPROHD5, test "$BOXTYPE" == anadolprohd5)
+AM_CONDITIONAL(ANADOLMULTI, test "$BOXTYPE" == anadolmulti)
+AM_CONDITIONAL(ANADOLMULTITWIN, test "$BOXTYPE" == anadolmultitwin)
 AM_CONDITIONAL(AX51, test "$BOXTYPE" == ax51)
 AM_CONDITIONAL(AX60, test "$BOXTYPE" == ax60)
 AM_CONDITIONAL(AX61, test "$BOXTYPE" == ax61)
+AM_CONDITIONAL(AXMULTITWIN, test "$BOXTYPE" == axmultitwin)
+AM_CONDITIONAL(AXMULTICOMBO, test "$BOXTYPE" == axmulticombo)
 AM_CONDITIONAL(AXULTRA, test "$BOXTYPE" == axultra)
 AM_CONDITIONAL(BCM7251S, test "$BOXTYPE" == bcm7251s)
 AM_CONDITIONAL(BEYONWIZU4, test "$BOXTYPE" == beyonwizu4)
@@ -485,7 +489,6 @@ AM_CONDITIONAL(TM4KSUPER, test "$BOXTYPE" == tm4ksuper)
 AM_CONDITIONAL(TURING, test "$BOXTYPE" == turing)
 AM_CONDITIONAL(ULTRABOX, test "$BOXTYPE" == ultrabox)
 AM_CONDITIONAL(ULTRAV8PLUS, test "$BOXTYPE" == ultrav8plus)
-AM_CONDITIONAL(ANADOLMULTI, test "$BOXTYPE" == anadolmulti)
 AM_CONDITIONAL(MAXYTEMULTI, test "$BOXTYPE" == maxytecmulti)
 AM_CONDITIONAL(MAXYTEMULTIPLUS, test "$BOXTYPE" == maxytecmultiplus)
 AM_CONDITIONAL(USTYM4KPRO, test "$BOXTYPE" == ustym4kpro)
@@ -532,6 +535,7 @@ BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile
 BoxBranding/remotes/ax3/Makefile
 BoxBranding/remotes/ax4/Makefile
+BoxBranding/remotes/ax5/Makefile
 BoxBranding/remotes/ax51/Makefile
 BoxBranding/remotes/ax60/Makefile
 BoxBranding/remotes/axas1/Makefile
