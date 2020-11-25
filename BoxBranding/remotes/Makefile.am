@@ -20,6 +20,14 @@ if AX61
 SUBDIRS += ax4
 endif
 
+if AXMULTITWIN
+SUBDIRS += ax5
+endif
+
+if AXMULTICOMBO
+SUBDIRS += ax5
+endif
+
 if AXULTRA
 SUBDIRS += ax2
 endif
@@ -605,6 +613,10 @@ SUBDIRS += maxytec1
 endif
 
 if ANADOLMULTI
+SUBDIRS += anadol2
+endif
+
+if ANADOLMULTITWIN
 SUBDIRS += anadol2
 endif
 
