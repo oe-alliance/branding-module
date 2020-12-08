@@ -29,8 +29,8 @@
 		<button name="BOUQUET+" pos="105,316" />
 		<button name="EXIT" pos="70,318" />
 		<button name="INFO" pos="70,344" />
-		<button name="VOL+" pos="36,349" />
-		<button name="BOUQUET+" pos="105,349" />
+		<button name="VOL-" pos="36,349" />
+		<button name="BOUQUET-" pos="105,349" />
 		<button name="MENU" pos="31,375" />
 		<button name="VIDEO" pos="57,375" />
 		<button name="AUDIO" pos="84,375" />
