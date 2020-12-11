@@ -170,6 +170,7 @@ class RcModel:
 			"ixusszero": "ixusszero",
 			"iziboxecohd": "izibox2",
 			"iziboxone4k": "izibox1",
+			"iziboxelite4k": "izibox2",
 			"iziboxx3": "izibox1",
 			"jdhdduo": "jd1",
 			"lunix": "qviart1",
