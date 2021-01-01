@@ -361,6 +361,7 @@ class RcModel:
 			"zgemmah9s": "zgemma6",
 			"zgemmah9se": "zgemma3",
 			"zgemmah92hse": "zgemma3",
+			"zgemmah9sse": "zgemma3",
 			"zgemmah9splus": "zgemma6",
 			"zgemmah9t": "zgemma6",
 			"zgemmah9twin": "zgemma3",
