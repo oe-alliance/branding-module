@@ -624,7 +624,7 @@ if MAXYTEMULTI
 SUBDIRS += maxytec1
 endif
 
-if MAXYTEMULTIPLUS
+if MAXYTEMULTISE
 SUBDIRS += maxytec1
 endif
 
