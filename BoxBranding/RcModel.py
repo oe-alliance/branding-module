@@ -177,6 +177,7 @@ class RcModel:
 			"lunix34k": "qviart1",
 			"lunix4k": "qviart3",
 			"lunixco": "qviart4",
+			"dual": "qviart5",
 			"mago": "relook",
 			"marvel1": "visionnet",
 			"maxytecmulti": "maxytec1",
