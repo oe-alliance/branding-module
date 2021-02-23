@@ -276,8 +276,12 @@ if JEPSSEN
 SUBDIRS += mediabox mediabox4k
 endif
 
-if QVIART
-SUBDIRS += qviart1 qviart2 qviart3 qviart4 qviart5
+if LUNIX
+SUBDIRS += qviart1 qviart2 qviart3 qviart4
+endif
+
+if DUAL
+SUBDIRS += qviart5
 endif
 
 if EDISION
