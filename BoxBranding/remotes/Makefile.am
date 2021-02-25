@@ -593,11 +593,11 @@ SUBDIRS += amiko1 amiko2 amiko4 amiko5 amiko6
 endif
 
 if DINOBOT
-SUBDIRS += dinobot
+SUBDIRS += dinobot1 dinobot2
 endif
 
 if FERGUSON4K
-SUBDIRS += dinobot
+SUBDIRS += dinobot1
 endif
 
 if AXASHIS

@@ -553,7 +553,8 @@ BoxBranding/remotes/cube/Makefile
 BoxBranding/remotes/dmm0/Makefile
 BoxBranding/remotes/dmm1/Makefile
 BoxBranding/remotes/dmm2/Makefile
-BoxBranding/remotes/dinobot/Makefile
+BoxBranding/remotes/dinobot1/Makefile
+BoxBranding/remotes/dinobot2/Makefile
 BoxBranding/remotes/e3hd/Makefile
 BoxBranding/remotes/e4hd/Makefile
 BoxBranding/remotes/e4hdcombo/Makefile

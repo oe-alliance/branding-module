@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/dinobot
+installdir = /usr/share/enigma2/rc_models/dinobot1
 
 dist_install_DATA = \
 	rc.png \
