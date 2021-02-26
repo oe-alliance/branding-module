@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/hitube
+installdir = /usr/share/enigma2/rc_models/hitube1
 
 dist_install_DATA = \
 	rc.png \

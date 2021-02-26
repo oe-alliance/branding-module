@@ -645,7 +645,7 @@ SUBDIRS += izibox1
 endif
 
 if HITUBE4K
-SUBDIRS += hitube
+SUBDIRS += hitube1 hitube2
 endif
 
 if SPYCATMINIV2
