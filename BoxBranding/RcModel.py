@@ -395,7 +395,32 @@ class RcModel:
 		# Default RC can only happen with DMM type remote controls.
 		return True if self.getRcFolder() == 'dmm0' else False
 
-	def getRcFolder(self):
+	def process(self, line):
+		if line.lower().startswith('config.usage.rc_model='):
+			parts = line.split('=')
+			folder = parts[-1].rstrip()
+			if isfile('/usr/share/enigma2/rc_models/'+ folder + '/rc.png') and isfile('/usr/share/enigma2/rc_models/'+ folder + '/rcpositions.xml') and isfile('/usr/share/enigma2/rc_models/'+ folder + '/remote.html'):
+				return folder
+		return None
+
+	# Don't try to be clever and use E2 functions here ...
+	def readE2Settings(self):
+		try:
+			with open('/etc/enigma2/settings') as config:
+				for line in config:
+					ret = self.process(line)
+					if ret is not None:
+						return ret
+		except IOError as e:
+			print "[RcModel] IOError: '/etc/enigma2/settings' cannot be opened"
+		return None
+
+	def getRcFolder(self, GetDefault=False):
+		if not GetDefault:
+			ret = self.readE2Settings()
+			if ret is not None:
+				return ret
+
 		boxType = getBoxType()
 		if pathExists("/proc/stb/info/azmodel"):
 			try:
