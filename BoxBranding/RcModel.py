@@ -1,10 +1,10 @@
+from __future__ import print_function
 from os.path import isfile, join as path_join
 
 from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOEM
 
 from Tools.Directories import SCOPE_SKIN, pathExists, resolveFilename
 from Tools.StbHardware import getFPVersion
-
 
 class RcModel:
 	def __init__(self):
@@ -413,7 +413,7 @@ class RcModel:
 					if ret is not None:
 						return ret
 		except IOError as e:
-			print "[RcModel] IOError: '/etc/enigma2/settings' cannot be opened"
+			print ("[RcModel] IOError: '/etc/enigma2/settings' cannot be opened")
 		return None
 
 	def getRcFolder(self, GetDefault=False):
