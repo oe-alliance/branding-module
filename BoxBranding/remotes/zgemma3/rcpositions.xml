@@ -1,55 +1,55 @@
 <rcs>
 	<rc id="2" image="/static/remotes/zgemma3/rc.png">
-		<button keyid="KEY_POWER" name="POWER" title="Power" pos="27,25" shape="rect" size="24,17" />
-		<button keyid="KEY_MUTE" name="MUTE" title="Mute" pos="98,25" shape="rect" size="26,17" />
-		<button keyid="KEY_1" name="1" title="1 ( .:)" pos="30,51" shape="rect" size="29,18" />
-		<button keyid="KEY_2" name="2" title="2 (abc)" pos="64,51" shape="rect" size="29,18" />
-		<button keyid="KEY_3" name="3" title="3 (def)" pos="97,51" shape="rect" size="29,18" />
-		<button keyid="KEY_4" name="4" title="4 (ghi)" pos="30,73" shape="rect" size="29,18" />
-		<button keyid="KEY_5" name="5" title="5 (jkl)" pos="64,73" shape="rect" size="29,18" />
-		<button keyid="KEY_6" name="6" title="6 (mno)" pos="97,73" shape="rect" size="29,18" />
-		<button keyid="KEY_7" name="7" title="7 (pqrs)" pos="30,95" shape="rect" size="29,17" />
-		<button keyid="KEY_8" name="8" title="8 (tuv)" pos="64,95" shape="rect" size="29,17" />
-		<button keyid="KEY_9" name="9" title="9 (wxyz)" pos="97,95" shape="rect" size="29,17" />
-		<button keyid="KEY_PREVIOUS" name="ARROWLEFT" title="Previous / Arrow Left" pos="30,116" shape="rect" size="29,18" />
-		<button keyid="KEY_0" name="0" title="0 (,?!)" pos="64,116" shape="rect" size="29,18" />
-		<button keyid="KEY_NEXT" name="ARROWRIGHT" title="Next / Arrow Right" pos="97,116" shape="rect" size="29,18" />
-		<button keyid="KEY_BACK" name="RECALL" title="Back" pos="25,140" shape="circle" radius="10" />
-		<button keyid="KEY_UP" name="UP" title="Up" pos="62,157" shape="circle" radius="8" />
-		<button keyid="KEY_INFO" name="INFO" title="Info" pos="99,140" shape="circle" radius="10" />
-		<button keyid="KEY_LEFT" name="LEFT" title="Left" pos="35,184" shape="circle" radius="8" />
-		<button keyid="KEY_OK" name="OK" title="OK" pos="62,184" shape="circle" radius="18" />
-		<button keyid="KEY_RIGHT" name="RIGHT" title="Right" pos="89,184" shape="circle" radius="8" />
-		<button keyid="KEY_EXIT" name="EXIT" title="Exit" pos="25,227" shape="circle" radius="10" />
-		<button keyid="KEY_DOWN" name="DOWN" title="Down" pos="62,211" shape="circle" radius="8" />
-		<button keyid="KEY_EPG" name="EPG" title="EPG" pos="99,227" shape="circle" radius="10" />
-		<button keyid="KEY_VOLUMEUP" name="VOL+" title="Volume +" pos="28,258" shape="rect" size="28,21" />
-		<button keyid="KEY_MENU" name="MENU" title="Menu" pos="63,256" shape="rect" size="28,18" />
-		<button keyid="KEY_CHANNELUP" name="BOUQUET+" title="Channel +" pos="97,258" shape="rect" size="29,21" />
-		<button keyid="KEY_VOLUMEDOWN" name="VOL-" title="Volume -" pos="28,293" shape="rect" size="28,21" />
-		<button keyid="KEY_VIDEO" name="VIDEO" title="File List" pos="63,294" shape="rect" size="28,18" />
-		<button keyid="KEY_CHANNELDOWN" name="BOUQUET-" title="Channel -" pos="97,293" shape="rect" size="29,21" />
-		<button keyid="KEY_TEXT" name="TEXT" title="Text" pos="30,315" shape="rect" size="29,16" />
-		<button keyid="KEY_AUDIO" name="AUDIO" title="Audio" pos="63,315" shape="rect" size="28,16" />
-		<button keyid="KEY_SUBTITLE" name="SUBTITLE" title="Subtitle" pos="97,315" shape="rect" size="29,16" />
-		<button keyid="KEY_TV" name="TV" title="TV" pos="30,336" shape="rect" size="29,17" />
-		<button keyid="KEY_CONTEXT_MENU" remap="KEY_BOOKMARKS" name="PLUGIN" title="Portal / Plugins" pos="63,336" shape="rect" size="28,17" />
-		<button keyid="KEY_RADIO" name="RADIO" title="Radio" pos="97,336" shape="rect" size="29,17" />
-		<button keyid="KEY_RED" name="RED" title="Red" pos="25,357" shape="rect" size="20,15" />
-		<button keyid="KEY_GREEN" name="GREEN" title="Green" pos="50,357" shape="rect" size="20,15" />
-		<button keyid="KEY_YELLOW" name="YELLOW" title="Yellow" pos="75,357" shape="rect" size="20,15" />
-		<button keyid="KEY_BLUE" name="BLUE" title="Blue" pos="100,357" shape="rect" size="20,15" />
-		<button keyid="KEY_RECORD" name="RECORD" title="Record" pos="30,379" shape="rect" size="29,18" />
-		<button keyid="KEY_STOP" name="STOP" title="Stop" pos="64,379" shape="rect" size="29,18" />
-		<button keyid="KEY_PLAYPAUSE" name="PLAYPAUSE" title="Play / Pause" pos="97,379" shape="rect" size="29,18" />
-		<button keyid="KEY_PREVIOUSSONG" name="PREVIOUSSONG" title="Previous Song" pos="30,402" shape="rect" size="29,17" />
-		<button keyid="KEY_NEXTSONG" name="NEXTSONG" title="Next Song" pos="64,402" shape="rect" size="29,17" />
-		<button keyid="KEY_PROGRAM" name="TIMER" title="Timer" pos="97,402" shape="rect" size="29,17" />
-		<button keyid="KEY_REWIND" name="REWIND" title="Rewind" pos="30,424" shape="rect" size="29,18" />
-		<button keyid="KEY_FASTFORWARD" name="FASTFORWARD" title="Fast Forward" pos="64,424" shape="rect" size="29,18" />
-		<button keyid="KEY_SLEEP" name="SLEEP" title="Sleep" pos="97,424" shape="rect" size="29,18" />
-		<button keyid="KEY_SWITCHVIDEOMODE" name="VMODE" title="Video Mode" pos="30,447" shape="rect" size="29,17" />
-		<button keyid="KEY_FAVORITES" name="FAV" title="Favorites" pos="64,447" shape="rect" size="29,17" />
-		<button keyid="KEY_HELP" name="HELP" title="Help" pos="97,447" shape="rect" size="29,17" />
+		<button keyid="KEY_POWER" name="POWER" title="Power" pos="26,24" shape="rect" size="28,20" />
+		<button keyid="KEY_MUTE" name="MUTE" title="Mute" pos="98,24" shape="rect" size="28,20" />
+		<button keyid="KEY_1" name="1" title="1 ( .:)" pos="28,51" shape="rect" size="32,20" />
+		<button keyid="KEY_2" name="2" title="2 (abc)" pos="62,51" shape="rect" size="32,20" />
+		<button keyid="KEY_3" name="3" title="3 (def)" pos="96,51" shape="rect" size="32,20" />
+		<button keyid="KEY_4" name="4" title="4 (ghi)" pos="28,73" shape="rect" size="32,20" />
+		<button keyid="KEY_5" name="5" title="5 (jkl)" pos="62,73" shape="rect" size="32,20" />
+		<button keyid="KEY_6" name="6" title="6 (mno)" pos="96,73" shape="rect" size="32,20" />
+		<button keyid="KEY_7" name="7" title="7 (pqrs)" pos="28,95" shape="rect" size="32,20" />
+		<button keyid="KEY_8" name="8" title="8 (tuv)" pos="62,95" shape="rect" size="32,20" />
+		<button keyid="KEY_9" name="9" title="9 (wxyz)" pos="96,95" shape="rect" size="32,20" />
+		<button keyid="KEY_PREVIOUS" name="ARROWLEFT" title="Previous / Arrow Left" pos="28,117" shape="rect" size="32,20" />
+		<button keyid="KEY_0" name="0" title="0 (,?!)" pos="62,117" shape="rect" size="32,20" />
+		<button keyid="KEY_NEXT" name="ARROWRIGHT" title="Next / Arrow Right" pos="96,117" shape="rect" size="32,20" />
+		<button keyid="KEY_BACK" name="RECALL" title="Back" pos="25,140" shape="circle" radius="11" />
+		<button keyid="KEY_INFO" name="INFO" title="Info" pos="99,140" shape="circle" radius="11" />
+		<button keyid="KEY_UP" name="UP" title="Up" pos="63,154" shape="rect" size="37,24" />
+		<button keyid="KEY_LEFT" name="LEFT" title="Left" pos="32,185" shape="rect" size="24,37" />
+		<button keyid="KEY_OK" name="OK" title="OK" pos="63,185" shape="circle" radius="18" />
+		<button keyid="KEY_RIGHT" name="RIGHT" title="Right" pos="93,185" shape="rect" size="24,37" />
+		<button keyid="KEY_DOWN" name="DOWN" title="Down" pos="63,215" shape="rect" size="37,24" />
+		<button keyid="KEY_EXIT" name="EXIT" title="Exit" pos="25,227" shape="circle" radius="11" />
+		<button keyid="KEY_EPG" name="EPG" title="EPG" pos="99,227" shape="circle" radius="11" />
+		<button keyid="KEY_VOLUMEUP" name="VOL+" title="Volume +" pos="28,257" shape="rect" size="32,24" />
+		<button keyid="KEY_CHANNELUP" name="BOUQUET+" title="Channel +" pos="96,257" shape="rect" size="32,24" />
+		<button keyid="KEY_MENU" name="MENU" title="Menu" pos="62,256" shape="rect" size="32,20" />
+		<button keyid="KEY_VIDEO" name="VIDEO" title="File List" pos="62,293" shape="rect" size="32,20" />
+		<button keyid="KEY_VOLUMEDOWN" name="VOL-" title="Volume -" pos="28,292" shape="rect" size="32,24" />
+		<button keyid="KEY_CHANNELDOWN" name="BOUQUET-" title="Channel -" pos="96,292" shape="rect" size="32,24" />
+		<button keyid="KEY_TEXT" name="TEXT" title="Text" pos="28,315" shape="rect" size="32,18" />
+		<button keyid="KEY_AUDIO" name="AUDIO" title="Audio" pos="62,315" shape="rect" size="32,18" />
+		<button keyid="KEY_SUBTITLE" name="SUBTITLE" title="Subtitle" pos="96,315" shape="rect" size="32,18" />
+		<button keyid="KEY_TV" name="TV" title="TV" pos="28,335" shape="rect" size="32,18" />
+		<button keyid="KEY_CONTEXT_MENU" remap="KEY_BOOKMARKS" name="PLUGIN" title="Portal / Plugins" pos="62,335" shape="rect" size="32,18" />
+		<button keyid="KEY_RADIO" name="RADIO" title="Radio" pos="96,335" shape="rect" size="32,18" />
+		<button keyid="KEY_RED" name="RED" title="Red" pos="24,357" shape="rect" size="24,20" />
+		<button keyid="KEY_GREEN" name="GREEN" title="Green" pos="49,357" shape="rect" size="24,20" />
+		<button keyid="KEY_YELLOW" name="YELLOW" title="Yellow" pos="75,357" shape="rect" size="24,20" />
+		<button keyid="KEY_BLUE" name="BLUE" title="Blue" pos="100,357" shape="rect" size="24,20" />
+		<button keyid="KEY_RECORD" name="RECORD" title="Record" pos="28,379" shape="rect" size="32,20" />
+		<button keyid="KEY_STOP" name="STOP" title="Stop" pos="62,379" shape="rect" size="32,20" />
+		<button keyid="KEY_PLAYPAUSE" name="PLAYPAUSE" title="Play / Pause" pos="96,379" shape="rect" size="32,20" />
+		<button keyid="KEY_PREVIOUSSONG" name="PREVIOUSSONG" title="Previous Song" pos="28,401" shape="rect" size="32,20" />
+		<button keyid="KEY_NEXTSONG" name="NEXTSONG" title="Next Song" pos="62,401" shape="rect" size="32,20" />
+		<button keyid="KEY_PROGRAM" name="TIMER" title="Timer" pos="96,401" shape="rect" size="32,20" />
+		<button keyid="KEY_REWIND" name="REWIND" title="Rewind" pos="28,423" shape="rect" size="32,20" />
+		<button keyid="KEY_FASTFORWARD" name="FASTFORWARD" title="Fast Forward" pos="62,423" shape="rect" size="32,20" />
+		<button keyid="KEY_SLEEP" name="SLEEP" title="Sleep" pos="96,423" shape="rect" size="32,20" />
+		<button keyid="KEY_SWITCHVIDEOMODE" name="VMODE" title="Video Mode" pos="28,445" shape="rect" size="32,20" />
+		<button keyid="KEY_FAVORITES" name="FAV" title="Favorites" pos="62,445" shape="rect" size="32,20" />
+		<button keyid="KEY_HELP" name="HELP" title="Help" pos="96,445" shape="rect" size="32,20" />
 	</rc>
 </rcs>
