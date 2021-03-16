@@ -299,6 +299,7 @@ class RcModel:
 			"viper4k": "amiko4",
 			"viper4k51": "amiko5",
 			"viper4kv20": "amiko6",
+			"viper4kv30": "amiko6",
 			"vipercombo": "amiko2",
 			"vipercombohdd": "amiko1",
 			"viperslim": "amiko2",
