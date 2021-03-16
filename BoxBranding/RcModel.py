@@ -164,6 +164,7 @@ class RcModel:
 			"gi11000": "et7x00mini",
 			"hitube4k": "hitube1",
 			"hitube4kpro": "hitube2",
+			"hitube4kplus": "hitube2",
 			"iqonios100hd": "iqon1",
 			"iqonios200hd": "iqon1",
 			"iqonios300hd": "iqon1",
