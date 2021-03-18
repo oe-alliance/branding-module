@@ -1,0 +1,61 @@
+<rcs>
+	<rc id="2">
+		<!-- <button name="TV Power" pos="24,27" /> --> <!-- Event type 4, code 4, value 1086264045 -->
+		<button name="POWER" pos="95,27" /> <!-- 116 -->
+		<!-- <button name="TV Volume -" pos="22,52" /> --> <!-- Event type 4, code 4, value 100332045 -->
+		<!-- <button name="TV Volume +" pos="47,52" /> --> <!-- Event type 4, code 4, value 100332300 -->
+		<!-- <button name="IR Learning" pos="72,52" /> --> <!-- Learning, no IR -->
+		<!-- <button name="TV / AV" pos="97,52" /> --> <!-- Event type 4, code 4, value 100332555	-->
+		<button name="1" pos="25,74" /> <!-- 2 -->
+		<button name="2" pos="60,74" /> <!-- 3 -->
+		<button name="3" pos="95,74" /> <!-- 4 -->
+		<button name="4" pos="25,102" /> <!-- 5 -->
+		<button name="5" pos="60,102" /> <!-- 6 -->
+		<button name="6" pos="95,102" /> <!-- 7 -->
+		<button name="7" pos="25,130" /> <!-- 8 -->
+		<button name="8" pos="60,130" /> <!-- 9 -->
+		<button name="9" pos="95,130" /> <!-- 10 -->
+		<button name="ARROWLEFT" pos="25,158" /> <!-- 412 -->
+		<button name="0" pos="60,158" /> <!-- 11 -->
+		<button name="ARROWRIGHT" pos="95,158" /> <!-- 407 -->
+		<button name="F1" pos="22,179" /> <!-- 59 -->
+		<button name="F2" pos="47,179" /> <!-- 60 -->
+		<button name="F3" pos="73,179" /> <!-- 61 -->
+		<button name="F4" pos="98,179" /> <!-- 62 -->
+		<button name="MUTE" pos="22,198" /> <!-- 113 -->
+		<!-- <button name="Resolution" pos="47,198" /> --> <!-- Event type 4, code 4, value 100280535 -->
+		<button name="HELP" pos="73,198" /> <!-- 138 -->
+		<!-- <button name="Magic" pos="98,198" /> --> <!-- Event type 4, code 4, value 100289460 -->
+		<button name="MENU" pos="20,222" /> <!-- 139 -->
+		<button name="UP" pos="59,226" /> <!-- 103 -->
+		<button name="EXIT" pos="100,222" /> <!-- 174 -->
+		<button name="LEFT" pos="32,253" /> <!-- 105 -->
+		<button name="OK" pos="60,253" /> <!-- 352 -->
+		<button name="RIGHT" pos="88,253" /> <!-- 106 -->
+		<button name="INFO" pos="21,287" /> <!-- 358 -->
+		<button name="DOWN" pos="59,280" /> <!-- 108 -->
+		<button name="RECALL" pos="98,286" /> <!-- 158 -->
+		<button name="VOL+" pos="27,314" /> <!-- 115 -->
+		<button name="VIDEO" pos="60,316" /> <!-- 393 -->
+		<button name="BOUQUET+" pos="92,314" /> <!-- 402 -->
+		<button name="VOL-" pos="27,347" /> <!-- 114 -->
+		<button name="EPG" pos="60,342" /> <!-- 365 -->
+		<button name="BOUQUET-" pos="92,347" /> <!-- 403 -->
+		<button name="RED" pos="22,367" /> <!-- 398 -->
+		<button name="GREEN" pos="47,367" /> <!-- 399 -->
+		<button name="YELLOW" pos="72,367" /> <!-- 400 -->
+		<button name="BLUE" pos="97,367" /> <!-- 401 -->
+		<button name="REWIND" pos="22,386" /> <!-- 168 -->
+		<button name="PLAY" pos="47,386" /> <!-- 207 -->
+		<button name="PAUSE" pos="72,386" /> <!-- 119 -->
+		<button name="FASTFORWARD" pos="97,386" /> <!-- 208 -->
+		<button name="AUDIO" pos="22,405" /> <!-- 392 -->
+		<button name="STOP" pos="47,405" /> <!-- 128 -->
+		<button name="RECORD" pos="72,405" /> <!-- 167 -->
+		<button name="CONTEXT" pos="97,405" /> <!-- 374 -->
+		<button name="TEXT" pos="22,424" /> <!-- 388 -->
+		<button name="SUBTITLE" pos="47,424" /> <!-- 370 -->
+		<button name="RADIO" pos="72,424" /> <!-- 377 -->
+		<button name="FAVORITES" pos="97,424" /> <!-- 364 -->
+	</rc>
+</rcs>
