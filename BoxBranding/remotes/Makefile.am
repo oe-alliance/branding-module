@@ -117,7 +117,7 @@ SUBDIRS += sf3038
 endif
 
 if SF8008
-SUBDIRS += sf8008
+SUBDIRS += sf8008 octagon1
 endif
 
 if SF3038
