@@ -22,7 +22,7 @@
 		<button keyid="KEY_VOLUMEUP" name="VOL+" title="Volume +" pos="34,209" shape="rect" size="27,26" />
 		<button keyid="KEY_CHANNELUP" name="BOUQUET+" title="Channel +" pos="112,209" shape="rect" size="27,26" />
 		<button keyid="KEY_EXIT" name="EXIT" title="Exit" pos="72,216" shape="rect" size="20,20" />
-		<button keyid="KEY_INFO" remap="KEY_EPG" name="EPG" title="Info / EPG" pos="72,242" shape="rect" size="20,20" />
+		<button keyid="KEY_INFO" name="EPG" title="Info / EPG" pos="72,242" shape="rect" size="20,20" />
 		<button keyid="KEY_VOLUMEDOWN" name="VOL-" title="Volume -" pos="34,242" shape="rect" size="27,23" />
 		<button keyid="KEY_CHANNELDOWN" name="BOUQUET-" title="Channel -" pos="112,242" shape="rect" size="27,23" />
 		<button keyid="KEY_1" name="1" title="1" pos="35,277" shape="rect" size="33,15" />
