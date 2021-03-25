@@ -460,6 +460,7 @@ AM_CONDITIONAL(OSMINI4K, test `echo "$BOXTYPE" | cut -b 1-8` == "osmini4k")
 AM_CONDITIONAL(PROTEK9900LX, test "$BOXTYPE" == 9900lx)
 AM_CONDITIONAL(PROTEK4KX1, test "$BOXTYPE" == protek4kx1)
 AM_CONDITIONAL(PROTEK4KX2, test "$BOXTYPE" == protek4kx2)
+AM_CONDITIONAL(PULSE4K, test "$BOXTYPE" == pulse4k)
 AM_CONDITIONAL(PUREHD, test "$BOXTYPE" == purehd)
 AM_CONDITIONAL(PUREHDSE, test "$BOXTYPE" == purehdse)
 AM_CONDITIONAL(SF98, test "$BOXTYPE" == sf98)
@@ -523,6 +524,7 @@ Makefile
 BoxBranding/Makefile
 BoxBranding/lib/Makefile
 BoxBranding/remotes/Makefile
+BoxBranding/remotes/abcom/Makefile
 BoxBranding/remotes/amiko1/Makefile
 BoxBranding/remotes/amiko2/Makefile
 BoxBranding/remotes/amiko3/Makefile

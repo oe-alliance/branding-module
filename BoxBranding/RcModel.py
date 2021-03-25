@@ -230,6 +230,7 @@ class RcModel:
 			"protek4k": "protek2",
 			"protek4kx1": "protek3",
 			"protek4kx2": "protek3",
+			"pulse4k": "abcom",
 			"quadbox2400": "hd2400",
 			"revo4k": "revo",
 			"roxxs200hd": "iqon1",
