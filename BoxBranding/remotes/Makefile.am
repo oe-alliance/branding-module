@@ -671,3 +671,7 @@ endif
 if PULSE4K
 SUBDIRS += abcom
 endif
+
+if NOVALER4K
+SUBDIRS += novaler1
+endif

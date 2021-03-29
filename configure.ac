@@ -435,6 +435,7 @@ AM_CONDITIONAL(VIPERTWIN, test "$BOXTYPE" == vipertwin)
 AM_CONDITIONAL(MEDIABOX, test "$BOXTYPE" == mediabox)
 AM_CONDITIONAL(MEDIABOX4K, test "$BOXTYPE" == mediabox4k)
 AM_CONDITIONAL(MBTWIN, test "$BOXTYPE" == mbtwin)
+AM_CONDITIONAL(NOVALER4K, test "$BOXTYPE" == novaler4k)
 AM_CONDITIONAL(HD2400, test "$MACHINE_BUILD" == hd2400)
 AM_CONDITIONAL(HD1500, test "$MACHINE_BUILD" == hd1500)
 AM_CONDITIONAL(HD1200, test "$MACHINE_BUILD" == hd1200)
@@ -618,6 +619,7 @@ BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
 BoxBranding/remotes/mediabox/Makefile
 BoxBranding/remotes/mediabox4k/Makefile
+BoxBranding/remotes/novaler4k/Makefile
 BoxBranding/remotes/red1/Makefile
 BoxBranding/remotes/red2/Makefile
 BoxBranding/remotes/octagon1/Makefile
