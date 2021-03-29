@@ -620,7 +620,7 @@ BoxBranding/remotes/megasat1/Makefile
 BoxBranding/remotes/megasat2/Makefile
 BoxBranding/remotes/mediabox/Makefile
 BoxBranding/remotes/mediabox4k/Makefile
-BoxBranding/remotes/novaler4k/Makefile
+BoxBranding/remotes/novaler1/Makefile
 BoxBranding/remotes/red1/Makefile
 BoxBranding/remotes/red2/Makefile
 BoxBranding/remotes/octagon1/Makefile
