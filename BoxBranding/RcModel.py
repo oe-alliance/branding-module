@@ -413,7 +413,7 @@ class RcModel:
 	# Don't try to be clever and use E2 functions here ...
 	def readE2Settings(self):
 		try:
-			with open('/etc/enigma2/settings') as config:
+			with open('/etc/enigma2/settings', encoding="utf-8") as config:
 				for line in config:
 					ret = self.process(line)
 					if ret is not None:
