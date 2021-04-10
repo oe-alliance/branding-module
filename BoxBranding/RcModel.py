@@ -6,6 +6,7 @@ from boxbranding import getBoxType, getMachineBrand, getMachineBuild, getBrandOE
 from Tools.Directories import SCOPE_SKIN, pathExists, resolveFilename
 from Tools.StbHardware import getFPVersion
 
+
 class RcModel:
 	def __init__(self):
 		self.boxTypes = {
