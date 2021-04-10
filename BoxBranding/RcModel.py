@@ -406,7 +406,7 @@ class RcModel:
 		if line.lower().startswith('config.usage.rc_model='):
 			parts = line.split('=')
 			folder = parts[-1].rstrip()
-			if isfile('/usr/share/enigma2/rc_models/'+ folder + '/rc.png') and isfile('/usr/share/enigma2/rc_models/'+ folder + '/rcpositions.xml') and isfile('/usr/share/enigma2/rc_models/'+ folder + '/remote.html'):
+			if isfile('/usr/share/enigma2/rc_models/' + folder + '/rc.png') and isfile('/usr/share/enigma2/rc_models/' + folder + '/rcpositions.xml') and isfile('/usr/share/enigma2/rc_models/' + folder + '/remote.html'):
 				return folder
 		return None
 
