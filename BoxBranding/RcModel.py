@@ -419,7 +419,7 @@ class RcModel:
 					if ret is not None:
 						return ret
 		except IOError as e:
-			print ("[RcModel] IOError: '/etc/enigma2/settings' cannot be opened")
+			print("[RcModel] IOError: '/etc/enigma2/settings' cannot be opened")
 		return None
 
 	def getRcFolder(self, GetDefault=False):
