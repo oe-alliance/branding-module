@@ -349,6 +349,8 @@ class RcModel:
 			"zgemmah102s": "zgemma7",
 			"zgemmah10combo": "zgemma7",
 			"zgemmah11": "zgemma7",
+			"zgemmah11s": "zgemma7",
+			"zgemmah112h": "zgemma7",
 			"zgemmah2h": "zgemma3",
 			"zgemmah2s": "zgemma3",
 			"zgemmah2splus": "zgemma3",
