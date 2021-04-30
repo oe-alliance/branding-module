@@ -668,7 +668,7 @@ if JDHDDUO
 SUBDIRS += jd1
 endif
 
-if PULSE4K
+if ABPULSE4K
 SUBDIRS += abcom
 endif
 
