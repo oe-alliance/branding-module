@@ -640,6 +640,10 @@ if IZIBOXELITE4K
 SUBDIRS += izibox2
 endif
 
+if IZIBOXONE4KPLUS
+SUBDIRS += izibox2
+endif
+
 if IZIBOXX3
 SUBDIRS += izibox1
 endif
