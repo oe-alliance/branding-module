@@ -255,6 +255,7 @@ class RcModel:
 			"sf8008m": "sf8008",
 			"sf8008s": "sf8008",
 			"sf8008t": "sf8008",
+			"sf8008ta": "sf8008",
 			"sf98": "sf98",
 			"singleboxlcd": "red2",
 			"sogno8800hd": "sogno",
