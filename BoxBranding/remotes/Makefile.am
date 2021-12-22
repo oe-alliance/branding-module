@@ -120,6 +120,10 @@ if SF8008
 SUBDIRS += sf8008 octagon1
 endif
 
+if SX988
+SUBDIRS += sf8008 octagon1 octagon2
+endif
+
 if SF3038
 SUBDIRS += sf3038
 endif
@@ -609,7 +613,11 @@ SUBDIRS += anadol1
 endif
 
 if USTYM4KPRO
-SUBDIRS += uclan
+SUBDIRS += uclan1
+endif
+
+if USTYM4KOTT
+SUBDIRS += uclan2
 endif
 
 if ULTRAV8PLUS

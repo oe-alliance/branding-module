@@ -1,4 +1,4 @@
-installdir = /usr/share/enigma2/rc_models/uclan
+installdir = /usr/share/enigma2/rc_models/octagon2
 
 dist_install_DATA = \
 	rc.png \

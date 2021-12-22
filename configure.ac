@@ -473,6 +473,7 @@ AM_CONDITIONAL(SF3038, test "$BOXTYPE" == sf3038)
 AM_CONDITIONAL(SF4008, test "$BOXTYPE" == sf4008)
 AM_CONDITIONAL(SF5008, test "$BOXTYPE" == sf5008)
 AM_CONDITIONAL(SF8008, test `echo "$BOXTYPE" | cut -b 1-6` == "sf8008")
+AM_CONDITIONAL(SX988, test "$BOXTYPE" == sx988)
 AM_CONDITIONAL(SOGNO8800HD, test "$BOXTYPE" == sogno8800hd)
 AM_CONDITIONAL(SPYCATMINIV2, test "$BOXTYPE" == spycatminiv2)
 AM_CONDITIONAL(T2CABLE, test "$BOXTYPE" == t2cable)
@@ -497,6 +498,7 @@ AM_CONDITIONAL(ULTRAV8PLUS, test "$BOXTYPE" == ultrav8plus)
 AM_CONDITIONAL(MAXYTEMULTI, test "$BOXTYPE" == maxytecmulti)
 AM_CONDITIONAL(MAXYTEMULTISE, test "$BOXTYPE" == maxytecmultise)
 AM_CONDITIONAL(USTYM4KPRO, test "$BOXTYPE" == ustym4kpro)
+AM_CONDITIONAL(USTYM4KOTT, test "$BOXTYPE" == ustym4kott)
 AM_CONDITIONAL(VS1000, test "$MACHINE_BUILD" == vs1000)
 AM_CONDITIONAL(VS1500, test "$MACHINE_BUILD" == vs1500)
 AM_CONDITIONAL(VUUNO, test "$BOXTYPE" == vuuno)
@@ -625,6 +627,7 @@ BoxBranding/remotes/novaler1/Makefile
 BoxBranding/remotes/red1/Makefile
 BoxBranding/remotes/red2/Makefile
 BoxBranding/remotes/octagon1/Makefile
+BoxBranding/remotes/octagon2/Makefile
 BoxBranding/remotes/odinm6/Makefile
 BoxBranding/remotes/odinm7/Makefile
 BoxBranding/remotes/odinm9/Makefile
@@ -661,7 +664,8 @@ BoxBranding/remotes/tm3/Makefile
 BoxBranding/remotes/tm4/Makefile
 BoxBranding/remotes/tm5/Makefile
 BoxBranding/remotes/tm6/Makefile
-BoxBranding/remotes/uclan/Makefile
+BoxBranding/remotes/uclan1/Makefile
+BoxBranding/remotes/uclan2/Makefile
 BoxBranding/remotes/visionnet/Makefile
 BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
