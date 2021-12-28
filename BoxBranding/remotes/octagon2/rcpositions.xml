@@ -1,5 +1,5 @@
 <rcs>
-	<rc keyid="2" image="/static/remotes/octagon2/rc.png">
+	<rc id="2" image="/static/remotes/octagon2/rc.png">
 		<button keyid="KEY_RESERVED" name="" title="TV Power" pos="25,30" shape="circle" radius="20" />
 		<button keyid="KEY_POWER" name="POWER" title="POWER" pos="90,31" shape="circle" radius="12" />
 		<button keyid="KEY_RESERVED" name="" title="TV A/V" pos="21,59" shape="rect" size="16,10" />
