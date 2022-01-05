@@ -302,7 +302,7 @@ class RcModel:
 			"ustym4kpro": "uclan1",
 			"ustym4kprosingle": "uclan1",
 			"ustym4kprotwin": "uclan1",
-			"ustym4kott": "uclan2",
+			"ustym4kottpremium": "uclan2",
 			"valalinux": "vala",
 			"vimastec1000": "hd1100",
 			"vimastec1500": "hd1100",

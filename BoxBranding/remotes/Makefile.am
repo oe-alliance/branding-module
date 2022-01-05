@@ -616,7 +616,7 @@ if USTYM4KPRO
 SUBDIRS += uclan1
 endif
 
-if USTYM4KOTT
+if USTYM4KOTTPREMIUM
 SUBDIRS += uclan2
 endif
 
