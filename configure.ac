@@ -465,6 +465,7 @@ AM_CONDITIONAL(PROTEK4KX2, test "$BOXTYPE" == protek4kx2)
 AM_CONDITIONAL(PULSE4K, test `echo "$BOXTYPE" | cut -b 1-7` == "pulse4k")
 AM_CONDITIONAL(PUREHD, test "$BOXTYPE" == purehd)
 AM_CONDITIONAL(PUREHDSE, test "$BOXTYPE" == purehdse)
+AM_CONDITIONAL(OG2OTT4K, test "$BOXTYPE" == og2ott4k)
 AM_CONDITIONAL(SF98, test "$BOXTYPE" == sf98)
 AM_CONDITIONAL(SF108, test "$BOXTYPE" == sf108)
 AM_CONDITIONAL(SF128, test "$BOXTYPE" == sf128)
@@ -643,6 +644,7 @@ BoxBranding/remotes/qviart2/Makefile
 BoxBranding/remotes/qviart3/Makefile
 BoxBranding/remotes/qviart4/Makefile
 BoxBranding/remotes/qviart5/Makefile
+BoxBranding/remotes/qviart6/Makefile
 BoxBranding/remotes/sab1/Makefile
 BoxBranding/remotes/sf98/Makefile
 BoxBranding/remotes/sf108/Makefile

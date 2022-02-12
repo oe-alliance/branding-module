@@ -288,6 +288,10 @@ if DUAL
 SUBDIRS += qviart5
 endif
 
+if OG2OTT4K
+SUBDIRS += qviart6
+endif
+
 if EDISION
 SUBDIRS += optimuss1 optimuss2
 endif

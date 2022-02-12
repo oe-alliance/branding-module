@@ -184,6 +184,7 @@ class RcModel:
 			"lunix4k": "qviart3",
 			"lunixco": "qviart4",
 			"dual": "qviart5",
+			"og2ott4k": "qviart6",
 			"mago": "relook",
 			"marvel1": "visionnet",
 			"maxytecmulti": "maxytec1",
