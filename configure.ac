@@ -449,6 +449,7 @@ AM_CONDITIONAL(HITUBE4K, test `echo "$BOXTYPE" | cut -b 1-8` == "hitube4k")
 AM_CONDITIONAL(MUTANT51, test "$BOXTYPE" == mutant51)
 AM_CONDITIONAL(MUTANT60, test "$BOXTYPE" == mutant60)
 AM_CONDITIONAL(MUTANT61, test "$BOXTYPE" == mutant61)
+AM_CONDITIONAL(MUTANT66SE, test "$BOXTYPE" == mutant66se)
 AM_CONDITIONAL(ODINM6, test "$BOXTYPE" == odinm6)
 AM_CONDITIONAL(ODINM7, test "$MACHINE_BUILD" == odinm7)
 AM_CONDITIONAL(ODINM9, test "$MACHINE_BUILD" == odinm9)
@@ -599,6 +600,7 @@ BoxBranding/remotes/hd1100/Makefile
 BoxBranding/remotes/hd530c/Makefile
 BoxBranding/remotes/hd2400/Makefile
 BoxBranding/remotes/hd60/Makefile
+BoxBranding/remotes/hd66se/Makefile
 BoxBranding/remotes/hitube1/Makefile
 BoxBranding/remotes/hitube2/Makefile
 BoxBranding/remotes/ini0/Makefile
