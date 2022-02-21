@@ -212,6 +212,7 @@ class RcModel:
 			"mutant61": "hd60",
 			"mutant66se": "hd66se",
 			"novaler4k": "novaler1",
+			"novaler4kse": "novaler1",
 			"novacombo": "evo7",
 			"novaip": "evo6",
 			"novatwin": "evo7",

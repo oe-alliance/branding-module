@@ -703,3 +703,7 @@ endif
 if NOVALER4K
 SUBDIRS += novaler1
 endif
+
+if NOVALER4KSE
+SUBDIRS += novaler1
+endif
