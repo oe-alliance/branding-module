@@ -124,6 +124,10 @@ if SF8008
 SUBDIRS += sf8008 octagon1
 endif
 
+if SFX6008
+SUBDIRS += sf8008 octagon1
+endif
+
 if SX988
 SUBDIRS += sf8008 octagon1 octagon2
 endif
