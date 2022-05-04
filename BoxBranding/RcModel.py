@@ -466,7 +466,6 @@ class RcModel:
 			boxType = "BrandOEM_fulan"
 		elif getMachineBuild().startswith("ebox"):
 			boxType = "MachineBuild_ebox"
-		boxType = self.machineBrands.get(getMachineBrand(), boxType)
 		boxType = self.machineBuilds.get(getMachineBuild(), boxType)
 		return self.boxTypes.get(boxType, "dmm0")
 
