@@ -198,6 +198,20 @@ char *_getBoxType()	// this will try to find the correct BOX MACHINE e.x MACHINE
 			return strdup(BOXTYPE);
 		}
 	}
+	else if(strcmp(BOXTYPE, "sfx6008") == 0)
+	{
+		boxtype_name = ReadProcEntry("/proc/stb/info/type");
+		if(strcmp(boxtype_name, "10") == 0)
+		{
+			free(boxtype_name);
+			return strdup("sfx6018");
+		}
+		else
+		{
+			free(boxtype_name);
+			return strdup(BOXTYPE);
+		}
+	}
 	else if(strcmp(BOXTYPE, "ustym4kpro") == 0)
 	{
 		boxtype_name = ReadProcEntry("/proc/stb/info/type");
@@ -313,6 +327,21 @@ char *_getMachineName()
 			{
 				free(boxtype_name);
 				return strdup("SF8008 4K Twin");
+			}
+			else
+			{
+				free(boxtype_name);
+				return strdup(MACHINE_NAME);
+			}
+		}
+		else if(strcmp(boxtype_name, "sfx6008") == 0)
+		{
+			free(boxtype_name);
+			boxtype_name = ReadProcEntry("/proc/stb/info/type");
+			if(startsWith(boxtype_name, "10"))
+			{
+				free(boxtype_name);
+				return strdup("SFX6018");
 			}
 			else
 			{
