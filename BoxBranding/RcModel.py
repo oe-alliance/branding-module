@@ -264,6 +264,7 @@ class RcModel:
 			"sfx6008": "octagon3",
 			"sfx6018": "octagon3",
 			"sx988": "octagon2",
+			"ip8": "octagon2",
 			"sf98": "sf98",
 			"singleboxlcd": "red2",
 			"sogno8800hd": "sogno",
