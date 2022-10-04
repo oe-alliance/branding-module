@@ -422,6 +422,7 @@ AM_CONDITIONAL(GBQUAD4K, test "$BOXTYPE" == gbquad4k)
 AM_CONDITIONAL(INIHDX, test "$MACHINE_BUILD" == inihdx)
 AM_CONDITIONAL(INIHDE, test "$MACHINE_BUILD" == inihde)
 AM_CONDITIONAL(INIHDP, test "$MACHINE_BUILD" == inihdp)
+AM_CONDITIONAL(IP8, test "$MACHINE_BUILD" == ip8)
 AM_CONDITIONAL(IQONIOS100HD, test "$BOXTYPE" == iqonios100hd)
 AM_CONDITIONAL(IQONIOS200HD, test "$BOXTYPE" == iqonios200hd)
 AM_CONDITIONAL(IQONIOS300HD, test "$BOXTYPE" == iqonios300hd)
@@ -544,6 +545,7 @@ BoxBranding/remotes/amiko6/Makefile
 BoxBranding/remotes/anadol1/Makefile
 BoxBranding/remotes/anadol2/Makefile
 BoxBranding/remotes/anadol3/Makefile
+BoxBranding/remotes/anadol4/Makefile
 BoxBranding/remotes/ariva/Makefile
 BoxBranding/remotes/ax1/Makefile
 BoxBranding/remotes/ax2/Makefile

@@ -40,6 +40,7 @@ class RcModel:
 			"anadolmultitwin": "anadol2",
 			"anadolmultiboxse": "anadol2",
 			"anadolprohd5": "anadol3",
+			"ip8": "anadol4",
 			"arivacombo": "ariva",
 			"arivatwin": "ariva",
 			"atemio5x00": "ini4",
