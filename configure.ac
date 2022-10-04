@@ -601,6 +601,7 @@ BoxBranding/remotes/gb1/Makefile
 BoxBranding/remotes/gb2/Makefile
 BoxBranding/remotes/gb3/Makefile
 BoxBranding/remotes/gb4/Makefile
+BoxBranding/remotes/gb5/Makefile
 BoxBranding/remotes/gi1/Makefile
 BoxBranding/remotes/hd1100/Makefile
 BoxBranding/remotes/hd530c/Makefile
