@@ -57,6 +57,8 @@ class RcModel:
 			"axashis4kcombo": "axas1",
 			"axashis4kcomboplus": "axas1",
 			"axashisc4k": "axas2",
+			"axas4kcombo": "axas2",
+			"axas4ktwin": "axas2",
 			"axashistwin": "axas3",
 			"axashistwinplus": "axas4",
 			"axodin": "odinm6",

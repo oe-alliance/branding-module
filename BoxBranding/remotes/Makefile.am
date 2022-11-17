@@ -620,7 +620,7 @@ if FERGUSON4K
 SUBDIRS += dinobot1
 endif
 
-if AXASHIS
+if AXAS
 SUBDIRS += axas1 axas2 axas3 axas4
 endif
 
