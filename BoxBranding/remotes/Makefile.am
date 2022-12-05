@@ -121,14 +121,18 @@ SUBDIRS += sf3038
 endif
 
 if SF8008
-SUBDIRS += sf8008 octagon1 octagon3
+SUBDIRS += sf8008 octagon1 octagon2 octagon3
 endif
 
 if SFX6008
-SUBDIRS += sf8008 octagon1 octagon3
+SUBDIRS += sf8008 octagon1 octagon2 octagon3
 endif
 
 if SX988
+SUBDIRS += sf8008 octagon1 octagon2 octagon3
+endif
+
+if SX88V2
 SUBDIRS += sf8008 octagon1 octagon2 octagon3
 endif
 

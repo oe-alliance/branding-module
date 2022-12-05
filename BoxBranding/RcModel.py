@@ -267,6 +267,7 @@ class RcModel:
 			"sf8008opt": "sf8008",
 			"sfx6008": "octagon3",
 			"sfx6018": "octagon3",
+			"sx88v2": "octagon3",
 			"sx988": "octagon2",
 			"ip8": "octagon2",
 			"sf98": "sf98",
