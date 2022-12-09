@@ -716,6 +716,10 @@ if NOVALER4KSE
 SUBDIRS += novaler1
 endif
 
+if NOVALER4KPRO
+SUBDIRS += novaler1
+endif
+
 if IP8
 SUBDIRS += anadol4
 endif
