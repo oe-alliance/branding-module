@@ -153,7 +153,7 @@ SUBDIRS += sf98
 endif
 
 if DREAMBOX
-SUBDIRS += dmm0 dmm1 dmm2
+SUBDIRS += dmm0 dmm1 dmm2 dmm3
 endif
 
 if EBOX

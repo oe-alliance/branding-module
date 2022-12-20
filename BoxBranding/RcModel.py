@@ -100,6 +100,8 @@ class RcModel:
 			"dm820": "dmm2",
 			"dm900": "dmm2",
 			"dm920": "dmm2",
+			"dreamone": "dmm3",
+			"dreamtwo": "dmm3",
 			"e4hd": "e4hd",
 			"e4hdcombo": "e4hdcombo",
 			"e4hdhybrid": "e4hd",
