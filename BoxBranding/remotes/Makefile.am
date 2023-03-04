@@ -640,6 +640,10 @@ if USTYM4KOTTPREMIUM
 SUBDIRS += uclan2
 endif
 
+if USTYM4KS2OTTX
+SUBDIRS += uclan3
+endif
+
 if ULTRAV8PLUS
 SUBDIRS += maxytec1
 endif

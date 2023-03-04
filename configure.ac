@@ -510,6 +510,7 @@ AM_CONDITIONAL(MAXYTEMULTI, test "$BOXTYPE" == maxytecmulti)
 AM_CONDITIONAL(MAXYTEMULTISE, test "$BOXTYPE" == maxytecmultise)
 AM_CONDITIONAL(USTYM4KPRO, test "$BOXTYPE" == ustym4kpro)
 AM_CONDITIONAL(USTYM4KOTTPREMIUM, test "$BOXTYPE" == ustym4kottpremium)
+AM_CONDITIONAL(USTYM4KS2OTTX, test "$BOXTYPE" == ustym4ks2ottx)
 AM_CONDITIONAL(VS1000, test "$MACHINE_BUILD" == vs1000)
 AM_CONDITIONAL(VS1500, test "$MACHINE_BUILD" == vs1500)
 AM_CONDITIONAL(VUUNO, test "$BOXTYPE" == vuuno)
@@ -683,6 +684,7 @@ BoxBranding/remotes/tm5/Makefile
 BoxBranding/remotes/tm6/Makefile
 BoxBranding/remotes/uclan1/Makefile
 BoxBranding/remotes/uclan2/Makefile
+BoxBranding/remotes/uclan3/Makefile
 BoxBranding/remotes/visionnet/Makefile
 BoxBranding/remotes/vu/Makefile
 BoxBranding/remotes/vu2/Makefile
