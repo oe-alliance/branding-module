@@ -684,6 +684,10 @@ if IZIBOXX3
 SUBDIRS += izibox1
 endif
 
+if IZIBOXX4
+SUBDIRS += izibox1
+endif
+
 if HITUBE4K
 SUBDIRS += hitube1 hitube2
 endif
