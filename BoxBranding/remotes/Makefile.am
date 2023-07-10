@@ -304,6 +304,10 @@ if OG2OTT4K
 SUBDIRS += qviart6
 endif
 
+if OG2S4K
+SUBDIRS += qviart8
+endif
+
 if EDISION
 SUBDIRS += optimuss1 optimuss2
 endif

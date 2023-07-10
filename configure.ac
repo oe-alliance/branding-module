@@ -663,6 +663,7 @@ BoxBranding/remotes/qviart4/Makefile
 BoxBranding/remotes/qviart5/Makefile
 BoxBranding/remotes/qviart6/Makefile
 BoxBranding/remotes/qviart7/Makefile
+BoxBranding/remotes/qviart8/Makefile
 BoxBranding/remotes/sab1/Makefile
 BoxBranding/remotes/sf98/Makefile
 BoxBranding/remotes/sf108/Makefile
