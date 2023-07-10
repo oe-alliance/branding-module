@@ -192,7 +192,7 @@ class RcModel:
 			"lunix34k": "qviart1",
 			"lunix4k": "qviart3",
 			"lunixco": "qviart4",
-			"dual": "qviart5",
+			"dual": "qviart7",
 			"og2ott4k": "qviart6",
 			"mago": "relook",
 			"marvel1": "visionnet",

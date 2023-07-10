@@ -297,7 +297,7 @@ SUBDIRS += qviart1 qviart2 qviart3 qviart4
 endif
 
 if DUAL
-SUBDIRS += qviart5
+SUBDIRS += qviart5 qviart7
 endif
 
 if OG2OTT4K
